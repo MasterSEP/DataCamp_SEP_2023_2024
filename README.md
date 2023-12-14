@@ -20,7 +20,7 @@ Dans cette section, vous trouverez les compétences essentielles que vous devez 
 Ces fiches de révision vous serviront de référence rapide pour évaluer votre niveau de préparation. Assurez-vous de travailler activement sur ces compétences et de les maîtriser pour réussir dans votre programme académique.
 N'hésitez pas à explorer ces fiches pour vous aider à atteindre le niveau de compétence requis pour votre Master 2.
 
-## Programmation 
+## Logiciels 
 Dans cette section, nous vous fournirons des ressources essentielles pour la programmation en statistique. Vous trouverez des informations sur les logiciels couramment utilisés, des guides d'installation, des explications sur leur utilité, et des exemples de code pour des manipulations générales. La programmation est un outil puissant en statistique. Cette section contient des exemples de codes en Python, R, ou d'autres langages pertinents, qui vous aideront à résoudre des problèmes et à automatiser des tâches courantes dans votre travail statistique. Ces exemples de code peuvent servir de point de départ pour vos propres projets ou analyses.
 
 ## Comment Utiliser ce Guide
