@@ -14,7 +14,7 @@ website:
       - text: "M1 SEP"
         file: "M1SEP.qmd"
       - text: "M2 SEP"
-        file: "M1SEP.qmd"
+        file: "M2SEP.qmd"
       - text: "Logiciels"
         file: "LOGICIELS.qmd"
 
