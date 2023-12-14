@@ -1,0 +1,62 @@
+---
+title: "SEP GUIDE - M2 SEP"
+format: pdf
+output:
+  pdf_document:
+    latex_engine: xelatex
+geometry:
+  - margin=0.5in
+  - margin=0.5in
+  - margin=0.5in
+  - margin=0.5in
+  - paperwidth=10.67in
+  - paperheight=7.5in
+header-includes:
+   - \usepackage{xcolor}
+   - \usepackage{graphicx}
+   - \definecolor{lightblue}{RGB}{173,216,230} 
+   - \pagecolor{lightblue}
+   - \usepackage{fancyhdr}
+   - \pagestyle{fancy}
+   - \fancyhead[L]{\includegraphics[width=3cm]{SEP.png}}
+editor:
+  markdown:
+    wrap: 72
+---
+
+\thispagestyle{empty}
+
+```{=tex}
+\vfill  
+\begin{center}
+Version 2023/24
+\vspace*{-2cm}
+\end{center}
+```
+```{=tex}
+\newpage
+\fancyfoot[C]{}
+\renewcommand{\contentsname}{Table des Matières}
+\vspace*{-1cm}
+\tableofcontents
+```
+```{=tex}
+\newpage
+\vspace*{-1cm}
+```
+<!-- Partie avec contenu Modifiable  -->
+
+# Rappels Fondamentaux
+
+## Qu'est ce qu'une variable ?
+
+Une variable statistique est une caractéristique ou une mesure que l'on peut attribuer à chaque individu d'une population ou d'un échantillon
+
+## Tableau récapitulatif autour du type de variable
+
+![](images/variables.png){width=70% fig-align="center"}
+
+
+## Vocabulaire autour de la variable
+
+Ton contenu ici...

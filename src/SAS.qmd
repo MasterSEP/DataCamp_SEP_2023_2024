@@ -1,0 +1,67 @@
+---
+title: "SEP GUIDE - SAS"
+format: pdf
+output:
+  pdf_document:
+    latex_engine: xelatex
+geometry:
+  - margin=0.5in
+  - margin=0.5in
+  - margin=0.5in
+  - margin=0.5in
+  - paperwidth=10.67in
+  - paperheight=7.5in
+header-includes:
+   - \usepackage{xcolor}
+   - \usepackage{graphicx}
+   - \usepackage{hyperref}
+   - \definecolor{lightblue}{RGB}{173,216,230} 
+   - \pagecolor{lightblue}
+   - \usepackage{fancyhdr}
+   - \pagestyle{fancy}
+   - \fancyhead[L]{\includegraphics[width=3cm]{SEP.png}}
+editor:
+  markdown:
+    wrap: 72
+---
+
+\thispagestyle{empty}
+
+```{=tex}
+\vfill  
+\begin{center}
+Version 2023/24
+\vspace*{-2cm}
+\end{center}
+```
+```{=tex}
+\newpage
+\vspace*{-1cm}
+```
+<!-- Partie avec contenu Modifiable  -->
+
+# SAS
+
+SAS est un logiciel d'analyse de données et de statistiques utilisé dans de nombreux domaines. Il vous permet d'effectuer des analyses statistiques avancées, de générer des rapports et de découvrir des tendances. SAS est utilisable directement sur le web ou en l'installant sur votre ordinateur.
+     
+L'installation de SAS peut être complexe, car il s'agit d'un logiciel commercial. Voici un brève tutoriel pour vous aider à l'installer sur votre machine : 
+
+Rendez-vous sur la plateforme Logiciel@Domicile : \url{https://lad.education-recherche.fr/liste_des_offres}
+
+Sélectionner l'offre portant sur SAS, vous arriverez ensuite sur une page d'authentification.
+
+Enregistrez-vous en sélectionnant L'URCA, (il faut que vous ayez accès au bureau virtuel).
+
+Après avoir rempli le formulaire et validé, vous accéderez au fichier de licence à appliquer à votre licence SAS si vous aviez déjà une licence l'an passé ou au dépôt pour les nouveaux étudiants. Elle est valable chaque année jusqu'en Juillet.
+   
+Une vidéo pour vous aider à l'installation du logiciel sur votre machine : 
+\url{https://www.youtube.com/watch?v=614-BmZiytQ&ab_channel=ZigZag}
+     
+Liste des badges : On vous conseil de faire le badge Base Programming Specialist et Advanced Programming Professional.
+\url{https://www.sas.com/fr_fr/certification/training-exam-preparation.html#7932a839-16a0-477e-bb9b-e987a5a60428}
+      
+Un tutoriel pour accéder aux e-learning SAS afin de se préparer aux certifications : 
+\url{https://www.youtube.com/watch?v=GFoFGC60G64&ab_channel=SASSoftwareFrance}
+      
+Vous avez l'accès à SAS OnDemand (en ligne) sur cette adresse : 
+\url{https://welcome.oda.sas.com/}

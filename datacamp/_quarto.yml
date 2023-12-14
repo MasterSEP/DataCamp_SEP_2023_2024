@@ -1,0 +1,22 @@
+project:
+  type: book
+
+book:
+  title: "DATA Camp du master SEP"
+  date: "12/14/2023"
+  chapters:
+    - index.qmd
+    - M1SEP.qmd
+    - M2SEP.qmd
+    - LOGICIELS.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreport
+
+editor: visual
+

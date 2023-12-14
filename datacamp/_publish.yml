@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 9bc742eb-af98-4d80-8a96-c256a018b0a5
+      url: 'https://quartopub.com/sites/datacamp/datacamp'

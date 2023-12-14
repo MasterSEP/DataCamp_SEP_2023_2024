@@ -1,0 +1,215 @@
+---
+title: "Rédaction et projets universitaires"
+---
+
+## *Ponctuation*
+
+### *Virgule*
+
+La virgule permet de marquer une pause dans la phrase. Elle est seulement suivie d'un espace.
+
+-   J'aime les films, surtout lorsqu'il y a du suspense.
+
+### *Point-virgule*
+
+le point-virgule permet de marquer une pause importante dans la phrase. Quand une phrase a un lien étroit avec celle qui précède, elle en est séparée par un point-virgule et non par un point.
+
+On ne met pas de majuscule au mot qui suit le point-virgule, sauf s'il s'agit d'un nom propre.
+
+-   Il s'était caché ; il pouvait ainsi les observer très attentivement.
+
+### *Tirets*
+
+les tirets permettent de segmenter une phrase. Ils sont encadrés d'espaces.
+
+-   Interstellar - réalisé par christopher Nolan - est un film de science-fiction.
+
+### *Deux-points*
+
+Les deux-points servent à annoncer une énumération ou une citation encadrée par des guillemets. Ils servent également à marquer un lien logique entre deux propositions (cause, conséquence ...).
+
+-   Les pays voisins de la France sont : la Belgique, le Luxembourg, l'Allemagne, la Suisse, l'Italie et l'Espagne.
+
+-   Série : oeuvre télévisuelle se déroulant en plusieurs parties.
+
+### *Points de suspension*
+
+Les trois points de suspension permettent d'exprimer un doute ou un silence. Ils ne sont jamais précédés d'une virgule ou d'un point-virgule mais sont suivis d'un espace.
+
+Entre crochet, ils indiquent une coupure dans une citation.
+
+-   Je ne sais pas qui dire... Ce film film est un chef d'oeuvre.
+
+### *Le point d'interrogation*
+
+Le point d'interrogation termine toute interrogation directe. Il est encadré d'espaces.
+
+-   As-tu déjà regardé la série Friends ? C'est une série culte.
+
+### *Le point d'exclamation*
+
+Le point d'exclamation permet d'exprimer la surprise, l'exaspération ou un ordre. Il est encadré d'espaces.
+
+-   Je ne m'attendais pas à une fin pareil ! Ouah.
+
+### *Guillemets*
+
+Les guillemets permettent de faire une citation. Ils sont séparés d'un espace autour de la citation.
+
+-   Il lui demanda : "Qu'as-tu pensé de ce court-métrage ?"
+
+## Mise en forme d'un projet
+
+### En général
+
+Ces étapes doivent impérativement être validées lorsque vous écrivez un projet :
+
+-   Vérifier les fautes d'orthographes ;
+
+-   Faire attention à la grammaire ;
+
+-   Utiliser une bonne typologie (police, taille de la police, couleur...) ;
+
+-   Mettre tous ses paragraphes en justifié.
+
+### Structure type
+
+Un projet doit respecter une structure bien définies afin que le lecteur puisse se repérer sans problème. Il faut :
+
+-   Une page de garde avec un titre parlant ;
+
+-   Un résumé expliquant le but et la conclusion du projet, si possible en français puis en anglais ;
+
+-   Une table des matières pour les parties,suivi d'une autre table des matières pour les figures et les tableaux ;
+
+-   Le corps du projet avec les différentes parties ;
+
+-   Une partie annexe ;
+
+-   Une bibliographie.
+
+### Ce qu'il faut éviter
+
+Les parties de votre projet doivent avoir un titre parlant, qui résume de quoi vous allez traiter ou qui donnent directement le résultat de votre partie.
+
+Il ne faut donc plus utiliser les titres « introduction » et « conclusion » qui sont beaucoup trop scolaires et qui ne renseignent pas sur les propos que vous voulez mettre en avant,
+
+**Exemple :**
+
+Un titre trop vague : La relation entre les appréciations et les types de film. Un titre parlant : Les films d'actions plus appréciés par le grand public.
+
+Une autre chose à proscrire est l'utilisation des « on constate » ou « on remarque ». Le projet n'est pas un rapport où vous expliquez seulement ce que vous trouvez, mais il doit « raconter une histoire » sans que vous ne parliez de vous.
+
+**Exemple :**
+
+A proscrire : On remarque que 65% des personnes interrogées regardent des séries fréquemment. Meilleure formulation : Parmi les personnes interrogées, 65% affirment regarder des séries fréquemment.
+
+### Figures
+
+Vous serez amenés à insérer plusieurs figures dans votre projet. Plusieurs règles doivent alors être respectées :
+
+-   Faire en sorte que la taille de la figure soit correcte et bien lisible ;
+
+-   Donner un titre précis permettant de comprendre la figure même sortie de son contexte ;
+
+-   Mettre une grille de lecture expliquant comment lire votre figure ;
+
+-   Indiquer la source de votre figure (si elle vient de vous, mettre « réalisée par les auteurs »).
+
+-   Numéroter toutes vos figures afin de créer une table des matières qui leur est dédiée.
+
+### Annexes
+
+Les annexes sont très importantes et ne doivent pas être négligées. En effet il faut :
+
+-   Ranger les annexes dans l'ordre chronologique d'apparition dans le projet;
+
+-   Mettre un titre parlant pour chaque annexe ;
+
+-   Elles se doivent d'être commentées convenablement ;
+
+-   Ne mettre un document en annexe que s'il est cité dans le corps du projet ;
+
+-   Ne pas mettre en annexe les sorties brutes (R, python...).
+
+## Commenter un graphique
+
+### Exemple
+
+Considérer le graphique créé à l'aide de R. La figure représente la répartition de l'habitude de consommation d'alcool chez des élèves selon leur genre.
+
+Un graphique se doit d'être lisible et agréable à l'œil. Les couleurs épurées et les axes bien définis permettent une meilleure lecture.
+
+![](images/graphiquee.png){fig-align="center" width="515"}
+
+### Remarque
+
+Dans votre futur professionnel, vous serez amené à travailler avec des collègues d'autres professions à qui vous devrez présenter vos études/analyses de données, Or, eux, n'auront pas les même connaissances que vous aurez. Il est donc important de bien expliquer comment se lit le graphique et de surtout ne pas mettre hors annexe des graphiques trop compliqués à la compréhension.
+
+Essayer de garder le même format de graphique tout le long d'une même analyse.
+
+Il faut penser à numéroter les graphiques afin de pouvoir faire une table de matière.
+
+N'oubliez d'indiquer la source du graphique !
+
+## Support de présentation
+
+### En général
+
+Ces étapes doivent impérativement être validées lorsque vous élaborez votre support de présentation :
+
+-   Vérifier l'orthographe ;
+
+-   Utiliser une bonne typologie (police, taille de la police, couleur...) ;
+
+-   Ne pas surcharger les slides ;
+
+-   être clair, concis sur les idées ;
+
+-   Privilégier les images ou schémas aux phrases ;
+
+-   Bonus : Mettre des animations.
+
+### Présentation
+
+Une fois le support terminé, il faut s'entraîner et répéter pour sa présentation orale.
+
+D'autres points sont à respecter si vous voulez faire une bonne présentation :
+
+-   Ne jamais lire ses slides ;
+
+-   Regarder le public ;
+
+-   Etre dynamique et non statique ;
+
+-   Essayer de sourire, au moins de paraître sympathique ;
+
+-   Prendre son temps ;
+
+## Mail professionnel
+
+### En général
+
+Lors de ce master, mais aussi dans votre vie professionnelle, vous serez amenés à rédiger des mails professionnels. En effet, ils permettent d'échanger simplement et rapidement dans le milieu professionnel, tout en étant moins formel qu'une lettre.
+
+Il faudra cependant suivre certaines règles :
+
+-   Éviter les fautes d'orthographes ;
+
+-   Avoir un vocabulaire soutenu ;
+
+-   Être bref et ne pas hésiter à aller à la ligne !
+
+### Structure type
+
+Un mail professionnel doit respecter des règles de rédaction qu'il faut impérativement respecter :
+
+-   Objet du mail : clair ;
+
+-   Formule d'appel : Bonjour Madame/ Monsieur, ;
+
+-   Corps du mail : phrasescourtes et langage courant et professionnel;
+
+-   Formule de courtoisie : Salutations respectueuses/Cordialement;
+
+-   Signature : Prénom et NOM.

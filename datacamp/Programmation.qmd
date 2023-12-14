@@ -1,0 +1,75 @@
+---
+title: "Liens utiles pour la programmation"
+---
+
+Dans cette partie vous devrez apprendre de manière autonome, mais ne vous inquiétez pas, vous serez tout de même guidés par des cheatsheets et des cours en ligne de qualité.
+
+## Installation
+
+### Python
+
+**Python** est l'un des langages de programmation les plus utilisés. Apprendre à coder avec Python est une **compétence très recherchée** dans le monde de la Data science !
+
+![](images/python.png){fig-align="center" width="157"}
+
+[Installation de Python](https://www.python.org/downloads/)
+
+[Installation d'Anaconda](https://www.anaconda.com/products/distribution)
+
+### R et R studio
+
+Dans le domaine de l\'**analyse statistique**, R est un des **langages de programmation** les plus utilisés et en même temps l\'un des langages les plus **simples** à apprendre ! Il est particulièrement **puissant** pour **l\'analyse et la visualisation des données.**
+
+![](images/r.png){fig-align="center" width="192"}
+
+[Installation de R](https://cran.r-project.org/)
+
+[Installation de R studio](https://posit.co/download/rstudio-desktop/)
+
+### SAS
+
+![](images/sas-01.png){fig-align="center" width="177"}
+
+[Créer un compte chez SAS](https://support.sas.com/en/support-home.html), en utilisant votre adresse e-mail universitaire.
+
+Il est possible d'installer la version virtuelle SAS gratuite universitaire. Cette version est compatible avec tous les OS y compris Mac.
+
+Suivez les instructions pour [Installer SAS University](https://www.sas.com/en_za/software/on-demand-for-academics.html) pour l'utiliser sur une machine virtuelle. Toutes les étapes y sont bien expliquées.
+
+Une autre alternative est d'utiliser [SAS Studio](https://welcome.oda.sas.com/). Suivez les instructions pour l'inscription à [SAS ON DEMAND FOR ACADEMICS](https://support.sas.com/ondemand/manuals/SASStudio.pdf) afin d'obtenir un accés à SAS Studio.
+
+30 à 50 minutes plus tard, vous recevrez sur votre boite mail un identifiant et un lien pour vous connecter au serveur de SAS Studio. Le mot de passe est celui de votre SAS.
+
+## Autoformation et cheatsheets
+
+### Python
+
+[Introduction à Python](https://openclassrooms.com/fr/courses/7168871-apprenez-les-bases-du-langage-python?archived-source=4262331)
+
+[Librairies appliquées à la data science](https://openclassrooms.com/fr/courses/7771531-decouvrez-les-librairies-python-pour-la-data-science?archived-source=4452741)
+
+[Exploration et nettoyage d'un jeu de données](https://openclassrooms.com/fr/courses/7410486-nettoyez-et-analysez-votre-jeu-de-donnees?archived-source=4525266)
+
+### R
+
+[Tutoriels pour apprendre R](https://www.r-bloggers.com/2015/12/how-to-learn-r-2/?utm_source=feedburner&amp%3Butm_medium=feed&amp%3Butm_campaign=Feed%3A%2BRBloggers%2B%28R%2Bbloggers%29)
+
+[Pour se familiariser avec des commandes de base](https://www.pluralsight.com/search?q=R)
+
+[Cheatsheet proposé directement par R Studio](https://posit.co/resources/cheatsheets/)
+
+### SQL
+
+![](images/sql.png){fig-align="center" width="111"}
+
+[Pour se familiariser avec SQL](https://www.codecademy.com/learn/learn-sql)
+
+[Cours SQL](https://sql.sh/cours)
+
+### SAS
+
+Pour ceux n'ayant pas encore d'adresse e-mail universitaire, vous pouvez vous entrainez avec [les supports gratuits d'E-learning SAS](https://support.sas.com/edu/elearning.html?ctry=us&productType=library), pour une prise en main du logiciel, choisissez pour débuter le e-learning SAS programming 1.
+
+Pour ceux ayant une adresse e-mail universitaire, vous pouvez en plus vous préparer aux certifications SAS.
+
+Pour passer ces certifications gratuitement, il faut obligatoirement vous inscrire dans le programme [SCYP-SAS Software Certified Young Professionals](https://www.sas.com/fr_fr/learn/academic-programs/students.html).
