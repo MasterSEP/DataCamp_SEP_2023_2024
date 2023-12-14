@@ -11,11 +11,3 @@ website:
       - href: "LOGICIELS.qmd"
         text: "Logiciels"
 
-format:
-  html:
-    theme: cosmo
-  pdf:
-    documentclass: scrreport
-
-editor: visual
-
