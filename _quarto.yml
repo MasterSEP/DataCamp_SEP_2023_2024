@@ -1,21 +1,26 @@
-website:
-  title: "DATA Camp du master SEP"
+project:
+  type : website
+  output-dir : docs
+
+website: 
+  search: true 
+  title: "Datacamp pour le master SEP"
+  reader-mode: true 
+  
   navbar:
     left:
-      - href: "index.qmd"
-        text: "Accueil"
-      - href: "M1SEP.qmd"
-        text: "M1 SEP"
-      - href: "M2SEP.qmd"
-        text: "M2 SEP"
-      - href: "LOGICIELS.qmd"
-        text: "Logiciels"
+      - text: "Accueil"
+        file: "index.qmd"
+      - text: "M1 SEP"
+        file: "M1SEP.qmd"
+      - text: "M2 SEP"
+        file: "M1SEP.qmd"
+      - text: "Logiciels"
+        file: "LOGICIELS.qmd"
 
 format:
   html:
+    toc: true 
+    page-layout: full 
     theme: cosmo
-  pdf:
-    documentclass: scrreport
-
-editor: visual
 
