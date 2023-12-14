@@ -1,16 +1,15 @@
-project:
-  type: book
-
-book:
+website:
   title: "DATA Camp du master SEP"
-  date: "12/14/2023"
-  chapters:
-    - index.qmd
-    - M1SEP.qmd
-    - M2SEP.qmd
-    - LOGICIELS.qmd
-
-bibliography: references.bib
+  navbar:
+    left:
+      - href: "index.qmd"
+        text: "Accueil"
+      - href: "M1SEP.qmd"
+        text: "M1 SEP"
+      - href: "M2SEP.qmd"
+        text: "M2 SEP"
+      - href: "LOGICIELS.qmd"
+        text: "Logiciels"
 
 format:
   html:
