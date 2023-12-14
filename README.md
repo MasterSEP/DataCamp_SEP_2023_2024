@@ -7,7 +7,7 @@ Que vous soyez nouvellement inscrits ou que vous cherchiez à approfondir vos co
 ## Table des matières :
  - Guide M1
  - Guide M2  
- - Programmation 
+ - Logiciels
 
 
 ## Guide M1
@@ -22,12 +22,5 @@ N'hésitez pas à explorer ces fiches pour vous aider à atteindre le niveau de 
 
 ## Logiciels 
 Dans cette section, nous vous fournirons des ressources essentielles pour la programmation en statistique. Vous trouverez des informations sur les logiciels couramment utilisés, des guides d'installation, des explications sur leur utilité, et des exemples de code pour des manipulations générales. La programmation est un outil puissant en statistique. Cette section contient des exemples de codes en Python, R, ou d'autres langages pertinents, qui vous aideront à résoudre des problèmes et à automatiser des tâches courantes dans votre travail statistique. Ces exemples de code peuvent servir de point de départ pour vos propres projets ou analyses.
-
-## Comment Utiliser ce Guide
-Pour tirer le meilleur parti de ce guide, suivez ces étapes simples :
-
-Explorez la table des matières ci-dessus pour trouver la section qui correspond à vos besoins.
-Ensuite pour chaque section il y a un sommaire spécifique.
-Vous avez la posibilité de convertir le guide en PDF ou en HTML en modifiant le code du fichier .qmd correspondant
 
 Bonne chance dans vos études et votre future carrière en statistique !
