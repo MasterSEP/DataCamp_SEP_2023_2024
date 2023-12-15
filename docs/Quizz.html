@@ -60,6 +60,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -125,11 +127,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#rappels-fondamentaux" id="toc-rappels-fondamentaux" class="nav-link active" data-scroll-target="#rappels-fondamentaux">Rappels Fondamentaux</a>
+  <li><a href="#master-1" id="toc-master-1" class="nav-link active" data-scroll-target="#master-1">Master 1</a>
   <ul class="collapse">
-  <li><a href="#quest-ce-quune-variable" id="toc-quest-ce-quune-variable" class="nav-link" data-scroll-target="#quest-ce-quune-variable">Qu’est ce qu’une variable ?</a></li>
-  <li><a href="#tableau-récapitulatif-autour-du-type-de-variable" id="toc-tableau-récapitulatif-autour-du-type-de-variable" class="nav-link" data-scroll-target="#tableau-récapitulatif-autour-du-type-de-variable">Tableau récapitulatif autour du type de variable</a></li>
-  <li><a href="#vocabulaire-autour-de-la-variable" id="toc-vocabulaire-autour-de-la-variable" class="nav-link" data-scroll-target="#vocabulaire-autour-de-la-variable">Vocabulaire autour de la variable</a></li>
+  <li><a href="#economie" id="toc-economie" class="nav-link" data-scroll-target="#economie">Economie</a></li>
+  <li><a href="#probabilités" id="toc-probabilités" class="nav-link" data-scroll-target="#probabilités">Probabilités</a></li>
+  <li><a href="#statistique" id="toc-statistique" class="nav-link" data-scroll-target="#statistique">Statistique</a></li>
+  <li><a href="#excel" id="toc-excel" class="nav-link" data-scroll-target="#excel">Excel</a></li>
+  <li><a href="#code-r" id="toc-code-r" class="nav-link" data-scroll-target="#code-r">Code R</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -154,23 +158,362 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="rappels-fondamentaux" class="level1">
-<h1>Rappels Fondamentaux</h1>
-<section id="quest-ce-quune-variable" class="level2">
-<h2 class="anchored" data-anchor-id="quest-ce-quune-variable">Qu’est ce qu’une variable ?</h2>
-<p>Une variable statistique est une caractéristique ou une mesure que l’on peut attribuer à chaque individu d’une population ou d’un échantillon</p>
+<section id="master-1" class="level1">
+<h1>Master 1</h1>
+<section id="economie" class="level2">
+<h2 class="anchored" data-anchor-id="economie">Economie</h2>
+<p>En économie, un agent rationnel est un agent :</p>
+<ul>
+<li><ol type="a">
+<li>égoïste<br>
+</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>dont les préférences sur les alternatives sont transitives<br>
+</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>qui maximise son bonheur<br>
+</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>qui fait toujours le meilleur choix</li>
+</ol></li>
+</ul>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<ul>
+<li><ol start="2" type="a">
+<li>dont les préférences sur les alternatives sont transitives<br>
+</li>
+</ol></li>
+</ul>
+</details>
+<p>Un équilibre de Nash est :</p>
+<ul>
+<li><ol type="a">
+<li>une situation où aucun agent ne peut accroitre son utilité étant donné les choix des autres agents</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>une situation où il est impossible d’accroitre l’utilité d’un agent sans diminuer celle d’un autre</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>une situation où la somme des utilités est maximisée</li>
+</ol></li>
+</ul>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<ul>
+<li><ol type="a">
+<li>une situation où aucun agent ne peut accroitre son utilité étant donné les choix des autres agents</li>
+</ol></li>
+</ul>
+</details>
 </section>
-<section id="tableau-récapitulatif-autour-du-type-de-variable" class="level2">
-<h2 class="anchored" data-anchor-id="tableau-récapitulatif-autour-du-type-de-variable">Tableau récapitulatif autour du type de variable</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/variables.png" class="img-fluid figure-img" style="width:70.0%"></p>
-</figure>
-</div>
+<section id="probabilités" class="level2">
+<h2 class="anchored" data-anchor-id="probabilités">Probabilités</h2>
+<p>Soit f: R -&gt; R+ la densité d’une variable aléatoire, notée X qui est définie par f(x)= 3/4 (x2+1) si x appartient à [0,1] et qui vaut 0 ailleurs, alors on a :</p>
+<ul>
+<li><ol type="a">
+<li>E(X)=1</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>E(X)=9/16</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>E(X)=3/8</li>
+</ol></li>
+</ul>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<ul>
+<li><ol start="2" type="a">
+<li>E(X)=9/16</li>
+</ol></li>
+</ul>
+</details>
+<p>Soient X ~N(-1;3) , Y ~N(4;2) et Cov(X,Y)=-1 alors la variable 2X-Y suit une loi :</p>
+<ul>
+<li><ol type="a">
+<li>N(-6; 12)</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>N(-6, 14)</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>N(-6, 16)</li>
+</ol></li>
+</ul>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<ul>
+<li><ol type="a">
+<li>N(-6; 12)</li>
+</ol></li>
+</ul>
+</details>
+<p>Soit f :R² -&gt; R+, la densité d’un couple de variables aléatoires, notées (X,Y) qui est définie par: f(x,y)=12/11 (xy+(x²+3)y) si x appartient à [0,1], et y appartient à [0,1] et qui vaut 0 ailleurs. Les variables X et Y sont-elles indépendantes ?</p>
+<ul>
+<li><ol type="a">
+<li>oui</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>non</li>
+</ol></li>
+</ul>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<ul>
+<li><ol type="a">
+<li>oui</li>
+</ol></li>
+</ul>
+</details>
+<p>Soient X ~N(1,2) , Y ~N(-1,4)&nbsp;et Cov(X,Y)= -1 &nbsp;alors la variable <span class="math inline">\((X-1)²/2^{1/2}+(Y+1)²/2\)</span> ~ <span class="math inline">\(chi²(2)\)</span></p>
+<ul>
+<li><ol type="a">
+<li>vrai</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>faux</li>
+</ol></li>
+</ul>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<ul>
+<li><ol start="2" type="a">
+<li>faux</li>
+</ol></li>
+</ul>
+</details>
 </section>
-<section id="vocabulaire-autour-de-la-variable" class="level2">
-<h2 class="anchored" data-anchor-id="vocabulaire-autour-de-la-variable">Vocabulaire autour de la variable</h2>
-<p>Ton contenu ici…</p>
+<section id="statistique" class="level2">
+<h2 class="anchored" data-anchor-id="statistique">Statistique</h2>
+<p>Quelle est la différence entre l’objectif de la statistique descriptive et la statistique inférentielle ?</p>
+<ul>
+<li><ol type="a">
+<li>La statistique descriptive résume un phénomène observé sur la population observée. Tandis que la statistique inférentielle généralise un phénomène observé sur un échantillon de la population à la population cible.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>La statistique descriptive généralise un phénomène observé sur un échantillon de la population à la population cible. Tandis que la statistique inférentielle résume un phénomène observé sur la population observée.</li>
+</ol></li>
+</ul>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<ul>
+<li><ol type="a">
+<li>La statistique descriptive résume un phénomène observé sur la population observée. Tandis que la statistique inférentielle généralise un phénomène observé sur un échantillon de la population à la population cible.
+</li></ol></li></ul></details>
+
+
+<p>On suppose que <span class="math inline">\(X_1 , …, X_n\)</span> forment un n-échantillon que l’on observe. <span class="math inline">\(X_1\)</span> suit la loi <span class="math inline">\(𝑃_𝜃\)</span>. On construit un estimateur 𝜃̂ = 𝑆(“<span class="math inline">\(X_1,…,X_n\)</span>” )de 𝜃. 𝜃&nbsp;̂ est-il aléatoire ?</p>
+<ul>
+<li><ol type="a">
+<li>oui</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>non</li>
+</ol></li>
+</ul>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<ul>
+<li><ol type="a">
+<li>oui</li>
+</ol></li>
+</ul>
+</details>
+<p>On dit qu’un estimateur â est meilleur que ô lorsque :</p>
+<ul>
+<li><ol type="a">
+<li>â est sans biais alors que ô ne l’est pas</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>â est consistant alors que ô ne l’est pas</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>Le biais de â est plus petit en valeur absolue, que celui de ô</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>Le risque quadratique de â est plus petit que celui de ô</li>
+</ol></li>
+<li><ol start="5" type="a">
+<li>La variance de â est plus petite que la variance de ô</li>
+</ol></li>
+</ul>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<ul>
+<li><ol start="4" type="a">
+<li>Le risque quadratique de â est plus petit que celui de ô</li>
+</ol></li>
+</ul>
+</details>
+</section>
+<section id="excel" class="level2">
+<h2 class="anchored" data-anchor-id="excel">Excel</h2>
+<p>Excel est un :</p>
+<ul>
+<li><ol type="a">
+<li>traitement de texte</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>tableur</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>compilateur</li>
+</ol></li>
+</ul>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<ul>
+<li><ol start="2" type="a">
+<li>tableur</li>
+</ol></li>
+</ul>
+</details>
+<p>Dans une feuille de calcul Excel, les données sont stockées dans</p>
+<ul>
+<li><ol type="a">
+<li>une variable</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>une cellule</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>un cadre</li>
+</ol></li>
+</ul>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<ul>
+<li><ol start="2" type="a">
+<li>une cellule</li>
+</ol></li>
+</ul>
+</details>
+<p>L’écriture =somme(ventes) est une écriture :</p>
+<ul>
+<li><ol type="a">
+<li>correcte</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>correcte si une plage a été nommée ventes</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>non correcte</li>
+</ol></li>
+</ul>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<ul>
+<li><ol start="2" type="a">
+<li>correcte si une plage a été nommée ventes</li>
+</ol></li>
+</ul>
+</details>
+</section>
+<section id="code-r" class="level2">
+<h2 class="anchored" data-anchor-id="code-r">Code R</h2>
+<p>On dispose d’un échantillon de données numérique nommée sample_x. Et on codeSample_x&lt;-sort(sample_x). Que fait ce code&nbsp;?</p>
+<ul>
+<li><ol type="a">
+<li>il sort l’échantillon x</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>il sort x de l’échantillon</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>il trie l’échantillon x par ordre croissant et le stocke dans le même échantillon</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>il trie l’échantillon x par ordre croissant et le stocke dans un autre échantillon</li>
+</ol></li>
+</ul>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<ul>
+<li><ol start="4" type="a">
+<li>il trie l’échantillon x par ordre croissant et le stocke dans un autre échantillon</li>
+</ol></li>
+</ul>
+</details>
+<p>On dispose d’un fichier nommé Sportcourse.csv et du code don&lt;-read.table(“Sportcourse.csv”, header=T, sep=“;”). Que fait ce code ?</p>
+<ul>
+<li><ol type="a">
+<li>il lit le fichier «&nbsp;Sportcourse.csv et ouvre un tableur</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>il lit le fichier Sportcourse.csv et le stocke dans un autre csv nommé «&nbsp;don&nbsp;»</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>il lit le fichier Sportcourse.csv avec une ligne avec les noms des variables et un séparateur et le stocke dans un tableau de données nommé don</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>il lit le fichier Sportcourse.csv avec une ligne avec les noms des variables et un séparateur et le stocke dans une matrice nommée don</li>
+</ol></li>
+</ul>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<ul>
+<li><ol start="3" type="a">
+<li>il lit le fichier Sportcourse.csv avec une ligne avec les noms des variables et un séparateur et le stocke dans un tableau de données nommé don</li>
+</ol></li>
+</ul>
+</details>
+<p>On dispose d’un tableau de donnée dans R (un data.frame) nommé « don » et du code : rownames(don)&lt;-don[,1] don&lt;-don[,-1]. Que fait ce code ?</p>
+<ul>
+<li><ol type="a">
+<li>il modifie don en déplaçant les noms de la première colonne comme nom des individus.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>il modifie don en déplaçant les noms de la première colonne comme nom des individus et garde la première colonne.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>il modifie don en déplaçant les noms de la première ligne comme nom des individus et supprime la première colonne.</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>il modifie don en déplaçant les noms de la première colonne comme nom des variables et supprime la première colonne.</li>
+</ol></li>
+</ul>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<ul>
+<li><ol type="a">
+<li>il modifie don en déplaçant les noms de la première colonne comme nom des individus.</li>
+</ol></li>
+</ul>
+</details>
 
 
 </section>

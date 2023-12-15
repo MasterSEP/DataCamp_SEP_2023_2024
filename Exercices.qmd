@@ -3,85 +3,81 @@ title: "Exercices"
 editor: visual
 ---
 
-# Algèbre Linéaire 
+# Algèbre Linéaire
 
-## Exercice 1 
+## Exercice 1
 
-On considère les matrices suivantes : 
+On considère les matrices suivantes :
 
-$A = \begin{bmatrix} 1 & 2 & 3 \end{bmatrix}$
-$B = \begin{bmatrix} 1 \\ -2 \end{bmatrix}$
-$C = \begin{bmatrix} 2 & 1 \\ -3 & 0 \\ 1 & 2 \end{bmatrix}$
-$D = \begin{bmatrix} -2 & 5 \\ 5 & 0 \end{bmatrix}$
-$E = \begin{bmatrix} -1 & 1 & 3 \\ -1 & -4 & 0 \\ 0 & 2 & 5 \end{bmatrix}$
+$A = \begin{bmatrix} 1 & 2 & 3 \end{bmatrix}$ $B = \begin{bmatrix} 1 \\ -2 \end{bmatrix}$ $C = \begin{bmatrix} 2 & 1 \\ -3 & 0 \\ 1 & 2 \end{bmatrix}$ $D = \begin{bmatrix} -2 & 5 \\ 5 & 0 \end{bmatrix}$ $E = \begin{bmatrix} -1 & 1 & 3 \\ -1 & -4 & 0 \\ 0 & 2 & 5 \end{bmatrix}$
 
 Quels sont les produits matriciels possibles ? Quelles sont les matrices carrées et les matrices symétriques ?
 
 <details>
-  <summary>Cliquez pour afficher le corrigé</summary>
-  
-  Les produits matriciels possibles sont : $AC$, $AE$, $BD$, $CD$, $DC$. La matrice carrée est $E$, $C$ et $D$ sont des matrices symétriques.
+
+<summary>Cliquez pour afficher le corrigé</summary>
+
+Les produits matriciels possibles sont : $AC$, $AE$, $BD$, $CD$, $DC$. La matrice carrée est $E$, $C$ et $D$ sont des matrices symétriques.
+
 </details>
 
 ## Exercice 2
 
-1) Soit $A = \begin{bmatrix} -1 & 1 & 1 \\ -1 & -1 & 1 \\ -1 & 1 & -1 \end{bmatrix}$. Montrer que $A^2 = 2I_3 - A$, en déduire que $A$ est inversible et calculer $A^{-1}$.
+1)  Soit $A = \begin{bmatrix} -1 & 1 & 1 \\ -1 & -1 & 1 \\ -1 & 1 & -1 \end{bmatrix}$. Montrer que $A^2 = 2I_3 - A$, en déduire que $A$ est inversible et calculer $A^{-1}$.
 
 Pour montrer que $A^2 = 2I_3 - A$, calculez $A^2$ et démontrez que cette égalité est valide.
 
 Puisque $A^2 = 2I_3 - A$, cela implique que $A$ est inversible. Pour calculer $A^{-1}$, utilisez cette relation et les propriétés des matrices inverses.
-       
-        
-2) Soit $A = \begin{bmatrix} 1 & 0 & 2 \\ 0 & -1 & 1 \\ 1 & -2 & 0 \end{bmatrix}$. Calculer $A^3 - A$. En déduire que $A$ est inversible puis déterminer $A^{-1}$.
+
+2)  Soit $A = \begin{bmatrix} 1 & 0 & 2 \\ 0 & -1 & 1 \\ 1 & -2 & 0 \end{bmatrix}$. Calculer $A^3 - A$. En déduire que $A$ est inversible puis déterminer $A^{-1}$.
 
 Calculez $A^3 - A$ pour démontrer que $A$ est inversible. En utilisant cette information, trouvez la matrice inverse $A^{-1}$.
 
 <details>
-  <summary>Cliquez pour afficher le corrigé</summary>
-  
 
-  Le calcul ne pose pas de problèmes. Il mène à:
-$\frac{{A^2 + A^2}}{2} = I_3 \implies A \cdot \left( \frac{{A + I_3}}{2} \right) = \left( \frac{{A + I_3}}{2} \right) \cdot A = I_3$       
-A est inversible, et son inverse est : $A^{-1} = \frac{{A + I_3}}{2}$
-  Un calcul donne : $A^3 - A = 4 \cdot I_3$.        
-  Donc $A \cdot \frac{{A^2 - I_3}}{4} = I_3$, ainsi $A$ est inversible et $A^{-1} = \frac{1}{4} \cdot (A^2 - I_3) = \frac{1}{4} \cdot \begin{bmatrix} 2 & -4 & 2 \\ 1 & -2 & -1 \\ 1 & 2 & -1 \end{bmatrix}$
+<summary>Cliquez pour afficher le corrigé</summary>
+
+Le calcul ne pose pas de problèmes. Il mène à: $\frac{{A^2 + A^2}}{2} = I_3 \implies A \cdot \left( \frac{{A + I_3}}{2} \right) = \left( \frac{{A + I_3}}{2} \right) \cdot A = I_3$\
+A est inversible, et son inverse est : $A^{-1} = \frac{{A + I_3}}{2}$ Un calcul donne : $A^3 - A = 4 \cdot I_3$.\
+Donc $A \cdot \frac{{A^2 - I_3}}{4} = I_3$, ainsi $A$ est inversible et $A^{-1} = \frac{1}{4} \cdot (A^2 - I_3) = \frac{1}{4} \cdot \begin{bmatrix} 2 & -4 & 2 \\ 1 & -2 & -1 \\ 1 & 2 & -1 \end{bmatrix}$
+
 </details>
 
-# Fondements de probabilités 
+# Fondements de probabilités
 
-## Exercice 1 
+## Exercice 1
 
-Dans la salle des profs 60% sont des femmes ; une femme sur trois porte des lunettes et un homme sur deux porte des lunettes : quelle est la probabilité pour qu’un porteur de lunettes pris au hasard soit une femme ?
+Dans la salle des profs 60% sont des femmes ; une femme sur trois porte des lunettes et un homme sur deux porte des lunettes : quelle est la probabilité pour qu'un porteur de lunettes pris au hasard soit une femme ?
 
 <details>
-  <summary>Cliquez pour afficher le corrigé</summary>
-  
-  Notons les différents événements : $Fe$ : « être femme », $Lu$ : « porter des lunettes », $H$ : « être homme ».
 
-Alors, on a $P(Fe) = 0.6$, $P(Lu|Fe) = \frac{1}{3}$ ; il s’agit de la probabilité conditionnelle de « porter des lunettes » sachant que la personne est une femme.
+<summary>Cliquez pour afficher le corrigé</summary>
+
+Notons les différents événements : $Fe$ : « être femme », $Lu$ : « porter des lunettes », $H$ : « être homme ».
+
+Alors, on a $P(Fe) = 0.6$, $P(Lu|Fe) = \frac{1}{3}$ ; il s'agit de la probabilité conditionnelle de « porter des lunettes » sachant que la personne est une femme.
 
 De même, on a $P(Lu|H) = 0.5$.
 
 On cherche la probabilité conditionnelle $P(Fe|Lu)$.
 
-D’après la formule des probabilités totales, on a : $P(Fe|Lu) \cdot P(Lu) = P(Lu|Fe) \cdot P(Fe)$ avec $P(Lu) = P(Lu|Fe) \cdot P(Fe) + P(Lu|H) \cdot P(H)$.
+D'après la formule des probabilités totales, on a : $P(Fe|Lu) \cdot P(Lu) = P(Lu|Fe) \cdot P(Fe)$ avec $P(Lu) = P(Lu|Fe) \cdot P(Fe) + P(Lu|H) \cdot P(H)$.
 
 Application numérique : $P(Lu) = 0.4$, donc $P(Fe|Lu) = \frac{P(Lu|Fe) \cdot P(Fe) \cdot P(Lu)}{P(Lu)} = 0.5$.
 
 </details>
 
-## Exercice 2 
+## Exercice 2
 
-Dans une entreprise deux ateliers fabriquent les mêmes pièces. L'atelier 1 fabrique en une journée deux fois plus de pièces que l'atelier 2. Le pourcentage de pièces défectueuses est 3% pour l'atelier 1 et 4% pour l'atelier 2. On prélève une pièce au hasard dans l'ensemble de la production d'une journée.      
-Déterminer :        
-- la probabilité que cette pièce provienne de l'atelier 1 ;
-- la probabilité que cette pièce provienne de l'atelier 1 et est défectueuse ;
-- la probabilité que cette pièce provienne de l'atelier 1 sachant qu'elle est défectueuse.
+Dans une entreprise deux ateliers fabriquent les mêmes pièces. L'atelier 1 fabrique en une journée deux fois plus de pièces que l'atelier 2. Le pourcentage de pièces défectueuses est 3% pour l'atelier 1 et 4% pour l'atelier 2. On prélève une pièce au hasard dans l'ensemble de la production d'une journée.\
+Déterminer :\
+- la probabilité que cette pièce provienne de l'atelier 1 ; - la probabilité que cette pièce provienne de l'atelier 1 et est défectueuse ; - la probabilité que cette pièce provienne de l'atelier 1 sachant qu'elle est défectueuse.
 
 <details>
-  <summary>Cliquez pour afficher le corrigé</summary>
-  
-  Notons $A$ l'événement "la pièce provient de l'atelier 1", $B$ l'événement "la pièce provient de l'atelier 2" et $D$ l'événement "la pièce est défectueuse".
+
+<summary>Cliquez pour afficher le corrigé</summary>
+
+Notons $A$ l'événement "la pièce provient de l'atelier 1", $B$ l'événement "la pièce provient de l'atelier 2" et $D$ l'événement "la pièce est défectueuse".
 
 L'énoncé nous dit que les $\frac{2}{3}$ des pièces produites proviennent de l'atelier 1. Donc $P(A)=\frac{2}{3}$.
 
@@ -91,7 +87,7 @@ Ainsi, on a $P_D(A) = \frac{P(A \cap D)}{P(D)} = 0.133$
 
 </details>
 
-## Exercice 3 
+## Exercice 3
 
 Soit $F$ la fonction définie par :
 
@@ -103,17 +99,17 @@ f(x) = \begin{cases}
 0,69 & \text{si } 7 \leq x \leq 11 \\
 1 & \text{si } x \geq 11 
 \end{cases}
-$$
-1) Vérifiez que $F(x)$ est une fonction de répartition en vérifiant les conditions requises pour une fonction de répartition.     
-      
-2) Soit $X$ la variable aléatoire admettant $F$ pour fonction de répartition ; quelle est la loi de $X$ ?
+$$ 1) Vérifiez que $F(x)$ est une fonction de répartition en vérifiant les conditions requises pour une fonction de répartition.
+
+2)  Soit $X$ la variable aléatoire admettant $F$ pour fonction de répartition ; quelle est la loi de $X$ ?
 
 <details>
-  <summary>Cliquez pour afficher le corrigé</summary>
-  
-  1) $F$ est croissante, de limite nulle en $-\infty$, de limite égale à $1$ en $+\infty$ et continue à droite ; il s’agit donc bien d’une fonction de répartition.
-   
-  2) 
+
+<summary>Cliquez pour afficher le corrigé</summary>
+
+1)  $F$ est croissante, de limite nulle en $-\infty$, de limite égale à $1$ en $+\infty$ et continue à droite ; il s'agit donc bien d'une fonction de répartition.
+
+2)  
 
 $$
 \begin{array}{|c|c|}
@@ -127,19 +123,19 @@ x \in X(\Omega) & P(X = x) \\
 \hline
 \end{array}
 $$
+
 </details>
-
-
-
 
 ## Exercice 4
 
 Soit $X$ une variable aléatoire de loi de Poisson de paramètre $\lambda > 0$. Calculer $E[(1 + X)^{-1}]$.
 
 <details>
-  <summary>Cliquez pour afficher le corrigé</summary>
-  $E((1+X)^{-1}) = \sum_{k=0}^{\infty} \frac{1}{1+k} \cdot e^{-\lambda} \cdot \frac{\lambda^k}{k!} = e^{-\lambda} \sum_{k=0}^{\infty} \frac{\lambda^{k+1}}{(k+1)!} = e^{-\lambda} \left(\sum_{k=0}^{\infty} \frac{\lambda^k}{k!} - 1\right) = e^{-\lambda} (e^{\lambda} - 1) = \frac{1 - e^{-\lambda}}{\lambda}$
-  
+
+<summary>Cliquez pour afficher le corrigé</summary>
+
+$E((1+X)^{-1}) = \sum_{k=0}^{\infty} \frac{1}{1+k} \cdot e^{-\lambda} \cdot \frac{\lambda^k}{k!} = e^{-\lambda} \sum_{k=0}^{\infty} \frac{\lambda^{k+1}}{(k+1)!} = e^{-\lambda} \left(\sum_{k=0}^{\infty} \frac{\lambda^k}{k!} - 1\right) = e^{-\lambda} (e^{\lambda} - 1) = \frac{1 - e^{-\lambda}}{\lambda}$
+
 </details>
 
 ## Exercice 5
@@ -147,27 +143,27 @@ Soit $X$ une variable aléatoire de loi de Poisson de paramètre $\lambda > 0$. 
 Montrer que $\text{Var}(X) = E(X^2) - 2(E(X))^2$.
 
 <details>
-  <summary>Cliquez pour afficher le corrigé</summary>
-  $ \text{Var}(X) = E[(X-E(X))^2] = E(X^2 - 2 E(X)X + (E(X))^2) = E(X^2) - 2 E(X)E(X) + (E(X))^2 = E(X^2) - 2(E(X))^2 $
+
+<summary>Cliquez pour afficher le corrigé</summary>
+
+\$ \text{Var}(X) = E\[(X-E(X))\^2\] = E(X\^2 - 2 E(X)X + (E(X))\^2) = E(X\^2) - 2 E(X)E(X) + (E(X))\^2 = E(X\^2) - 2(E(X))\^2 \$
+
 </details>
 
 ## Exercice 6
 
 Le nombre $X$ de kg de tomates récoltés dans un jardin en une semaine est une variable aléatoire dont la loi de probabilité est la suivante :
 
-1) Quelle est l'espérance mathématique de $X$ et quelle est sa variance ?
+1)  Quelle est l'espérance mathématique de $X$ et quelle est sa variance ?
 
-2) Pendant les six semaines de la saison de récolte, la distribution de probabilité ne varie pas. Calculer l'espérance mathématique et la variance de la variable aléatoire $Y$ donnant la récolte totale en kg durant les six semaines.
+2)  Pendant les six semaines de la saison de récolte, la distribution de probabilité ne varie pas. Calculer l'espérance mathématique et la variance de la variable aléatoire $Y$ donnant la récolte totale en kg durant les six semaines.
 
 <details>
-  <summary>Cliquez pour afficher le corrigé</summary>
-  
-  1) $E(X) = 0 \times 0.1 + 1 \times 0.5 + 2 \times 0.3 + 3 \times 0.1 = 1.4$; 
-   $E(X^2) = 0^2 \times 0.1 + 1^2 \times 0.5 + 2^2 \times 0.3 + 3^2 \times 0.1 = 2.6$ donc $Var(X) = E(X^2) - (E(X))^2 = 0.64$
-         
-  2) $Y$ étant la somme de 6 variables aléatoires i.i.d., on a : $E(Y) = 6E(X) = 8.4$ et $Var(Y) = 6$ et $Var(X) = 3.84$
-  
+
+<summary>Cliquez pour afficher le corrigé</summary>
+
+1)  $E(X) = 0 \times 0.1 + 1 \times 0.5 + 2 \times 0.3 + 3 \times 0.1 = 1.4$; $E(X^2) = 0^2 \times 0.1 + 1^2 \times 0.5 + 2^2 \times 0.3 + 3^2 \times 0.1 = 2.6$ donc $Var(X) = E(X^2) - (E(X))^2 = 0.64$
+
+2)  $Y$ étant la somme de 6 variables aléatoires i.i.d., on a : $E(Y) = 6E(X) = 8.4$ et $Var(Y) = 6$ et $Var(X) = 3.84$
+
 </details>
-
-
-

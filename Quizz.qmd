@@ -3,16 +3,182 @@ title: "Quizz"
 editor: visual
 ---
 
-# Rappels Fondamentaux
+# Master 1 
 
-## Qu'est ce qu'une variable ?
+## Economie 
 
-Une variable statistique est une caractéristique ou une mesure que l'on peut attribuer à chaque individu d'une population ou d'un échantillon
+En économie, un agent rationnel est un agent : 
 
-## Tableau récapitulatif autour du type de variable
+- a. égoïste     
+- b. dont les préférences sur les alternatives sont transitives      
+- c. qui maximise son bonheur     
+- d. qui fait toujours le meilleur choix
 
-![](images/variables.png){width="70%" fig-align="center"}
+<details>
+<summary>Cliquez pour afficher le corrigé</summary>
+- b. dont les préférences sur les alternatives sont transitives      
+</details>
 
-## Vocabulaire autour de la variable
+Un équilibre de Nash est : 
 
-Ton contenu ici...
+- a. une situation où aucun agent ne peut accroitre son utilité étant donné les choix des autres agents 
+- b. une situation où il est impossible d'accroitre l'utilité d'un agent sans diminuer celle d'un autre 
+- c. une situation où la somme des utilités est maximisée 
+
+<details>
+<summary>Cliquez pour afficher le corrigé</summary>
+- a. une situation où aucun agent ne peut accroitre son utilité étant donné les choix des autres agents 
+</details>
+
+## Probabilités 
+
+Soit  f: R -> R+  la densité d'une variable aléatoire, notée X qui est définie par f(x)= 3/4 (x2+1) si x appartient à [0,1] et qui vaut 0 ailleurs, alors on a : 
+
+- a. E(X)=1
+- b. E(X)=9/16
+- c. E(X)=3/8
+
+<details>
+<summary>Cliquez pour afficher le corrigé</summary>
+- b. E(X)=9/16
+</details>
+
+Soient X ~N(-1;3) , Y ~N(4;2) et Cov(X,Y)=-1 alors la variable 2X-Y suit une loi :
+
+- a. N(-6; 12)
+- b. N(-6, 14)
+- c. N(-6, 16)
+
+<details>
+<summary>Cliquez pour afficher le corrigé</summary>
+- a. N(-6; 12)
+</details>
+
+Soit f :R² -> R+, la densité d'un couple de variables aléatoires, notées (X,Y) qui est définie par: f(x,y)=12/11 (xy+(x²+3)y)  si x appartient à [0,1], et y appartient à [0,1] et qui vaut 0 ailleurs. Les variables X et Y sont-elles indépendantes ?
+
+- a. oui 
+- b. non
+
+<details>
+<summary>Cliquez pour afficher le corrigé</summary>
+- a. oui 
+</details>
+
+Soient X ~N(1,2) , Y ~N(-1,4) et Cov(X,Y)= -1  alors la variable  $(X-1)²/2^{1/2}+(Y+1)²/2$ ~ $chi²(2)$
+
+- a. vrai
+- b. faux
+
+<details>
+<summary>Cliquez pour afficher le corrigé</summary>
+- b. faux
+</details>
+
+## Statistique 
+
+Quelle est la différence entre l’objectif de la statistique descriptive et la statistique inférentielle ?
+
+- a. La statistique descriptive résume un phénomène observé sur la population observée. Tandis que la statistique inférentielle généralise un phénomène observé sur un échantillon de la population à la population cible.
+- b. La statistique descriptive généralise un phénomène observé sur un échantillon de la population à la population cible. Tandis que la statistique inférentielle résume un phénomène observé sur la population observée.
+
+<details>
+<summary>Cliquez pour afficher le corrigé</summary>
+- a. La statistique descriptive résume un phénomène observé sur la population observée. Tandis que la statistique inférentielle généralise un phénomène observé sur un échantillon de la population à la population cible.</details>
+
+On suppose que $X_1 , …, X_n$ forment un n-échantillon que l’on observe. $X_1$ suit la loi $𝑃_𝜃$.
+On construit un estimateur 𝜃̂ = 𝑆("$X_1,…,X_n$" )de 𝜃.
+𝜃 ̂ est-il aléatoire ?
+
+- a. oui 
+- b. non
+
+<details>
+<summary>Cliquez pour afficher le corrigé</summary>
+- a. oui 
+</details>
+
+On dit qu’un estimateur â est meilleur que ô lorsque :
+
+- a. â est sans biais alors que ô ne l’est pas 
+- b. â est consistant alors que ô ne l’est pas
+- c. Le biais de â est plus petit en valeur absolue, que celui de ô
+- d. Le risque quadratique de â est plus petit que celui de ô
+- e. La variance de â est plus petite que la variance de ô
+
+<details>
+<summary>Cliquez pour afficher le corrigé</summary>
+- d. Le risque quadratique de â est plus petit que celui de ô
+</details>
+
+## Excel
+
+Excel est un : 
+
+- a. traitement de texte 
+- b. tableur 
+- c. compilateur 
+
+<details>
+<summary>Cliquez pour afficher le corrigé</summary>
+- b. tableur 
+</details>
+
+Dans une feuille de calcul Excel, les données sont stockées dans
+
+- a. une variable
+- b. une cellule
+- c. un cadre
+
+<details>
+<summary>Cliquez pour afficher le corrigé</summary>
+- b. une cellule
+</details>
+
+L'écriture =somme(ventes) est une écriture :
+
+- a. correcte 
+- b. correcte si une plage a été nommée ventes 
+- c. non correcte 
+
+<details>
+<summary>Cliquez pour afficher le corrigé</summary>
+- b. correcte si une plage a été nommée ventes 
+</details>
+
+## Code R 
+
+On dispose d’un échantillon de données numérique nommée sample_x. Et on codeSample_x<-sort(sample_x). Que fait ce code ?
+
+- a. il sort l’échantillon x
+- b. il sort x de l’échantillon
+- c. il trie l’échantillon x par ordre croissant et le stocke dans le même échantillon
+- d. il trie l’échantillon x par ordre croissant et le stocke dans un autre échantillon
+
+<details>
+<summary>Cliquez pour afficher le corrigé</summary>
+- d. il trie l’échantillon x par ordre croissant et le stocke dans un autre échantillon
+</details>
+
+On dispose d’un fichier nommé Sportcourse.csv et du code don<-read.table("Sportcourse.csv", header=T, sep=";"). Que fait ce code ?
+
+- a. il lit le fichier « Sportcourse.csv et ouvre un tableur
+- b. il lit le fichier Sportcourse.csv et le stocke dans un autre csv nommé « don »
+- c. il lit le fichier Sportcourse.csv avec une ligne avec les noms des variables et un séparateur et le stocke dans un tableau de données nommé don
+- d. il lit le fichier Sportcourse.csv avec une ligne avec les noms des variables et un séparateur et le stocke dans une matrice nommée don
+
+<details>
+<summary>Cliquez pour afficher le corrigé</summary>
+- c. il lit le fichier Sportcourse.csv avec une ligne avec les noms des variables et un séparateur et le stocke dans un tableau de données nommé don
+</details>
+
+On dispose d’un tableau de donnée dans R (un data.frame) nommé « don » et du code : rownames(don)<-don[,1] don<-don[,-1]. Que fait ce code ?
+
+- a. il modifie don en déplaçant les noms de la première colonne comme nom des individus.
+- b. il modifie don en déplaçant les noms de la première colonne comme nom des individus et garde la première colonne. 
+- c. il modifie don en déplaçant les noms de la première ligne comme nom des individus et supprime la première colonne. 
+- d. il modifie don en déplaçant les noms de la première colonne comme nom des variables et supprime la première colonne.
+
+<details>
+<summary>Cliquez pour afficher le corrigé</summary>
+- a. il modifie don en déplaçant les noms de la première colonne comme nom des individus.
+</details>
