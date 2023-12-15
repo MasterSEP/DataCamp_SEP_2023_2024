@@ -1,0 +1,18 @@
+---
+title: "DATA Camp M2"
+editor: visual
+---
+
+# Rappels Fondamentaux
+
+## Qu'est ce qu'une variable ?
+
+Une variable statistique est une caractéristique ou une mesure que l'on peut attribuer à chaque individu d'une population ou d'un échantillon
+
+## Tableau récapitulatif autour du type de variable
+
+![](images/variables.png){width="70%" fig-align="center"}
+
+## Vocabulaire autour de la variable
+
+Ton contenu ici...
