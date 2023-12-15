@@ -1,14 +1,13 @@
 ---
 title: "DATA Camp M1"
 editor: visual
---- 
+---
 
 # Algèbre Linéaire : niveau élémentaire
 
 ## Matrices
 
-Une matrice est un tableau de nombres disposés en $m$ lignes et $n$
-colonnes. Soit $A$ de taille $(m, n)$ : $$
+Une matrice est un tableau de nombres disposés en $m$ lignes et $n$ colonnes. Soit $A$ de taille $(m, n)$ : $$
 A = (a_{ij})_{i=1,\ldots,m \atop j=1,\ldots,n} =
 \begin{bmatrix}
 a_{11} & \cdots & a_{1n} \\
@@ -17,8 +16,7 @@ a_{m1} & \cdots & a_{mn}
 \end{bmatrix}
 $$
 
-Le terme $a_{ij}$ est situé à la $i$-ème ligne de la $j$-ème colonne de
-la matrice $A$.
+Le terme $a_{ij}$ est situé à la $i$-ème ligne de la $j$-ème colonne de la matrice $A$.
 
 \textcolor{green!70!black!70!black}{Exemples :}
 
@@ -49,17 +47,11 @@ D =
 \end{bmatrix}
 $$
 
-$A$ est une matrice de taille $(3, 2)$, $B$ est une matrice de taille
-$(3, 1)$, $C$ est une matrice de taille $(1, 3)$, $D$ est une matrice de
-taille $(2, 2)$.
+$A$ est une matrice de taille $(3, 2)$, $B$ est une matrice de taille $(3, 1)$, $C$ est une matrice de taille $(1, 3)$, $D$ est une matrice de taille $(2, 2)$.
 
-Une matrice $(m, 1)$ est dite matrice colonne. Une matrice $(1, n)$ est
-dite une matrice ligne. Une matrice $(n, n)$ est dite une matrice carrée
-d'ordre $n$.
+Une matrice $(m, 1)$ est dite matrice colonne. Une matrice $(1, n)$ est dite une matrice ligne. Une matrice $(n, n)$ est dite une matrice carrée d'ordre $n$.
 
-On appelle transposée de $A$ (et on note $A^t$ ou $A'$), la matrice dont
-les lignes sont les colonnes de $A$, et dont les colonnes sont les
-lignes de $A$.
+On appelle transposée de $A$ (et on note $A^t$ ou $A'$), la matrice dont les lignes sont les colonnes de $A$, et dont les colonnes sont les lignes de $A$.
 
 \textcolor{green!70!black}{Exemple :} $$
 A =
@@ -84,8 +76,7 @@ $$
 
 ## Matrices usuelles
 
-Une matrice carrée d'ordre $n$ est dite diagonale lorsque, pour tout
-$i \neq j$, on a $a_{ij} = 0$ : $$
+Une matrice carrée d'ordre $n$ est dite diagonale lorsque, pour tout $i \neq j$, on a $a_{ij} = 0$ : $$
 A =
 \begin{bmatrix}
 -2 & 0 & 0 \\
@@ -94,8 +85,7 @@ A =
 \end{bmatrix}
 $$
 
-La matrice unité $I_n$ est la matrice diagonale telle que
-$\forall i = 1, \ldots, n$, $a_{ii} = 1$ : $$
+La matrice unité $I_n$ est la matrice diagonale telle que $\forall i = 1, \ldots, n$, $a_{ii} = 1$ : $$
 I_3 =
 \begin{bmatrix}
 1 & 0 & 0 \\
@@ -106,27 +96,26 @@ $$
 
 ## Opérations de base
 
-Soient $A$ et $B$ deux matrices de même taille $(m, n)$ de termes
-généraux respectifs $a_{ij}$ et $b_{ij}$, et $\lambda$ un nombre réel.
+Soient $A$ et $B$ deux matrices de même taille $(m, n)$ de termes généraux respectifs $a_{ij}$ et $b_{ij}$, et $\lambda$ un nombre réel.
 
 $A = B$ si et seulement si $a_{ij} = b_{ij}$ pour tous $i,j$.
 
 La somme de $A$ et $B$ est la matrice de terme général $a_{ij} + b_{ij}$
-: $$
-A + B =
-\begin{bmatrix}
-5 + (-4) & 2 + 1 \\
-6 + 1 & 1 + (-3)
-\end{bmatrix}
-=
-\begin{bmatrix}
-1 & 3 \\
-7 & -2
-\end{bmatrix}
-$$
 
-Le produit de $A$ par $\lambda$ est la matrice de terme général
-$\lambda a_{ij}$ : $$
+:   $$
+    A + B =
+    \begin{bmatrix}
+    5 + (-4) & 2 + 1 \\
+    6 + 1 & 1 + (-3)
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    1 & 3 \\
+    7 & -2
+    \end{bmatrix}
+    $$
+
+Le produit de $A$ par $\lambda$ est la matrice de terme général $\lambda a_{ij}$ : $$
 \lambda A =
 3 \times
 \begin{bmatrix}
@@ -170,12 +159,7 @@ $$
 
 ## Multiplication matricielle
 
-Le produit de matrices A et B (noté $AB$) n'est défini que si le nombre
-de colonnes de $A$ est égal au nombre de lignes de $B$. C'est-à-dire $A$
-doit être de taille $(m, p)$ et $B$ de taille $(p, n)$. Alors $AB$ est
-de taille $(m, n)$. De plus, soient $a_{ij}$ et $b_{ij}$ les termes
-généraux respectifs de $A$ et $B$, alors le terme général de $C$ = $AB$
-est $c_{ij}$ défini par : $$
+Le produit de matrices A et B (noté $AB$) n'est défini que si le nombre de colonnes de $A$ est égal au nombre de lignes de $B$. C'est-à-dire $A$ doit être de taille $(m, p)$ et $B$ de taille $(p, n)$. Alors $AB$ est de taille $(m, n)$. De plus, soient $a_{ij}$ et $b_{ij}$ les termes généraux respectifs de $A$ et $B$, alors le terme général de $C$ = $AB$ est $c_{ij}$ défini par : $$
 c_{ij} = \sum_{k=1}^{p} a_{ik} b_{kj}
 $$ \textcolor{green!70!black}{Exemple : } $$A =
 \begin{bmatrix}
@@ -188,18 +172,15 @@ B = \begin{bmatrix}
 -1 & 5 \\
 1 & 2 \\
 3 & 4
-\end{bmatrix}$$ Alors, la matrice $C = AB$ est donnée par :
-$$C = \begin{bmatrix}
+\end{bmatrix}$$ Alors, la matrice $C = AB$ est donnée par : $$C = \begin{bmatrix}
 -1 & 10 \\
 33 & 29 \\
 0 & 33
 \end{bmatrix}$$
 
-En effet, l'élément qui se trouve au croisement de la i-ème ligne et la
-j-ème colonne est : $$c_{ij} = \sum_{k=1}^{p} a_{ik} b_{kj}$$
+En effet, l'élément qui se trouve au croisement de la i-ème ligne et la j-ème colonne est : $$c_{ij} = \sum_{k=1}^{p} a_{ik} b_{kj}$$
 
-Par exemple,
-$$c_{2,1} = (-3) \times (-1) + 6 \times 1 + 8 \times 3 = 33$$
+Par exemple, $$c_{2,1} = (-3) \times (-1) + 6 \times 1 + 8 \times 3 = 33$$
 
 \textbf{\textcolor{red}{Le produit matriciel n’est pas commutatif.}}
 
@@ -217,8 +198,7 @@ $$
 
 Si A est une matrice carrée d'ordre n, alors $$A I_n = I_n A = A$$
 
-Le produit de deux matrices peut être nul sans que l'une des deux
-matrices ne soit la matrice nulle, par exemple : $$
+Le produit de deux matrices peut être nul sans que l'une des deux matrices ne soit la matrice nulle, par exemple : $$
 \begin{bmatrix}
 1 & 2 \\
 2 & 4
@@ -231,17 +211,13 @@ $$
 
 ## Inverse
 
-Une matrice carrée $A$ d'ordre $n$ est dite inversible lorsqu'il existe
-une matrice $B$ telle que : $$ A B = B A = I_n $$ $B$ est alors notée
-$A^{-1}$, l'inverse de $A$.
+Une matrice carrée $A$ d'ordre $n$ est dite inversible lorsqu'il existe une matrice $B$ telle que : $$ A B = B A = I_n $$ $B$ est alors notée $A^{-1}$, l'inverse de $A$.
 
 \newpage
 
 ## Systèmes linéaires
 
-Grâce au produit matriciel, on peut représenter un système linéaire par
-une équation matricielle. Soit le système linéaire de $n$ équations et
-$p$ inconnues :
+Grâce au produit matriciel, on peut représenter un système linéaire par une équation matricielle. Soit le système linéaire de $n$ équations et $p$ inconnues :
 
 $$
 \begin{cases}
@@ -277,60 +253,44 @@ b_n
 
 ## Déterminant
 
-Soit $A = (a_{ij})$ une matrice carrée d'ordre 2. Le déterminant de $A$
-est le réel noté $\text{det}(A)$ tel que : $$
+Soit $A = (a_{ij})$ une matrice carrée d'ordre 2. Le déterminant de $A$ est le réel noté $\text{det}(A)$ tel que : $$
 \text{det}(A) = \begin{vmatrix}
 a_{11} & a_{12} \\
 a_{21} & a_{22}
 \end{vmatrix} = a_{11}a_{22} - a_{12}a_{21}
 $$
 
-Soient $A = (a_{ij})$ et $B = (b_{ij})$ deux matrices carrées d'ordre
-$n$ et $\lambda \in \mathbb{R}$. On a les propriétés suivantes :
+Soient $A = (a_{ij})$ et $B = (b_{ij})$ deux matrices carrées d'ordre $n$ et $\lambda \in \mathbb{R}$. On a les propriétés suivantes :
 
 -   $\text{det}(AB) = \text{det}(A) \cdot \text{det}(B) = \text{det}(BA)$
 -   $\text{det}(A^T) = \text{det}(A)$
 -   $\text{det}(\lambda A) = \lambda^n \cdot \text{det}(A)$
--   Si $A$ est diagonale, alors
-    $\text{det}(A) = a_{11}a_{22}\ldots a_{nn}$
+-   Si $A$ est diagonale, alors $\text{det}(A) = a_{11}a_{22}\ldots a_{nn}$
 -   $\text{det}(I_n) = 1$
 -   $A$ est inversible si et seulement si $\text{det}(A) \neq 0$
--   Si $\text{det}(A) \neq 0$, alors
-    $\text{det}(A^{-1}) = \frac{1}{\text{det}(A)}$
+-   Si $\text{det}(A) \neq 0$, alors $\text{det}(A^{-1}) = \frac{1}{\text{det}(A)}$
 
 ## Diagonalisation
 
 \textcolor{green!70!black}{Valeur propre / Vecteur propre}
 
-Une valeur propre de $A$ est un scalaire $\lambda$ tel qu'il existe un
-vecteur colonne non nul $V$ vérifiant : $AV = \lambda V$. $V$ est alors
-appelé vecteur propre de $A$ associé à $\lambda$.
+Une valeur propre de $A$ est un scalaire $\lambda$ tel qu'il existe un vecteur colonne non nul $V$ vérifiant : $AV = \lambda V$. $V$ est alors appelé vecteur propre de $A$ associé à $\lambda$.
 
 \textcolor{green!70!black}{Diagonalisation}
 
-Une matrice carrée $A$ d'ordre $n$ est diagonalisable lorsqu'il existe
-une matrice diagonale $D$ et une matrice inversible $P$ telles que :
-$A = PDP^{-1}$. $D$ est constituée des valeurs propres de $A$. $P$ est
-obtenue par la concaténation des vecteurs propres de $A$. Si les valeurs
-propres de $A$ sont distinctes, alors $A$ est diagonalisable (réciproque
-fausse).
+Une matrice carrée $A$ d'ordre $n$ est diagonalisable lorsqu'il existe une matrice diagonale $D$ et une matrice inversible $P$ telles que : $A = PDP^{-1}$. $D$ est constituée des valeurs propres de $A$. $P$ est obtenue par la concaténation des vecteurs propres de $A$. Si les valeurs propres de $A$ sont distinctes, alors $A$ est diagonalisable (réciproque fausse).
 
 ## Matrice symétrique
 
-Une matrice carrée $A$ d'ordre $n$ est symétrique lorsque $A^T = A$. Si
-$A$ est symétrique, alors :
+Une matrice carrée $A$ d'ordre $n$ est symétrique lorsque $A^T = A$. Si $A$ est symétrique, alors :
 
 -   $A$ a des valeurs propres réelles.
 -   $A$ est diagonalisable.
--   Il existe une matrice $P$ telle que $P^{-1} = P^T$ et
-    $A = PDP^{-1}$.
+-   Il existe une matrice $P$ telle que $P^{-1} = P^T$ et $A = PDP^{-1}$.
 
 ## Produit scalaire
 
-Soit $x$, $y$, $z$ trois vecteurs de $\mathbb{R}^n$ et $\lambda$ un
-scalaire. On définit par produit scalaire (qu'on note
-$\langle \cdot, \cdot \rangle$) toute application qui vérifie les
-propriétés suivantes :
+Soit $x$, $y$, $z$ trois vecteurs de $\mathbb{R}^n$ et $\lambda$ un scalaire. On définit par produit scalaire (qu'on note $\langle \cdot, \cdot \rangle$) toute application qui vérifie les propriétés suivantes :
 
 -   $\langle x + \lambda y, z \rangle = \langle x, z \rangle + \lambda \langle y, z \rangle$
 -   $\langle x, y + \lambda z \rangle = \langle x, z \rangle + \lambda \langle x, z \rangle$
@@ -344,12 +304,9 @@ $$
 
 ## Norme
 
-On appelle norme associée à un produit scalaire le réel
-$\|x\| = \sqrt{\langle x, x \rangle}$. Elle vérifie les propriétés
-suivantes :
+On appelle norme associée à un produit scalaire le réel $\|x\| = \sqrt{\langle x, x \rangle}$. Elle vérifie les propriétés suivantes :
 
--   $|\langle x, y \rangle| \leq \|x\| \cdot \|y\|$ (Inégalité de
-    Cauchy-Schwartz)
+-   $|\langle x, y \rangle| \leq \|x\| \cdot \|y\|$ (Inégalité de Cauchy-Schwartz)
 -   $\|x + y\| \leq \|x\| + \|y\|$ (Inégalité triangulaire)
 -   $\|x\| \geq 0$ avec égalité si $x = 0$
 -   $\|\lambda x\| = |\lambda| \cdot \|x\|$
@@ -359,50 +316,34 @@ Un vecteur est dit unitaire ou normé si $\|x\| = 1$
 
 ## Orthogonalité
 
-Deux vecteurs $x$ et $y$ sont dits orthogonaux si
-$\langle x, y \rangle = 0$. On note $x \perp y$.
+Deux vecteurs $x$ et $y$ sont dits orthogonaux si $\langle x, y \rangle = 0$. On note $x \perp y$.
 
-Une famille de vecteurs $\{x_i\}$ est dite orthogonale si tous ses
-vecteurs sont deux à deux orthogonaux. Toute famille orthogonale
-$\{x_i\}_{i=1}^p$ vérifie le théorème de Pythagore : $$
+Une famille de vecteurs $\{x_i\}$ est dite orthogonale si tous ses vecteurs sont deux à deux orthogonaux. Toute famille orthogonale $\{x_i\}_{i=1}^p$ vérifie le théorème de Pythagore : $$
 \left\|\sum_{i=1}^n x_i\right\|^2 = \sum_{i=1}^n \|x_i\|^2
 $$
 
-Soit $E$ un espace muni d'un produit scalaire et $X$ une partie de $E$.
-On appelle orthogonal de $X$ et on note $X^\perp$ l'ensemble :
-$X^\perp = \{y \in E \,|\, \forall x \in X, \langle x, y \rangle = 0\}$.
+Soit $E$ un espace muni d'un produit scalaire et $X$ une partie de $E$. On appelle orthogonal de $X$ et on note $X^\perp$ l'ensemble : $X^\perp = \{y \in E \,|\, \forall x \in X, \langle x, y \rangle = 0\}$.
 
-On dit que $\{e_i\}_{i=1}^p$ est une base orthonormée de $E$ si et
-seulement si : - Si $a_1e_1 + a_2e_2 + \ldots + a_ne_n = 0$, alors
-$a_i = 0$ pour tout $i \in \{1, \ldots, n\}$.\
-- Pour tout $x \in E$, il existe $a_1, a_2, \ldots, a_n \in \mathbb{R}$
-tels que $x = a_1e_1 + a_2e_2 + \ldots + a_ne_n$.\
+On dit que $\{e_i\}_{i=1}^p$ est une base orthonormée de $E$ si et seulement si : - Si $a_1e_1 + a_2e_2 + \ldots + a_ne_n = 0$, alors $a_i = 0$ pour tout $i \in \{1, \ldots, n\}$.\
+- Pour tout $x \in E$, il existe $a_1, a_2, \ldots, a_n \in \mathbb{R}$ tels que $x = a_1e_1 + a_2e_2 + \ldots + a_ne_n$.\
 - $e_i$ est orthogonal à $e_j$ pour tout $i \neq j$.\
 - Pour tout $i \in \{1, \ldots, n\}$, $\|e_i\| = 1$.
 
 ## Projection orthogonale
 
-Soit $x$ un vecteur d'un espace muni d'un produit scalaire $E$. Soit $F$
-un sous-espace vectoriel de $E$, $x$ s'écrit de façon unique sous la
-forme : $x = f + f^\perp$ où $f \in F$ et $f^\perp \in F^\perp$. On dit
-que $f$ est le projeté orthogonal de $x$ sur $F$ et on note
-$f = P_F(x)$.
+Soit $x$ un vecteur d'un espace muni d'un produit scalaire $E$. Soit $F$ un sous-espace vectoriel de $E$, $x$ s'écrit de façon unique sous la forme : $x = f + f^\perp$ où $f \in F$ et $f^\perp \in F^\perp$. On dit que $f$ est le projeté orthogonal de $x$ sur $F$ et on note $f = P_F(x)$.
 
-Pour $x$ et $y$ de $E$, on a
-$\langle P_F(x),y\rangle = \langle x, P_F(y)\>$.
+Pour $x$ et $y$ de $E$, on a $\langle P_F(x),y\rangle = \langle x, P_F(y)\>$.
 
-Si $(e_1, e_2, \ldots, e_n)$ est une base orthonormée, alors :
-$P_F(x) = \sum_{i=1}^n \langle x, e_i \rangle e_i$
+Si $(e_1, e_2, \ldots, e_n)$ est une base orthonormée, alors : $P_F(x) = \sum_{i=1}^n \langle x, e_i \rangle e_i$
 
 Notons que : $\|x - P_F(x)\| = \inf_{f \in F} \|x - f\|$
 
 ## Matrice orthogonale
 
-Soit $M$ une matrice carrée d'ordre $n$. On dit que $M$ est une matrice
-orthogonale si elle vérifie : $$M \cdot M^T = M^T \cdot M = I_n$$
+Soit $M$ une matrice carrée d'ordre $n$. On dit que $M$ est une matrice orthogonale si elle vérifie : $$M \cdot M^T = M^T \cdot M = I_n$$
 
-Le déterminant d'une matrice orthogonale est égal à $\pm 1$. L'ensemble
-des valeurs propres de $M$ est inclus dans l'ensemble $\{0, 1\}$.
+Le déterminant d'une matrice orthogonale est égal à $\pm 1$. L'ensemble des valeurs propres de $M$ est inclus dans l'ensemble $\{0, 1\}$.
 
 \newpage
 
@@ -411,39 +352,25 @@ des valeurs propres de $M$ est inclus dans l'ensemble $\{0, 1\}$.
 ## Quelques définitions
 
 -   On appelle épreuve $E$ toute expérience probabiliste.
--   On appelle univers de $E$ l'ensemble, généralement noté $\Omega$, de
-    tous les résultats possibles de l'épreuve $E$ (appelés "événements
-    élémentaires").
+-   On appelle univers de $E$ l'ensemble, généralement noté $\Omega$, de tous les résultats possibles de l'épreuve $E$ (appelés "événements élémentaires").
 
-Lancer une paire de dés équilibrés et en retenir la somme est une
-épreuve. $\Omega = \{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}$ \hspace{1cm}
-![](images/deux_des.png){width="5%" fig-align="center"}
+Lancer une paire de dés équilibrés et en retenir la somme est une épreuve. $\Omega = \{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}$ \hspace{1cm} ![](images/deux_des.png){width="5%" fig-align="center"}
 
 ## Evénements
 
 Un événement est un sous-ensemble de $\Omega$.
 
--   L'intersection de $A$ et $B$, notée $A \cap B$, est un événement. Il
-    est réalisé uniquement si $A$ et $B$ se produisent.
--   La réunion de $A$ et $B$, notée $A \cup B$, est un événement. Il est
-    réalisé si $A$ ou $B$ se produit. Deux événements remarquables sont
-    à retenir :
+-   L'intersection de $A$ et $B$, notée $A \cap B$, est un événement. Il est réalisé uniquement si $A$ et $B$ se produisent.
+-   La réunion de $A$ et $B$, notée $A \cup B$, est un événement. Il est réalisé si $A$ ou $B$ se produit. Deux événements remarquables sont à retenir :
     -   L'événement certain $\Omega$ ;
     -   L'événement impossible $\emptyset$ ;
--   Tous les éléments qui n'appartiennent pas à $A$ appartiennent à un
-    événement que l'on appelle le complémentaire de $A$. On le note
-    $\overline{A}$ ou $A^C$.
--   On dit que deux événements $A$ et $B$ sont incompatibles s'ils ne
-    peuvent pas être réalisés en même temps.
+-   Tous les éléments qui n'appartiennent pas à $A$ appartiennent à un événement que l'on appelle le complémentaire de $A$. On le note $\overline{A}$ ou $A^C$.
+-   On dit que deux événements $A$ et $B$ sont incompatibles s'ils ne peuvent pas être réalisés en même temps.
 
-Si $A$, $B$ et $C$ sont des événements de $\Omega$, les propriétés
-suivantes sont toujours vérifiées :
+Si $A$, $B$ et $C$ sont des événements de $\Omega$, les propriétés suivantes sont toujours vérifiées :
 
 -   $A \cup \overline{A} = \Omega$ et $A \cap \overline{A} = \emptyset$
--   $\overline{\overline{A} \cap \overline{B}} = \overline{A} \cup \overline{B}$
-    et
-    $\overline{\overline{A} \cup \overline{B}} = \overline{A} \cap \overline{B}$
-    (lois de De Morgan)
+-   $\overline{\overline{A} \cap \overline{B}} = \overline{A} \cup \overline{B}$ et $\overline{\overline{A} \cup \overline{B}} = \overline{A} \cap \overline{B}$ (lois de De Morgan)
 -   $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
 -   $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
 
@@ -451,20 +378,16 @@ suivantes sont toujours vérifiées :
 
 La famille d'événements forme une partition de $\Omega$ si : $$
 \bigcup_{i \in I} A_i = \Omega \quad \text{et} \quad A_i \cap A_j = \emptyset \text{ pour tout } i \neq j.
-$$ Une partition remarquable est la famille qui contient l'événement $A$
-et son complémentaire.
+$$ Une partition remarquable est la famille qui contient l'événement $A$ et son complémentaire.
 
 ## Tribus et boréliens
 
-![](images/venn_diagrams.jpg){width="50%" fig-align="center"}
-![](images/AnBnC.png){width="50%" fig-align="center"}
+![](images/venn_diagrams.jpg){width="50%" fig-align="center"} ![](images/AnBnC.png){width="50%" fig-align="center"}
 
 \textcolor{green!70!black}{Comment pouvons-nous qualifier l'ensemble des événements ?}
 
-Une tribu est une famille $T$ de parties de l'ensemble $\Omega$ qui
-vérifie les propriétés suivantes : - $\Omega \in T$\
-- Si $(A_n)$ est une suite dénombrable d'éléments de $T$, alors
-$\bigcup A_n \in T$\
+Une tribu est une famille $T$ de parties de l'ensemble $\Omega$ qui vérifie les propriétés suivantes : - $\Omega \in T$\
+- Si $(A_n)$ est une suite dénombrable d'éléments de $T$, alors $\bigcup A_n \in T$\
 --- Si $A$ est un élément de $T$, alors son complémentaire l'est aussi.
 
 De plus, si $T$ est une tribu, alors : - $\emptyset \in T$\
@@ -472,21 +395,16 @@ De plus, si $T$ est une tribu, alors : - $\emptyset \in T$\
 
 \textcolor{green!70!black}{Exemples de tribus :}
 
-Pour le cas discret, on considère l'expérience "Lancer une pièce de
-monnaie équilibrée".\
+Pour le cas discret, on considère l'expérience "Lancer une pièce de monnaie équilibrée".\
 On notera : $P$ pour "PILE apparaît" et $F$ pour "FACE apparaît".\
-Dans ce cas, l'univers est l'ensemble $\{P, F\}$ et
-$T = \{\Omega, \emptyset, P, F\}$ est une tribu.\
+Dans ce cas, l'univers est l'ensemble $\{P, F\}$ et $T = \{\Omega, \emptyset, P, F\}$ est une tribu.\
 En général, l'ensemble des parties est une tribu classique.
 
-Pour le cas continu, les intervalles du type $[a, +\infty[$,
-$]a, +\infty[$, $]-\infty, a[$, $]-\infty, a]$ sont des tribus. Nous les
-appelons DES BORÉLIENS.
+Pour le cas continu, les intervalles du type $[a, +\infty[$, $]a, +\infty[$, $]-\infty, a[$, $]-\infty, a]$ sont des tribus. Nous les appelons DES BORÉLIENS.
 
 \textcolor{green!70!black}{Propriétés :}
 
-Soient $A$ et $B$ deux événements. Les propriétés suivantes sont
-toujours vraies :
+Soient $A$ et $B$ deux événements. Les propriétés suivantes sont toujours vraies :
 
 1.  $P(A^C) = 1 - P(A)$\
 2.  $P(B) = P(A \cap B) + P(A^C \cap B)$\
@@ -494,8 +412,7 @@ toujours vraies :
 4.  $0 \leq P(A) \leq 1$\
 5.  $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
 
-De plus, en considérant une suite $(A_k)$ d'événements, on a les
-relations suivantes : $$
+De plus, en considérant une suite $(A_k)$ d'événements, on a les relations suivantes : $$
 \begin{aligned}
 P\left(\bigcup A_k\right) & = \lim_{n \to +\infty} P\left(\bigcup_{k=1}^n A_k\right) \\
 P\left(\bigcap A_k\right) & = \lim_{n \to +\infty} P\left(\bigcap_{k=1}^n A_k\right) \\
@@ -509,27 +426,17 @@ $$
 
 ## Mesure
 
-Soit $E$ un ensemble muni d'une tribu $T$. On appelle mesure toute
-application $m : T \rightarrow \mathbb{R}^+$ telle que : -
-$m(\emptyset) = 0$ - Si $(A_n)$ est une suite d'éléments de $T$ deux à
-deux disjoints alors : $$m\left(\bigcup_n A_n\right) = \sum_n m(A_n).$$
+Soit $E$ un ensemble muni d'une tribu $T$. On appelle mesure toute application $m : T \rightarrow \mathbb{R}^+$ telle que : - $m(\emptyset) = 0$ - Si $(A_n)$ est une suite d'éléments de $T$ deux à deux disjoints alors : $$m\left(\bigcup_n A_n\right) = \sum_n m(A_n).$$
 
 ## Probabilités
 
-Soit $E$ un ensemble muni d'une tribu $T$. On appelle probabilité toute
-application $P : T \rightarrow \mathbb{R}^+$ telle que : -
-$P(\emptyset) = 0$ - Si $(A_n)$ est une suite d'éléments de $T$ deux à
-deux disjoints alors : $$P\left(\bigcup_n A_n\right) = \sum_n P(A_n).$$
+Soit $E$ un ensemble muni d'une tribu $T$. On appelle probabilité toute application $P : T \rightarrow \mathbb{R}^+$ telle que : - $P(\emptyset) = 0$ - Si $(A_n)$ est une suite d'éléments de $T$ deux à deux disjoints alors : $$P\left(\bigcup_n A_n\right) = \sum_n P(A_n).$$
 
 ## Probabilités conditionnelles
 
-En théorie des probabilités, nous nous intéressons souvent au
-comportement d'un aléa, sachant qu'un autre événement est déjà passé.
-C'est ce que nous appelons Les Probabilités Conditionnelles.
+En théorie des probabilités, nous nous intéressons souvent au comportement d'un aléa, sachant qu'un autre événement est déjà passé. C'est ce que nous appelons Les Probabilités Conditionnelles.
 
-Considérant deux événements de probabilité non nulle, $A$ et $B$, la
-probabilité conditionnelle de $A$ sachant que $B$ est réalisé
-(couramment dit $A$ sachant $B$) est donnée par : $$
+Considérant deux événements de probabilité non nulle, $A$ et $B$, la probabilité conditionnelle de $A$ sachant que $B$ est réalisé (couramment dit $A$ sachant $B$) est donnée par : $$
 P(A|B) = \frac{P(A \cap B)}{P(B)}
 $$
 
@@ -537,8 +444,7 @@ Par commutativité de l'intersection, nous avons : $$
 P(A \cap B) = P(B \cap A)
 $$
 
-En utilisant la formule ci-dessus, nous pouvons également exprimer la
-probabilité conditionnelle de $B$ sachant $A$ : $$
+En utilisant la formule ci-dessus, nous pouvons également exprimer la probabilité conditionnelle de $B$ sachant $A$ : $$
 P(B|A) = \frac{P(A|B) \cdot P(B)}{P(A)}
 $$
 
@@ -546,50 +452,27 @@ C'est ce que nous appelons \textcolor{red}{LA FORMULE DE BAYES}.
 
 ## Indépendance
 
-Deux événements $A$ et $B$ sont dits indépendants si et seulement si :
-$$P(A \cap B) = P(A) \cdot P(B)$$ En termes courants, deux événements
-sont indépendants si le résultat de l'un n'influence aucunement
-l'aboutissement de l'autre. Sous condition d'indépendance de $A$ et $B$,
-la notion de la probabilité conditionnelle tombe à l'eau, car les
-événements évoluent l'un sans se soucier de l'autre. Ceci se traduit par
-: $$P(A|B) = P(A)$$ $$P(B|A) = P(B)$$
+Deux événements $A$ et $B$ sont dits indépendants si et seulement si : $$P(A \cap B) = P(A) \cdot P(B)$$ En termes courants, deux événements sont indépendants si le résultat de l'un n'influence aucunement l'aboutissement de l'autre. Sous condition d'indépendance de $A$ et $B$, la notion de la probabilité conditionnelle tombe à l'eau, car les événements évoluent l'un sans se soucier de l'autre. Ceci se traduit par : $$P(A|B) = P(A)$$ $$P(B|A) = P(B)$$
 
-Notons que si $A$ est indépendant de $B$, il le sera par rapport à son
-complémentaire également, et vice versa. En général, pour une suite
-$(A_n)$ d'événements indépendants, on a :
-$$P\left(\bigcap A_i\right) = \prod P(A_i) = P(A_1) \cdot \ldots \cdot P(A_n)$$
-Cette formule est largement utilisée en statistique.
+Notons que si $A$ est indépendant de $B$, il le sera par rapport à son complémentaire également, et vice versa. En général, pour une suite $(A_n)$ d'événements indépendants, on a : $$P\left(\bigcap A_i\right) = \prod P(A_i) = P(A_1) \cdot \ldots \cdot P(A_n)$$ Cette formule est largement utilisée en statistique.
 
 \textcolor{red}{NE PAS CONFONDRE INDÉPENDANCE ET INCOMPATIBILITÉ DES ÉVÉNEMENTS}
 
 ## Variable aléatoire
 
-Une variable aléatoire est un nombre qui dépend du résultat d'une
-expérience aléatoire. Chaque exécution de l'expérience génère une
-réalisation de la variable aléatoire.
+Une variable aléatoire est un nombre qui dépend du résultat d'une expérience aléatoire. Chaque exécution de l'expérience génère une réalisation de la variable aléatoire.
 
-Mathématiquement, on définit une variable aléatoire X comme une fonction
-$X : T \rightarrow \mathbb{R}$ qui associe à chaque événement s, un réel
-$X(s)$.
+Mathématiquement, on définit une variable aléatoire X comme une fonction $X : T \rightarrow \mathbb{R}$ qui associe à chaque événement s, un réel $X(s)$.
 
-Par exemple, dans une queue pour la caisse d'un magasin, le nombre de
-clients est une variable aléatoire. La durée de traitement de chaque
-requête aussi. Remarquons que la première est un nombre entier. On dit
-qu'elle est à support discret. Alors que la deuxième est une durée (un
-nombre réel). On dit qu'elle est à support continu.
+Par exemple, dans une queue pour la caisse d'un magasin, le nombre de clients est une variable aléatoire. La durée de traitement de chaque requête aussi. Remarquons que la première est un nombre entier. On dit qu'elle est à support discret. Alors que la deuxième est une durée (un nombre réel). On dit qu'elle est à support continu.
 
 \textcolor{green!70!black}{Qu’est- ce qui caractérise une variable aléatoire ?}
 
 ## Fonction de répartition
 
-Une variable aléatoire traduit le résultat d'une expérience aléatoire en
-nombre réel. La fonction de répartition transporte le calcul des
-probabilités concernant les réalisations de la variable aléatoire. C'est
-la fonction définie par : $$F_X(x) = P(X \leq x)$$
-\textcolor{green!70!black}{Propriétés :}
+Une variable aléatoire traduit le résultat d'une expérience aléatoire en nombre réel. La fonction de répartition transporte le calcul des probabilités concernant les réalisations de la variable aléatoire. C'est la fonction définie par : $$F_X(x) = P(X \leq x)$$ \textcolor{green!70!black}{Propriétés :}
 
-Pour tout $x$, $0 \leq F_X(x) \leq 1$ $F_X$ est une fonction croissante.
-$\lim_{x \to -\infty} F_X(x) = 0$ et $\lim_{x \to \infty} F_X(x) = 1$
+Pour tout $x$, $0 \leq F_X(x) \leq 1$ $F_X$ est une fonction croissante. $\lim_{x \to -\infty} F_X(x) = 0$ et $\lim_{x \to \infty} F_X(x) = 1$
 
 ![](images/fonction_repartition.png){width="50%" fig-align="center"}
 
@@ -597,14 +480,11 @@ $\lim_{x \to -\infty} F_X(x) = 0$ et $\lim_{x \to \infty} F_X(x) = 1$
 
 \textcolor{green!70!black}{CAS DISCRET : Probabilité ponctuelle}
 
-La probabilité ponctuelle est la fonction qui décrit les sauts de la
-fonction de répartition :
-$$P(X = k) = P(X \leq k) - P(X \leq k - 1) = p_k$$ $$\sum p_i = 1$$
+La probabilité ponctuelle est la fonction qui décrit les sauts de la fonction de répartition : $$P(X = k) = P(X \leq k) - P(X \leq k - 1) = p_k$$ $$\sum p_i = 1$$
 
 \textcolor{green!70!black}{CAS CONTINU : densité de probabilité}
 
-La densité est la fonction qui décrit les variations de la fonction de
-répartition : $$f(x) = \frac{dF_X}{dx}(x)$$ $$\int f(x) dx = 1$$
+La densité est la fonction qui décrit les variations de la fonction de répartition : $$f(x) = \frac{dF_X}{dx}(x)$$ $$\int f(x) dx = 1$$
 
 \newpage
 
@@ -614,67 +494,43 @@ répartition : $$f(x) = \frac{dF_X}{dx}(x)$$ $$\int f(x) dx = 1$$
 
 \textcolor{green!70!black}{ESPÉRANCE}
 
-L'espérance d'une variable aléatoire est sa valeur attendue. C'est une
-mesure de localisation de la distribution.
+L'espérance d'une variable aléatoire est sa valeur attendue. C'est une mesure de localisation de la distribution.
 
-Dans le cas discret : $$E(X) = \sum k \cdot P(X = k)$$
-$$k \in X(\Omega)$$ Alors que dans le cas continu :
-$$E(X) = \int x \cdot f_X(x) \, dx$$ $$x \in X(\Omega)$$
+Dans le cas discret : $$E(X) = \sum k \cdot P(X = k)$$ $$k \in X(\Omega)$$ Alors que dans le cas continu : $$E(X) = \int x \cdot f_X(x) \, dx$$ $$x \in X(\Omega)$$
 
-\textcolor{green!70!black}{THÉORÈME DE TRANSFERT}
-$$E(g(X)) = \sum g(k) \cdot P(X = k)$$ $$\forall k \in X(\Omega)$$
-$$E(g(X)) = \int g(x) \cdot f_X(x) \, dx$$ $$\forall x \in X(\Omega)$$
-\textcolor{green!70!black}{VARIANCE}
+\textcolor{green!70!black}{THÉORÈME DE TRANSFERT} $$E(g(X)) = \sum g(k) \cdot P(X = k)$$ $$\forall k \in X(\Omega)$$ $$E(g(X)) = \int g(x) \cdot f_X(x) \, dx$$ $$\forall x \in X(\Omega)$$ \textcolor{green!70!black}{VARIANCE}
 
-La variance d'une variable aléatoire décrit la dispersion de la variable
-aléatoire autour de sa valeur moyenne (son espérance).
+La variance d'une variable aléatoire décrit la dispersion de la variable aléatoire autour de sa valeur moyenne (son espérance).
 
-Elle est définie par : $$Var(X) = E(X^2) - (E(X))^2 = E((x - E(X))^2)$$
-Sa racine carrée est appelée écart-type et notée généralement :
-$$\sigma(X) = \sqrt{Var(X)}$$
+Elle est définie par : $$Var(X) = E(X^2) - (E(X))^2 = E((x - E(X))^2)$$ Sa racine carrée est appelée écart-type et notée généralement : $$\sigma(X) = \sqrt{Var(X)}$$
 
 \newpage
 
 \textcolor{green!70!black}{CENTRAGE ET RÉDUCTION}
 
-Le centrage consiste à localiser la distribution autour de l'origine et
-la réduction consiste à normaliser la dispersion. La technique est
-simple : $$Y = \frac{X - E(X)}{\sigma(X)}$$
+Le centrage consiste à localiser la distribution autour de l'origine et la réduction consiste à normaliser la dispersion. La technique est simple : $$Y = \frac{X - E(X)}{\sigma(X)}$$
 
 \textcolor{green!70!black}{MOMENTS D’ORDRE r}
 
-Le moment d'ordre r est défini par : $$\mu_r = E(X^r)$$ Le moment centré
-d'ordre r est défini ainsi : $$\mũ_r = E((X - E(X))^r)$$
+Le moment d'ordre r est défini par : $$\mu_r = E(X^r)$$ Le moment centré d'ordre r est défini ainsi : $$\mũ_r = E((X - E(X))^r)$$
 
 ## Couples aléatoires
 
-La fonction conjointe $$F_{X, Y}(x, y) = P(X \leq x \cap Y \leq y)$$ est
-appelée la distribution conjointe de X et Y.
+La fonction conjointe $$F_{X, Y}(x, y) = P(X \leq x \cap Y \leq y)$$ est appelée la distribution conjointe de X et Y.
 
-Dans le cas continu, la fonction définie par :
-$$f_{X, Y}(x, y) = \frac{\partial^2 F_{X, Y}(x, y)}{\partial x \partial y}$$
-est la densité conjointe du couple (X, Y). On a donc :
-$$F_{X, Y}(x, y) = \int \int f_{X, Y}(t, u) \, dt \, du, \text{ où } -\infty < x, y < +\infty,$$
+Dans le cas continu, la fonction définie par : $$f_{X, Y}(x, y) = \frac{\partial^2 F_{X, Y}(x, y)}{\partial x \partial y}$$ est la densité conjointe du couple (X, Y). On a donc : $$F_{X, Y}(x, y) = \int \int f_{X, Y}(t, u) \, dt \, du, \text{ où } -\infty < x, y < +\infty,$$
 
-Dans le cas discret, on définit la fonction de probabilité conjointe :
-$$P(X = x_i, Y = y_j) = p_{ij}$$ On a donc :
-$$F_{X, Y}(x, y) = \sum \sum p_{ij}, \text{ où } x_i \leq x \text{ et } y_j \leq y$$
+Dans le cas discret, on définit la fonction de probabilité conjointe : $$P(X = x_i, Y = y_j) = p_{ij}$$ On a donc : $$F_{X, Y}(x, y) = \sum \sum p_{ij}, \text{ où } x_i \leq x \text{ et } y_j \leq y$$
 
 \textcolor{green!70!black}{LOI MARGINALE}
 
-La loi marginale de X est définie comme suit :
-$$f_X(x) = \int f_{X, Y}(x, y) \, dy, \text{ où } -\infty < x < \infty,$$
-dans le cas continu, ou encore :
-$$f_X(x_i) = \sum p_{ij}, \text{ où } j \text{ tel que } y_j \leq y$$
+La loi marginale de X est définie comme suit : $$f_X(x) = \int f_{X, Y}(x, y) \, dy, \text{ où } -\infty < x < \infty,$$ dans le cas continu, ou encore : $$f_X(x_i) = \sum p_{ij}, \text{ où } j \text{ tel que } y_j \leq y$$
 
-Si X et Y sont indépendants, alors :
-$$f_{X, Y}(x, y) = f_X(x) \cdot f_Y(y)$$
+Si X et Y sont indépendants, alors : $$f_{X, Y}(x, y) = f_X(x) \cdot f_Y(y)$$
 
 \textcolor{green!70!black}{COVARIANCE}
 
-La covariance mesure l'intensité de la relation linéaire entre deux
-variables aléatoires X et Y. Elle est définie comme suit :
-$$Cov(X, Y) = E(XY) - E(X) \cdot E(Y)$$
+La covariance mesure l'intensité de la relation linéaire entre deux variables aléatoires X et Y. Elle est définie comme suit : $$Cov(X, Y) = E(XY) - E(X) \cdot E(Y)$$
 
 Si X et Y sont indépendants, alors : $$Cov(X, Y) = 0$$
 
@@ -716,22 +572,17 @@ $$
 
 ## Vecteurs aléatoires
 
-Pour un vecteur aléatoire $$(X_1, X_2, \ldots, X_n)$$, l'espérance est
-toujours linéaire. Pour une suite $$(a_i)_{i \in \{1, \ldots, n\}}$$ de
-réels, on a : $$
+Pour un vecteur aléatoire $$(X_1, X_2, \ldots, X_n)$$, l'espérance est toujours linéaire. Pour une suite $$(a_i)_{i \in \{1, \ldots, n\}}$$ de réels, on a : $$
 \mathbb{E}(a_1X_1 + a_2X_2 + \ldots + a_nX_n) = a_1\mathbb{E}(X_1) + a_2\mathbb{E}(X_2) + \ldots + a_n\mathbb{E}(X_n)
 $$
 
-Si les variables aléatoires $$X_1, X_2, \ldots, X_n$$ sont
-indépendantes, alors la variance de leur somme est égale à la somme de
-leurs variances individuelles : $$
+Si les variables aléatoires $$X_1, X_2, \ldots, X_n$$ sont indépendantes, alors la variance de leur somme est égale à la somme de leurs variances individuelles : $$
 \text{Var}(X_1 + X_2 + \ldots + X_n) = \text{Var}(X_1) + \ldots + \text{Var}(X_n)
 $$
 
 ## Lois usuelles
 
-Ces tableaux récapitulent les lois usuelles que vous pourrez rencontrer
-dans différents cours du master.
+Ces tableaux récapitulent les lois usuelles que vous pourrez rencontrer dans différents cours du master.
 
 ```{=tex}
 \begin{tabular}{|c|c|c|c|c|c|}
@@ -799,10 +650,7 @@ $$\Gamma(x) = \int_0^{\infty} t^{x-1}e^{-t} \, dt \text{ : désigne la fonction 
 
 $$B(x, y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)} \text{ : désigne la fonction Bêta}$$
 
-Nous allons souvent rencontrer les lois grisées dans les Tests
-statistiques. Là encore, connaître les densités ne servirait pas à grand
-chose, mais ceci nous évitera de parler de lois dont nous ne connaissons
-pas la tête.
+Nous allons souvent rencontrer les lois grisées dans les Tests statistiques. Là encore, connaître les densités ne servirait pas à grand chose, mais ceci nous évitera de parler de lois dont nous ne connaissons pas la tête.
 
 \newpage
 
@@ -812,31 +660,21 @@ pas la tête.
 
 \textcolor{green!70!black}{INDEPENDANCE DEUX À DEUX}
 
-Les variables $X_1, \ldots, X_n$ sont deux à deux indépendantes si et
-seulement si : $\forall i \neq j, X_i$ et $X_j$ sont indépendantes.
+Les variables $X_1, \ldots, X_n$ sont deux à deux indépendantes si et seulement si : $\forall i \neq j, X_i$ et $X_j$ sont indépendantes.
 
 \textcolor{green!70!black}{INDEPENDANCE MUTUELLE}
 
-Les variables $X_1, \ldots, X_n$ sont mutuellement indépendantes si et
-seulement si :
-$$P(X_1 = x_1, \ldots, X_n = x_n) = P(X_1 = x_1) \times \ldots \times P(X_n = x_n)$$
+Les variables $X_1, \ldots, X_n$ sont mutuellement indépendantes si et seulement si : $$P(X_1 = x_1, \ldots, X_n = x_n) = P(X_1 = x_1) \times \ldots \times P(X_n = x_n)$$
 
 \textcolor{red}{L'INDÉPENDANCE MUTUELLE IMPLIQUE L'INDÉPENDANCE DEUX À DEUX. LA RÉCIROQUE EST FAUSSE.}
 
-Si $X_1, \ldots, X_n$ sont mutuellement indépendantes, alors pour toute
-famille de fonctions réelles $f_i$, on a :
-$(f_1(X_1), \ldots, f_n(X_n))$ sont indépendantes.
+Si $X_1, \ldots, X_n$ sont mutuellement indépendantes, alors pour toute famille de fonctions réelles $f_i$, on a : $(f_1(X_1), \ldots, f_n(X_n))$ sont indépendantes.
 
 \textbf{ESPÉRANCE ET VARIANCE-COVARIANCE}
 
-Soit $X = (X_1, \ldots, X_n)^T$ un vecteur aléatoire. Dans le cas
-multidimensionnel, l'espérance scalaire est remplacée par un vecteur
-espérance. $$E(X) = (E(X_1), \ldots, E(X_n))^T$$
+Soit $X = (X_1, \ldots, X_n)^T$ un vecteur aléatoire. Dans le cas multidimensionnel, l'espérance scalaire est remplacée par un vecteur espérance. $$E(X) = (E(X_1), \ldots, E(X_n))^T$$
 
-La variance unidimensionnelle est remplacée par la matrice symétrique de
-variance-covariance. Elle contient les variances en diagonale et les
-covariances ailleurs. On la note généralement $\Sigma_X$.
-$$\Sigma_X = \begin{bmatrix}
+La variance unidimensionnelle est remplacée par la matrice symétrique de variance-covariance. Elle contient les variances en diagonale et les covariances ailleurs. On la note généralement $\Sigma_X$. $$\Sigma_X = \begin{bmatrix}
 V(X_1) & \ldots & \text{Cov}(X_1, X_n) \\
 \vdots & \ddots & \vdots \\
 \text{Cov}(X_n, X_1) & \ldots & V(X_n)
@@ -844,59 +682,39 @@ V(X_1) & \ldots & \text{Cov}(X_1, X_n) \\
 
 ## Notions de convergence
 
-Si l'on pense à des données, vues comme réalisation de variables
-aléatoires $X_1, \ldots, X_n$, il serait intéressant de se poser la
-question de savoir comment évolue cette suite lorsque $n$ tend vers
-l'infini.
+Si l'on pense à des données, vues comme réalisation de variables aléatoires $X_1, \ldots, X_n$, il serait intéressant de se poser la question de savoir comment évolue cette suite lorsque $n$ tend vers l'infini.
 
 \textcolor{green!70!black}{Convergence presque sûre}
 
-On dit que $(X_n)$ converge presque sûrement vers $X$ et on note
-$X_n \xrightarrow{\text{p.s.}} X$ si et seulement si :
-$P\left(\lim_{{n\to+\infty}} X_n = X\right) = 1$
+On dit que $(X_n)$ converge presque sûrement vers $X$ et on note $X_n \xrightarrow{\text{p.s.}} X$ si et seulement si : $P\left(\lim_{{n\to+\infty}} X_n = X\right) = 1$
 
 \textcolor{green!70!black}{Convergence en probabilité}
 
-On dit que $(X_n)$ converge en probabilité vers $X$ et on note
-$X_n \xrightarrow{\text{p}} X$ si et seulement si :
-$\forall \varepsilon > 0, \quad P(|X_n - X| > \varepsilon) \rightarrow 0$
+On dit que $(X_n)$ converge en probabilité vers $X$ et on note $X_n \xrightarrow{\text{p}} X$ si et seulement si : $\forall \varepsilon > 0, \quad P(|X_n - X| > \varepsilon) \rightarrow 0$
 
 \textcolor{green!70!black}{Convergence en Loi}
 
-On dit que $(X_n)$ converge en loi vers $X$ et on note
-$X_n \xrightarrow{\mathcal{L}} X$ si et seulement si :
-$F_{X_n} \xrightarrow{n \to +\infty} F_X$ Où $F_X$ dénote la fonction de
-répartition de $X$.
+On dit que $(X_n)$ converge en loi vers $X$ et on note $X_n \xrightarrow{\mathcal{L}} X$ si et seulement si : $F_{X_n} \xrightarrow{n \to +\infty} F_X$ Où $F_X$ dénote la fonction de répartition de $X$.
 
 \textcolor{green!70!black}{Convergence en Moyenne quadratique}
 
-On dit que $(X_n)$ converge en moyenne quadratique vers $X$ et on note
-$X_n \xrightarrow{m.q.} X$ si et seulement si :
-$\mathbb{E}((X_n - X)^2) \rightarrow 0$ Cette définition peut se
-généraliser jusqu'à l'ordre $n$, mais nous n'en aurons pas besoin.
+On dit que $(X_n)$ converge en moyenne quadratique vers $X$ et on note $X_n \xrightarrow{m.q.} X$ si et seulement si : $\mathbb{E}((X_n - X)^2) \rightarrow 0$ Cette définition peut se généraliser jusqu'à l'ordre $n$, mais nous n'en aurons pas besoin.
 
 ![](images/convergence.png){width="30%" fig-align="center"}
 
 ## Loi faible des grands nombres
 
-Soit $X_1, \ldots, X_n$ une suite de variables aléatoires indépendantes
-et de même loi telles que : $\mathbb{E}(X_i) = \mu$ et
-$\text{Var}(X_i) = \sigma^2$ alors :\
+Soit $X_1, \ldots, X_n$ une suite de variables aléatoires indépendantes et de même loi telles que : $\mathbb{E}(X_i) = \mu$ et $\text{Var}(X_i) = \sigma^2$ alors :\
 $$\frac{1}{n} \sum_{i=1}^{n} X_i \xrightarrow{p} \mu $$
 
 ## Loi forte des grands nombres
 
-Soit $X_1, \ldots, X_n$ une suite de variables aléatoires indépendantes
-et de même loi telles que : $\mathbb{E}(X_i) = \mu$ et
-$\text{Var}(X_i) = \sigma^2$, alors :\
+Soit $X_1, \ldots, X_n$ une suite de variables aléatoires indépendantes et de même loi telles que : $\mathbb{E}(X_i) = \mu$ et $\text{Var}(X_i) = \sigma^2$, alors :\
 $$\frac{1}{n} \sum_{i=1}^{n} X_i \xrightarrow{p.s.} \mu$$
 
 ## Théorème Central Limite
 
-Soit $X_1, \ldots, X_n$ une suite de variables aléatoires indépendantes
-et de même loi telles que : $\mathbb{E}(X_i) = \mu$ et
-$\text{Var}(X_i) = \sigma^2$, alors :
-$$\sqrt{n}\frac{\overline{X}_n - \mu}{\sigma} \xrightarrow{\mathcal{Loi}} \mathcal{N}(0, 1)$$
+Soit $X_1, \ldots, X_n$ une suite de variables aléatoires indépendantes et de même loi telles que : $\mathbb{E}(X_i) = \mu$ et $\text{Var}(X_i) = \sigma^2$, alors : $$\sqrt{n}\frac{\overline{X}_n - \mu}{\sigma} \xrightarrow{\mathcal{Loi}} \mathcal{N}(0, 1)$$
 
 \newpage
 
@@ -904,53 +722,29 @@ $$\sqrt{n}\frac{\overline{X}_n - \mu}{\sigma} \xrightarrow{\mathcal{Loi}} \mathc
 
 ## Echantillon / Estimateur
 
-Le point de départ est un vecteur (ou un tableau dans le cas
-multidimensionnel) de données. Ces données peuvent être vues comme les
-réalisations $(x_1, x_2, \ldots, x_n)$ d'une variable aléatoire $X$ qui
-dépend d'un certain paramètre $\theta$ que nous allons chercher à
-estimer. Pour ce faire, nous allons construire un échantillon de cette
-variable. Un échantillon $(X_1, X_2, \ldots, X_n)$ est un n-uplet de
-variables aléatoires indépendantes qui suivent toutes la même loi (celle
-de $X$). Un estimateur de $\theta$ est une fonction
-$\hat{\theta} = f(X_1, X_2, \ldots, X_n)$ de notre échantillon, qui
-possède une loi de probabilité. Lorsque l'aléa est réalisé,
-$\hat{\theta}(\omega) = f(x_1, x_2, \ldots, x_n)$ est une estimation de
-$\theta$. Le but de ce cours est de construire le meilleur estimateur
-possible de $\theta$.
+Le point de départ est un vecteur (ou un tableau dans le cas multidimensionnel) de données. Ces données peuvent être vues comme les réalisations $(x_1, x_2, \ldots, x_n)$ d'une variable aléatoire $X$ qui dépend d'un certain paramètre $\theta$ que nous allons chercher à estimer. Pour ce faire, nous allons construire un échantillon de cette variable. Un échantillon $(X_1, X_2, \ldots, X_n)$ est un n-uplet de variables aléatoires indépendantes qui suivent toutes la même loi (celle de $X$). Un estimateur de $\theta$ est une fonction $\hat{\theta} = f(X_1, X_2, \ldots, X_n)$ de notre échantillon, qui possède une loi de probabilité. Lorsque l'aléa est réalisé, $\hat{\theta}(\omega) = f(x_1, x_2, \ldots, x_n)$ est une estimation de $\theta$. Le but de ce cours est de construire le meilleur estimateur possible de $\theta$.
 
 ## Estimateur sans biais
 
-Pour que l'estimation soit bonne, il faut que $\hat{\theta}$ soit proche
-de $\theta$. Comme $\hat{\theta} = f(X_1, X_2, \ldots, X_n)$ est une
-variable aléatoire, on ne peut imposer de condition qu'à sa valeur
-moyenne.
+Pour que l'estimation soit bonne, il faut que $\hat{\theta}$ soit proche de $\theta$. Comme $\hat{\theta} = f(X_1, X_2, \ldots, X_n)$ est une variable aléatoire, on ne peut imposer de condition qu'à sa valeur moyenne.
 
-On définit ainsi le biais :
-$$b_n(\hat{\theta}, \theta) = \mathbb{E}(\hat{\theta}_n) - \theta$$
+On définit ainsi le biais : $$b_n(\hat{\theta}, \theta) = \mathbb{E}(\hat{\theta}_n) - \theta$$
 
-Un estimateur est dit sans biais si $b_n(\hat{\theta}, \theta) = 0$,
-c'est-à-dire : $$\mathbb{E}(\hat{\theta}_n) = \theta$$
+Un estimateur est dit sans biais si $b_n(\hat{\theta}, \theta) = 0$, c'est-à-dire : $$\mathbb{E}(\hat{\theta}_n) = \theta$$
 
 ## Estimateur convergent
 
-Un estimateur est dit convergent s'il converge en probabilité vers le
-paramètre à estimer : $$\hat{\theta}_n \xrightarrow{P} \theta$$
+Un estimateur est dit convergent s'il converge en probabilité vers le paramètre à estimer : $$\hat{\theta}_n \xrightarrow{P} \theta$$
 
-En pratique, tout estimateur sans biais et dont la variance tend vers 0
-est convergent.
+En pratique, tout estimateur sans biais et dont la variance tend vers 0 est convergent.
 
 ## Estimateur optimal
 
 \textcolor{green!70!black}{Qualité d’un estimateur}
 
-La qualité d'un estimateur est mesurée à travers son erreur quadratique
-moyenne définie par :
-$$EQM(\hat{\theta}_n) = (b_n(\hat{\theta}, \theta))^2 + V(\hat{\theta}_n)$$
-Comme nous cherchons tout le temps (presque) des estimateurs sans biais,
-il reste à comparer les variances.
+La qualité d'un estimateur est mesurée à travers son erreur quadratique moyenne définie par : $$EQM(\hat{\theta}_n) = (b_n(\hat{\theta}, \theta))^2 + V(\hat{\theta}_n)$$ Comme nous cherchons tout le temps (presque) des estimateurs sans biais, il reste à comparer les variances.
 
-Un estimateur 𝜃̂1 est meilleur que 𝜃̂2 si :
-$$V(\hat{\theta}_1) < V(\hat{\theta}_2)$$
+Un estimateur 𝜃̂1 est meilleur que 𝜃̂2 si : $$V(\hat{\theta}_1) < V(\hat{\theta}_2)$$
 
 \textcolor{green!70!black}{Inégalité de Rao-Cramer/ Efficacité}
 
@@ -958,10 +752,7 @@ On définit la quantité d'information apportée par l'estimateur par : $$
 I(\hat{\theta}_n) = -\left( \mathbb{E} \left( \frac{\partial L}{\partial \theta} \right) \right)^2
 $$ Où 𝐿(𝑥, 𝜃) = ∏ 𝑓(𝑥𝑖) (nous reviendrons sur sa définition)
 
-L'inégalité de Rao-Cramer postule que la variance d'un estimateur ne
-peut pas aller en delà d'un certain seuil :
-$$V(\hat{\theta}_n) \geq \frac{1}{I(\hat{\theta}_n)}$$ Un estimateur est
-optimal (ou efficace) si sa variance vérifie le cas d'égalité.
+L'inégalité de Rao-Cramer postule que la variance d'un estimateur ne peut pas aller en delà d'un certain seuil : $$V(\hat{\theta}_n) \geq \frac{1}{I(\hat{\theta}_n)}$$ Un estimateur est optimal (ou efficace) si sa variance vérifie le cas d'égalité.
 
 \newpage
 
@@ -969,82 +760,52 @@ optimal (ou efficace) si sa variance vérifie le cas d'égalité.
 
 \textcolor{green!70!black}{Méthode du maximum de vraisemblance}
 
-La méthode du maximum de vraisemblance consiste à affecter $𝜃$ la valeur
-qui maximise la probabilité d'observer $(𝑥_1, 𝑥_2, … , 𝑥_𝑛)$ lorsque
-l'aléa du vecteur $(𝑋_1, 𝑋_2, … , 𝑋_𝑛)$ tombe. Sans trop rentrer dans la
-théorie de la vraisemblance, nous allons présenter un algorithme en cinq
-étapes pour calculer cet estimateur (qui présente des propriétés assez
-séduisantes) :
+La méthode du maximum de vraisemblance consiste à affecter $𝜃$ la valeur qui maximise la probabilité d'observer $(𝑥_1, 𝑥_2, … , 𝑥_𝑛)$ lorsque l'aléa du vecteur $(𝑋_1, 𝑋_2, … , 𝑋_𝑛)$ tombe. Sans trop rentrer dans la théorie de la vraisemblance, nous allons présenter un algorithme en cinq étapes pour calculer cet estimateur (qui présente des propriétés assez séduisantes) :
 
 \textcolor{blue}{Etape 1 : Calculer la fonction de vraisemblance}
 
 Dans le cas continu : $$L(\mathbf{x}, \theta) = \prod_{i=1}^{n} f(x_i)$$
 
-Dans le cas discret :
-$$L(\mathbf{x}, \theta) = \prod_{i=1}^{n} P(X_i = x_i)$$
-\textcolor{blue}{Etape 2 : Calculer le log-vraisemblance}
+Dans le cas discret : $$L(\mathbf{x}, \theta) = \prod_{i=1}^{n} P(X_i = x_i)$$ \textcolor{blue}{Etape 2 : Calculer le log-vraisemblance}
 
-Il s'agit de calculer un maximum, ce qui revient à dériver. Il s'agit
-ici d'un produit de n facteurs, ce qui rend la dérivation assez coriace.
-La fonction logarithmique présente des propriétés assez sympas pour
-faciliter cette tâche.
+Il s'agit de calculer un maximum, ce qui revient à dériver. Il s'agit ici d'un produit de n facteurs, ce qui rend la dérivation assez coriace. La fonction logarithmique présente des propriétés assez sympas pour faciliter cette tâche.
 
 \textcolor{blue}{Etape 3 : Calculer la dérivée de la log-vraisemblance}
 
-\textcolor{blue}{Etape 4 : Résoudre l'équation d'inconnue $𝜽$}
-$$\frac{\partial (\ln(L))}{\partial \theta} = 0 \Rightarrow \theta = \theta_0$$
+\textcolor{blue}{Etape 4 : Résoudre l'équation d'inconnue $𝜽$} $$\frac{\partial (\ln(L))}{\partial \theta} = 0 \Rightarrow \theta = \theta_0$$
 
 \textcolor{blue}{Etape 5 : Vérifier qu'il s'agit d'un maximum.}
 
-En s'assurant que :
-$$\frac{\partial^2 (\ln(L))}{\partial \theta^2} < 0$$
+En s'assurant que : $$\frac{\partial^2 (\ln(L))}{\partial \theta^2} < 0$$
 
 \newpage
 
 \textcolor{green!70!black}{Méthode des moments}
 
-Comme le paramètre à estimer intervient dans la densité de probabilité,
-les moments théoriques sont souvent en fonction de ce paramètre. Ainsi,
-la méthode des moments consiste à égaliser les moments théoriques
-(espérance, variance) à leurs équivalents empiriques et à en dégager une
-estimation ponctuelle.
+Comme le paramètre à estimer intervient dans la densité de probabilité, les moments théoriques sont souvent en fonction de ce paramètre. Ainsi, la méthode des moments consiste à égaliser les moments théoriques (espérance, variance) à leurs équivalents empiriques et à en dégager une estimation ponctuelle.
 
-En pratique, il faut résoudre l'(les) équation(s) :
-$$\mathbb{E}(X) = \overline{X} \text{ et } \text{Var}(X) = S_n^2$$ avec
-: $$\overline{X} = \frac{1}{n} \sum_{i=1}^{n} X_i \hspace{2cm}
+En pratique, il faut résoudre l'(les) équation(s) : $$\mathbb{E}(X) = \overline{X} \text{ et } \text{Var}(X) = S_n^2$$ avec : $$\overline{X} = \frac{1}{n} \sum_{i=1}^{n} X_i \hspace{2cm}
  S_n^2 = \frac{1}{n} \sum_{i=1}^{n} (X_i - \overline{X})^2$$
 
 \textcolor{green!70!black}{Méthode des moindres carrés ordinaires}
 
-Lorsqu'il s'agit de prendre une mesure 𝜃 avec un appareil doté d'une
-imprécision $𝜀$, alors le problème d'estimation peut s'écrire :
-$𝑋 = 𝜃 + 𝜀$. La méthode des moindres-carrés ordinaires consiste à
-trouver le paramètre $𝜃$ qui minimise la somme des carrées des erreurs :
-$$𝜃_{𝑀𝐶𝑂} = \arg\min \left( \sum_{i=0}^n \varepsilon_i^2 \right) = \arg\min \left( \sum_{i=0}^n (X_i - \theta)^2 \right)$$
+Lorsqu'il s'agit de prendre une mesure 𝜃 avec un appareil doté d'une imprécision $𝜀$, alors le problème d'estimation peut s'écrire : $𝑋 = 𝜃 + 𝜀$. La méthode des moindres-carrés ordinaires consiste à trouver le paramètre $𝜃$ qui minimise la somme des carrées des erreurs : $$𝜃_{𝑀𝐶𝑂} = \arg\min \left( \sum_{i=0}^n \varepsilon_i^2 \right) = \arg\min \left( \sum_{i=0}^n (X_i - \theta)^2 \right)$$
 
 ## Intervalles de confiance
 
-Un intervalle de confiance \[$A$, $B$\] de niveau $1 - \alpha$ est un
-intervalle aléatoire qui a la probabilité $1 - \alpha$ de contenir le
-paramètre à estimer $\theta$. Formellement, on écrit :
-$P (t_1 (\theta) \leq f(X_1, \ldots, X_n) \leq t_2 (\theta)) = P(A \leq \theta \leq B) = 1 - \alpha$
+Un intervalle de confiance \[$A$, $B$\] de niveau $1 - \alpha$ est un intervalle aléatoire qui a la probabilité $1 - \alpha$ de contenir le paramètre à estimer $\theta$. Formellement, on écrit : $P (t_1 (\theta) \leq f(X_1, \ldots, X_n) \leq t_2 (\theta)) = P(A \leq \theta \leq B) = 1 - \alpha$
 
 \newpage
 
 ## Test d'hypothèses
 
-Dans le cadre d'un test d'hypothèse, nous cherchons à faire valoir une
-hypothèse en dépit d'une autre, qui lui est contradictoire.
+Dans le cadre d'un test d'hypothèse, nous cherchons à faire valoir une hypothèse en dépit d'une autre, qui lui est contradictoire.
 
-On appellera la première (celle dont le rejet à tort sera le plus
-préjudiciable) « Hypothèse nulle » et la deuxième « Hypothèse
-alternative ».
+On appellera la première (celle dont le rejet à tort sera le plus préjudiciable) « Hypothèse nulle » et la deuxième « Hypothèse alternative ».
 
 ![](images/test_hypo.png){width="50%" fig-align="center"}
 
-Les calculs qui se cachent derrière le choix de l'hypothèse à garder
-sont compliqués. Mais BONNE NOUVELLE, la machine fera tour à notre
-place. Il suffit juste de suivre correctement la méthode :
+Les calculs qui se cachent derrière le choix de l'hypothèse à garder sont compliqués. Mais BONNE NOUVELLE, la machine fera tour à notre place. Il suffit juste de suivre correctement la méthode :
 
 \textcolor{blue}{Etape 1 : Choisir judicieusement les hypothèses à évaluer et fixer le risque $𝛼$}\
 \textcolor{blue}{Etape 2 : Choisir le test adapté à la procédure}\
@@ -1055,11 +816,7 @@ place. Il suffit juste de suivre correctement la méthode :
 
 ## Construction d'intervalles de confiance
 
-Les intervalles de confiance sont des outils essentiels en statistique
-pour estimer des paramètres inconnus tout en mesurant l'incertitude
-associée à cette estimation. Ci-dessous, vous trouverez un tableau
-présentant la construction des intervalles de confiance pour différents
-paramètres.
+Les intervalles de confiance sont des outils essentiels en statistique pour estimer des paramètres inconnus tout en mesurant l'incertitude associée à cette estimation. Ci-dessous, vous trouverez un tableau présentant la construction des intervalles de confiance pour différents paramètres.
 
 ```{=tex}
 \begin{figure}[H]
@@ -1067,8 +824,7 @@ paramètres.
   \includegraphics[width=0.75\textwidth]{images/intervalles_conf.png}
 \end{figure}
 ```
-
-# Economie 
+# Economie
 
 ## Définitions
 
@@ -1313,4 +1069,3 @@ On conseille parfois de finir sa dissertation sur une ouverture. Une ouverture e
 Une fois tout cela fait, on prend sa copie (totalement vierge à ce moment) et on commence à écrire dessus : on recopie l'introduction, on rédige le développement directement sur la copie (on ne rédige jamais son développement sur le brouillon, cela prend beaucoup trop de temps à recopier). *Le développement du devoir doit contenir des titres apparents pour les parties et les sous-parties*. Cela signifie que le titre de votre grande partie est marqué dans votre copie (précédé d'un « I) ») et qu'il est isolé du texte et souligné. Bref, on doit pouvoir voir apparaître d'un coup d'œil votre plan en survolant votre copie du regard.
 
 Comme dit juste au-dessus, si on manque de temps, on coupe une partie du développement et on recopie la conclusion qui se trouve sur le brouillon. Attention : si vous ne rédigez pas tout le développement, mettez tout de même le plan apparent pour les parties et sous-parties non développées. C'est précisément parce qu'on a une idée de ce que vous auriez écrit qu'il est possible (en cas de gros manque de temps) de ne pas rédiger tout le développement. Si vous ne détaillez pas votre plan, c'est la trame de votre raisonnement qui manque et c'est beaucoup plus ennuyeux. Si vous ne pouvez pas rédiger tout le développement, je vous conseille de mettre des éléments que vous auriez utilisé sous forme de liste de tirets (en plus des titres apparents qui sont obligatoires).
-

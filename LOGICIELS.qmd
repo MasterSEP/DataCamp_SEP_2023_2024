@@ -5,19 +5,7 @@ editor: visual
 
 # Présentation
 
-Dans le cadre de notre parcours SEP (Master pour l'Évaluation et la
-Prévision), l'utilisation de logiciels joue un rôle central dans notre
-formation. Ces outils informatiques, soigneusement sélectionnés pour
-répondre aux besoins variés de la recherche, de l'analyse de données et
-de la visualisation, contribuent à renforcer notre expertise dans le
-domaine. Dans ce document, nous allons vous présenter un éventail de
-logiciels essentiels tout au long de votre formation, des langages de
-programmation en passant par des logiciels utiles au bon déroulement.
-Nous expliquerons également comment les installer, en fournissant des
-liens directs pour faciliter la mise en place de ces outils
-incontournables. Que vous soyez un étudiant débutant ou un professionnel
-expérimenté, ce guide vous sera précieux pour tirer le meilleur parti de
-ces logiciels au cours de votre parcours SEP.
+Dans le cadre de notre parcours SEP (Master pour l'Évaluation et la Prévision), l'utilisation de logiciels joue un rôle central dans notre formation. Ces outils informatiques, soigneusement sélectionnés pour répondre aux besoins variés de la recherche, de l'analyse de données et de la visualisation, contribuent à renforcer notre expertise dans le domaine. Dans ce document, nous allons vous présenter un éventail de logiciels essentiels tout au long de votre formation, des langages de programmation en passant par des logiciels utiles au bon déroulement. Nous expliquerons également comment les installer, en fournissant des liens directs pour faciliter la mise en place de ces outils incontournables. Que vous soyez un étudiant débutant ou un professionnel expérimenté, ce guide vous sera précieux pour tirer le meilleur parti de ces logiciels au cours de votre parcours SEP.
 
 \newpage
 
@@ -25,14 +13,9 @@ ces logiciels au cours de votre parcours SEP.
 
 ## RStudio
 
-RStudio est un logiciel convivial spécialement conçu pour la
-programmation en R, un langage de statistiques. Il offre un
-environnement complet pour l'analyse de données, la création de
-graphiques et la génération de rapports, facilitant ainsi la
-manipulation des données.
+RStudio est un logiciel convivial spécialement conçu pour la programmation en R, un langage de statistiques. Il offre un environnement complet pour l'analyse de données, la création de graphiques et la génération de rapports, facilitant ainsi la manipulation des données.
 
-RStudio propose une version gratuite appelée RStudio Desktop. Il faut au
-préalable installer R puis RStudio Deskop.
+RStudio propose une version gratuite appelée RStudio Desktop. Il faut au préalable installer R puis RStudio Deskop.
 
 \centering
 
@@ -40,15 +23,9 @@ préalable installer R puis RStudio Deskop.
 
 ## Anaconda
 
-Anaconda est une plateforme tout-en-un pour Python, un langage de
-programmation. Il simplifie l'installation et la gestion de packages
-Python, tandis que Jupyter Notebook permet de créer des documents
-interactifs, et Spyder est un environnement de développement Python.
+Anaconda est une plateforme tout-en-un pour Python, un langage de programmation. Il simplifie l'installation et la gestion de packages Python, tandis que Jupyter Notebook permet de créer des documents interactifs, et Spyder est un environnement de développement Python.
 
-Anaconda offre une documentation complète pour l'installation. Vous
-pouvez vous rendre sur le site officiel d'Anaconda. Choisissez la
-version appropriée pour votre système d'exploitation (Windows, macOS, ou
-Linux) et suivez les instructions fournies.
+Anaconda offre une documentation complète pour l'installation. Vous pouvez vous rendre sur le site officiel d'Anaconda. Choisissez la version appropriée pour votre système d'exploitation (Windows, macOS, ou Linux) et suivez les instructions fournies.
 
 \centering
 
@@ -56,15 +33,9 @@ Linux) et suivez les instructions fournies.
 
 ## Excel
 
-Microsoft Excel est un tableur qui vous aide à organiser, analyser et
-visualiser des données. Il est couramment utilisé pour effectuer des
-calculs, créer des graphiques et des tableaux, et est adapté à de
-nombreuses tâches liées aux chiffres. Vous l'utiliserez également pour
-les macros.
+Microsoft Excel est un tableur qui vous aide à organiser, analyser et visualiser des données. Il est couramment utilisé pour effectuer des calculs, créer des graphiques et des tableaux, et est adapté à de nombreuses tâches liées aux chiffres. Vous l'utiliserez également pour les macros.
 
-Microsoft Excel est généralement installé avec la suite Microsoft
-Office. Suivez les instructions de Microsoft pour installer Office, puis
-Excel sera inclus.
+Microsoft Excel est généralement installé avec la suite Microsoft Office. Suivez les instructions de Microsoft pour installer Office, puis Excel sera inclus.
 
 \centering
 
@@ -74,14 +45,9 @@ Avec votre adresse étudiante vous devriez avoir un accès gratuit.
 
 ## Github Desktop
 
-Github Desktop est un outil simple qui simplifie la gestion des versions
-de code sur la plateforme de développement GitHub/GitLab. Il vous permet
-de collaborer efficacement sur des projets informatiques.
+Github Desktop est un outil simple qui simplifie la gestion des versions de code sur la plateforme de développement GitHub/GitLab. Il vous permet de collaborer efficacement sur des projets informatiques.
 
-Pour GitHub Desktop, rendez-vous sur la page officielle de GitHub
-Desktop et téléchargez la version appropriée pour votre système
-d'exploitation. Ils fournissent également des guides d'installation
-détaillés.
+Pour GitHub Desktop, rendez-vous sur la page officielle de GitHub Desktop et téléchargez la version appropriée pour votre système d'exploitation. Ils fournissent également des guides d'installation détaillés.
 
 \centering
 
@@ -89,13 +55,9 @@ détaillés.
 
 ## QGIS
 
-QGIS est un logiciel de cartographie qui vous permet de créer des
-cartes, d'analyser des données géospatiales et de visualiser des
-informations géographiques de manière interactive.
+QGIS est un logiciel de cartographie qui vous permet de créer des cartes, d'analyser des données géospatiales et de visualiser des informations géographiques de manière interactive.
 
-Pour installer QGIS, vous pouvez visiter le site officiel de QGIS.
-Choisissez la version correspondant à votre système d'exploitation, puis
-suivez les instructions d'installation.
+Pour installer QGIS, vous pouvez visiter le site officiel de QGIS. Choisissez la version correspondant à votre système d'exploitation, puis suivez les instructions d'installation.
 
 \centering
 
@@ -103,13 +65,9 @@ suivez les instructions d'installation.
 
 ## Gephi
 
-Gephi est un logiciel de visualisation de réseaux qui vous aide à
-représenter graphiquement des données relationnelles. Il est largement
-utilisé pour explorer des structures de réseaux complexes.
+Gephi est un logiciel de visualisation de réseaux qui vous aide à représenter graphiquement des données relationnelles. Il est largement utilisé pour explorer des structures de réseaux complexes.
 
-Gephi est disponible en téléchargement sur le site officiel de Gephi.
-Vous y trouverez des guides d'installation pour les différentes
-plateformes.
+Gephi est disponible en téléchargement sur le site officiel de Gephi. Vous y trouverez des guides d'installation pour les différentes plateformes.
 
 \centering
 
@@ -117,14 +75,9 @@ plateformes.
 
 ## PowerBI
 
-Power BI est un outil de business intelligence de Microsoft qui vous
-permet de créer des tableaux de bord interactifs et des rapports à
-partir de données, facilitant ainsi la prise de décisions basée sur les
-informations.
+Power BI est un outil de business intelligence de Microsoft qui vous permet de créer des tableaux de bord interactifs et des rapports à partir de données, facilitant ainsi la prise de décisions basée sur les informations.
 
-Power BI Desktop est disponible sur le site de Microsoft. Rendez-vous
-sur la page de téléchargement pour obtenir le logiciel et suivez les
-instructions.
+Power BI Desktop est disponible sur le site de Microsoft. Rendez-vous sur la page de téléchargement pour obtenir le logiciel et suivez les instructions.
 
 \centering
 
@@ -132,15 +85,9 @@ instructions.
 
 ## SPSS
 
-SPSS est un logiciel d'analyse statistique largement utilisé dans la
-recherche en sciences sociales. Il simplifie la gestion des données,
-l'analyse statistique et la création de graphiques.
+SPSS est un logiciel d'analyse statistique largement utilisé dans la recherche en sciences sociales. Il simplifie la gestion des données, l'analyse statistique et la création de graphiques.
 
-IBM SPSS est une solution propriétaire et payante. L'éditeur propose
-tout de même une période d'essai gratuite, variant de 15 à 30 jours.
-Cette version est limitée en termes de fonctionnalités. Il faudra pour
-bénéficier de la solution complète, opter pour la version premium.
-Cependant, l'enseignant concerné vous accompagnera dans cette démarche.
+IBM SPSS est une solution propriétaire et payante. L'éditeur propose tout de même une période d'essai gratuite, variant de 15 à 30 jours. Cette version est limitée en termes de fonctionnalités. Il faudra pour bénéficier de la solution complète, opter pour la version premium. Cependant, l'enseignant concerné vous accompagnera dans cette démarche.
 
 \centering
 
@@ -148,12 +95,9 @@ Cependant, l'enseignant concerné vous accompagnera dans cette démarche.
 
 ## Veracrypt
 
-VeraCrypt est un outil de chiffrement de données. Il vous permet de
-créer des disques virtuels cryptés pour protéger vos données sensibles,
-garantissant ainsi leur confidentialité.
+VeraCrypt est un outil de chiffrement de données. Il vous permet de créer des disques virtuels cryptés pour protéger vos données sensibles, garantissant ainsi leur confidentialité.
 
-Le site officiel de VeraCrypt propose des instructions d'installation
-détaillées pour chiffrer vos données.
+Le site officiel de VeraCrypt propose des instructions d'installation détaillées pour chiffrer vos données.
 
 \centering
 
@@ -161,12 +105,9 @@ détaillées pour chiffrer vos données.
 
 ## Zotero
 
-Zotero est un gestionnaire de références bibliographiques qui vous aide
-à collecter, organiser et citer des sources dans vos travaux de
-recherche, simplifiant ainsi la gestion de vos références.
+Zotero est un gestionnaire de références bibliographiques qui vous aide à collecter, organiser et citer des sources dans vos travaux de recherche, simplifiant ainsi la gestion de vos références.
 
-Pour Zotero, visitez le site officiel et suivez les guides
-d'installation pour votre navigateur et votre système d'exploitation.
+Pour Zotero, visitez le site officiel et suivez les guides d'installation pour votre navigateur et votre système d'exploitation.
 
 \centering
 
@@ -174,12 +115,9 @@ d'installation pour votre navigateur et votre système d'exploitation.
 
 ## OBS Studio
 
-OBS Studio est un logiciel d'enregistrement et de diffusion en direct.
-Il est utilisé pour capturer des vidéos de haute qualité, enregistrer
-des sessions, et diffuser en direct sur des plateformes.
+OBS Studio est un logiciel d'enregistrement et de diffusion en direct. Il est utilisé pour capturer des vidéos de haute qualité, enregistrer des sessions, et diffuser en direct sur des plateformes.
 
-Vous pouvez télécharger OBS Studio depuis le site officiel. Ils
-fournissent des instructions pour l'installation et la configuration.
+Vous pouvez télécharger OBS Studio depuis le site officiel. Ils fournissent des instructions pour l'installation et la configuration.
 
 \centering
 
