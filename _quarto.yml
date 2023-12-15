@@ -21,7 +21,7 @@ website:
         file: "Quizz.qmd"
       - text: "Logiciels"
         file: "LOGICIELS.qmd"
-
+        
 format:
   html:
     toc: true 
