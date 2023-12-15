@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Datacamp pour le master SEP - DATA Camp Logiciels</title>
+<title>Datacamp pour le master SEP - Exercices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,6 +60,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -93,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">M2 SEP</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Exercices.html" rel="" target="">
+    <a class="nav-link active" href="./Exercices.html" rel="" target="" aria-current="page">
  <span class="menu-text">Exercices</span></a>
   </li>  
   <li class="nav-item">
@@ -101,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Quizz</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./LOGICIELS.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./LOGICIELS.html" rel="" target="">
  <span class="menu-text">Logiciels</span></a>
   </li>  
 </ul>
@@ -125,20 +127,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#présentation" id="toc-présentation" class="nav-link active" data-scroll-target="#présentation">Présentation</a></li>
-  <li><a href="#logiciels" id="toc-logiciels" class="nav-link" data-scroll-target="#logiciels">Logiciels</a>
+  <li><a href="#algèbre-linéaire" id="toc-algèbre-linéaire" class="nav-link active" data-scroll-target="#algèbre-linéaire">Algèbre Linéaire</a>
   <ul class="collapse">
-  <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio">RStudio</a></li>
-  <li><a href="#anaconda" id="toc-anaconda" class="nav-link" data-scroll-target="#anaconda">Anaconda</a></li>
-  <li><a href="#excel" id="toc-excel" class="nav-link" data-scroll-target="#excel">Excel</a></li>
-  <li><a href="#github-desktop" id="toc-github-desktop" class="nav-link" data-scroll-target="#github-desktop">Github Desktop</a></li>
-  <li><a href="#qgis" id="toc-qgis" class="nav-link" data-scroll-target="#qgis">QGIS</a></li>
-  <li><a href="#gephi" id="toc-gephi" class="nav-link" data-scroll-target="#gephi">Gephi</a></li>
-  <li><a href="#powerbi" id="toc-powerbi" class="nav-link" data-scroll-target="#powerbi">PowerBI</a></li>
-  <li><a href="#spss" id="toc-spss" class="nav-link" data-scroll-target="#spss">SPSS</a></li>
-  <li><a href="#veracrypt" id="toc-veracrypt" class="nav-link" data-scroll-target="#veracrypt">Veracrypt</a></li>
-  <li><a href="#zotero" id="toc-zotero" class="nav-link" data-scroll-target="#zotero">Zotero</a></li>
-  <li><a href="#obs-studio" id="toc-obs-studio" class="nav-link" data-scroll-target="#obs-studio">OBS Studio</a></li>
+  <li><a href="#exercice-1" id="toc-exercice-1" class="nav-link" data-scroll-target="#exercice-1">Exercice 1</a></li>
+  <li><a href="#exercice-2" id="toc-exercice-2" class="nav-link" data-scroll-target="#exercice-2">Exercice 2</a></li>
+  </ul></li>
+  <li><a href="#fondements-de-probabilités" id="toc-fondements-de-probabilités" class="nav-link" data-scroll-target="#fondements-de-probabilités">Fondements de probabilités</a>
+  <ul class="collapse">
+  <li><a href="#exercice-1-1" id="toc-exercice-1-1" class="nav-link" data-scroll-target="#exercice-1-1">Exercice 1</a></li>
+  <li><a href="#exercice-2-1" id="toc-exercice-2-1" class="nav-link" data-scroll-target="#exercice-2-1">Exercice 2</a></li>
+  <li><a href="#exercice-3" id="toc-exercice-3" class="nav-link" data-scroll-target="#exercice-3">Exercice 3</a></li>
+  <li><a href="#exercice-4" id="toc-exercice-4" class="nav-link" data-scroll-target="#exercice-4">Exercice 4</a></li>
+  <li><a href="#exercice-5" id="toc-exercice-5" class="nav-link" data-scroll-target="#exercice-5">Exercice 5</a></li>
+  <li><a href="#exercice-6" id="toc-exercice-6" class="nav-link" data-scroll-target="#exercice-6">Exercice 6</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -148,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">DATA Camp Logiciels</h1>
+<h1 class="title">Exercices</h1>
 </div>
 
 
@@ -163,78 +164,146 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="présentation" class="level1">
-<h1>Présentation</h1>
-<p>Dans le cadre de notre parcours SEP (Master pour l’Évaluation et la Prévision), l’utilisation de logiciels joue un rôle central dans notre formation. Ces outils informatiques, soigneusement sélectionnés pour répondre aux besoins variés de la recherche, de l’analyse de données et de la visualisation, contribuent à renforcer notre expertise dans le domaine. Dans ce document, nous allons vous présenter un éventail de logiciels essentiels tout au long de votre formation, des langages de programmation en passant par des logiciels utiles au bon déroulement. Nous expliquerons également comment les installer, en fournissant des liens directs pour faciliter la mise en place de ces outils incontournables. Que vous soyez un étudiant débutant ou un professionnel expérimenté, ce guide vous sera précieux pour tirer le meilleur parti de ces logiciels au cours de votre parcours SEP.</p>
+<section id="algèbre-linéaire" class="level1">
+<h1>Algèbre Linéaire</h1>
+<section id="exercice-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1">Exercice 1</h2>
+<p>On considère les matrices suivantes :</p>
+<p><span class="math inline">\(A = \begin{bmatrix} 1 &amp; 2 &amp; 3 \end{bmatrix}\)</span> <span class="math inline">\(B = \begin{bmatrix} 1 \\ -2 \end{bmatrix}\)</span> <span class="math inline">\(C = \begin{bmatrix} 2 &amp; 1 \\ -3 &amp; 0 \\ 1 &amp; 2 \end{bmatrix}\)</span> <span class="math inline">\(D = \begin{bmatrix} -2 &amp; 5 \\ 5 &amp; 0 \end{bmatrix}\)</span> <span class="math inline">\(E = \begin{bmatrix} -1 &amp; 1 &amp; 3 \\ -1 &amp; -4 &amp; 0 \\ 0 &amp; 2 &amp; 5 \end{bmatrix}\)</span></p>
+<p>Quels sont les produits matriciels possibles ? Quelles sont les matrices carrées et les matrices symétriques ?</p>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+Les produits matriciels possibles sont : <span class="math inline">\(AC\)</span>, <span class="math inline">\(AE\)</span>, <span class="math inline">\(BD\)</span>, <span class="math inline">\(CD\)</span>, <span class="math inline">\(DC\)</span>. La matrice carrée est <span class="math inline">\(E\)</span>, <span class="math inline">\(C\)</span> et <span class="math inline">\(D\)</span> sont des matrices symétriques.
+</details>
 </section>
-<section id="logiciels" class="level1">
-<h1>Logiciels</h1>
-<section id="rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="rstudio">RStudio</h2>
-<p>RStudio est un logiciel convivial spécialement conçu pour la programmation en R, un langage de statistiques. Il offre un environnement complet pour l’analyse de données, la création de graphiques et la génération de rapports, facilitant ainsi la manipulation des données.</p>
-<p>RStudio propose une version gratuite appelée RStudio Desktop. Il faut au préalable installer R puis RStudio Deskop.</p>
-<p></p>
+<section id="exercice-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2">Exercice 2</h2>
+<ol type="1">
+<li>Soit <span class="math inline">\(A = \begin{bmatrix} -1 &amp; 1 &amp; 1 \\ -1 &amp; -1 &amp; 1 \\ -1 &amp; 1 &amp; -1 \end{bmatrix}\)</span>. Montrer que <span class="math inline">\(A^2 = 2I_3 - A\)</span>, en déduire que <span class="math inline">\(A\)</span> est inversible et calculer <span class="math inline">\(A^{-1}\)</span>.</li>
+</ol>
+<p>Pour montrer que <span class="math inline">\(A^2 = 2I_3 - A\)</span>, calculez <span class="math inline">\(A^2\)</span> et démontrez que cette égalité est valide.</p>
+<p>Puisque <span class="math inline">\(A^2 = 2I_3 - A\)</span>, cela implique que <span class="math inline">\(A\)</span> est inversible. Pour calculer <span class="math inline">\(A^{-1}\)</span>, utilisez cette relation et les propriétés des matrices inverses.</p>
+<ol start="2" type="1">
+<li>Soit <span class="math inline">\(A = \begin{bmatrix} 1 &amp; 0 &amp; 2 \\ 0 &amp; -1 &amp; 1 \\ 1 &amp; -2 &amp; 0 \end{bmatrix}\)</span>. Calculer <span class="math inline">\(A^3 - A\)</span>. En déduire que <span class="math inline">\(A\)</span> est inversible puis déterminer <span class="math inline">\(A^{-1}\)</span>.</li>
+</ol>
+<p>Calculez <span class="math inline">\(A^3 - A\)</span> pour démontrer que <span class="math inline">\(A\)</span> est inversible. En utilisant cette information, trouvez la matrice inverse <span class="math inline">\(A^{-1}\)</span>.</p>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+Le calcul ne pose pas de problèmes. Il mène à: <span class="math inline">\(\frac{{A^2 + A^2}}{2} = I_3 \implies A \cdot \left( \frac{{A + I_3}}{2} \right) = \left( \frac{{A + I_3}}{2} \right) \cdot A = I_3\)</span><br>
+A est inversible, et son inverse est : <span class="math inline">\(A^{-1} = \frac{{A + I_3}}{2}\)</span> Un calcul donne : <span class="math inline">\(A^3 - A = 4 \cdot I_3\)</span>.<br>
+Donc <span class="math inline">\(A \cdot \frac{{A^2 - I_3}}{4} = I_3\)</span>, ainsi <span class="math inline">\(A\)</span> est inversible et <span class="math inline">\(A^{-1} = \frac{1}{4} \cdot (A^2 - I_3) = \frac{1}{4} \cdot \begin{bmatrix} 2 &amp; -4 &amp; 2 \\ 1 &amp; -2 &amp; -1 \\ 1 &amp; 2 &amp; -1 \end{bmatrix}\)</span>
+</details>
 </section>
-<section id="anaconda" class="level2">
-<h2 class="anchored" data-anchor-id="anaconda">Anaconda</h2>
-<p>Anaconda est une plateforme tout-en-un pour Python, un langage de programmation. Il simplifie l’installation et la gestion de packages Python, tandis que Jupyter Notebook permet de créer des documents interactifs, et Spyder est un environnement de développement Python.</p>
-<p>Anaconda offre une documentation complète pour l’installation. Vous pouvez vous rendre sur le site officiel d’Anaconda. Choisissez la version appropriée pour votre système d’exploitation (Windows, macOS, ou Linux) et suivez les instructions fournies.</p>
-<p></p>
 </section>
-<section id="excel" class="level2">
-<h2 class="anchored" data-anchor-id="excel">Excel</h2>
-<p>Microsoft Excel est un tableur qui vous aide à organiser, analyser et visualiser des données. Il est couramment utilisé pour effectuer des calculs, créer des graphiques et des tableaux, et est adapté à de nombreuses tâches liées aux chiffres. Vous l’utiliserez également pour les macros.</p>
-<p>Microsoft Excel est généralement installé avec la suite Microsoft Office. Suivez les instructions de Microsoft pour installer Office, puis Excel sera inclus.</p>
-<p></p>
-<p>Avec votre adresse étudiante vous devriez avoir un accès gratuit.</p>
+<section id="fondements-de-probabilités" class="level1">
+<h1>Fondements de probabilités</h1>
+<section id="exercice-1-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1-1">Exercice 1</h2>
+<p>Dans la salle des profs 60% sont des femmes ; une femme sur trois porte des lunettes et un homme sur deux porte des lunettes : quelle est la probabilité pour qu’un porteur de lunettes pris au hasard soit une femme ?</p>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<p>Notons les différents événements : <span class="math inline">\(Fe\)</span> : « être femme », <span class="math inline">\(Lu\)</span> : « porter des lunettes », <span class="math inline">\(H\)</span> : « être homme ».</p>
+<p>Alors, on a <span class="math inline">\(P(Fe) = 0.6\)</span>, <span class="math inline">\(P(Lu|Fe) = \frac{1}{3}\)</span> ; il s’agit de la probabilité conditionnelle de « porter des lunettes » sachant que la personne est une femme.</p>
+<p>De même, on a <span class="math inline">\(P(Lu|H) = 0.5\)</span>.</p>
+<p>On cherche la probabilité conditionnelle <span class="math inline">\(P(Fe|Lu)\)</span>.</p>
+<p>D’après la formule des probabilités totales, on a : <span class="math inline">\(P(Fe|Lu) \cdot P(Lu) = P(Lu|Fe) \cdot P(Fe)\)</span> avec <span class="math inline">\(P(Lu) = P(Lu|Fe) \cdot P(Fe) + P(Lu|H) \cdot P(H)\)</span>.</p>
+<p>Application numérique : <span class="math inline">\(P(Lu) = 0.4\)</span>, donc <span class="math inline">\(P(Fe|Lu) = \frac{P(Lu|Fe) \cdot P(Fe) \cdot P(Lu)}{P(Lu)} = 0.5\)</span>.</p>
+</details>
 </section>
-<section id="github-desktop" class="level2">
-<h2 class="anchored" data-anchor-id="github-desktop">Github Desktop</h2>
-<p>Github Desktop est un outil simple qui simplifie la gestion des versions de code sur la plateforme de développement GitHub/GitLab. Il vous permet de collaborer efficacement sur des projets informatiques.</p>
-<p>Pour GitHub Desktop, rendez-vous sur la page officielle de GitHub Desktop et téléchargez la version appropriée pour votre système d’exploitation. Ils fournissent également des guides d’installation détaillés.</p>
-<p></p>
+<section id="exercice-2-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2-1">Exercice 2</h2>
+<p>Dans une entreprise deux ateliers fabriquent les mêmes pièces. L’atelier 1 fabrique en une journée deux fois plus de pièces que l’atelier 2. Le pourcentage de pièces défectueuses est 3% pour l’atelier 1 et 4% pour l’atelier 2. On prélève une pièce au hasard dans l’ensemble de la production d’une journée.<br>
+Déterminer :<br>
+- la probabilité que cette pièce provienne de l’atelier 1 ; - la probabilité que cette pièce provienne de l’atelier 1 et est défectueuse ; - la probabilité que cette pièce provienne de l’atelier 1 sachant qu’elle est défectueuse.</p>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<p>Notons <span class="math inline">\(A\)</span> l’événement “la pièce provient de l’atelier 1”, <span class="math inline">\(B\)</span> l’événement “la pièce provient de l’atelier 2” et <span class="math inline">\(D\)</span> l’événement “la pièce est défectueuse”.</p>
+<p>L’énoncé nous dit que les <span class="math inline">\(\frac{2}{3}\)</span> des pièces produites proviennent de l’atelier 1. Donc <span class="math inline">\(P(A)=\frac{2}{3}\)</span>.</p>
+<p>On cherche <span class="math inline">\(P(A \cap D) = P_A(D) \cdot P(A) = 0.03 \times 2/3 = 0.02\)</span>. De même, on démontre que <span class="math inline">\(P(B \cap D) = 0.175\)</span> et donc que <span class="math inline">\(P(D) = P(A \cap D) + P(B \cap D) = 0.15\)</span>.</p>
+<p>Ainsi, on a <span class="math inline">\(P_D(A) = \frac{P(A \cap D)}{P(D)} = 0.133\)</span></p>
+</details>
 </section>
-<section id="qgis" class="level2">
-<h2 class="anchored" data-anchor-id="qgis">QGIS</h2>
-<p>QGIS est un logiciel de cartographie qui vous permet de créer des cartes, d’analyser des données géospatiales et de visualiser des informations géographiques de manière interactive.</p>
-<p>Pour installer QGIS, vous pouvez visiter le site officiel de QGIS. Choisissez la version correspondant à votre système d’exploitation, puis suivez les instructions d’installation.</p>
-<p></p>
+<section id="exercice-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-3">Exercice 3</h2>
+<p>Soit <span class="math inline">\(F\)</span> la fonction définie par :</p>
+<p><span class="math display">\[
+f(x) = \begin{cases}
+0 &amp; \text{si } x &lt; 0 \\
+0,29 &amp; \text{si } -1 \leq x \leq 1 \\
+0,37 &amp; \text{si } 1 \leq x \leq 7 \\
+0,69 &amp; \text{si } 7 \leq x \leq 11 \\
+1 &amp; \text{si } x \geq 11
+\end{cases}
+\]</span> 1) Vérifiez que <span class="math inline">\(F(x)\)</span> est une fonction de répartition en vérifiant les conditions requises pour une fonction de répartition.</p>
+<ol start="2" type="1">
+<li>Soit <span class="math inline">\(X\)</span> la variable aléatoire admettant <span class="math inline">\(F\)</span> pour fonction de répartition ; quelle est la loi de <span class="math inline">\(X\)</span> ?</li>
+</ol>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<ol type="1">
+<li><p><span class="math inline">\(F\)</span> est croissante, de limite nulle en <span class="math inline">\(-\infty\)</span>, de limite égale à <span class="math inline">\(1\)</span> en <span class="math inline">\(+\infty\)</span> et continue à droite ; il s’agit donc bien d’une fonction de répartition.</p></li>
+<li></li>
+</ol>
+<span class="math display">\[
+\begin{array}{|c|c|}
+\hline
+x \in X(\Omega) &amp; P(X = x) \\
+\hline
+-1 &amp; 0.29 \\
+1 &amp; 0.08 \\
+7 &amp; 0.32 \\
+11 &amp; 0.31 \\
+\hline
+\end{array}
+\]</span>
+</details>
 </section>
-<section id="gephi" class="level2">
-<h2 class="anchored" data-anchor-id="gephi">Gephi</h2>
-<p>Gephi est un logiciel de visualisation de réseaux qui vous aide à représenter graphiquement des données relationnelles. Il est largement utilisé pour explorer des structures de réseaux complexes.</p>
-<p>Gephi est disponible en téléchargement sur le site officiel de Gephi. Vous y trouverez des guides d’installation pour les différentes plateformes.</p>
-<p></p>
+<section id="exercice-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-4">Exercice 4</h2>
+<p>Soit <span class="math inline">\(X\)</span> une variable aléatoire de loi de Poisson de paramètre <span class="math inline">\(\lambda &gt; 0\)</span>. Calculer <span class="math inline">\(E[(1 + X)^{-1}]\)</span>.</p>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<p><span class="math inline">\(E((1+X)^{-1}) = \sum_{k=0}^{\infty} \frac{1}{1+k} \cdot e^{-\lambda} \cdot \frac{\lambda^k}{k!} = e^{-\lambda} \sum_{k=0}^{\infty} \frac{\lambda^{k+1}}{(k+1)!} = e^{-\lambda} \left(\sum_{k=0}^{\infty} \frac{\lambda^k}{k!} - 1\right) = e^{-\lambda} (e^{\lambda} - 1) = \frac{1 - e^{-\lambda}}{\lambda}\)</span></p>
+</details>
 </section>
-<section id="powerbi" class="level2">
-<h2 class="anchored" data-anchor-id="powerbi">PowerBI</h2>
-<p>Power BI est un outil de business intelligence de Microsoft qui vous permet de créer des tableaux de bord interactifs et des rapports à partir de données, facilitant ainsi la prise de décisions basée sur les informations.</p>
-<p>Power BI Desktop est disponible sur le site de Microsoft. Rendez-vous sur la page de téléchargement pour obtenir le logiciel et suivez les instructions.</p>
-<p></p>
+<section id="exercice-5" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-5">Exercice 5</h2>
+<p>Montrer que <span class="math inline">\(\text{Var}(X) = E(X^2) - 2(E(X))^2\)</span>.</p>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+$ (X) = E[(X-E(X))^2] = E(X^2 - 2 E(X)X + (E(X))^2) = E(X^2) - 2 E(X)E(X) + (E(X))^2 = E(X^2) - 2(E(X))^2 $
+</details>
 </section>
-<section id="spss" class="level2">
-<h2 class="anchored" data-anchor-id="spss">SPSS</h2>
-<p>SPSS est un logiciel d’analyse statistique largement utilisé dans la recherche en sciences sociales. Il simplifie la gestion des données, l’analyse statistique et la création de graphiques.</p>
-<p>IBM SPSS est une solution propriétaire et payante. L’éditeur propose tout de même une période d’essai gratuite, variant de 15 à 30 jours. Cette version est limitée en termes de fonctionnalités. Il faudra pour bénéficier de la solution complète, opter pour la version premium. Cependant, l’enseignant concerné vous accompagnera dans cette démarche.</p>
-<p></p>
-</section>
-<section id="veracrypt" class="level2">
-<h2 class="anchored" data-anchor-id="veracrypt">Veracrypt</h2>
-<p>VeraCrypt est un outil de chiffrement de données. Il vous permet de créer des disques virtuels cryptés pour protéger vos données sensibles, garantissant ainsi leur confidentialité.</p>
-<p>Le site officiel de VeraCrypt propose des instructions d’installation détaillées pour chiffrer vos données.</p>
-<p></p>
-</section>
-<section id="zotero" class="level2">
-<h2 class="anchored" data-anchor-id="zotero">Zotero</h2>
-<p>Zotero est un gestionnaire de références bibliographiques qui vous aide à collecter, organiser et citer des sources dans vos travaux de recherche, simplifiant ainsi la gestion de vos références.</p>
-<p>Pour Zotero, visitez le site officiel et suivez les guides d’installation pour votre navigateur et votre système d’exploitation.</p>
-<p></p>
-</section>
-<section id="obs-studio" class="level2">
-<h2 class="anchored" data-anchor-id="obs-studio">OBS Studio</h2>
-<p>OBS Studio est un logiciel d’enregistrement et de diffusion en direct. Il est utilisé pour capturer des vidéos de haute qualité, enregistrer des sessions, et diffuser en direct sur des plateformes.</p>
-<p>Vous pouvez télécharger OBS Studio depuis le site officiel. Ils fournissent des instructions pour l’installation et la configuration.</p>
-<p></p>
+<section id="exercice-6" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-6">Exercice 6</h2>
+<p>Le nombre <span class="math inline">\(X\)</span> de kg de tomates récoltés dans un jardin en une semaine est une variable aléatoire dont la loi de probabilité est la suivante :</p>
+<ol type="1">
+<li><p>Quelle est l’espérance mathématique de <span class="math inline">\(X\)</span> et quelle est sa variance ?</p></li>
+<li><p>Pendant les six semaines de la saison de récolte, la distribution de probabilité ne varie pas. Calculer l’espérance mathématique et la variance de la variable aléatoire <span class="math inline">\(Y\)</span> donnant la récolte totale en kg durant les six semaines.</p></li>
+</ol>
+<details>
+<summary>
+Cliquez pour afficher le corrigé
+</summary>
+<ol type="1">
+<li><p><span class="math inline">\(E(X) = 0 \times 0.1 + 1 \times 0.5 + 2 \times 0.3 + 3 \times 0.1 = 1.4\)</span>; <span class="math inline">\(E(X^2) = 0^2 \times 0.1 + 1^2 \times 0.5 + 2^2 \times 0.3 + 3^2 \times 0.1 = 2.6\)</span> donc <span class="math inline">\(Var(X) = E(X^2) - (E(X))^2 = 0.64\)</span></p></li>
+<li><p><span class="math inline">\(Y\)</span> étant la somme de 6 variables aléatoires i.i.d., on a : <span class="math inline">\(E(Y) = 6E(X) = 8.4\)</span> et <span class="math inline">\(Var(Y) = 6\)</span> et <span class="math inline">\(Var(X) = 3.84\)</span></p></li>
+</ol>
+</details>
 
 
 </section>

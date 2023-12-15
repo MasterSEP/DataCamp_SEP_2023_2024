@@ -1,5 +1,5 @@
 ---
-title: "DATA Camp M2"
+title: "Quizz"
 editor: visual
 ---
 

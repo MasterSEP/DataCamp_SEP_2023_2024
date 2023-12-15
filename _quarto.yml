@@ -15,6 +15,10 @@ website:
         file: "M1SEP.qmd"
       - text: "M2 SEP"
         file: "M2SEP.qmd"
+      - text: "Exercices"
+        file: "Exercices.qmd"
+      - text: "Quizz"
+        file: "Quizz.qmd"
       - text: "Logiciels"
         file: "LOGICIELS.qmd"
 
