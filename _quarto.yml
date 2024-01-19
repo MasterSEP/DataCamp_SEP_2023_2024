@@ -14,7 +14,7 @@ website:
       - text: "M1 SEP"
         file: "M1SEP.qmd"
       - text: "M2 SEP"
-        file: ""
+        file: "M2SEP.qmd"
       - text: "Exercices"
         file: "Exercices.qmd"
       - text: "Quizz"
