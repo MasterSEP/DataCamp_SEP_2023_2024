@@ -16,3 +16,4 @@ Une variable statistique est une caractéristique ou une mesure que l'on peut at
 ## Vocabulaire autour de la variable
 
 Ton contenu ici...
+kkk
