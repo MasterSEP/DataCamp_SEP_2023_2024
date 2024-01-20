@@ -340,7 +340,23 @@ abline(Reg1)  #Representation de la regression linéaire
 
 ### Regression logistique
 
-***Def regression logistique*** :
+***Def regression logistique*** : Utilisée pour des problèmes de classification ( variable dependante bianire ). \
+
+***Principe:*** Modélise la probabilité que la variable dépendante appartienne à une catégorie particulière.\
+
+``` r
+# Régression logistique en R (y binaire à expliquer)
+glm_model <- glm(y ~ x1 + x2, data = dataset, family = "binomial")
+summary(glm_model)
+```
+
+``` r
+# Régression logistique en Python (y binaire à expliquer)
+from sklearn.linear_model import LogisticRegression
+
+model = LogisticRegression()
+model.fit(X, y)
+```
 
 ## Test d'independance
 
