@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -60,6 +94,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -125,11 +161,30 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#rappels-fondamentaux" id="toc-rappels-fondamentaux" class="nav-link active" data-scroll-target="#rappels-fondamentaux">Rappels Fondamentaux</a>
+  <li><a href="#partie-1-analyse-de-données" id="toc-partie-1-analyse-de-données" class="nav-link active" data-scroll-target="#partie-1-analyse-de-données">Partie 1 : Analyse de données</a>
+  <ul class="collapse">
+  <li><a href="#rappels-fondamentaux" id="toc-rappels-fondamentaux" class="nav-link" data-scroll-target="#rappels-fondamentaux">Rappels Fondamentaux</a>
   <ul class="collapse">
   <li><a href="#quest-ce-quune-variable" id="toc-quest-ce-quune-variable" class="nav-link" data-scroll-target="#quest-ce-quune-variable">Qu’est ce qu’une variable ?</a></li>
-  <li><a href="#tableau-récapitulatif-autour-du-type-de-variable" id="toc-tableau-récapitulatif-autour-du-type-de-variable" class="nav-link" data-scroll-target="#tableau-récapitulatif-autour-du-type-de-variable">Tableau récapitulatif autour du type de variable</a></li>
-  <li><a href="#vocabulaire-autour-de-la-variable" id="toc-vocabulaire-autour-de-la-variable" class="nav-link" data-scroll-target="#vocabulaire-autour-de-la-variable">Vocabulaire autour de la variable</a></li>
+  <li><a href="#tableau-du-type-de-variable" id="toc-tableau-du-type-de-variable" class="nav-link" data-scroll-target="#tableau-du-type-de-variable">Tableau du type de variable :</a></li>
+  <li><a href="#vocabulaire-autour-de-la-variable" id="toc-vocabulaire-autour-de-la-variable" class="nav-link" data-scroll-target="#vocabulaire-autour-de-la-variable">Vocabulaire autour de la variable :</a></li>
+  <li><a href="#exemple-concret" id="toc-exemple-concret" class="nav-link" data-scroll-target="#exemple-concret">Exemple concret :</a></li>
+  </ul></li>
+  <li><a href="#traitement-des-données" id="toc-traitement-des-données" class="nav-link" data-scroll-target="#traitement-des-données">Traitement des données</a>
+  <ul class="collapse">
+  <li><a href="#gestion-des-valeurs-manquantes" id="toc-gestion-des-valeurs-manquantes" class="nav-link" data-scroll-target="#gestion-des-valeurs-manquantes">Gestion des valeurs manquantes</a></li>
+  <li><a href="#group_by" id="toc-group_by" class="nav-link" data-scroll-target="#group_by">Group_by</a></li>
+  <li><a href="#merge" id="toc-merge" class="nav-link" data-scroll-target="#merge">Merge</a></li>
+  <li><a href="#variables-dummys" id="toc-variables-dummys" class="nav-link" data-scroll-target="#variables-dummys">variables dummys</a></li>
+  </ul></li>
+  <li><a href="#statistiques-descriptives" id="toc-statistiques-descriptives" class="nav-link" data-scroll-target="#statistiques-descriptives">Statistiques Descriptives</a></li>
+  <li><a href="#premiers-modèles" id="toc-premiers-modèles" class="nav-link" data-scroll-target="#premiers-modèles">Premiers modèles</a>
+  <ul class="collapse">
+  <li><a href="#modèles-linéaires" id="toc-modèles-linéaires" class="nav-link" data-scroll-target="#modèles-linéaires">Modèles linéaires</a></li>
+  <li><a href="#regression-logistique" id="toc-regression-logistique" class="nav-link" data-scroll-target="#regression-logistique">Regression logistique</a></li>
+  <li><a href="#regression-ridge-et-lasso" id="toc-regression-ridge-et-lasso" class="nav-link" data-scroll-target="#regression-ridge-et-lasso">Regression ridge et lasso</a></li>
+  </ul></li>
+  <li><a href="#test-dindependance" id="toc-test-dindependance" class="nav-link" data-scroll-target="#test-dindependance">Test d’independance</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -154,23 +209,490 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="rappels-fondamentaux" class="level1">
-<h1>Rappels Fondamentaux</h1>
-<section id="quest-ce-quune-variable" class="level2">
-<h2 class="anchored" data-anchor-id="quest-ce-quune-variable">Qu’est ce qu’une variable ?</h2>
-<p>Une variable statistique est une caractéristique ou une mesure que l’on peut attribuer à chaque individu d’une population ou d’un échantillon</p>
+<section id="partie-1-analyse-de-données" class="level1">
+<h1>Partie 1 : Analyse de données</h1>
+<section id="rappels-fondamentaux" class="level2">
+<h2 class="anchored" data-anchor-id="rappels-fondamentaux">Rappels Fondamentaux</h2>
+<section id="quest-ce-quune-variable" class="level3">
+<h3 class="anchored" data-anchor-id="quest-ce-quune-variable">Qu’est ce qu’une variable ?</h3>
+<p>Une variable statistique est une caractéristique ou une mesure que l’on peut attribuer à chaque individu d’une population ou d’un échantillon.</p>
 </section>
-<section id="tableau-récapitulatif-autour-du-type-de-variable" class="level2">
-<h2 class="anchored" data-anchor-id="tableau-récapitulatif-autour-du-type-de-variable">Tableau récapitulatif autour du type de variable</h2>
+<section id="tableau-du-type-de-variable" class="level3">
+<h3 class="anchored" data-anchor-id="tableau-du-type-de-variable">Tableau du type de variable :</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/variables.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<p><img src="images/variables.png" class="img-fluid figure-img" style="width:84.0%"></p>
 </figure>
 </div>
 </section>
-<section id="vocabulaire-autour-de-la-variable" class="level2">
-<h2 class="anchored" data-anchor-id="vocabulaire-autour-de-la-variable">Vocabulaire autour de la variable</h2>
-<p>Ton contenu ici…</p>
+<section id="vocabulaire-autour-de-la-variable" class="level3">
+<h3 class="anchored" data-anchor-id="vocabulaire-autour-de-la-variable">Vocabulaire autour de la variable :</h3>
+<p>Lors d’une analyse statistique, on distingue deux types principaux de variables :</p>
+<ul>
+<li>La <strong>variable à expliquer</strong> (à prédir, ou à estimer) : <strong>Y</strong></li>
+<li>Les <strong>variables explicatives</strong> (prédictives ou estimatrices) : <strong>X_i</strong></li>
+</ul>
+<p>Tout l’exercice reside à établir la relation la plus pertinente entre les variables explicatives <strong>X_i</strong> et la variable à expliquer <strong>Y</strong>.</p>
+<p><strong>Tableau des synonymes :</strong></p>
+<p>Catégorique = Qualitative.<br>
+Numérique = Quantitative.</p>
+<div class="quarto-figure quarto-figure-right">
+<figure class="figure">
+<p><img src="images/Variables2.png" class="img-fluid figure-img" width="294"></p>
+</figure>
+</div>
+</section>
+<section id="exemple-concret" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-concret">Exemple concret :</h3>
+<p>Je cherche à estimer le prix d’une maison en fonction de 4 caractéristiques : le type de bien, l’état du bien, le nombre de pièces et la superficie en m2.</p>
+<p>Pour ce faire, j’ai à ma disposition une base de données intitulée “data_immobilier” (générée aléatoirement) que je traite en R.</p>
+<p>Avant tout, je dois avoir ces éléments en tête :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Exemple1.png" class="img-fluid figure-img" width="500"></p>
+</figure>
+</div>
+<p>Ensuite, je peux passer à l’étape suivante.</p>
+</section>
+</section>
+<section id="traitement-des-données" class="level2">
+<h2 class="anchored" data-anchor-id="traitement-des-données">Traitement des données</h2>
+<p>Peu importe leur origine, les bases de données nécessitent presque toujours un traitement avant d’être exploitables. De la collecte à l’enregistrement, des irrégularités s’introduisent, causant des erreurs lors de l’exploitation. Le traitement vise à corriger ou à gérer ces irrégularités. Bien que chaque base de données présente ses propres spécificités et problèmes, les quatre points que nous aborderons par la suite sont courants et doivent être maîtrisés</p>
+<section id="gestion-des-valeurs-manquantes" class="level3">
+<h3 class="anchored" data-anchor-id="gestion-des-valeurs-manquantes">Gestion des valeurs manquantes</h3>
+<p>Les valeurs manquantes, souvent représentées par les <code>NaN</code>, sont parmi les anomalies les plus couramment rencontrées dans les bases de données. Plusieurs stratégies peuvent être adoptées face à ces valeurs :</p>
+<p><u><strong><em>Conversion</em></strong></u> : On surpasse le <code>NaN</code> en le convertissant en une autre valeur, comme un flottant.</p>
+<ul>
+<li><strong>Avantage</strong> : Conservation de données.</li>
+<li><strong>Désavantage</strong> : Introduction d’un biais potentiellement significatif.</li>
+</ul>
+<p><strong>Code</strong> :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convertir les NaN en 0 (ou une autre valeur) en R.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df[<span class="fu">is.na</span>(df)] <span class="ot">&lt;-</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convertir les NaN en 0 (ou une autre valeur) en python. </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">df.fillna</span>(<span class="dv">0</span>, <span class="at">inplace=</span>True)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><u><strong><em>imputation</em></strong></u> : remplacer les valeurs manquantes par des estimations (la moyenne ou la médiane des autres valeurs).</p>
+<ul>
+<li><strong>Avantage</strong> : Conservation de données.</li>
+<li><strong>Désavantage</strong> : Introduction d’un biais potentiellement significatif.</li>
+</ul>
+<p><strong>Code</strong> :</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Utiliser la moyenne pour imputer en R </span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>column_name[<span class="fu">is.na</span>(df<span class="sc">$</span>column_name)] <span class="ot">&lt;-</span> <span class="fu">mean</span>(df<span class="sc">$</span>column_name, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Utiliser la moyenne pour imputer en python</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'column_name'</span>]<span class="fu">.fillna</span>(df[<span class="st">'column_name'</span>]<span class="fu">.mean</span>(), <span class="at">inplace=</span>True)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><u><strong><em>suppression</em></strong></u> : supprimer les lignes avec des NaN.</p>
+<ul>
+<li><strong>Avantage</strong> : On limite le biais .</li>
+<li><strong>Désavantage</strong> : perte d’information générale.</li>
+</ul>
+<p><strong>Code</strong> :</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Supprimer les lignes contenant des NaN en R</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df[<span class="fu">complete.cases</span>(df), ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Supprimer les lignes contenant des NaN </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">df.dropna</span>(<span class="at">inplace=</span>True)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Il n’y a pas de solution parfaite, certains cas vont favoriser certains choix, mais la suppression reste quand même la plus sur en terme de qualité de l’information, à privilègier des que possible.</p>
+</section>
+<section id="group_by" class="level3">
+<h3 class="anchored" data-anchor-id="group_by">Group_by</h3>
+<p>La fonction <code>group_by</code> est utilisé pour regrouper des données en fonction de certaines variables catégorielles. Cela permet d’effectuer des opérations et des analyses spécifiques à chaque groupe, et comprendre les comportements ou les anomalies spécifiques à chaque groupe.<br>
+Concretement, si l’on reprend la base <code>data_immobilier</code>, faire une group_by sur la variable <code>Type_de_bien</code> nous permettra de faire une etude sur le groupe <code>maison</code>, <code>loft</code>, <code>appartement</code> et <code>studio</code> séparemment.</p>
+<p>R :</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Groupement des données par Type_de_bien et calcul de la moyenne des autres variables</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data_grouped <span class="ot">&lt;-</span> data_immobilier <span class="sc">%&gt;%</span>                                 <span class="co">#Nouveau DataFrame "data_grouped"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Type_de_bien) <span class="sc">%&gt;%</span>                                        <span class="co">#Selection par groupe "Type de bien"</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(                                                        <span class="co">#Affiche les infomations</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Prix_moyen =</span> <span class="fu">mean</span>(Prix, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),                          <span class="co">#La moyenne de prix pour chaque groupe</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">Superficie_moyenne =</span> <span class="fu">mean</span>(Superficie_m2, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),         <span class="co">#La moyenne de superficie pour chaque groupe</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">Nombre_moyen_de_pieces =</span> <span class="fu">mean</span>(Nombre_de_pieces, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)   <span class="co">#La moyenne de Nombre de piece pour chaque groupe</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(data_grouped)                                                 <span class="co">#Affichage</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Python :</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Groupement des données par Type_de_bien et calcul de la moyenne des autres variables </span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data_grouped <span class="ot">=</span> <span class="fu">data_immobilier.groupby</span>(<span class="st">'Type_de_bien'</span>)<span class="fu">.agg</span>({</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Prix'</span><span class="sc">:</span> <span class="st">'mean'</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Superficie_m2'</span><span class="sc">:</span> <span class="st">'mean'</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Nombre_de_pieces'</span><span class="sc">:</span> <span class="st">'mean'</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>})<span class="fu">.reset_index</span>()</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(data_grouped)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="merge" class="level3">
+<h3 class="anchored" data-anchor-id="merge">Merge</h3>
+<p>La fonction merge est utilisée pour fusionner deux dataframes sur la base d’au moins une colonne commune. Cette fonction est extremement utile si l’on souhaite combiner des données provennant de differentes bases pour une même analyse.</p>
+<p>Application concrète avec la base de données <code>data_immobilier</code>:<br>
+On a une autre base de données, <code>data_Localisation</code>, avec les variables <code>Superficie_m2</code> et <code>Localisation</code>. En utilisant la fonction merge, on va fusionner les deux bases de données en utilisant la colonne commune, <code>Superficie_m2</code> , pour avoir une base de données plus riche.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple de code R utilisant merge</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>data_complete <span class="ot">&lt;-</span> <span class="fu">merge</span>(data_immobilier, data_Localisation, <span class="at">by =</span> <span class="st">"Superficie_m2"</span>, <span class="at">all =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple de code Python utilisant merge</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>data_complete <span class="ot">=</span> <span class="fu">pd.merge</span>(data_immobilier, data_Localisation, <span class="at">on=</span><span class="st">'Superficie_m2'</span>, <span class="at">how=</span><span class="st">'outer'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/merge.png" class="img-fluid figure-img" width="452"></p>
+</figure>
+</div>
+</section>
+<section id="variables-dummys" class="level3">
+<h3 class="anchored" data-anchor-id="variables-dummys">variables dummys</h3>
+<p>Les variables dummy sont utilisées pour convertir des variables catégorielles en variables numériques.<br>
+Objectifs : Utiliser ces variables dans des analyses statistiques et des modèles de machine learning qui requièrent des entrées numériques. Comment créer des variables dummy ? Exemple concret :</p>
+<p>On reprend le dataframe qui a une desormais colonne catégorielle nommée <code>Localisation</code> avec des noms de villes. On crée les variables dummy, soit pour chaque catégorie unique dans la colonne <code>Localisation</code> deviendra une nouvelle colonne dans le dataframe.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># En R</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>data_with_dummies <span class="ot">&lt;-</span> <span class="fu">model.matrix</span>(<span class="sc">~</span> Localisation <span class="sc">-</span> <span class="dv">1</span>, <span class="at">data =</span> data_complete) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">as.data.frame</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># En python</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>data_with_dummies <span class="ot">=</span> <span class="fu">pd.get_dummies</span>(data_complete, <span class="at">columns=</span>[<span class="st">'Localisation'</span>], <span class="at">prefix=</span><span class="st">''</span>, <span class="at">prefix_sep=</span><span class="st">''</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Dans le nouveau dataframe, <code>data_with_dummies</code>, chaque ville unique de la colonne <code>Localisation</code> originale a été transformée en une nouvelle colonne. Si une observation dans la colonne <code>Localisation</code> originale était “Paris”, alors la colonne <code>LocalisationParis</code> serait marquée avec un <code>1</code>, et toutes les autres colonnes de ville seraient marquées avec des <code>0</code>.</p>
+<p><img src="images/dummys.png" class="img-fluid" width="433"></p>
+<p>Attention aux problémes de multicolinéarité, supprimer une colonne pour une utilisation dans certains modèles.</p>
+</section>
+</section>
+<section id="statistiques-descriptives" class="level2">
+<h2 class="anchored" data-anchor-id="statistiques-descriptives">Statistiques Descriptives</h2>
+<p>Les statistiques descriptives permettent de résumer, décrire et comprendre les données.</p>
+<p>Pour les variables <code>quantitatives</code>, on utilise :</p>
+<p><code>Moyenne</code> : La valeur moyenne.<br>
+<code>Médiane</code> : La valeur centrale.<br>
+<code>Mode</code> : La valeur la plus fréquente.<br>
+<code>Min,Max</code>= valeur minimal et maximum. <code>Écart Type</code> : Mesure de la dispersion des valeurs.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># En python</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">describe</span>(data_quantitative)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># En R </span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(data_quantitative)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Pour les variables <code>qualitatives</code>, on utilise:</p>
+<p><code>Fréquences</code> : Nombre de fois qu’une catégorie apparaît.<br>
+<code>Pourcentages</code> : Proportion d’une catégorie par rapport au total.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># En python</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculer les fréquences</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>freq <span class="ot">=</span> <span class="fu">data_qualitative.value_counts</span>()</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculer les pourcentages</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>perce <span class="ot">=</span> frequencies <span class="sc">/</span> <span class="fu">len</span>(data_qualitative) <span class="sc">*</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># En R </span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculer les fréquences</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>frequencies <span class="ot">&lt;-</span> <span class="fu">table</span>(data_qualitative)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculer les pourcentages</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>percentages <span class="ot">&lt;-</span> <span class="fu">prop.table</span>(frequencies) <span class="sc">*</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>On illustre également par des <code>graphiques</code> descriptifs:</p>
+<p>Histogrammes et Diagrammes en Barres : Pour montrer la distribution des données.<br>
+Boîtes à Moustaches (Boxplots) : Pour montrer la médiane, quartiles et valeurs aberrantes.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># En python</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un histogramme pour les données quantitatives</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plt.hist</span>(data_quantitative, <span class="at">bins=</span><span class="dv">5</span>, <span class="at">edgecolor=</span><span class="st">'k'</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plt.xlabel</span>(<span class="st">"Valeurs"</span>)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plt.ylabel</span>(<span class="st">"Fréquence"</span>)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plt.title</span>(<span class="st">"Histogramme des données quantitatives"</span>)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plt.show</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># En R </span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un histogramme pour les données quantitatives</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="fu">data.frame</span>(<span class="at">x =</span> data_quantitative)) <span class="sc">+</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> x), <span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">fill =</span> <span class="st">"blue"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Valeurs"</span>, <span class="at">y =</span> <span class="st">"Fréquence"</span>, <span class="at">title =</span> <span class="st">"Histogramme des données quantitatives"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>La statistique descriptive offre une première compréhension des données, indispensable avant toute analyse plus approfondie. Elle permet de déceler des tendances, anomalies, ou relations à explorer davantage. C’est une étape indispensable à ne surtout pas negliger.</p>
+</section>
+<section id="premiers-modèles" class="level2">
+<h2 class="anchored" data-anchor-id="premiers-modèles">Premiers modèles</h2>
+<section id="modèles-linéaires" class="level3">
+<h3 class="anchored" data-anchor-id="modèles-linéaires">Modèles linéaires</h3>
+<p><strong><em>Def regression</em></strong> : Un ensemble de méthodes pour analyser la relation d’une variable à expliquer par une ou plusieurs autres variables explicatives.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/Reg1.png" class="img-fluid figure-img" width="467"></p>
+</figure>
+</div>
+<p><strong>Méthode des moindres carrés ordinaires :</strong></p>
+<p><strong>Objectif</strong> : Regarder à quel point la droite obtenue est meilleure que la droite de la moyenne des observations. Donc, <span class="math inline">\(R^2 = \min\left(\sum(y - \hat{y})^2\right)\)</span></p>
+<p><strong>Moindres carrés ajustés :</strong></p>
+<p>Le <span class="math inline">\(R^2\)</span> carré ordinaire peut seulement augmenter ou rester constant par l’ajout d’une nouvelle variable. Concretement, ne réduira jamais la capacité explicative du modèle. Le adjusted - <span class="math inline">\(R^2\)</span> est une methode par pénalisation qui compense ce défaut. Il faut donc le privilègier à l’etude.</p>
+<p><strong>P-value :</strong></p>
+<p>C’est un indicateur statistique utilisé pour évaluer la significativité d’un résultat. On pose que l’hypothèse nulle (généralement l’absence d’effet ou de relation) est vraie. Une p-value faible suggère que les observations sont peu probables sous l’hypothèse nulle, indiquant ainsi une évidence forte contre l’hypothèse nulle et en faveur de l’hypothèse alternative, donc qu’il y a probablement une relation.</p>
+<p>Une p-value inférieure à un seuil défini (souvent 0,05) est généralement interprétée comme statistiquement significative, suggérant que le modèle ou la variable examinée a un effet réel et non dû au hasard.</p>
+<p>Concrètement,</p>
+<ul>
+<li><p>p-value &lt; 5%, la variable est statistiquement significative, donc probablement explicative, on la garde dans le modèle.</p></li>
+<li><p>p-value &gt; 5%, la variable n’est pas statistiquement significative, donc probablement pas explicative, on l’exclut du modèle.</p></li>
+</ul>
+<p><strong>Gestion des outliers :</strong></p>
+<p>Certaines observations extrêmes, ou outliers, peuvent fausser les résultats en raison de leur décalage significatif par rapport au reste des données. Il faut les identifier et, si nécessaire, les exclure en amont de l’analyse. Pour ce faire, on utilise souvent des méthodes telles que DFFITS et DFBETAS. Ces techniques aident à déterminer si une observation individuelle est particulièrement influente et si elle devrait être considérée comme un outlier devant être exclu de l’analyse pour obtenir des résultats plus fiables.</p>
+<p><strong>Multicollinéarité :</strong></p>
+<p>La multicollinéarité dans les modèles de régression linéaire est un phénomène où deux ou plusieurs variables explicatives sont fortement corrélées entre elles. Cette forte corrélation peut causer des problèmes dans l’estimation des coefficients de régression, rendant les résultats moins fiables. Pour mesurer le degré de multicollinéarité dans un modèle, on utilise souvent l’indice VIF.</p>
+<ul>
+<li><p>VIF &lt; 5, peu de risque de multicollinéarité .</p></li>
+<li><p>VIF &gt; 5, risque de multicollinéarité.</p></li>
+</ul>
+<p><strong>Méthode Backward élimination pour affiner la précision du modèle :</strong></p>
+<p>Initialement, on a une variable à expliquer et plusieurs variables explicatives.</p>
+<p>On cherche la meilleure combinaison possible entre ces variables pour definir ce modèle, du point de vue de la significativité à travers la p-value, et de l’explicativité à travers le adjusted- <span class="math inline">\(R^2\)</span>.</p>
+<p>Une idée serait de tester toutes les combinaisons une à une, en théorie cela fonctionnerait, mais cela n’est pas réaliste au vu de la quantité de calcul nécessaire.</p>
+<p>la méthode Backward élimination consiste alors à évaluer le modèle par itération suivant le schéma suivant :</p>
+<ul>
+<li><p>1 - Je fais mon modèle avec l’ensemble des variables.</p></li>
+<li><p>2 - Je supprime LA variable qui à la p-value &gt; 5%, la plus élevé.</p></li>
+<li><p>3 - Je réévalue le modèle</p></li>
+<li><p>4 - Je regarde comment le adjusted-<span class="math inline">\(R^2\)</span> à évoluer :</p>
+<ul>
+<li><p>Il augmente, c’est bien le modèle est plus explicatif</p></li>
+<li><p>Il diminue, c’est mauvais, la variable avait quand même une importance</p>
+<ul>
+<li>Je refléchis à la conserver ou non si la p-value est pas trop haute.</li>
+</ul></li>
+</ul></li>
+<li><p>5 - Je répète les étapes 2,3 et 4 autant de fois que nécessaire.</p></li>
+</ul>
+<p><strong>Codes :</strong></p>
+<p>Régression linéaire simple :</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#var1 -&gt; a expliquer</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co">#var2 -&gt; explicative</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>Reg1<span class="ot">&lt;-</span><span class="fu">lm</span>(var1<span class="sc">~</span>var2, <span class="at">data=</span>df)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(Reg1) <span class="co"># Le détail </span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(Reg1) <span class="co">#Representation de la regression linéaire </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Régression linéaire multiple :</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#var1 -&gt; a expliquer</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>Reg1<span class="ot">&lt;-</span><span class="fu">lm</span>(var1<span class="sc">~</span>var2<span class="sc">+</span>var3<span class="sc">+</span>var4, <span class="at">data=</span>df)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(Reg1) <span class="co"># Le détail </span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(Reg1)  <span class="co">#Representation de la regression linéaire </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="regression-logistique" class="level3">
+<h3 class="anchored" data-anchor-id="regression-logistique">Regression logistique</h3>
+<p><strong><em>Def regression logistique</em></strong> : Utilisée pour des problèmes de classification ( variable dependante bianire ).<br>
+</p>
+<p><strong><em>Principe:</em></strong> Modélise la probabilité que la variable dépendante appartienne à une catégorie particulière.<br>
+</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Régression logistique en R (y binaire à expliquer)</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>glm_model <span class="ot">&lt;-</span> <span class="fu">glm</span>(y <span class="sc">~</span> x1 <span class="sc">+</span> x2, <span class="at">data =</span> dataset, <span class="at">family =</span> <span class="st">"binomial"</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(glm_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Régression logistique en Python (y binaire à expliquer)</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>from sklearn.linear_model import LogisticRegression</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>model <span class="ot">=</span> <span class="fu">LogisticRegression</span>()</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">model.fit</span>(X, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="regression-ridge-et-lasso" class="level3">
+<h3 class="anchored" data-anchor-id="regression-ridge-et-lasso">Regression ridge et lasso</h3>
+<section id="rigde" class="level4">
+<h4 class="anchored" data-anchor-id="rigde">Rigde</h4>
+<p><strong><em>Usage:</em></strong> Utilisée pour traiter le problème de multicollinéarité dans les données. Ajoute une pénalité au carré des coefficients. <strong><em>Principe:</em></strong> Minimise une somme pondérée des carrés des résidus et des carrés des coefficients.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Régression Ridge en R</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glmnet)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>ridge_model <span class="ot">&lt;-</span> <span class="fu">glmnet</span>(x, y, <span class="at">alpha =</span> <span class="dv">0</span>, <span class="at">lambda =</span> lambda_value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Régression Ridge en Python</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>from sklearn.linear_model import Ridge</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>model <span class="ot">=</span> <span class="fu">Ridge</span>(<span class="at">alpha=</span><span class="fl">1.0</span>)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="fu">model.fit</span>(X, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="lasso" class="level4">
+<h4 class="anchored" data-anchor-id="lasso">Lasso</h4>
+<p><strong><em>Usage:</em></strong> Usage: Permet de sélectionner des variables en réduisant les coefficients de certaines à zéro. <strong><em>Principe:</em></strong> Semblable à Ridge, mais ajoute une pénalité absolue aux coefficients.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Régression Lasso en R</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glmnet)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>lasso_model <span class="ot">&lt;-</span> <span class="fu">glmnet</span>(x, y, <span class="at">alpha =</span> <span class="dv">1</span>, <span class="at">lambda =</span> lambda_value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Régression Lasso en Python</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>from sklearn.linear_model import Lasso</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>model <span class="ot">=</span> <span class="fu">Lasso</span>(<span class="at">alpha=</span><span class="fl">1.0</span>)</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">model.fit</span>(X, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+</section>
+<section id="test-dindependance" class="level2">
+<h2 class="anchored" data-anchor-id="test-dindependance">Test d’independance</h2>
+<p>Les tests d’indépendance, sont utilisés en statistique pour déterminer si deux variables semblent être liées ou non. L’intérêt principal de ces tests est de vérifier l’existence d’une association ou d’une relation entre les variables.</p>
+<p>Cas 1: Les deux variables sont nominales</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tableaux des effectifs croisés ou fréquences croisées</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>tab <span class="ot">&lt;-</span> <span class="fu">table</span>(var1, var2)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(tab)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>prop_table <span class="ot">&lt;-</span> <span class="fu">prop.table</span>(tab, <span class="at">margin =</span> <span class="dv">2</span>)</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(prop_tab)</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Représentation graphique des profils</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(tab, <span class="at">legend =</span> <span class="cn">TRUE</span>, <span class="at">beside =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(prop_table, <span class="at">legend =</span> <span class="cn">TRUE</span>, <span class="at">beside =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Test d'indépendance du khi-carré</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>chi_sq_test <span class="ot">&lt;-</span> <span class="fu">chisq.test</span>(tab)</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(chi_sq_test)</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Si chi_sq_test$p.value &lt; 0.05 &amp; all(chi_sq_test$expected &gt; 5)</span></span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Alors test significatif et effectifs espérés supérieurs à 5, il y a dependance. </span></span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Analyse des résidus standardisés via leur représentation avec la fonction mosaicplot()</span></span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a><span class="fu">mosaicplot</span>(tab)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Cas 2: Une variable est quantitative et l’autre est nominale binaire</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># var1 -&gt; quantitative </span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="co"># var2 -&gt; nominale binaire</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sous-populations définies par la variable binaire</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>groupe1 <span class="ot">&lt;-</span> df<span class="sc">$</span>var1[df<span class="sc">$</span>var2 <span class="sc">==</span> <span class="st">"Oui"</span>]</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>groupe2 <span class="ot">&lt;-</span> df<span class="sc">$</span>var1[df<span class="sc">$</span>var2 <span class="sc">==</span> <span class="st">"Non"</span>]</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Indicateurs statistiques </span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(groupe1)</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(groupe2)</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Representation graphique</span></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> variable_nominale, <span class="at">y =</span> variable_quantitative)) <span class="sc">+</span></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Tester la normalité</span></span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>shapiro1 <span class="ot">&lt;-</span> <span class="fu">shapiro.test</span>(groupe1)</span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a>shapiro2 <span class="ot">&lt;-</span> <span class="fu">shapiro.test</span>(groupe2)</span>
+<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(shapiro1)</span>
+<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(shapiro2)</span>
+<span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Si shapiro1$p.value &gt; 0.05 et shapiro2$p.value &gt; 0.05</span></span>
+<span id="cb28-24"><a href="#cb28-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalité non rejetté </span></span>
+<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Procédure paramétrique</span></span>
+<span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-28"><a href="#cb28-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Tester l'égalité des variances</span></span>
+<span id="cb28-29"><a href="#cb28-29" aria-hidden="true" tabindex="-1"></a>var_test <span class="ot">&lt;-</span> <span class="fu">var.test</span>(groupe1, groupe2)</span>
+<span id="cb28-30"><a href="#cb28-30" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(var_test)</span>
+<span id="cb28-31"><a href="#cb28-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-32"><a href="#cb28-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Si var_test$p.value &gt; 0.05</span></span>
+<span id="cb28-33"><a href="#cb28-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Égalité des variances non rejeté </span></span>
+<span id="cb28-34"><a href="#cb28-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Faire un test de comparasion des moyennes </span></span>
+<span id="cb28-35"><a href="#cb28-35" aria-hidden="true" tabindex="-1"></a>t_test <span class="ot">&lt;-</span> <span class="fu">t.test</span>(var_quanti <span class="sc">~</span> var_nominale, <span class="at">var.equal =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb28-36"><a href="#cb28-36" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(t_test)</span>
+<span id="cb28-37"><a href="#cb28-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-38"><a href="#cb28-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Si var_test$p.value &lt; 0.05</span></span>
+<span id="cb28-39"><a href="#cb28-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Égalité des variances rejetée</span></span>
+<span id="cb28-40"><a href="#cb28-40" aria-hidden="true" tabindex="-1"></a><span class="co"># les variables ne sont pas indépendantes</span></span>
+<span id="cb28-41"><a href="#cb28-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Faire un test de comparasion des moyennes </span></span>
+<span id="cb28-42"><a href="#cb28-42" aria-hidden="true" tabindex="-1"></a>t_test <span class="ot">&lt;-</span> <span class="fu">t.test</span>(var_quanti <span class="sc">~</span> var_nominale, <span class="at">var.equal =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb28-43"><a href="#cb28-43" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(t_test)</span>
+<span id="cb28-44"><a href="#cb28-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-45"><a href="#cb28-45" aria-hidden="true" tabindex="-1"></a><span class="co"># Procédure non paramétrique (shapiro1$p.value &lt; 0.05 ou shapiro2$p.value &lt; 0.05)</span></span>
+<span id="cb28-46"><a href="#cb28-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-47"><a href="#cb28-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Tester l'égalité des variances</span></span>
+<span id="cb28-48"><a href="#cb28-48" aria-hidden="true" tabindex="-1"></a>ansari_test <span class="ot">&lt;-</span> <span class="fu">ansari.test</span>(groupe1, groupe2)</span>
+<span id="cb28-49"><a href="#cb28-49" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(ansari_test)</span>
+<span id="cb28-50"><a href="#cb28-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-51"><a href="#cb28-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Si ansari_test$p.value &gt; 0.05</span></span>
+<span id="cb28-52"><a href="#cb28-52" aria-hidden="true" tabindex="-1"></a><span class="co"># Égalité des variances non rejetée</span></span>
+<span id="cb28-53"><a href="#cb28-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Faire un test de comparaison des medianes </span></span>
+<span id="cb28-54"><a href="#cb28-54" aria-hidden="true" tabindex="-1"></a>wilcox_test <span class="ot">&lt;-</span> <span class="fu">wilcox.test</span>(var_quanti <span class="sc">~</span> var_nominale)</span>
+<span id="cb28-55"><a href="#cb28-55" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(wilcox_test)</span>
+<span id="cb28-56"><a href="#cb28-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-57"><a href="#cb28-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Si ansari_test$p.value &lt; 0.05</span></span>
+<span id="cb28-58"><a href="#cb28-58" aria-hidden="true" tabindex="-1"></a><span class="co"># Égalité des variances rejetée</span></span>
+<span id="cb28-59"><a href="#cb28-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-60"><a href="#cb28-60" aria-hidden="true" tabindex="-1"></a><span class="st">"Les distributions conditionnelles de X connaissant Y diffèrent d'un paramètre d'échelle"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Cas 3 : une variable est quantitative et l’autre nominale non binaire</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># var1 -&gt; quantitative </span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="co"># var2 -&gt; nominale non binaire</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Indicateurs statistiques</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>indicateurs <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(var2) <span class="sc">%&gt;%</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">moyenne =</span> <span class="fu">mean</span>(var1),</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">mediane =</span> <span class="fu">median</span>(var1),</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">ecart_type =</span> <span class="fu">sd</span>(var1),</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">minimum =</span> <span class="fu">min</span>(var1),</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>            <span class="at">maximum =</span> <span class="fu">max</span>(var1),</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">q1 =</span> <span class="fu">quantile</span>(var1, <span class="fl">0.25</span>),</span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">q3 =</span> <span class="fu">quantile</span>(var1, <span class="fl">0.75</span>))</span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>indicateurs</span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Représentations graphiques</span></span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> choux<span class="sc">$</span>var2, <span class="at">y =</span> choux<span class="sc">$</span>var1)) <span class="sc">+</span></span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">outlier.colour =</span> <span class="st">"red"</span>, <span class="at">outlier.size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"lightgray"</span>, <span class="st">"lightblue"</span>), <span class="at">guide =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">"Ventes "</span>, <span class="at">title =</span> <span class="st">"Boîtes à Moustaches des ..."</span>)</span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Test de normalité</span></span>
+<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a>normality <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(var2) <span class="sc">%&gt;%</span></span>
+<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">shapiro.test</span>(var1)<span class="sc">$</span>p.value)</span>
+<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a>normality</span>
+<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a><span class="co"># si tous les shapiro.test(var1)$p.value &gt; 0.05</span></span>
+<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalité non rejetté </span></span>
+<span id="cb29-31"><a href="#cb29-31" aria-hidden="true" tabindex="-1"></a><span class="co"># procédure Paramétrique</span></span>
+<span id="cb29-32"><a href="#cb29-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-33"><a href="#cb29-33" aria-hidden="true" tabindex="-1"></a>bartlett_res <span class="ot">&lt;-</span> <span class="fu">bartlett.test</span>(var1 <span class="sc">~</span> var2, <span class="at">data =</span> df)</span>
+<span id="cb29-34"><a href="#cb29-34" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(bartlett_res)</span>
+<span id="cb29-35"><a href="#cb29-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-36"><a href="#cb29-36" aria-hidden="true" tabindex="-1"></a><span class="co">#si bartlett_res$p.value &gt; 0.05 </span></span>
+<span id="cb29-37"><a href="#cb29-37" aria-hidden="true" tabindex="-1"></a><span class="co">#l’égalité des variances n’est pas rejetée</span></span>
+<span id="cb29-38"><a href="#cb29-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-39"><a href="#cb29-39" aria-hidden="true" tabindex="-1"></a>oneway_res <span class="ot">&lt;-</span> <span class="fu">oneway.test</span>(var1 <span class="sc">~</span> var2, <span class="at">data =</span> df, <span class="at">var.equal =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb29-40"><a href="#cb29-40" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(oneway_res)</span>
+<span id="cb29-41"><a href="#cb29-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-42"><a href="#cb29-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier l'indépendance: </span></span>
+<span id="cb29-43"><a href="#cb29-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-44"><a href="#cb29-44" aria-hidden="true" tabindex="-1"></a><span class="do">##si oneway_res$p.value &gt; 0.05</span></span>
+<span id="cb29-45"><a href="#cb29-45" aria-hidden="true" tabindex="-1"></a><span class="do">##alors Les variables sont indépendantes (pas de relation significative)</span></span>
+<span id="cb29-46"><a href="#cb29-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-47"><a href="#cb29-47" aria-hidden="true" tabindex="-1"></a><span class="do">##si oneway_res$p.value &lt; 0.05</span></span>
+<span id="cb29-48"><a href="#cb29-48" aria-hidden="true" tabindex="-1"></a><span class="do">##Les variables ne sont pas indépendantes (relation significative)</span></span>
+<span id="cb29-49"><a href="#cb29-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-50"><a href="#cb29-50" aria-hidden="true" tabindex="-1"></a><span class="co">#si bartlett_res$p.value &lt; 0.05 (l’égalité des variances est rejetée)</span></span>
+<span id="cb29-51"><a href="#cb29-51" aria-hidden="true" tabindex="-1"></a><span class="co">#Les variables ne sont pas indépendantes</span></span>
+<span id="cb29-52"><a href="#cb29-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-53"><a href="#cb29-53" aria-hidden="true" tabindex="-1"></a><span class="co">#si au moins un shapiro.test(tonnage)$p.value &lt; 0.05</span></span>
+<span id="cb29-54"><a href="#cb29-54" aria-hidden="true" tabindex="-1"></a><span class="co">#Procédure Non paramétrique</span></span>
+<span id="cb29-55"><a href="#cb29-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-56"><a href="#cb29-56" aria-hidden="true" tabindex="-1"></a>fligner_res <span class="ot">&lt;-</span> <span class="fu">fligner.test</span>(var1 <span class="sc">~</span> var2, <span class="at">data =</span> df)</span>
+<span id="cb29-57"><a href="#cb29-57" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(fligner_res)</span>
+<span id="cb29-58"><a href="#cb29-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-59"><a href="#cb29-59" aria-hidden="true" tabindex="-1"></a><span class="co">#si fligner_res$p.value &gt; 0.05 </span></span>
+<span id="cb29-60"><a href="#cb29-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-61"><a href="#cb29-61" aria-hidden="true" tabindex="-1"></a><span class="do">##l’égalité des variances n’est pas rejetée</span></span>
+<span id="cb29-62"><a href="#cb29-62" aria-hidden="true" tabindex="-1"></a>kruskal_res <span class="ot">&lt;-</span> <span class="fu">kruskal.test</span>(var1 <span class="sc">~</span> var2, <span class="at">data =</span> df)</span>
+<span id="cb29-63"><a href="#cb29-63" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(kruskal_res)</span>
+<span id="cb29-64"><a href="#cb29-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-65"><a href="#cb29-65" aria-hidden="true" tabindex="-1"></a><span class="do">## Vérifier l'indépendance</span></span>
+<span id="cb29-66"><a href="#cb29-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-67"><a href="#cb29-67" aria-hidden="true" tabindex="-1"></a><span class="do">## Si kruskal_res$p.value &gt; 0.05</span></span>
+<span id="cb29-68"><a href="#cb29-68" aria-hidden="true" tabindex="-1"></a><span class="do">##Les variables sont indépendantes (pas de relation significative)</span></span>
+<span id="cb29-69"><a href="#cb29-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-70"><a href="#cb29-70" aria-hidden="true" tabindex="-1"></a><span class="do">## Si kruskal_res$p.value &lt; 0.05</span></span>
+<span id="cb29-71"><a href="#cb29-71" aria-hidden="true" tabindex="-1"></a><span class="do">##Les variables ne sont pas indépendantes (relation significative)</span></span>
+<span id="cb29-72"><a href="#cb29-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-73"><a href="#cb29-73" aria-hidden="true" tabindex="-1"></a><span class="do">## Comparaison deux-à-deux</span></span>
+<span id="cb29-74"><a href="#cb29-74" aria-hidden="true" tabindex="-1"></a>pairwise_wilcox_res <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(df<span class="sc">$</span>var_quanti, df<span class="sc">$</span>var_nominale)</span>
+<span id="cb29-75"><a href="#cb29-75" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(pairwise_wilcox_res)</span>
+<span id="cb29-76"><a href="#cb29-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-77"><a href="#cb29-77" aria-hidden="true" tabindex="-1"></a><span class="co">#si fligner_res$p.value &gt; 0.05 </span></span>
+<span id="cb29-78"><a href="#cb29-78" aria-hidden="true" tabindex="-1"></a><span class="co">#l’égalité des variances est rejetée</span></span>
+<span id="cb29-79"><a href="#cb29-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-80"><a href="#cb29-80" aria-hidden="true" tabindex="-1"></a><span class="st">'Les distributions conditionnelles de X connaissant Y diffèrent d un paramètre d echelle'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Cas 4 :Les deux variables sont quantitatives</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Indicateurs statistiques</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(var1)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(var2)</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Représentation du nuage de points</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> var1, <span class="at">y =</span> var2)) <span class="sc">+</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Tester la normalité des couples d'observations</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>mshapiro_test <span class="ot">&lt;-</span> <span class="fu">shapiro.test</span>(<span class="fu">cbind</span>(var1, var2))</span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(mshapiro_test)</span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Si mshapiro_test$p.value &gt; 0.05</span></span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalité non rejeté</span></span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a><span class="do">## Test de non-corrélation de Pearson</span></span>
+<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a>pearson_test <span class="ot">&lt;-</span> <span class="fu">cor.test</span>(var1, var2, <span class="at">method =</span> <span class="st">"pearson"</span>)</span>
+<span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(pearson_test)</span>
+<span id="cb30-20"><a href="#cb30-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-21"><a href="#cb30-21" aria-hidden="true" tabindex="-1"></a><span class="do">## Si la p-value &lt; 0,05 on peut rejeter l'hypothèse nulle de non-corrélation, </span></span>
+<span id="cb30-22"><a href="#cb30-22" aria-hidden="true" tabindex="-1"></a><span class="do">## Conclure qu'il y a une corrélation significative entre les deux variables</span></span>
+<span id="cb30-23"><a href="#cb30-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-24"><a href="#cb30-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Si mshapiro_test$p.value &lt; 0.05</span></span>
+<span id="cb30-25"><a href="#cb30-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalité rejetée</span></span>
+<span id="cb30-26"><a href="#cb30-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-27"><a href="#cb30-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Test de non-corrélation monotone de Spearman</span></span>
+<span id="cb30-28"><a href="#cb30-28" aria-hidden="true" tabindex="-1"></a>spearman_test <span class="ot">&lt;-</span> <span class="fu">cor.test</span>(var1, var2, <span class="at">method =</span> <span class="st">"spearman"</span>)</span>
+<span id="cb30-29"><a href="#cb30-29" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(spearman_test)</span>
+<span id="cb30-30"><a href="#cb30-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-31"><a href="#cb30-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Si la p-value &lt; 0,05 on peut rejeter l'hypothèse nulle de non-corrélation, </span></span>
+<span id="cb30-32"><a href="#cb30-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Conclure qu'il y a une corrélation significative entre les deux variables</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

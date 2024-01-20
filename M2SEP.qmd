@@ -340,7 +340,7 @@ abline(Reg1)  #Representation de la regression linéaire
 
 ### Regression logistique
 
-***Def regression logistique*** : Utilisée pour des problèmes de classification ( variable dependante bianire ). \
+***Def regression logistique*** : Utilisée pour des problèmes de classification ( variable dependante bianire ).\
 
 ***Principe:*** Modélise la probabilité que la variable dépendante appartienne à une catégorie particulière.\
 
@@ -358,12 +358,11 @@ model = LogisticRegression()
 model.fit(X, y)
 ```
 
-### Regression ridge et lasso 
+### Regression ridge et lasso
 
-#### Rigde 
+#### Rigde
 
-***Usage:*** Utilisée pour traiter le problème de multicollinéarité dans les données. Ajoute une pénalité au carré des coefficients.
-***Principe:*** Minimise une somme pondérée des carrés des résidus et des carrés des coefficients.
+***Usage:*** Utilisée pour traiter le problème de multicollinéarité dans les données. Ajoute une pénalité au carré des coefficients. ***Principe:*** Minimise une somme pondérée des carrés des résidus et des carrés des coefficients.
 
 ``` r
 # Régression Ridge en R
@@ -378,10 +377,10 @@ from sklearn.linear_model import Ridge
 model = Ridge(alpha=1.0)
 model.fit(X, y)
 ```
-#### Lasso 
 
-***Usage:*** Usage: Permet de sélectionner des variables en réduisant les coefficients de certaines à zéro.
-***Principe:*** Semblable à Ridge, mais ajoute une pénalité absolue aux coefficients.
+#### Lasso
+
+***Usage:*** Usage: Permet de sélectionner des variables en réduisant les coefficients de certaines à zéro. ***Principe:*** Semblable à Ridge, mais ajoute une pénalité absolue aux coefficients.
 
 ``` r
 # Régression Lasso en R
@@ -401,7 +400,7 @@ model.fit(X, y)
 
 Les tests d'indépendance, sont utilisés en statistique pour déterminer si deux variables semblent être liées ou non. L'intérêt principal de ces tests est de vérifier l'existence d'une association ou d'une relation entre les variables.
 
-Cas 1:  Les deux variables sont nominales 
+Cas 1: Les deux variables sont nominales
 
 ``` r
 # Tableaux des effectifs croisés ou fréquences croisées
@@ -424,7 +423,8 @@ print(chi_sq_test)
 # Analyse des résidus standardisés via leur représentation avec la fonction mosaicplot()
 mosaicplot(tab)
 ```
-Cas 2:  Une variable est quantitative et l'autre est nominale binaire
+
+Cas 2: Une variable est quantitative et l'autre est nominale binaire
 
 ``` r
 # var1 -> quantitative 
@@ -488,7 +488,8 @@ print(wilcox_test)
 
 "Les distributions conditionnelles de X connaissant Y diffèrent d'un paramètre d'échelle"
 ```
-Cas 3 :  une variable est quantitative et l’autre nominale non binaire 
+
+Cas 3 : une variable est quantitative et l'autre nominale non binaire
 
 ``` r
 # var1 -> quantitative 
