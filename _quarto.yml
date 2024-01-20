@@ -13,6 +13,8 @@ website:
         file: "index.qmd"
       - text: "M1 SEP"
         file: "M1SEP.qmd"
+      - text: "M2 SEP"
+        file: "M2SEP.qmd"
       - text: "Exercices"
         file: "Exercices.qmd"
       - text: "Quizz"
