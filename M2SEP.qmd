@@ -358,19 +358,254 @@ model = LogisticRegression()
 model.fit(X, y)
 ```
 
+### Regression ridge et lasso 
+
+#### Rigde 
+
+***Usage:*** Utilisée pour traiter le problème de multicollinéarité dans les données. Ajoute une pénalité au carré des coefficients.
+***Principe:*** Minimise une somme pondérée des carrés des résidus et des carrés des coefficients.
+
+``` r
+# Régression Ridge en R
+library(glmnet)
+ridge_model <- glmnet(x, y, alpha = 0, lambda = lambda_value)
+```
+
+``` r
+# Régression Ridge en Python
+from sklearn.linear_model import Ridge
+
+model = Ridge(alpha=1.0)
+model.fit(X, y)
+```
+#### Lasso 
+
+***Usage:*** Usage: Permet de sélectionner des variables en réduisant les coefficients de certaines à zéro.
+***Principe:*** Semblable à Ridge, mais ajoute une pénalité absolue aux coefficients.
+
+``` r
+# Régression Lasso en R
+library(glmnet)
+lasso_model <- glmnet(x, y, alpha = 1, lambda = lambda_value)
+```
+
+``` r
+# Régression Lasso en Python
+from sklearn.linear_model import Lasso
+
+model = Lasso(alpha=1.0)
+model.fit(X, y)
+```
+
 ## Test d'independance
 
-## Récapitulons
+Les tests d'indépendance, sont utilisés en statistique pour déterminer si deux variables semblent être liées ou non. L'intérêt principal de ces tests est de vérifier l'existence d'une association ou d'une relation entre les variables.
 
-Comment faire une analyse rigoureuse ?
+Cas 1:  Les deux variables sont nominales 
 
-1 - Identifier les variables leurs types et leurs interet dans l'étude.\
-2 - traitement de la base pour la rendre exploitable.\
-3 - Les statistiques descriptives pour une premieres perceptions.\
-4 - Etude à proprement parler.
+``` r
+# Tableaux des effectifs croisés ou fréquences croisées
+tab <- table(var1, var2)
+print(tab)
+prop_table <- prop.table(tab, margin = 2)
+print(prop_tab)
 
-# Partie 2 : Complément de cours
+# Représentation graphique des profils
+barplot(tab, legend = TRUE, beside = TRUE)
+barplot(prop_table, legend = TRUE, beside = TRUE)
 
-## Mathématiques
+# Test d'indépendance du khi-carré
+chi_sq_test <- chisq.test(tab)
+print(chi_sq_test)
 
-## Economie
+# Si chi_sq_test$p.value < 0.05 & all(chi_sq_test$expected > 5)
+# Alors test significatif et effectifs espérés supérieurs à 5, il y a dependance. 
+
+# Analyse des résidus standardisés via leur représentation avec la fonction mosaicplot()
+mosaicplot(tab)
+```
+Cas 2:  Une variable est quantitative et l'autre est nominale binaire
+
+``` r
+# var1 -> quantitative 
+# var2 -> nominale binaire
+
+# Sous-populations définies par la variable binaire
+groupe1 <- df$var1[df$var2 == "Oui"]
+groupe2 <- df$var1[df$var2 == "Non"]
+
+# Indicateurs statistiques 
+summary(groupe1)
+summary(groupe2)
+
+# Representation graphique
+ggplot(df, aes(x = variable_nominale, y = variable_quantitative)) +
+  geom_boxplot() +
+  theme_minimal()
+
+# Tester la normalité
+shapiro1 <- shapiro.test(groupe1)
+shapiro2 <- shapiro.test(groupe2)
+print(shapiro1)
+print(shapiro2)
+
+# Si shapiro1$p.value > 0.05 et shapiro2$p.value > 0.05
+# Normalité non rejetté 
+
+# Procédure paramétrique
+
+# Tester l'égalité des variances
+var_test <- var.test(groupe1, groupe2)
+print(var_test)
+
+# Si var_test$p.value > 0.05
+# Égalité des variances non rejeté 
+# Faire un test de comparasion des moyennes 
+t_test <- t.test(var_quanti ~ var_nominale, var.equal = TRUE)
+print(t_test)
+
+# Si var_test$p.value < 0.05
+# Égalité des variances rejetée
+# les variables ne sont pas indépendantes
+# Faire un test de comparasion des moyennes 
+t_test <- t.test(var_quanti ~ var_nominale, var.equal = FALSE)
+print(t_test)
+
+# Procédure non paramétrique (shapiro1$p.value < 0.05 ou shapiro2$p.value < 0.05)
+
+# Tester l'égalité des variances
+ansari_test <- ansari.test(groupe1, groupe2)
+print(ansari_test)
+
+# Si ansari_test$p.value > 0.05
+# Égalité des variances non rejetée
+# Faire un test de comparaison des medianes 
+wilcox_test <- wilcox.test(var_quanti ~ var_nominale)
+print(wilcox_test)
+
+# Si ansari_test$p.value < 0.05
+# Égalité des variances rejetée
+
+"Les distributions conditionnelles de X connaissant Y diffèrent d'un paramètre d'échelle"
+```
+Cas 3 :  une variable est quantitative et l’autre nominale non binaire 
+
+``` r
+# var1 -> quantitative 
+# var2 -> nominale non binaire
+
+# Indicateurs statistiques
+indicateurs <- df %>%
+  group_by(var2) %>%
+  summarise(moyenne = mean(var1),
+            mediane = median(var1),
+            ecart_type = sd(var1),
+            minimum = min(var1),
+            maximum = max(var1),
+            q1 = quantile(var1, 0.25),
+            q3 = quantile(var1, 0.75))
+indicateurs
+
+# Représentations graphiques
+ggplot(df, aes(x = choux$var2, y = choux$var1)) +
+  geom_boxplot(outlier.colour = "red", outlier.size = 2) +
+  scale_fill_manual(values = c("lightgray", "lightblue"), guide = FALSE) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(x = "", y = "Ventes ", title = "Boîtes à Moustaches des ...")
+
+# Test de normalité
+normality <- df %>%
+  group_by(var2) %>%
+  summarise(shapiro.test(var1)$p.value)
+normality
+
+# si tous les shapiro.test(var1)$p.value > 0.05
+# Normalité non rejetté 
+# procédure Paramétrique
+
+bartlett_res <- bartlett.test(var1 ~ var2, data = df)
+print(bartlett_res)
+
+#si bartlett_res$p.value > 0.05 
+#l’égalité des variances n’est pas rejetée
+
+oneway_res <- oneway.test(var1 ~ var2, data = df, var.equal = TRUE)
+print(oneway_res)
+
+# Vérifier l'indépendance: 
+
+##si oneway_res$p.value > 0.05
+##alors Les variables sont indépendantes (pas de relation significative)
+
+##si oneway_res$p.value < 0.05
+##Les variables ne sont pas indépendantes (relation significative)
+
+#si bartlett_res$p.value < 0.05 (l’égalité des variances est rejetée)
+#Les variables ne sont pas indépendantes
+
+#si au moins un shapiro.test(tonnage)$p.value < 0.05
+#Procédure Non paramétrique
+
+fligner_res <- fligner.test(var1 ~ var2, data = df)
+print(fligner_res)
+
+#si fligner_res$p.value > 0.05 
+
+##l’égalité des variances n’est pas rejetée
+kruskal_res <- kruskal.test(var1 ~ var2, data = df)
+print(kruskal_res)
+
+## Vérifier l'indépendance
+
+## Si kruskal_res$p.value > 0.05
+##Les variables sont indépendantes (pas de relation significative)
+
+## Si kruskal_res$p.value < 0.05
+##Les variables ne sont pas indépendantes (relation significative)
+
+## Comparaison deux-à-deux
+pairwise_wilcox_res <- pairwise.wilcox.test(df$var_quanti, df$var_nominale)
+print(pairwise_wilcox_res)
+
+#si fligner_res$p.value > 0.05 
+#l’égalité des variances est rejetée
+
+'Les distributions conditionnelles de X connaissant Y diffèrent d un paramètre d echelle'
+```
+
+Cas 4 :Les deux variables sont quantitatives
+
+``` r
+# Indicateurs statistiques
+summary(var1)
+summary(var2)
+
+# Représentation du nuage de points
+ggplot() +
+  geom_point(aes(x = var1, y = var2)) +
+  theme_minimal()
+
+# Tester la normalité des couples d'observations
+mshapiro_test <- shapiro.test(cbind(var1, var2))
+print(mshapiro_test)
+
+# Si mshapiro_test$p.value > 0.05
+# Normalité non rejeté
+
+## Test de non-corrélation de Pearson
+pearson_test <- cor.test(var1, var2, method = "pearson")
+print(pearson_test)
+
+## Si la p-value < 0,05 on peut rejeter l'hypothèse nulle de non-corrélation, 
+## Conclure qu'il y a une corrélation significative entre les deux variables
+
+# Si mshapiro_test$p.value < 0.05
+# Normalité rejetée
+
+# Test de non-corrélation monotone de Spearman
+spearman_test <- cor.test(var1, var2, method = "spearman")
+print(spearman_test)
+
+# Si la p-value < 0,05 on peut rejeter l'hypothèse nulle de non-corrélation, 
+# Conclure qu'il y a une corrélation significative entre les deux variables
+```
