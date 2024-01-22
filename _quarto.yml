@@ -4,7 +4,7 @@ project:
 
 website: 
   search: true 
-  title: "Datacamp pour le master SEP"
+  title: "SEP Guide"
   reader-mode: true 
   
   navbar:
