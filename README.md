@@ -5,8 +5,11 @@ Ce guide a été créé pour vous aider à réussir dans vos études, en vous fo
 Que vous soyez nouvellement inscrits ou que vous cherchiez à approfondir vos connaissances, ce guide devrait vous être précieux.
 
 ## Table des matières :
+ - Accueil 
  - Guide M1
- - Guide M2  
+ - Guide M2
+ - Exercices
+ - Quizz
  - Logiciels
 
 
