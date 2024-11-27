@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.6.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SEP Guide - DATA Camp M1</title>
+<title>DATA Camp M1 – SEP Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,17 +35,23 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-29dedaace5d8918e049944c60b75f171.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -54,14 +60,42 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -70,52 +104,52 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">SEP Guide</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Accueil</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./M1SEP.html" rel="" target="" aria-current="page">
- <span class="menu-text">M1 SEP</span></a>
+    <a class="nav-link active" href="./M1SEP.html" aria-current="page"> 
+<span class="menu-text">M1 SEP</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./M2SEP.html" rel="" target="">
- <span class="menu-text">M2 SEP</span></a>
+    <a class="nav-link" href="./M2SEP.html"> 
+<span class="menu-text">M2 SEP</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Exercices.html" rel="" target="">
- <span class="menu-text">Exercices</span></a>
+    <a class="nav-link" href="./Exercices.html"> 
+<span class="menu-text">Exercices</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Quizz.html" rel="" target="">
- <span class="menu-text">Quizz</span></a>
+    <a class="nav-link" href="./Quizz.html"> 
+<span class="menu-text">Quizz</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./LOGICIELS.html" rel="" target="">
- <span class="menu-text">Logiciels</span></a>
+    <a class="nav-link" href="./LOGICIELS.html"> 
+<span class="menu-text">Logiciels</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -136,7 +170,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#déterminant-dune-matrice" id="toc-déterminant-dune-matrice" class="nav-link" data-scroll-target="#déterminant-dune-matrice">Déterminant d’une matrice</a></li>
   <li><a href="#déterminant-dune-matrice-2-times-2" id="toc-déterminant-dune-matrice-2-times-2" class="nav-link" data-scroll-target="#déterminant-dune-matrice-2-times-2">Déterminant d’une matrice <span class="math inline">\((2 \times 2)\)</span></a></li>
   <li><a href="#déterminant-dune-matrice-diagonale" id="toc-déterminant-dune-matrice-diagonale" class="nav-link" data-scroll-target="#déterminant-dune-matrice-diagonale">Déterminant d’une matrice diagonale</a></li>
-  <li><a href="#espace-euclidien" id="toc-espace-euclidien" class="nav-link" data-scroll-target="#espace-euclidien">Espace Euclidien</a></li>
   <li><a href="#orthogonalité" id="toc-orthogonalité" class="nav-link" data-scroll-target="#orthogonalité">Orthogonalité</a></li>
   <li><a href="#base-duale" id="toc-base-duale" class="nav-link" data-scroll-target="#base-duale">Base duale</a></li>
   <li><a href="#diagonalisation-dune-matrice" id="toc-diagonalisation-dune-matrice" class="nav-link" data-scroll-target="#diagonalisation-dune-matrice">Diagonalisation d’une matrice</a></li>
@@ -146,7 +179,6 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#définitions" id="toc-définitions" class="nav-link" data-scroll-target="#définitions">Définitions</a></li>
   <li><a href="#probabilités" id="toc-probabilités" class="nav-link" data-scroll-target="#probabilités">Probabilités</a></li>
-  <li><a href="#fondements-de-probabilités-niveau-basique" id="toc-fondements-de-probabilités-niveau-basique" class="nav-link" data-scroll-target="#fondements-de-probabilités-niveau-basique">Fondements de probabilités : niveau basique</a></li>
   <li><a href="#propriétés-1" id="toc-propriétés-1" class="nav-link" data-scroll-target="#propriétés-1">Propriétés</a></li>
   <li><a href="#vecteurs-aléatoires" id="toc-vecteurs-aléatoires" class="nav-link" data-scroll-target="#vecteurs-aléatoires">Vecteurs aléatoires</a></li>
   <li><a href="#lois-usuelles" id="toc-lois-usuelles" class="nav-link" data-scroll-target="#lois-usuelles">Lois usuelles</a></li>
@@ -212,7 +244,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -220,12 +252,12 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
 
-<p>Ici, seront listés les pré-requis nécessaires pour le master SEP.</p>
+
 <section id="mathématique" class="level1">
 <h1>Mathématique</h1>
-<p>Nous allons commencer par les bases des probabilités, de l’algèbre linéaire et des statistiques.</p>
 <section id="algèbre-linéaire" class="level2">
 <h2 class="anchored" data-anchor-id="algèbre-linéaire">Algèbre Linéaire</h2>
 <p>Rappelons les notions essentielles à connaître sur les matrices.</p>
@@ -282,10 +314,7 @@ d_1 &amp; 0 &amp; \cdots &amp; 0 \\
 0 &amp; 0 &amp; \cdots &amp; d_n
 \end{array}  \right)
 \]</span> le déterminant est le produit des éléments diagonaux : <span class="math display">\[\text{det}(D) = d_1 \times d_2 \times \cdots \times d_n\]</span></p>
-<p>Les déterminants sont particulièrement utiles en algèbre linéaire pour déterminer si une matrice est inversible (une matrice est inversible si et seulement si son déterminant est non nul) et pour résoudre des systèmes d’équations linéaires.</p>
-</section>
-<section id="espace-euclidien" class="level3">
-<h3 class="anchored" data-anchor-id="espace-euclidien">Espace Euclidien</h3>
+<p>Les déterminants sont particulièrement utiles en algèbre linéaire pour déterminer si une matrice est inversible (une matrice est inversible si et seulement si son déterminant est non nul) et pour résoudre des systèmes d’équations linéaires. En algèbre, on définit un espace où les vecteurs appartiennent et on utilise le plus souvent un espace euclidien. C’est un espace où est rattaché une distance qu’on appelle produit scalaire. ### Espace euclidien</p>
 <div class="custom-box">
 <p>Un <strong>espace euclidien</strong> est un espace vectoriel réel de dimension finie muni d’une forme bilinéaire symétrique définie positive, appelée <strong>produit scalaire</strong> : <span class="math display">\[\langle x, y \rangle = x_1 y_1 + x_2 y_2 + \cdots + x_n y_n\]</span></p>
 </div>
@@ -325,7 +354,7 @@ x = \frac{v}{\|v\|_2}
 </section>
 </section>
 <section id="construction-de-matrice-de-projection-orthogonale" class="level4">
-<h4 class="anchored" data-anchor-id="construction-de-matrice-de-projection-orthogonale">Construction de matrice de projection Orthogonale</h4>
+<h4 class="anchored" data-anchor-id="construction-de-matrice-de-projection-orthogonale">Construction de matrice de projection orthogonale</h4>
 <div class="custom-box">
 <p>Soient <span class="math inline">\(v_1, \ldots, v_p\)</span>, <span class="math inline">\(p\)</span> vecteurs de <span class="math inline">\(\mathbb{R}^n\)</span> avec <span class="math inline">\(p \leq n\)</span>. Si <span class="math inline">\((v_1, \ldots, v_p)\)</span> est une base orthogonale de <span class="math inline">\(\mathbb{R}^p\)</span> et <span class="math inline">\(W = \text{vect}(v_1, \ldots, v_p)\)</span>, alors la matrice de projection <span class="math inline">\(W\)</span> de <span class="math inline">\(\mathbb{R}^n\)</span> sur <span class="math inline">\(W\)</span> est : <span class="math display">\[
 W = V (V^t V)^{-1} V^t
@@ -393,12 +422,11 @@ Warning
 <h2 class="anchored" data-anchor-id="statistiques-descriptives-univariées">Statistiques Descriptives Univariées</h2>
 <ul>
 <li><p><strong>Moyenne</strong> : La moyenne arithmétique d’une série de valeurs <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span> est donnée par : <span class="math display">\[
-\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
-\]</span></p></li>
+\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i\]</span> En théorie, on représente la moyenne comme l’espérance : Dans le cas discret : <span class="math display">\[E(X) = \sum k \cdot P(X = k)\]</span> <span class="math display">\[k \in X(\Omega)\]</span> Alors que dans le cas continu : <span class="math display">\[E(X) = \int x \cdot f_X(x) \, dx\]</span> <span class="math display">\[x \in X(\Omega)\]</span></p></li>
 <li><p><strong>Médiane</strong> : La médiane est la valeur qui sépare la série en deux parties égales. Pour une série ordonnée, si <span class="math inline">\(n\)</span> est impair, la médiane est la valeur centrale. Si <span class="math inline">\(n\)</span> est pair, c’est la moyenne des deux valeurs centrales.</p></li>
 <li><p><strong>Variance</strong> : La variance mesure la dispersion des valeurs autour de la moyenne : <span class="math display">\[
 \text{Var}(X) = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2
-\]</span></p></li>
+\]</span> ou en théorie <span class="math display">\[Var(X) = E(X^2) - (E(X))^2 = E((x - E(X))^2)\]</span></p></li>
 <li><p><strong>Écart-type</strong> : L’écart-type est la racine carrée de la variance : <span class="math display">\[
 \sigma = \sqrt{\text{Var}(X)}
 \]</span></p></li>
@@ -423,7 +451,7 @@ Note
 <section id="définitions" class="level3">
 <h3 class="anchored" data-anchor-id="définitions">Définitions</h3>
 <ul>
-<li><strong>Covariance</strong> : La covariance entre deux variables <span class="math inline">\(X\)</span> et <span class="math inline">\(Y\)</span> mesure la manière dont deux variables varient ensemble. Elle est donnée par deux formules :</li>
+<li><strong>Covariance</strong> : La covariance entre deux variables <span class="math inline">\(X\)</span> et <span class="math inline">\(Y\)</span> mesure la manière dont deux variables varient ensemble.</li>
 </ul>
 <ol type="1">
 <li><p>Pour un échantillon de données : <span class="math display">\[
@@ -455,76 +483,104 @@ P(A \cap B) = P(B \cap A)
 <p>En utilisant la formule ci-dessus, nous pouvons également exprimer la probabilité conditionnelle de <span class="math inline">\(B\)</span> sachant <span class="math inline">\(A\)</span> : <span class="math display">\[
 P(B|A) = \frac{P(A|B) \cdot P(B)}{P(A)}
 \]</span></p>
-<p>C’est ce que nous appelons .</p>
+<p>C’est ce que nous appelons la formule de Bayes.</p>
 </section>
 <section id="indépendance" class="level4">
 <h4 class="anchored" data-anchor-id="indépendance">Indépendance</h4>
 <p>Deux événements <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont dits indépendants si et seulement si : <span class="math display">\[P(A \cap B) = P(A) \cdot P(B)\]</span> En termes courants, deux événements sont indépendants si le résultat de l’un n’influence aucunement l’aboutissement de l’autre. Sous condition d’indépendance de <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span>, la notion de la probabilité conditionnelle tombe à l’eau, car les événements évoluent l’un sans se soucier de l’autre. Ceci se traduit par : <span class="math display">\[P(A|B) = P(A)\]</span> <span class="math display">\[P(B|A) = P(B)\]</span></p>
 <p>Notons que si <span class="math inline">\(A\)</span> est indépendant de <span class="math inline">\(B\)</span>, il le sera par rapport à son complémentaire également, et vice versa. En général, pour une suite <span class="math inline">\((A_n)\)</span> d’événements indépendants, on a : <span class="math display">\[P\left(\bigcap A_i\right) = \prod P(A_i) = P(A_1) \cdot \ldots \cdot P(A_n)\]</span> Cette formule est largement utilisée en statistique.</p>
-<p></p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ne pas confondre l’indépendance et l’incompatibilité des évènements</p>
+</div>
+</div>
 </section>
 <section id="variable-aléatoire" class="level4">
 <h4 class="anchored" data-anchor-id="variable-aléatoire">Variable aléatoire</h4>
 <p>Une variable aléatoire est un nombre qui dépend du résultat d’une expérience aléatoire. Chaque exécution de l’expérience génère une réalisation de la variable aléatoire.</p>
 <p>Mathématiquement, on définit une variable aléatoire X comme une fonction <span class="math inline">\(X : T \rightarrow \mathbb{R}\)</span> qui associe à chaque événement s, un réel <span class="math inline">\(X(s)\)</span>.</p>
 <p>Par exemple, dans une queue pour la caisse d’un magasin, le nombre de clients est une variable aléatoire. La durée de traitement de chaque requête aussi. Remarquons que la première est un nombre entier. On dit qu’elle est à support discret. Alors que la deuxième est une durée (un nombre réel). On dit qu’elle est à support continu.</p>
-<p></p>
 </section>
-<section id="fonction-de-répartition" class="level4">
-<h4 class="anchored" data-anchor-id="fonction-de-répartition">Fonction de répartition</h4>
+<section id="quest--ce-qui-caractérise-une-variable-aléatoire" class="level4">
+<h4 class="anchored" data-anchor-id="quest--ce-qui-caractérise-une-variable-aléatoire">Qu’est- ce qui caractérise une variable aléatoire ?</h4>
+<section id="fonction-de-répartition" class="level5">
+<h5 class="anchored" data-anchor-id="fonction-de-répartition">Fonction de répartition</h5>
 <p>Une variable aléatoire traduit le résultat d’une expérience aléatoire en nombre réel. La fonction de répartition transporte le calcul des probabilités concernant les réalisations de la variable aléatoire. C’est la fonction définie par : <span class="math display">\[F_X(x) = P(X \leq x)\]</span> </p>
 <p>Pour tout <span class="math inline">\(x\)</span>, <span class="math inline">\(0 \leq F_X(x) \leq 1\)</span> <span class="math inline">\(F_X\)</span> est une fonction croissante. <span class="math inline">\(\lim_{x \to -\infty} F_X(x) = 0\)</span> et <span class="math inline">\(\lim_{x \to \infty} F_X(x) = 1\)</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/fonction_repartition.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="images/fonction_repartition.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 </section>
-<section id="probabilité-ponctuelle-densité" class="level4">
-<h4 class="anchored" data-anchor-id="probabilité-ponctuelle-densité">Probabilité ponctuelle / Densité</h4>
-<p></p>
+<section id="probabilité-ponctuelle-densité" class="level5">
+<h5 class="anchored" data-anchor-id="probabilité-ponctuelle-densité">Probabilité ponctuelle / Densité</h5>
+<div class="custom-box">
+<p>CAS DISCRET : Probabilité ponctuelle</p>
 <p>La probabilité ponctuelle est la fonction qui décrit les sauts de la fonction de répartition : <span class="math display">\[P(X = k) = P(X \leq k) - P(X \leq k - 1) = p_k\]</span> <span class="math display">\[\sum p_i = 1\]</span></p>
-<p></p>
-<p>La densité est la fonction qui décrit les variations de la fonction de répartition : <span class="math display">\[f(x) = \frac{dF_X}{dx}(x)\]</span> <span class="math display">\[\int f(x) dx = 1\]</span></p>
+</div>
+<div class="custom-box">
+<p>CAS CONTINU : densité de probabilité La densité est la fonction qui décrit les variations de la fonction de répartition : <span class="math display">\[f(x) = \frac{dF_X}{dx}(x)\]</span> <span class="math display">\[\int f(x) dx = 1\]</span></p>
+</div>
 </section>
 </section>
-<section id="fondements-de-probabilités-niveau-basique" class="level3">
-<h3 class="anchored" data-anchor-id="fondements-de-probabilités-niveau-basique">Fondements de probabilités : niveau basique</h3>
-<section id="moments" class="level4">
-<h4 class="anchored" data-anchor-id="moments">Moments</h4>
-<p></p>
-<p>L’espérance d’une variable aléatoire est sa valeur attendue. C’est une mesure de localisation de la distribution.</p>
-<p>Dans le cas discret : <span class="math display">\[E(X) = \sum k \cdot P(X = k)\]</span> <span class="math display">\[k \in X(\Omega)\]</span> Alors que dans le cas continu : <span class="math display">\[E(X) = \int x \cdot f_X(x) \, dx\]</span> <span class="math display">\[x \in X(\Omega)\]</span></p>
-<p> <span class="math display">\[E(g(X)) = \sum g(k) \cdot P(X = k)\]</span> <span class="math display">\[\forall k \in X(\Omega)\]</span> <span class="math display">\[E(g(X)) = \int g(x) \cdot f_X(x) \, dx\]</span> <span class="math display">\[\forall x \in X(\Omega)\]</span> </p>
-<p>La variance d’une variable aléatoire décrit la dispersion de la variable aléatoire autour de sa valeur moyenne (son espérance).</p>
-<p>Elle est définie par : <span class="math display">\[Var(X) = E(X^2) - (E(X))^2 = E((x - E(X))^2)\]</span> Sa racine carrée est appelée écart-type et notée généralement : <span class="math display">\[\sigma(X) = \sqrt{Var(X)}\]</span></p>
-<p></p>
+<section id="fondements-de-probabilités-niveau-basique" class="level4">
+<h4 class="anchored" data-anchor-id="fondements-de-probabilités-niveau-basique">Fondements de probabilités : niveau basique</h4>
+<section id="centrage-et-réduction" class="level5">
+<h5 class="anchored" data-anchor-id="centrage-et-réduction">Centrage et réduction</h5>
 <p>Le centrage consiste à localiser la distribution autour de l’origine et la réduction consiste à normaliser la dispersion. La technique est simple : <span class="math display">\[Y = \frac{X - E(X)}{\sigma(X)}\]</span></p>
-<p></p>
+</section>
+<section id="moments-dordre-r" class="level5">
+<h5 class="anchored" data-anchor-id="moments-dordre-r">Moments d’ordre r</h5>
 <p>Le moment d’ordre r est défini par : <span class="math display">\[\mu_r = E(X^r)\]</span> Le moment centré d’ordre r est défini ainsi : <span class="math display">\[\mũ_r = E((X - E(X))^r)\]</span></p>
+</section>
 </section>
 <section id="couples-aléatoires" class="level4">
 <h4 class="anchored" data-anchor-id="couples-aléatoires">Couples aléatoires</h4>
 <p>La fonction conjointe <span class="math display">\[F_{X, Y}(x, y) = P(X \leq x \cap Y \leq y)\]</span> est appelée la distribution conjointe de X et Y.</p>
 <p>Dans le cas continu, la fonction définie par : <span class="math display">\[f_{X, Y}(x, y) = \frac{\partial^2 F_{X, Y}(x, y)}{\partial x \partial y}\]</span> est la densité conjointe du couple (X, Y). On a donc : <span class="math display">\[F_{X, Y}(x, y) = \int \int f_{X, Y}(t, u) \, dt \, du, \text{ où } -\infty &lt; x, y &lt; +\infty,\]</span></p>
 <p>Dans le cas discret, on définit la fonction de probabilité conjointe : <span class="math display">\[P(X = x_i, Y = y_j) = p_{ij}\]</span> On a donc : <span class="math display">\[F_{X, Y}(x, y) = \sum \sum p_{ij}, \text{ où } x_i \leq x \text{ et } y_j \leq y\]</span></p>
-<p></p>
+<section id="loi-mardinale" class="level5">
+<h5 class="anchored" data-anchor-id="loi-mardinale">Loi mardinale</h5>
 <p>La loi marginale de X est définie comme suit : <span class="math display">\[f_X(x) = \int f_{X, Y}(x, y) \, dy, \text{ où } -\infty &lt; x &lt; \infty,\]</span> dans le cas continu, ou encore : <span class="math display">\[f_X(x_i) = \sum p_{ij}, \text{ où } j \text{ tel que } y_j \leq y\]</span></p>
 <p>Si X et Y sont indépendants, alors : <span class="math display">\[f_{X, Y}(x, y) = f_X(x) \cdot f_Y(y)\]</span></p>
-<p></p>
-<p>La covariance mesure l’intensité de la relation linéaire entre deux variables aléatoires X et Y. Elle est définie comme suit : <span class="math display">\[Cov(X, Y) = E(XY) - E(X) \cdot E(Y)\]</span></p>
+</section>
+</section>
+<section id="covariance" class="level4">
+<h4 class="anchored" data-anchor-id="covariance">COVARIANCE</h4>
+<p>La covariance que nous avons traité plus haut dans les statistiques bivariées mesure l’intensité de la relation linéaire entre deux variables aléatoires X et Y. Elle est définie comme suit : <span class="math display">\[Cov(X, Y) = E(XY) - E(X) \cdot E(Y)\]</span></p>
 <p>Si X et Y sont indépendants, alors : <span class="math display">\[Cov(X, Y) = 0\]</span></p>
-<p></p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Il est important de noter que la réciproque n’est pas vraie : la covariance n’implique pas nécessairement l’indépendance entre X et Y.</p>
+</div>
+</div>
 </section>
 </section>
 <section id="propriétés-1" class="level3">
 <h3 class="anchored" data-anchor-id="propriétés-1">Propriétés</h3>
-<p> <span class="math display">\[
+<p><strong>ESPÉRANCE</strong> <span class="math display">\[
 \mathbb{E}(aX + bY) = a\mathbb{E}(X) + b\mathbb{E}(Y)
-\]</span> <span class="math display">\[
-\mathbb{E}(a) = a
 \]</span></p>
-<p> <span class="math display">\[
+<p><span class="math display">\[
+\mathbb{E}(a) = a
+\]</span> <strong>VARIANCE</strong> <span class="math display">\[
 \text{Var}(aX) = a^2\text{Var}(X)
 \]</span> <span class="math display">\[
 \text{Var}(a) = 0
@@ -533,7 +589,7 @@ P(B|A) = \frac{P(A|B) \cdot P(B)}{P(A)}
 \]</span> <span class="math display">\[
 \text{Var}(X - Y) = \text{Var}(X) + \text{Var}(Y) - 2\text{Cov}(X,Y)
 \]</span></p>
-<p> <span class="math display">\[
+<p><strong>COVARIANCE</strong> <span class="math display">\[
 \text{Cov}(X, Y) = \text{Cov}(Y, X)
 \]</span> <span class="math display">\[
 \text{Cov}(aX + b, cY + d) = ac\text{Cov}(X, Y)
@@ -547,10 +603,10 @@ P(B|A) = \frac{P(A|B) \cdot P(B)}{P(A)}
 </section>
 <section id="vecteurs-aléatoires" class="level3">
 <h3 class="anchored" data-anchor-id="vecteurs-aléatoires">Vecteurs aléatoires</h3>
-<p>Pour un vecteur aléatoire <span class="math display">\[(X_1, X_2, \ldots, X_n)\]</span>, l’espérance est toujours linéaire. Pour une suite <span class="math display">\[(a_i)_{i \in \{1, \ldots, n\}}\]</span> de réels, on a : <span class="math display">\[
+<p>Pour un vecteur aléatoire <span class="math inline">\((X_1, X_2, \ldots, X_n)\)</span>, l’espérance est toujours linéaire. Pour une suite <span class="math inline">\((a_i)_{i \in \{1, \ldots, n\}}\)</span> de réels, on a : <span class="math display">\[
 \mathbb{E}(a_1X_1 + a_2X_2 + \ldots + a_nX_n) = a_1\mathbb{E}(X_1) + a_2\mathbb{E}(X_2) + \ldots + a_n\mathbb{E}(X_n)
 \]</span></p>
-<p>Si les variables aléatoires <span class="math display">\[X_1, X_2, \ldots, X_n\]</span> sont indépendantes, alors la variance de leur somme est égale à la somme de leurs variances individuelles : <span class="math display">\[
+<p>Si les variables aléatoires <span class="math inline">\(X_1, X_2, \ldots, X_n\)</span> sont indépendantes, alors la variance de leur somme est égale à la somme de leurs variances individuelles : <span class="math display">\[
 \text{Var}(X_1 + X_2 + \ldots + X_n) = \text{Var}(X_1) + \ldots + \text{Var}(X_n)
 \]</span></p>
 </section>
@@ -583,17 +639,13 @@ V(X_1) &amp; \ldots &amp; \text{Cov}(X_1, X_n) \\
 <section id="notions-de-convergence" class="level3">
 <h3 class="anchored" data-anchor-id="notions-de-convergence">Notions de convergence</h3>
 <p>Si l’on pense à des données, vues comme réalisation de variables aléatoires <span class="math inline">\(X_1, \ldots, X_n\)</span>, il serait intéressant de se poser la question de savoir comment évolue cette suite lorsque <span class="math inline">\(n\)</span> tend vers l’infini.</p>
-<p></p>
 <p>On dit que <span class="math inline">\((X_n)\)</span> converge presque sûrement vers <span class="math inline">\(X\)</span> et on note <span class="math inline">\(X_n \xrightarrow{\text{p.s.}} X\)</span> si et seulement si : <span class="math inline">\(P\left(\lim_{{n\to+\infty}} X_n = X\right) = 1\)</span></p>
-<p></p>
 <p>On dit que <span class="math inline">\((X_n)\)</span> converge en probabilité vers <span class="math inline">\(X\)</span> et on note <span class="math inline">\(X_n \xrightarrow{\text{p}} X\)</span> si et seulement si : <span class="math inline">\(\forall \varepsilon &gt; 0, \quad P(|X_n - X| &gt; \varepsilon) \rightarrow 0\)</span></p>
-<p></p>
 <p>On dit que <span class="math inline">\((X_n)\)</span> converge en loi vers <span class="math inline">\(X\)</span> et on note <span class="math inline">\(X_n \xrightarrow{\mathcal{L}} X\)</span> si et seulement si : <span class="math inline">\(F_{X_n} \xrightarrow{n \to +\infty} F_X\)</span> Où <span class="math inline">\(F_X\)</span> dénote la fonction de répartition de <span class="math inline">\(X\)</span>.</p>
-<p></p>
 <p>On dit que <span class="math inline">\((X_n)\)</span> converge en moyenne quadratique vers <span class="math inline">\(X\)</span> et on note <span class="math inline">\(X_n \xrightarrow{m.q.} X\)</span> si et seulement si : <span class="math inline">\(\mathbb{E}((X_n - X)^2) \rightarrow 0\)</span> Cette définition peut se généraliser jusqu’à l’ordre <span class="math inline">\(n\)</span>, mais nous n’en aurons pas besoin.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/convergence.png" class="img-fluid figure-img" style="width:30.0%"></p>
+<p><img src="images/convergence.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
 </figure>
 </div>
 </section>
@@ -631,7 +683,6 @@ V(X_1) &amp; \ldots &amp; \text{Cov}(X_1, X_n) \\
 </section>
 <section id="estimateur-optimal" class="level3">
 <h3 class="anchored" data-anchor-id="estimateur-optimal">Estimateur optimal</h3>
-<p></p>
 <p>La qualité d’un estimateur est mesurée à travers son erreur quadratique moyenne définie par : <span class="math display">\[EQM(\hat{\theta}_n) = (b_n(\hat{\theta}, \theta))^2 + V(\hat{\theta}_n)\]</span> Comme nous cherchons tout le temps (presque) des estimateurs sans biais, il reste à comparer les variances.</p>
 <p>Un estimateur 𝜃̂1 est meilleur que 𝜃̂2 si : <span class="math display">\[V(\hat{\theta}_1) &lt; V(\hat{\theta}_2)\]</span></p>
 <p></p>
@@ -642,22 +693,40 @@ I(\hat{\theta}_n) = -\left( \mathbb{E} \left( \frac{\partial L}{\partial \theta}
 </section>
 <section id="construction-dun-estimateur" class="level3">
 <h3 class="anchored" data-anchor-id="construction-dun-estimateur">Construction d’un estimateur</h3>
-<p></p>
+<p>Un estimateur est une valeur qu’on ne peut pas obtenir en théorie donc on essaye de l’estimer. Par exemple, on ne peut pas calculer l’espérence d’une série de données et donc pour essayer d’obtenir une valeur on calculer une estimation. On recours à plusieurs estimateurs tels que le maximum de vraisemblance ou bien la méthode des moments.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La méthode du maximum de vraisemblance est la plus souvent utilisé dans les modèles de prédiction.</p>
+</div>
+</div>
+<div class="custom-box">
 <p>La méthode du maximum de vraisemblance consiste à affecter <span class="math inline">\(𝜃\)</span> la valeur qui maximise la probabilité d’observer <span class="math inline">\((𝑥_1, 𝑥_2, … , 𝑥_𝑛)\)</span> lorsque l’aléa du vecteur <span class="math inline">\((𝑋_1, 𝑋_2, … , 𝑋_𝑛)\)</span> tombe. Sans trop rentrer dans la théorie de la vraisemblance, nous allons présenter un algorithme en cinq étapes pour calculer cet estimateur (qui présente des propriétés assez séduisantes) :</p>
-<p></p>
+</div>
+<p><strong>Etape 1</strong> : Calculer la fonction de vraisemblance</p>
 <p>Dans le cas continu : <span class="math display">\[L(\mathbf{x}, \theta) = \prod_{i=1}^{n} f(x_i)\]</span></p>
-<p>Dans le cas discret : <span class="math display">\[L(\mathbf{x}, \theta) = \prod_{i=1}^{n} P(X_i = x_i)\]</span> </p>
-<p>Il s’agit de calculer un maximum, ce qui revient à dériver. Il s’agit ici d’un produit de n facteurs, ce qui rend la dérivation assez coriace. La fonction logarithmique présente des propriétés assez sympas pour faciliter cette tâche.</p>
-<p></p>
-<p> <span class="math display">\[\frac{\partial (\ln(L))}{\partial \theta} = 0 \Rightarrow \theta = \theta_0\]</span></p>
-<p></p>
+<p>Dans le cas discret : <span class="math display">\[L(\mathbf{x}, \theta) = \prod_{i=1}^{n} P(X_i = x_i)\]</span></p>
+<p><strong>Etape 2</strong> : Calculer le log-vraisemblance Il s’agit de calculer un maximum, ce qui revient à dériver. Il s’agit ici d’un produit de n facteurs, ce qui rend la dérivation assez coriace. La fonction logarithmique présente des propriétés assez sympas pour faciliter cette tâche.</p>
+<p><strong>Etape 3</strong> : Calculer la dérivée de la log-vraisemblance</p>
+<p><strong>Etape 4</strong> : Résoudre l’équation d’inconnue <span class="math inline">\(𝜽\)</span>} <span class="math display">\[\frac{\partial (\ln(L))}{\partial \theta} = 0 \Rightarrow \theta = \theta_0\]</span></p>
+<p><strong>Etape 5</strong>: Vérifier qu’il s’agit d’un maximum.</p>
 <p>En s’assurant que : <span class="math display">\[\frac{\partial^2 (\ln(L))}{\partial \theta^2} &lt; 0\]</span></p>
-<p></p>
-<p>Comme le paramètre à estimer intervient dans la densité de probabilité, les moments théoriques sont souvent en fonction de ce paramètre. Ainsi, la méthode des moments consiste à égaliser les moments théoriques (espérance, variance) à leurs équivalents empiriques et à en dégager une estimation ponctuelle.</p>
+<div class="custom-box">
+<p>La méthode des moments consiste à égaliser les moments théoriques (espérance, variance) à leurs équivalents empiriques et à en dégager une estimation ponctuelle.</p>
+</div>
 <p>En pratique, il faut résoudre l’(les) équation(s) : <span class="math display">\[\mathbb{E}(X) = \overline{X} \text{ et } \text{Var}(X) = S_n^2\]</span> avec : <span class="math display">\[\overline{X} = \frac{1}{n} \sum_{i=1}^{n} X_i \hspace{2cm}
 S_n^2 = \frac{1}{n} \sum_{i=1}^{n} (X_i - \overline{X})^2\]</span></p>
-<p></p>
+<p>Il existe une autre méthode d’estimateurs qu’est la méthode des moindres carrés ordinaires.</p>
+<div class="custom-box">
 <p>Lorsqu’il s’agit de prendre une mesure 𝜃 avec un appareil doté d’une imprécision <span class="math inline">\(𝜀\)</span>, alors le problème d’estimation peut s’écrire : <span class="math inline">\(𝑋 = 𝜃 + 𝜀\)</span>. La méthode des moindres-carrés ordinaires consiste à trouver le paramètre <span class="math inline">\(𝜃\)</span> qui minimise la somme des carrées des erreurs : <span class="math display">\[𝜃_{𝑀𝐶𝑂} = \arg\min \left( \sum_{i=0}^n \varepsilon_i^2 \right) = \arg\min \left( \sum_{i=0}^n (X_i - \theta)^2 \right)\]</span></p>
+</div>
 </section>
 <section id="intervalles-de-confiance" class="level3">
 <h3 class="anchored" data-anchor-id="intervalles-de-confiance">Intervalles de confiance</h3>
@@ -669,14 +738,14 @@ S_n^2 = \frac{1}{n} \sum_{i=1}^{n} (X_i - \overline{X})^2\]</span></p>
 <p>On appellera la première (celle dont le rejet à tort sera le plus préjudiciable) « Hypothèse nulle » et la deuxième « Hypothèse alternative ».</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/test_hypo.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="images/test_hypo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 <p>Les calculs qui se cachent derrière le choix de l’hypothèse à garder sont compliqués. Mais BONNE NOUVELLE, la machine fera tour à notre place. Il suffit juste de suivre correctement la méthode :</p>
-<p><br>
-<br>
-<br>
-</p>
+<p><strong>Etape 1</strong> : Choisir judicieusement les hypothèses à évaluer et fixer le risque <span class="math inline">\(𝛼\)</span><br>
+<strong>Etape 2</strong> : Choisir le test adapté à la procédure<br>
+<strong>Etape 3</strong> : Rentrer la commande correspondante sur R et exécuter<br>
+<strong>Etape 4</strong>: Lire dans les sorties la p-value. si elle est supérieure à α on <strong>conserve</strong> l’hypothèse nulle H0. Si elle lui est inférieure, on <strong>rejette</strong> H0 et on <strong>accepte</strong> l’hypothèse alternative H1.</p>
 </section>
 <section id="construction-dintervalles-de-confiance" class="level3">
 <h3 class="anchored" data-anchor-id="construction-dintervalles-de-confiance">Construction d’intervalles de confiance</h3>
@@ -692,7 +761,7 @@ S_n^2 = \frac{1}{n} \sum_{i=1}^{n} (X_i - \overline{X})^2\]</span></p>
 <h3 class="anchored" data-anchor-id="macroéconomie">Macroéconomie</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/macroeconomics.png" class="img-fluid figure-img" width="73"></p>
+<p><img src="images/macroeconomics.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="73"></p>
 </figure>
 </div>
 <p>La macroéconomie est l’étude économique d’un système ou de phénomènes à un niveau global de l’économie.</p>
@@ -714,7 +783,7 @@ S_n^2 = \frac{1}{n} \sum_{i=1}^{n} (X_i - \overline{X})^2\]</span></p>
 <h3 class="anchored" data-anchor-id="marché">Marché</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/economie-circulaire.png" class="img-fluid figure-img" width="73"></p>
+<p><img src="images/economie-circulaire.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="73"></p>
 </figure>
 </div>
 <p>“Le marché c’est une institution sociale qui permet l’échange entre l’offre et la demande.”</p>
@@ -802,7 +871,7 @@ t : Temps
 <p><em>“On tient tout d’abord à remercier l’enseignant chercheur (en Philosophie économique, Théories économiques de la justice, Redistribution des revenus, Economie sociale, Economie publique), monsieur <strong>Jean-Sébastien Gharbi</strong> pour cette rubrique d’aide à la dissertation.”</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/dissertation.png" class="img-fluid figure-img" width="320"></p>
+<p><img src="images/dissertation.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="320"></p>
 </figure>
 </div>
 <p>On pense souvent que la dissertation en économie est un exercice difficile et qui récompense mal le travail. C’est totalement faux. La dissertation est un exercice dans lequel il est facile d’obtenir la moyenne, et même (avec un peu d’entraînement) d’obtenir systématiquement de très bonnes notes. C’est un exercice relativement facile parce que c’est un exercice en très grande partie formel&nbsp;: tout est une question de méthode.</p>
@@ -822,7 +891,7 @@ t : Temps
 <p><u><strong>Comment on fait une dissertation ?</strong></u></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/question-02.png" class="img-fluid figure-img" width="174"></p>
+<p><img src="images/question-02.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="174"></p>
 </figure>
 </div>
 <section id="analyse-du-sujet" class="level3">
@@ -941,18 +1010,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -984,11 +1042,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -998,8 +1095,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1011,7 +1117,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1055,6 +1284,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1080,6 +1310,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1140,6 +1396,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
