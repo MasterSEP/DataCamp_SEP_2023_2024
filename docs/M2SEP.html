@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.32">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DATA Camp M2 – SEP Guide</title>
+<title>SEP Guide - DATA Camp M2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -69,23 +69,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-29dedaace5d8918e049944c60b75f171.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
+  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -94,42 +88,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -138,52 +104,52 @@ window.Quarto = {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
+      <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">SEP Guide</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Accueil</span></a>
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./M1SEP.html"> 
-<span class="menu-text">M1 SEP</span></a>
+    <a class="nav-link" href="./M1SEP.html" rel="" target="">
+ <span class="menu-text">M1 SEP</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./M2SEP.html" aria-current="page"> 
-<span class="menu-text">M2 SEP</span></a>
+    <a class="nav-link active" href="./M2SEP.html" rel="" target="" aria-current="page">
+ <span class="menu-text">M2 SEP</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Exercices.html"> 
-<span class="menu-text">Exercices</span></a>
+    <a class="nav-link" href="./Exercices.html" rel="" target="">
+ <span class="menu-text">Exercices</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Quizz.html"> 
-<span class="menu-text">Quizz</span></a>
+    <a class="nav-link" href="./Quizz.html" rel="" target="">
+ <span class="menu-text">Quizz</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./LOGICIELS.html"> 
-<span class="menu-text">Logiciels</span></a>
+    <a class="nav-link" href="./LOGICIELS.html" rel="" target="">
+ <span class="menu-text">Logiciels</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools ms-auto">
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
 </div>
+          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -196,7 +162,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#partie-1-analyse-de-données" id="toc-partie-1-analyse-de-données" class="nav-link active" data-scroll-target="#partie-1-analyse-de-données">Partie 1 : Analyse de données</a>
+  <li><a href="#analyse-de-données" id="toc-analyse-de-données" class="nav-link active" data-scroll-target="#analyse-de-données">Analyse de données</a>
   <ul class="collapse">
   <li><a href="#rappels-fondamentaux" id="toc-rappels-fondamentaux" class="nav-link" data-scroll-target="#rappels-fondamentaux">Rappels Fondamentaux</a>
   <ul class="collapse">
@@ -221,6 +187,66 @@ window.Quarto = {
   </ul></li>
   <li><a href="#test-dindependance" id="toc-test-dindependance" class="nav-link" data-scroll-target="#test-dindependance">Test d’independance</a></li>
   </ul></li>
+  <li><a href="#excelvba" id="toc-excelvba" class="nav-link" data-scroll-target="#excelvba">Excel/VBA</a>
+  <ul class="collapse">
+  <li><a href="#étapes-simples-pour-débuter" id="toc-étapes-simples-pour-débuter" class="nav-link" data-scroll-target="#étapes-simples-pour-débuter">Étapes simples pour débuter</a>
+  <ul class="collapse">
+  <li><a href="#accéder-à-léditeur-vba" id="toc-accéder-à-léditeur-vba" class="nav-link" data-scroll-target="#accéder-à-léditeur-vba">Accéder à l’éditeur VBA</a></li>
+  <li><a href="#créer-une-macro" id="toc-créer-une-macro" class="nav-link" data-scroll-target="#créer-une-macro">Créer une macro</a></li>
+  <li><a href="#écrire-un-exemple-de-macro" id="toc-écrire-un-exemple-de-macro" class="nav-link" data-scroll-target="#écrire-un-exemple-de-macro">Écrire un exemple de macro</a></li>
+  <li><a href="#exécuter-la-macro" id="toc-exécuter-la-macro" class="nav-link" data-scroll-target="#exécuter-la-macro">Exécuter la macro</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#innovation-digitale-et-transition-écologique" id="toc-innovation-digitale-et-transition-écologique" class="nav-link" data-scroll-target="#innovation-digitale-et-transition-écologique">Innovation digitale et transition écologique</a>
+  <ul class="collapse">
+  <li><a href="#schumpeter-le-père-de-la-théorie-de-linnovation" id="toc-schumpeter-le-père-de-la-théorie-de-linnovation" class="nav-link" data-scroll-target="#schumpeter-le-père-de-la-théorie-de-linnovation">Schumpeter, le père de la théorie de l’innovation</a>
+  <ul class="collapse">
+  <li><a href="#rôle-clé-de-linnovation" id="toc-rôle-clé-de-linnovation" class="nav-link" data-scroll-target="#rôle-clé-de-linnovation">Rôle clé de l’innovation</a></li>
+  <li><a href="#destruction-créatrice" id="toc-destruction-créatrice" class="nav-link" data-scroll-target="#destruction-créatrice">Destruction créatrice</a></li>
+  <li><a href="#le-rôle-de-lentrepreneur" id="toc-le-rôle-de-lentrepreneur" class="nav-link" data-scroll-target="#le-rôle-de-lentrepreneur">Le rôle de l’entrepreneur</a></li>
+  </ul></li>
+  <li><a href="#un-cercle-vertueux-léconomie-circulaire" id="toc-un-cercle-vertueux-léconomie-circulaire" class="nav-link" data-scroll-target="#un-cercle-vertueux-léconomie-circulaire">Un cercle vertueux : l’économie circulaire</a>
+  <ul class="collapse">
+  <li><a href="#principe-de-base-réduire-réutiliser-recycler-3r" id="toc-principe-de-base-réduire-réutiliser-recycler-3r" class="nav-link" data-scroll-target="#principe-de-base-réduire-réutiliser-recycler-3r">Principe de base : réduire, réutiliser, recycler (3R)</a></li>
+  <li><a href="#boucles-fermées" id="toc-boucles-fermées" class="nav-link" data-scroll-target="#boucles-fermées">Boucles fermées</a></li>
+  <li><a href="#avantages" id="toc-avantages" class="nav-link" data-scroll-target="#avantages">Avantages</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#gestion-de-projet-digital" id="toc-gestion-de-projet-digital" class="nav-link" data-scroll-target="#gestion-de-projet-digital">Gestion de projet digital</a>
+  <ul class="collapse">
+  <li><a href="#la-gestion-de-projet-son-origine" id="toc-la-gestion-de-projet-son-origine" class="nav-link" data-scroll-target="#la-gestion-de-projet-son-origine">La gestion de projet : son origine</a>
+  <ul class="collapse">
+  <li><a href="#diagramme-de-gantt" id="toc-diagramme-de-gantt" class="nav-link" data-scroll-target="#diagramme-de-gantt">Diagramme de Gantt</a></li>
+  <li><a href="#roue-de-deming-pcda" id="toc-roue-de-deming-pcda" class="nav-link" data-scroll-target="#roue-de-deming-pcda">Roue de Deming (PCDA)</a></li>
+  <li><a href="#les-0-olympiques-objectif-zéro" id="toc-les-0-olympiques-objectif-zéro" class="nav-link" data-scroll-target="#les-0-olympiques-objectif-zéro">Les 0 Olympiques (Objectif “Zéro”)</a></li>
+  <li><a href="#méthode-des-5s-complément-toyotiste" id="toc-méthode-des-5s-complément-toyotiste" class="nav-link" data-scroll-target="#méthode-des-5s-complément-toyotiste">Méthode des 5S (complément toyotiste)</a></li>
+  <li><a href="#chemin-critique-critical-path-method" id="toc-chemin-critique-critical-path-method" class="nav-link" data-scroll-target="#chemin-critique-critical-path-method">Chemin critique (Critical Path Method)</a></li>
+  </ul></li>
+  <li><a href="#une-application-cest-quoi" id="toc-une-application-cest-quoi" class="nav-link" data-scroll-target="#une-application-cest-quoi">Une application, c’est quoi ?</a>
+  <ul class="collapse">
+  <li><a href="#comment-ça-marche" id="toc-comment-ça-marche" class="nav-link" data-scroll-target="#comment-ça-marche">Comment ça marche ?</a></li>
+  <li><a href="#pourquoi-une-application" id="toc-pourquoi-une-application" class="nav-link" data-scroll-target="#pourquoi-une-application">Pourquoi une application ?</a></li>
+  <li><a href="#penser-design-et-interface" id="toc-penser-design-et-interface" class="nav-link" data-scroll-target="#penser-design-et-interface">Penser design et interface</a></li>
+  </ul></li>
+  <li><a href="#rigueur-est-mère-de-réussite-le-génie-logiciel" id="toc-rigueur-est-mère-de-réussite-le-génie-logiciel" class="nav-link" data-scroll-target="#rigueur-est-mère-de-réussite-le-génie-logiciel">Rigueur est mère de réussite : le génie logiciel</a>
+  <ul class="collapse">
+  <li><a href="#conception-structurée" id="toc-conception-structurée" class="nav-link" data-scroll-target="#conception-structurée">Conception structurée</a></li>
+  <li><a href="#bonnes-pratiques-de-code" id="toc-bonnes-pratiques-de-code" class="nav-link" data-scroll-target="#bonnes-pratiques-de-code">Bonnes pratiques de code</a></li>
+  <li><a href="#structurer-un-projet" id="toc-structurer-un-projet" class="nav-link" data-scroll-target="#structurer-un-projet">Structurer un projet</a></li>
+  <li><a href="#tests-et-qualité" id="toc-tests-et-qualité" class="nav-link" data-scroll-target="#tests-et-qualité">Tests et qualité</a></li>
+  <li><a href="#collaboration-et-gestion-des-versions" id="toc-collaboration-et-gestion-des-versions" class="nav-link" data-scroll-target="#collaboration-et-gestion-des-versions">Collaboration et gestion des versions</a></li>
+  <li><a href="#adopter-des-patterns-de-design" id="toc-adopter-des-patterns-de-design" class="nav-link" data-scroll-target="#adopter-des-patterns-de-design">Adopter des patterns de design</a></li>
+  <li><a href="#le-zen-of-python" id="toc-le-zen-of-python" class="nav-link" data-scroll-target="#le-zen-of-python">Le Zen of Python</a></li>
+  </ul></li>
+  <li><a href="#commencer-sur-de-bonnes-bases-python" id="toc-commencer-sur-de-bonnes-bases-python" class="nav-link" data-scroll-target="#commencer-sur-de-bonnes-bases-python">Commencer sur de bonnes bases : Python</a>
+  <ul class="collapse">
+  <li><a href="#les-fonctions" id="toc-les-fonctions" class="nav-link" data-scroll-target="#les-fonctions">Les fonctions</a></li>
+  <li><a href="#tests-unitaires" id="toc-tests-unitaires" class="nav-link" data-scroll-target="#tests-unitaires">Tests unitaires</a></li>
+  <li><a href="#objets-et-classes-programmation-orientée-objet" id="toc-objets-et-classes-programmation-orientée-objet" class="nav-link" data-scroll-target="#objets-et-classes-programmation-orientée-objet">Objets et classes (Programmation orientée objet)</a></li>
+  <li><a href="#environnements-virtuels-avec-docker" id="toc-environnements-virtuels-avec-docker" class="nav-link" data-scroll-target="#environnements-virtuels-avec-docker">Environnements virtuels (avec Docker)</a></li>
+  </ul></li>
+  <li><a href="#plus-on-est-de-pro-plus-on-rit" id="toc-plus-on-est-de-pro-plus-on-rit" class="nav-link" data-scroll-target="#plus-on-est-de-pro-plus-on-rit">Plus on est de pro, plus on rit</a></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="M2SEP.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -234,7 +260,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
   
@@ -242,12 +268,10 @@ window.Quarto = {
   </div>
   
 
-
 </header>
 
-
-<section id="partie-1-analyse-de-données" class="level1">
-<h1>Partie 1 : Analyse de données</h1>
+<section id="analyse-de-données" class="level1">
+<h1>Analyse de données</h1>
 <section id="rappels-fondamentaux" class="level2">
 <h2 class="anchored" data-anchor-id="rappels-fondamentaux">Rappels Fondamentaux</h2>
 <section id="quest-ce-quune-variable" class="level3">
@@ -258,7 +282,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="tableau-du-type-de-variable">Tableau du type de variable :</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/variables.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:84.0%"></p>
+<p><img src="images/variables.png" class="img-fluid figure-img" style="width:84.0%"></p>
 </figure>
 </div>
 </section>
@@ -275,7 +299,7 @@ window.Quarto = {
 Numérique = Quantitative.</p>
 <div class="quarto-figure quarto-figure-right">
 <figure class="figure">
-<p><img src="images/Variables2.png" class="img-fluid quarto-figure quarto-figure-right figure-img" width="294"></p>
+<p><img src="images/Variables2.png" class="img-fluid figure-img" width="294"></p>
 </figure>
 </div>
 </section>
@@ -286,7 +310,7 @@ Numérique = Quantitative.</p>
 <p>Avant tout, je dois avoir ces éléments en tête :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/Exemple1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500"></p>
+<p><img src="images/Exemple1.png" class="img-fluid figure-img" width="500"></p>
 </figure>
 </div>
 <p>Ensuite, je peux passer à l’étape suivante.</p>
@@ -364,7 +388,7 @@ On a une autre base de données, <code>data_Localisation</code>, avec les variab
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>data_complete <span class="ot">=</span> <span class="fu">pd.merge</span>(data_immobilier, data_Localisation, <span class="at">on=</span><span class="st">'Superficie_m2'</span>, <span class="at">how=</span><span class="st">'outer'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/merge.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="452"></p>
+<p><img src="images/merge.png" class="img-fluid figure-img" width="452"></p>
 </figure>
 </div>
 </section>
@@ -432,7 +456,7 @@ Boîtes à Moustaches (Boxplots) : Pour montrer la médiane, quartiles et valeur
 <p><strong><em>Def regression</em></strong> : Un ensemble de méthodes pour analyser la relation d’une variable à expliquer par une ou plusieurs autres variables explicatives.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="images/Reg1.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="467"></p>
+<p><img src="images/Reg1.png" class="img-fluid figure-img" width="467"></p>
 </figure>
 </div>
 <p><strong>Méthode des moindres carrés ordinaires :</strong></p>
@@ -730,6 +754,435 @@ Boîtes à Moustaches (Boxplots) : Pour montrer la médiane, quartiles et valeur
 <span id="cb30-30"><a href="#cb30-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-31"><a href="#cb30-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Si la p-value &lt; 0,05 on peut rejeter l'hypothèse nulle de non-corrélation, </span></span>
 <span id="cb30-32"><a href="#cb30-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Conclure qu'il y a une corrélation significative entre les deux variables</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="excelvba" class="level1">
+<h1>Excel/VBA</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Les démarches suivantes s’appliquent sous Windows, il se peut que la version IOS diffère.</p>
+</div>
+</div>
+<p><strong>Écrire des macros en VBA</strong>, c’est comme apprendre à donner des instructions précises à Excel pour qu’il effectue automatiquement des tâches répétitives, sans que vous ayez à les refaire manuellement.</p>
+<section id="étapes-simples-pour-débuter" class="level2">
+<h2 class="anchored" data-anchor-id="étapes-simples-pour-débuter">Étapes simples pour débuter</h2>
+<section id="accéder-à-léditeur-vba" class="level3">
+<h3 class="anchored" data-anchor-id="accéder-à-léditeur-vba">Accéder à l’éditeur VBA</h3>
+<ul>
+<li>Allez dans Excel, puis <a href="https://support.microsoft.com/fr-fr/office/afficher-l-onglet-d%C3%A9veloppeur-e1192344-5e56-4d45-931b-e5fd9bea2d45" title="Comment activer l'onglet Développeur ?">activez l’onglet Développeur</a> si nécessaire. Dans l’onglet développeur, cliquez sur <em>Visual Basic</em> pour ouvrir l’éditeur VBA.</li>
+</ul>
+</section>
+<section id="créer-une-macro" class="level3">
+<h3 class="anchored" data-anchor-id="créer-une-macro">Créer une macro</h3>
+<ul>
+<li>Dans l’éditeur, insérez un module (<em>Insertion &gt; Module</em>). Vous pourrez y écrire votre code.</li>
+</ul>
+</section>
+<section id="écrire-un-exemple-de-macro" class="level3">
+<h3 class="anchored" data-anchor-id="écrire-un-exemple-de-macro">Écrire un exemple de macro</h3>
+<p>Commencez par des tâches simples, comme écrire dans une cellule.</p>
+<p><u>Exemple :</u></p>
+<pre class="vba"><code>Sub first_macro()
+
+  Range("A1").value = "Test Macro" ' Change la valeur de A1
+
+End Sub</code></pre>
+<p>Ce code dit à Excel : Change la valeur de la cellule A1 par ” Test Macro “.</p>
+</section>
+<section id="exécuter-la-macro" class="level3">
+<h3 class="anchored" data-anchor-id="exécuter-la-macro">Exécuter la macro</h3>
+<p>Retournez dans Excel, appuyez sur <strong>Alt + F8</strong>, sélectionnez votre macro (<em>first_macro</em>) et cliquez sur <strong>Exécuter</strong>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Commencez par enregistrer une macro avec l’outil <em>Enregistreur de macro</em> d’Excel (dans l’onglet Développeur). Cela génère automatiquement du code VBA que vous pouvez observer et modifier pour apprendre.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="innovation-digitale-et-transition-écologique" class="level1">
+<h1>Innovation digitale et transition écologique</h1>
+<div class="custom-box">
+<p>Selon l’<a href="https://www.insee.fr/fr/metadonnees/definition/c1182">INSEE</a> :</p>
+<p>“L’innovation désigne l’introduction sur le marché d’un produit ou d’un procédé nouveau ou significativement amélioré par rapport à ceux précédemment élaborés par l’unité légale.</p>
+<p>Deux types d’innovation sont distingués : les innovations de produits (biens ou services) et de procédés (incluant les innovations d’organisation et de marketing).</p>
+<p>Plus précisément :</p>
+<ul>
+<li><p>l’innovation de produits inclut les changements significatifs de design et les biens ou services numériques. Elle exclut la revente en l’état de nouveaux biens ou services et les changements de nature esthétique ;</p></li>
+<li><p>l’innovation de procédés concerne la production et les méthodes de développement, la logistique et la distribution, le système d’information et de communication, les tâches administratives et la comptabilité, l’organisation des procédures, la gestion des relations avec les fournisseurs, l’organisation du travail, les processus de décision, les ressources humaines, le marketing, l’emballage, la tarification et le service après-vente.”(INSEE, 2020).</p></li>
+</ul>
+</div>
+<section id="schumpeter-le-père-de-la-théorie-de-linnovation" class="level2">
+<h2 class="anchored" data-anchor-id="schumpeter-le-père-de-la-théorie-de-linnovation">Schumpeter, le père de la théorie de l’innovation</h2>
+<p>Joseph Schumpeter, économiste du 20ᵉ siècle, a expliqué comment l’innovation est le moteur principal de la croissance économique.</p>
+<section id="rôle-clé-de-linnovation" class="level3">
+<h3 class="anchored" data-anchor-id="rôle-clé-de-linnovation">Rôle clé de l’innovation</h3>
+<ul>
+<li>Schumpeter distingue plusieurs types d’innovations :
+<ul>
+<li><p>Nouveaux produits (ex. le smartphone).</p></li>
+<li><p>Nouvelles méthodes de production (ex. impression 3D).</p></li>
+<li><p>Nouveaux marchés (ex. l’économie numérique).</p></li>
+<li><p>Nouvelles organisations (ex. chaînes logistiques).</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="destruction-créatrice" class="level3">
+<h3 class="anchored" data-anchor-id="destruction-créatrice">Destruction créatrice</h3>
+<ul>
+<li><p>L’innovation bouleverse l’économie en rendant obsolètes certaines activités (par ex., le courrier papier remplacé par les emails) tout en créant de nouvelles opportunités.</p></li>
+<li><p>C’est ce processus de “destruction créatrice” qui renouvelle en permanence les structures économiques.</p></li>
+</ul>
+</section>
+<section id="le-rôle-de-lentrepreneur" class="level3">
+<h3 class="anchored" data-anchor-id="le-rôle-de-lentrepreneur">Le rôle de l’entrepreneur</h3>
+<ul>
+<li>Schumpeter place l’entrepreneur au centre de l’innovation. C’est lui qui prend des risques, introduit des changements, et stimule la concurrence.</li>
+</ul>
+</section>
+</section>
+<section id="un-cercle-vertueux-léconomie-circulaire" class="level2">
+<h2 class="anchored" data-anchor-id="un-cercle-vertueux-léconomie-circulaire">Un cercle vertueux : l’économie circulaire</h2>
+<p>L’économie circulaire est un modèle économique qui cherche à limiter les déchets et à optimiser l’utilisation des ressources naturelles.</p>
+<section id="principe-de-base-réduire-réutiliser-recycler-3r" class="level3">
+<h3 class="anchored" data-anchor-id="principe-de-base-réduire-réutiliser-recycler-3r">Principe de base : réduire, réutiliser, recycler (3R)</h3>
+<ul>
+<li><strong>Réduire :</strong> Utiliser moins de matières premières.</li>
+<li><strong>Réutiliser :</strong> Prolonger la vie des produits (ex. réparer un téléphone au lieu d’en acheter un neuf).</li>
+<li><strong>Recycler :</strong> Transformer les déchets en nouvelles ressources (ex. plastique recyclé).</li>
+</ul>
+</section>
+<section id="boucles-fermées" class="level3">
+<h3 class="anchored" data-anchor-id="boucles-fermées">Boucles fermées</h3>
+<ul>
+<li>Contrairement à l’économie traditionnelle (linéaire), où les ressources sont extraites, utilisées, puis jetées, l’économie circulaire fonctionne en boucle. Par exemple, une bouteille en verre peut être recyclée pour fabriquer une nouvelle bouteille.<br>
+Dans ce concept, les déchets des uns sont les matières premières des autres.</li>
+</ul>
+</section>
+<section id="avantages" class="level3">
+<h3 class="anchored" data-anchor-id="avantages">Avantages</h3>
+<ul>
+<li>Moins de déchets et de pollution.</li>
+<li>Conservation des ressources naturelles.</li>
+<li>Création de nouvelles activités (ex. recyclage, réparation, conception éco-responsable).</li>
+</ul>
+<p><strong>L’économie circulaire</strong> cherche à innover en adoptant <strong>un modèle durable et respectueux de l’environnement</strong>, en transformant les déchets en ressources.</p>
+</section>
+</section>
+</section>
+<section id="gestion-de-projet-digital" class="level1">
+<h1>Gestion de projet digital</h1>
+<p>La gestion de projet digital regroupe l’ensemble des activités nécessaires pour planifier, organiser et superviser un projet numérique (souvent une application), afin d’atteindre les objectifs fixés dans les délais impartis et selon les attentes définies.</p>
+<section id="la-gestion-de-projet-son-origine" class="level2">
+<h2 class="anchored" data-anchor-id="la-gestion-de-projet-son-origine">La gestion de projet : son origine</h2>
+<p>On situe les origines de la gestion de projet moderne au début du 20ᵉ siècle avec le Fordisme. Henry Ford révolutionne la production en introduisant le travail à la chaîne. Chaque étape est minutieusement planifiée pour maximiser la productivité. Toyota améliore le modèle fordiste avec des méthodes comme le “Juste à Temps” (JIT) et le “Kaizen” (amélioration continue). L’accent est mis sur la réduction des gaspillages et l’implication des équipes, ouvrant la voie à des concepts clés comme l’optimisation et la flexibilité.</p>
+<p>Cet art est basé sur des concepts majeurs :</p>
+<section id="diagramme-de-gantt" class="level3">
+<h3 class="anchored" data-anchor-id="diagramme-de-gantt">Diagramme de Gantt</h3>
+<ul>
+<li>Un outil visuel qui montre les tâches d’un projet, leur durée, et leur ordre.</li>
+<li>Les barres horizontales représentent les activités, permettant de suivre l’avancement.<br>
+Exemple :</li>
+</ul>
+<p><img src="images/GANTT.png" class="img-fluid" data-fig-align="center"><br>
+<a href="https://lequartier.animafac.net/fiches-pratiques/outils-numeriques-structurer-projet-associatif/"><em>Source</em></a></p>
+</section>
+<section id="roue-de-deming-pcda" class="level3">
+<h3 class="anchored" data-anchor-id="roue-de-deming-pcda">Roue de Deming (PCDA)</h3>
+<ul>
+<li><p>Un cycle itératif pour l’amélioration continue :</p>
+<ul>
+<li>Plan (planifier) : Définir les objectifs et les actions nécessaires.</li>
+<li>Do (faire) : Exécuter le plan.</li>
+<li>Check (vérifier) : Mesurer et analyser les résultats.</li>
+<li>Act (agir) : Ajuster et améliorer en fonction des retours.</li>
+</ul></li>
+<li><p>Utilisé pour garantir que chaque étape est maîtrisée et optimisée.</p></li>
+</ul>
+<p><img src="images/PCDA.png" class="img-fluid" data-fig-align="center" width="500"><br>
+<a href="https://web.archive.org/web/20210624065640/https://learn.saylor.org/mod/page/view.php?id=21134"><em>Source</em></a></p>
+</section>
+<section id="les-0-olympiques-objectif-zéro" class="level3">
+<h3 class="anchored" data-anchor-id="les-0-olympiques-objectif-zéro">Les 0 Olympiques (Objectif “Zéro”)</h3>
+<ul>
+<li><p>Inspiré du toyotisme, cela vise :</p>
+<ul>
+<li>Zéro défaut : Produire sans erreur.</li>
+<li>Zéro pannes : Maintenir régulièrement pour éviter les pannes.</li>
+<li>Zéro papiers : Réduire les frais administratifs(monétaire et temporel).</li>
+<li>Zéro délais : Minimiser les retards.</li>
+<li>Zéro stocks : Éviter les surplus inutiles.</li>
+</ul></li>
+</ul>
+<p><img src="images/5-zeros.png" class="img-fluid" data-fig-align="center"><br>
+<a href="https://stmg.education/les-dicos/dico-management/zero.html"><em>Source</em></a></p>
+</section>
+<section id="méthode-des-5s-complément-toyotiste" class="level3">
+<h3 class="anchored" data-anchor-id="méthode-des-5s-complément-toyotiste">Méthode des 5S (complément toyotiste)</h3>
+<ul>
+<li>Seiri (Trier), Seiton (Ranger), Seiso (Nettoyer), Seiketsu (Standardiser), Shitsuke (Soutenir).</li>
+<li>Une méthode pour organiser efficacement les espaces de travail et garantir un environnement productif.</li>
+</ul>
+</section>
+<section id="chemin-critique-critical-path-method" class="level3">
+<h3 class="anchored" data-anchor-id="chemin-critique-critical-path-method">Chemin critique (Critical Path Method)</h3>
+<ul>
+<li>Analyse des tâches pour identifier celles qui déterminent la durée totale du projet.</li>
+<li>Cela permet de se concentrer sur les étapes les plus critiques pour respecter les délais.</li>
+</ul>
+</section>
+</section>
+<section id="une-application-cest-quoi" class="level2">
+<h2 class="anchored" data-anchor-id="une-application-cest-quoi">Une application, c’est quoi ?</h2>
+<p>Une application est un programme informatique conçu pour répondre à un besoin précis, comme envoyer des messages, faire des achats en ligne ou gérer des données. Elle est utilisée par des utilisateurs via des interfaces (smartphones, ordinateurs).</p>
+<section id="comment-ça-marche" class="level3">
+<h3 class="anchored" data-anchor-id="comment-ça-marche">Comment ça marche ?</h3>
+<ul>
+<li><p><strong>Frontend (partie visible) :</strong><br>
+C’est l’interface que vous voyez et utilisez (boutons, formulaires, pages web). Elle est conçue pour être intuitive et agréable à utiliser.</p></li>
+<li><p><strong>Backend (partie invisible) :</strong><br>
+C’est la “machinerie” qui fait fonctionner l’application. Elle traite les données, exécute les calculs et gère les demandes de l’utilisateur.</p></li>
+<li><p><strong>Exemple :</strong> Sur une page web d’achat en ligne, vous pouvez voir un bouton “Commander”, parfaitement mis en valeur pour que vous puissiez cliquer dessus sans trop chercher (frontend), quand vous cliquerez sur “Commander”, votre commande sera enregistrée et votre paiement validé (backend).</p></li>
+</ul>
+</section>
+<section id="pourquoi-une-application" class="level3">
+<h3 class="anchored" data-anchor-id="pourquoi-une-application">Pourquoi une application ?</h3>
+<p>Une application est créée pour résoudre un problème ou simplifier une tâche, c’est une solution qui répond à un besoin, par exemple :</p>
+<ul>
+<li><p>Commander un repas sans avoir à se déplacer.</p></li>
+<li><p>Gérer des rendez-vous professionnels.</p></li>
+<li><p>Analyser des données dans une entreprise.</p></li>
+</ul>
+</section>
+<section id="penser-design-et-interface" class="level3">
+<h3 class="anchored" data-anchor-id="penser-design-et-interface">Penser design et interface</h3>
+<p>Une application bien conçue doit :</p>
+<ul>
+<li><p>Être <strong>simple à utiliser</strong> : l’utilisateur ne doit pas se perdre ou être frustré.</p></li>
+<li><p>Être <strong>agréable visuellement</strong> : des couleurs, polices et boutons clairs.</p></li>
+<li><p><strong>S’adapter à tous les appareils</strong> : ordinateurs, smartphones, tablettes (design “responsive”).</p></li>
+</ul>
+<p>La culture applicative, c’est comprendre qu’une application est une combinaison entre ce que l’utilisateur voit (frontend) et la technologie qui fonctionne en arrière-plan (backend), avec comme objectif de rendre la vie plus simple et agréable grâce à un bon design et une utilité claire.</p>
+</section>
+</section>
+<section id="rigueur-est-mère-de-réussite-le-génie-logiciel" class="level2">
+<h2 class="anchored" data-anchor-id="rigueur-est-mère-de-réussite-le-génie-logiciel">Rigueur est mère de réussite : le génie logiciel</h2>
+<p>Pour atteindre ses objectifs de façon rigoureuse, il est possible d’appliquer plusieurs concepts :</p>
+<ul>
+<li>Le <strong>software engineering</strong> (ou génie logiciel) est la discipline qui consiste à concevoir, développer, tester, et maintenir des logiciels de manière organisée et efficace.</li>
+</ul>
+<section id="conception-structurée" class="level3">
+<h3 class="anchored" data-anchor-id="conception-structurée">Conception structurée</h3>
+<p>Avant de coder, on planifie comment le logiciel va fonctionner (quelles sont ses fonctionnalités, sa structure). Cela inclut des étapes comme la création de diagrammes ou l’écriture d’un cahier des charges.</p>
+</section>
+<section id="bonnes-pratiques-de-code" class="level3">
+<h3 class="anchored" data-anchor-id="bonnes-pratiques-de-code">Bonnes pratiques de code</h3>
+<p>Écrire du code de qualité est crucial pour garantir que le logiciel soit lisible, réutilisable, et facile à maintenir. Voici quelques bonnes pratiques :</p>
+<ul>
+<li><p><strong>DRY (Don’t Repeat Yourself)</strong> : Éviter de dupliquer le code ; si une fonctionnalité doit être réutilisée, elle doit être écrite une seule fois et utilisée partout.</p></li>
+<li><p><strong>KISS (Keep It Simple, Stupid)</strong> : Rendre le code aussi simple que possible pour éviter des solutions inutiles ou complexes.</p></li>
+<li><p><strong>SOLID</strong> : Ensemble de principes qui facilitent la conception orientée objet :</p>
+<ul>
+<li><p><strong>S</strong> : Single Responsibility Principle (chaque classe doit avoir une seule responsabilité).</p></li>
+<li><p><strong>O</strong> : Open/Closed Principle (le code doit être ouvert à l’extension mais fermé à la modification).</p></li>
+<li><p><strong>L</strong> : Liskov Substitution Principle (les sous-classes doivent pouvoir remplacer leurs classes parentes).</p></li>
+<li><p><strong>I</strong> : Interface Segregation Principle (les interfaces doivent être spécifiques à un usage).</p></li>
+<li><p><strong>D</strong> : Dependency Inversion Principle (les modules de haut niveau ne doivent pas dépendre de modules de bas niveau, mais des abstractions).</p></li>
+</ul></li>
+<li><p><a href="https://peps.python.org/pep-0008/"><strong>PEP8</strong></a> <strong>(Python Enhancement Proposal)</strong> : Un guide de style pour écrire du code Python clair et lisible, couvrant des aspects comme les indentations, les noms de variables, et les espaces.</p></li>
+</ul>
+</section>
+<section id="structurer-un-projet" class="level3">
+<h3 class="anchored" data-anchor-id="structurer-un-projet">Structurer un projet</h3>
+<p>Un projet bien structuré est essentiel pour être déployable en production et maintenable dans le temps. Cela inclut :</p>
+<ul>
+<li><p>Une organisation claire des fichiers et des dossiers.</p></li>
+<li><p>Une séparation entre le code source, les tests, et la configuration.</p></li>
+<li><p>Une documentation complète expliquant le fonctionnement du logiciel et les étapes pour contribuer au projet.</p></li>
+</ul>
+</section>
+<section id="tests-et-qualité" class="level3">
+<h3 class="anchored" data-anchor-id="tests-et-qualité">Tests et qualité</h3>
+<p>Tester un logiciel garantit qu’il fonctionne correctement et répond aux besoins.</p>
+<ul>
+<li><strong>Tests unitaires :</strong> Vérifient des petites parties du code (ex. une seule fonction).</li>
+<li><strong>Tests d’intégration :</strong> Vérifient que différentes parties du code fonctionnent ensemble.</li>
+<li><strong>Automatisation des tests :</strong> Les outils comme pytest (en Python) permettent d’automatiser les tests pour gagner du temps.</li>
+</ul>
+<p>Pour renforcer la qualité, on utilise des linters (ex. <em>pylint, flake8</em>) qui analysent le code pour repérer les erreurs de style ou de logique avant qu’elles ne causent des problèmes.</p>
+</section>
+<section id="collaboration-et-gestion-des-versions" class="level3">
+<h3 class="anchored" data-anchor-id="collaboration-et-gestion-des-versions">Collaboration et gestion des versions</h3>
+<p>Le développement logiciel est souvent un travail d’équipe. Des outils comme Git permettent de :</p>
+<ul>
+<li>Gérer différentes versions du code.</li>
+<li>Suivre l’historique des modifications.</li>
+<li>Collaborer efficacement en évitant les conflits entre les contributions des développeurs.</li>
+</ul>
+</section>
+<section id="adopter-des-patterns-de-design" class="level3">
+<h3 class="anchored" data-anchor-id="adopter-des-patterns-de-design">Adopter des patterns de design</h3>
+<p>Les design patterns sont des solutions éprouvées pour résoudre des problèmes fréquents de conception logicielle. Par exemple :</p>
+<ul>
+<li><strong>Singleton :</strong> Garantir qu’une classe n’ait qu’une seule instance.</li>
+<li><strong>Factory :</strong> Centraliser la création d’objets complexes.</li>
+<li><strong>Observer :</strong> Réagir aux changements d’état dans un système.</li>
+</ul>
+</section>
+<section id="le-zen-of-python" class="level3">
+<h3 class="anchored" data-anchor-id="le-zen-of-python">Le Zen of Python</h3>
+<p>Une philosophie de développement Python, illustrée par des principes comme :</p>
+<ul>
+<li>“Beautiful is better than ugly” (un code lisible est préférable).</li>
+<li>“Simple is better than complex” (la simplicité est essentielle).</li>
+<li>“Errors should never pass silently” (les erreurs doivent être explicites).</li>
+</ul>
+<div class="custom-box">
+<p>Ces pratiques sont essentielles pour concevoir des logiciels efficaces, maintenables et collaboratifs.<br>
+Pour conclure, le génie logiciel, c’est comme construire une maison : il faut des plans solides, des matériaux adaptés (le code), un contrôle qualité (tests), et un design qui facilite les rénovations futures (maintenance).</p>
+</div>
+</section>
+</section>
+<section id="commencer-sur-de-bonnes-bases-python" class="level2">
+<h2 class="anchored" data-anchor-id="commencer-sur-de-bonnes-bases-python">Commencer sur de bonnes bases : Python</h2>
+<section id="les-fonctions" class="level3">
+<h3 class="anchored" data-anchor-id="les-fonctions">Les fonctions</h3>
+<p>Une fonction est un bloc de code qui effectue une tâche spécifique. Vous pouvez la réutiliser plusieurs fois.<br>
+Exemple :</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dire_bonjour(nom):</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="ss">f"Bonjour, </span><span class="sc">{</span>nom<span class="sc">}</span><span class="ss"> !"</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dire_bonjour(<span class="st">"Alice"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Ici, la fonction <em>dire_bonjour</em> prend un nom et retourne un message personnalisé.</p>
+</section>
+<section id="tests-unitaires" class="level3">
+<h3 class="anchored" data-anchor-id="tests-unitaires">Tests unitaires</h3>
+<p>Les tests unitaires permettent de vérifier qu’une partie précise de votre code (comme une fonction) fonctionne correctement.<br>
+Exemple avec la bibliothèque unittest :</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> unittest</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> addition(a, b):</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> TestAddition(unittest.TestCase):</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_positif(<span class="va">self</span>):</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(addition(<span class="dv">2</span>, <span class="dv">3</span>), <span class="dv">5</span>)</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>    unittest.main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Cela permet de détecter les erreurs dès que le code change.</p>
+</section>
+<section id="objets-et-classes-programmation-orientée-objet" class="level3">
+<h3 class="anchored" data-anchor-id="objets-et-classes-programmation-orientée-objet">Objets et classes (Programmation orientée objet)</h3>
+<p>Python permet de créer des classes, des “modèles” pour structurer vos données et comportements.</p>
+<div class="custom-box">
+<p>Exemple :</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Animal:</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nom):</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.nom <span class="op">=</span> nom</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> parler(<span class="va">self</span>):</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nom<span class="sc">}</span><span class="ss"> fait un bruit."</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>chien <span class="op">=</span> Animal(<span class="st">"Rex"</span>)</span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(chien.parler())  <span class="co"># Rex fait un bruit.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Une classe regroupe des données (<em>nom</em>) et des comportements (<em>parler</em>).</p>
+</section>
+<section id="environnements-virtuels-avec-docker" class="level3">
+<h3 class="anchored" data-anchor-id="environnements-virtuels-avec-docker">Environnements virtuels (avec Docker)</h3>
+<p>Un <strong>environnement virtuel</strong> permet d’isoler les dépendances (bibliothèques, versions de Python) d’un projet pour éviter les conflits avec d’autres projets.</p>
+<ul>
+<li>Avec Python :</li>
+</ul>
+<div class="sourceCode" id="cb35"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv mon_env</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> mon_env/bin/activate  <span class="co"># Active l'environnement</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install numpy            <span class="co"># Installe une bibliothèque uniquement pour cet environnement</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Avec Docker (outil pour des environnements plus complexes) :<br>
+Docker crée des conteneurs, qui isolent tout un système (pas seulement Python).<br>
+Exemple d’un fichier Dockerfile :</li>
+</ul>
+<div class="sourceCode" id="cb36"><pre class="sourceCode dockerfile code-with-copy"><code class="sourceCode dockerfile"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> python:3.9</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="kw">WORKDIR</span> /app</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="kw">COPY</span> . .</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="kw">CMD</span> [<span class="st">"python"</span>, <span class="st">"main.py"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Cela garantit que votre application fonctionnera partout de la même manière.</p>
+<p>En résumé, maîtriser ces bases vous aide à écrire un code réutilisable, fiable, et bien organisé, tout en travaillant dans des environnements adaptés.</p>
+</section>
+</section>
+<section id="plus-on-est-de-pro-plus-on-rit" class="level2">
+<h2 class="anchored" data-anchor-id="plus-on-est-de-pro-plus-on-rit">Plus on est de pro, plus on rit</h2>
+<p>De votre rôle de professionnel de la donnée, dans les projets, vous serez amenez à travailler avec divers métiers, il est important de comprendre les fonctionnements et les missions de vos futurs collaborateurs.<br>
+Parmi ces individus avec lesquels vous allez collaborer fréquemment :</p>
+<p><strong>Le Product Manager (PM)</strong></p>
+<ul>
+<li><strong>Rôle :</strong> Définit la stratégie et les objectifs d’un produit ou d’un projet en s’appuyant sur des analyses de données.</li>
+<li><strong>Collaboration :</strong> Il travaille avec des data scientists et data analysts pour comprendre les tendances utilisateurs et prendre des décisions stratégiques basées sur les données.</li>
+</ul>
+<p><strong>Le Développeur Backend</strong></p>
+<ul>
+<li><strong>Rôle :</strong> Construit les systèmes qui collectent et rendent accessibles les données (APIs, bases de données).</li>
+<li><strong>Collaboration :</strong> Il travaille avec les data engineers pour intégrer les pipelines de données et avec les data scientists pour fournir les données nécessaires à leurs analyses.</li>
+</ul>
+<p><strong>Le Développeur Frontend</strong></p>
+<ul>
+<li><strong>Rôle :</strong> Développe des interfaces utilisateur (sites web, tableaux de bord, applications) pour visualiser ou interagir avec les données.</li>
+<li><strong>Collaboration :</strong> Il travaille avec des data analysts et des business intelligence analysts pour présenter les données de manière compréhensible et esthétique.</li>
+</ul>
+<p><strong>Le Spécialiste en Cybersécurité</strong></p>
+<ul>
+<li><strong>Rôle :</strong> Protège les systèmes et les données contre les attaques et les intrusions.</li>
+<li><strong>Collaboration :</strong> Il s’associe à des data governance specialists et des data engineers pour sécuriser les pipelines de données et garantir la conformité aux régulations.</li>
+</ul>
+<p><strong>Le Cloud Architect</strong></p>
+<ul>
+<li><strong>Rôle :</strong> Conçoit les infrastructures cloud pour héberger et traiter les données à grande échelle.</li>
+<li><strong>Collaboration :</strong> Il travaille avec des data engineers et des big data engineers pour s’assurer que les systèmes cloud répondent aux besoins de stockage et de calcul.</li>
+</ul>
+<p><strong>Le Consultant en Transformation Digitale</strong></p>
+<ul>
+<li><strong>Rôle :</strong> Aide les entreprises à intégrer les données dans leurs processus décisionnels et leurs outils numériques.</li>
+<li><strong>Collaboration :</strong> Il collabore avec des chief data officers, data scientists et business intelligence analysts pour orienter les projets.</li>
+</ul>
+<p><strong>L’UX Designer (Designer d’expérience utilisateur)</strong></p>
+<ul>
+<li><strong>Rôle :</strong> Conçoit des interfaces utilisateur et des parcours fluides en se basant sur les données utilisateurs.</li>
+<li><strong>Collaboration :</strong> Il utilise les insights des data analysts et des product managers pour optimiser l’expérience utilisateur.</li>
+</ul>
+<p><strong>L’Ingénieur DevOps</strong></p>
+<ul>
+<li><strong>Rôle :</strong> Automatise et optimise le déploiement des applications, y compris les modèles d’apprentissage automatique ou les systèmes de traitement de données.</li>
+<li><strong>Collaboration :</strong> Il travaille avec les machine learning engineers et data engineers pour déployer les solutions en production.</li>
+</ul>
+<p><strong>L’Analyste Marketing</strong></p>
+<ul>
+<li><strong>Rôle :</strong> Utilise les données pour mesurer l’efficacité des campagnes publicitaires et comprendre le comportement des clients.</li>
+<li><strong>Collaboration :</strong> Il collabore avec les data analysts et les business intelligence analysts pour extraire et interpréter les métriques marketing.</li>
+</ul>
+<p><strong>Le Responsable de la Conformité (Compliance Officer)</strong></p>
+<ul>
+<li><strong>Rôle :</strong> S’assure que l’entreprise respecte les lois et régulations liées aux données (comme le RGPD).</li>
+<li><strong>Collaboration :</strong> Il travaille avec les data governance specialists pour encadrer l’usage des données de manière légale et éthique.</li>
+</ul>
+<p>Ces métiers feront certainement parti de l’écosystème auquel vous appartiendrez et contribuerons à vos projets de près ou de loin.</p>
 
 
 </section>
@@ -771,7 +1224,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -803,50 +1267,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -856,17 +1281,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -878,130 +1294,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
-        }
-        return container.innerHTML
-      } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
+      return note.innerHTML;
     });
   }
       let selectedAnnoteEl;
@@ -1045,7 +1338,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
-            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1071,32 +1363,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1157,7 +1423,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-
 
 
 
