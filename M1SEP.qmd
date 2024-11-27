@@ -5,7 +5,7 @@ editor: visual
 
 Ici, seront listés les pré-requis nécessaires pour le master SEP.
 
-# Mathématique
+# Mathématiques
 
 Nous allons commencer par les bases des probabilités, de l'algèbre linéaire et des statistiques.
 
