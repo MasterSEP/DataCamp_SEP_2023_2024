@@ -3,7 +3,7 @@ title: "DATA Camp M2"
 editor: visual
 ---
 
-# Partie 1 : Analyse de données
+# Analyse de données
 
 ## Rappels Fondamentaux
 
@@ -610,3 +610,431 @@ print(spearman_test)
 # Si la p-value < 0,05 on peut rejeter l'hypothèse nulle de non-corrélation, 
 # Conclure qu'il y a une corrélation significative entre les deux variables
 ```
+
+---
+title: "Economie"
+editor: visual
+---
+
+# Excel/VBA
+
+::: callout-note
+Les démarches suivantes s'appliquent sous Windows, il se peut que la version IOS diffère.
+:::
+
+**Écrire des macros en VBA**, c'est comme apprendre à donner des instructions précises à Excel pour qu'il effectue automatiquement des tâches répétitives, sans que vous ayez à les refaire manuellement.
+
+## Étapes simples pour débuter
+
+### Accéder à l'éditeur VBA
+
+-   Allez dans Excel, puis [activez l'onglet Développeur](https://support.microsoft.com/fr-fr/office/afficher-l-onglet-d%C3%A9veloppeur-e1192344-5e56-4d45-931b-e5fd9bea2d45 "Comment activer l'onglet Développeur ?") si nécessaire. Dans l'onglet développeur, cliquez sur *Visual Basic* pour ouvrir l'éditeur VBA.
+
+### Créer une macro
+
+-   Dans l'éditeur, insérez un module (*Insertion \> Module*). Vous pourrez y écrire votre code.
+
+### Écrire un exemple de macro
+
+Commencez par des tâches simples, comme écrire dans une cellule.
+
+[Exemple :]{.underline}
+
+```VBA
+Sub first_macro()
+
+  Range("A1").value = "Test Macro" ' Change la valeur de A1
+
+End Sub
+```
+
+Ce code dit à Excel : Change la valeur de la cellule A1 par " Test Macro ".
+
+### Exécuter la macro
+
+Retournez dans Excel, appuyez sur **Alt + F8**, sélectionnez votre macro (*first_macro*) et cliquez sur **Exécuter**.
+
+::: callout-tip
+Commencez par enregistrer une macro avec l'outil *Enregistreur de macro* d'Excel (dans l'onglet Développeur). Cela génère automatiquement du code VBA que vous pouvez observer et modifier pour apprendre.
+:::
+
+# Innovation digitale et transition écologique
+
+::: custom-box
+Selon l'[INSEE](https://www.insee.fr/fr/metadonnees/definition/c1182) :
+
+"L'innovation désigne l'introduction sur le marché d'un produit ou d'un procédé nouveau ou significativement amélioré par rapport à ceux précédemment élaborés par l'unité légale.
+
+Deux types d'innovation sont distingués : les innovations de produits (biens ou services) et de procédés (incluant les innovations d'organisation et de marketing).
+
+Plus précisément :
+
+-   l'innovation de produits inclut les changements significatifs de design et les biens ou services numériques. Elle exclut la revente en l'état de nouveaux biens ou services et les changements de nature esthétique ;
+
+-   l'innovation de procédés concerne la production et les méthodes de développement, la logistique et la distribution, le système d'information et de communication, les tâches administratives et la comptabilité, l'organisation des procédures, la gestion des relations avec les fournisseurs, l'organisation du travail, les processus de décision, les ressources humaines, le marketing, l'emballage, la tarification et le service après-vente."(INSEE, 2020).
+:::
+
+## Schumpeter, le père de la théorie de l'innovation
+
+Joseph Schumpeter, économiste du 20ᵉ siècle, a expliqué comment l'innovation est le moteur principal de la croissance économique.
+
+### Rôle clé de l'innovation
+
+-   Schumpeter distingue plusieurs types d'innovations :
+    -   Nouveaux produits (ex. le smartphone).
+
+    -   Nouvelles méthodes de production (ex. impression 3D).
+
+    -   Nouveaux marchés (ex. l'économie numérique).
+
+    -   Nouvelles organisations (ex. chaînes logistiques).
+
+### Destruction créatrice
+
+-   L'innovation bouleverse l'économie en rendant obsolètes certaines activités (par ex., le courrier papier remplacé par les emails) tout en créant de nouvelles opportunités.
+
+-   C'est ce processus de "destruction créatrice" qui renouvelle en permanence les structures économiques.
+
+### Le rôle de l'entrepreneur
+
+-   Schumpeter place l'entrepreneur au centre de l'innovation. C'est lui qui prend des risques, introduit des changements, et stimule la concurrence.
+
+## Un cercle vertueux : l'économie circulaire
+
+L'économie circulaire est un modèle économique qui cherche à limiter les déchets et à optimiser l'utilisation des ressources naturelles.
+
+### Principe de base : réduire, réutiliser, recycler (3R)
+
+-   **Réduire :** Utiliser moins de matières premières.
+-   **Réutiliser :** Prolonger la vie des produits (ex. réparer un téléphone au lieu d'en acheter un neuf).
+-   **Recycler :** Transformer les déchets en nouvelles ressources (ex. plastique recyclé).
+
+### Boucles fermées
+
+-   Contrairement à l'économie traditionnelle (linéaire), où les ressources sont extraites, utilisées, puis jetées, l'économie circulaire fonctionne en boucle. Par exemple, une bouteille en verre peut être recyclée pour fabriquer une nouvelle bouteille.\
+    Dans ce concept, les déchets des uns sont les matières premières des autres.
+
+### Avantages
+
+-   Moins de déchets et de pollution.
+-   Conservation des ressources naturelles.
+-   Création de nouvelles activités (ex. recyclage, réparation, conception éco-responsable).
+
+**L'économie circulaire** cherche à innover en adoptant **un modèle durable et respectueux de l'environnement**, en transformant les déchets en ressources.
+
+# Gestion de projet digital
+
+La gestion de projet digital regroupe l'ensemble des activités nécessaires pour planifier, organiser et superviser un projet numérique (souvent une application), afin d'atteindre les objectifs fixés dans les délais impartis et selon les attentes définies.
+
+## La gestion de projet : son origine
+
+On situe les origines de la gestion de projet moderne au début du 20ᵉ siècle avec le Fordisme. Henry Ford révolutionne la production en introduisant le travail à la chaîne. Chaque étape est minutieusement planifiée pour maximiser la productivité. Toyota améliore le modèle fordiste avec des méthodes comme le "Juste à Temps" (JIT) et le "Kaizen" (amélioration continue). L'accent est mis sur la réduction des gaspillages et l'implication des équipes, ouvrant la voie à des concepts clés comme l'optimisation et la flexibilité.
+
+Cet art est basé sur des concepts majeurs :
+
+### Diagramme de Gantt
+
+-   Un outil visuel qui montre les tâches d'un projet, leur durée, et leur ordre.
+-   Les barres horizontales représentent les activités, permettant de suivre l'avancement.\
+    Exemple :
+
+![](images/GANTT.png){fig-align="center"}\
+[*Source*](https://lequartier.animafac.net/fiches-pratiques/outils-numeriques-structurer-projet-associatif/)
+
+### Roue de Deming (PCDA)
+
+-   Un cycle itératif pour l'amélioration continue :
+
+    -   Plan (planifier) : Définir les objectifs et les actions nécessaires.
+    -   Do (faire) : Exécuter le plan.
+    -   Check (vérifier) : Mesurer et analyser les résultats.
+    -   Act (agir) : Ajuster et améliorer en fonction des retours.
+
+-   Utilisé pour garantir que chaque étape est maîtrisée et optimisée.
+
+![](images/PCDA.png){fig-align="center" width="500"}\
+[*Source*](https://web.archive.org/web/20210624065640/https://learn.saylor.org/mod/page/view.php?id=21134)
+
+### Les 0 Olympiques (Objectif "Zéro")
+
+-   Inspiré du toyotisme, cela vise :
+
+    -   Zéro défaut : Produire sans erreur.
+    -   Zéro pannes : Maintenir régulièrement pour éviter les pannes.
+    -   Zéro papiers : Réduire les frais administratifs(monétaire et temporel).
+    -   Zéro délais : Minimiser les retards.
+    -   Zéro stocks : Éviter les surplus inutiles.
+
+![](images/5-zeros.png){fig-align="center"}\
+[*Source*](https://stmg.education/les-dicos/dico-management/zero.html)
+
+### Méthode des 5S (complément toyotiste)
+
+-   Seiri (Trier), Seiton (Ranger), Seiso (Nettoyer), Seiketsu (Standardiser), Shitsuke (Soutenir).
+-   Une méthode pour organiser efficacement les espaces de travail et garantir un environnement productif.
+
+### Chemin critique (Critical Path Method)
+
+-   Analyse des tâches pour identifier celles qui déterminent la durée totale du projet.
+-   Cela permet de se concentrer sur les étapes les plus critiques pour respecter les délais.
+
+## Une application, c'est quoi ?
+
+Une application est un programme informatique conçu pour répondre à un besoin précis, comme envoyer des messages, faire des achats en ligne ou gérer des données. Elle est utilisée par des utilisateurs via des interfaces (smartphones, ordinateurs).
+
+### Comment ça marche ?
+
+-   **Frontend (partie visible) :**\
+    C'est l'interface que vous voyez et utilisez (boutons, formulaires, pages web). Elle est conçue pour être intuitive et agréable à utiliser.
+
+-   **Backend (partie invisible) :**\
+    C'est la "machinerie" qui fait fonctionner l'application. Elle traite les données, exécute les calculs et gère les demandes de l'utilisateur.
+
+-   **Exemple :** Sur une page web d'achat en ligne, vous pouvez voir un bouton "Commander", parfaitement mis en valeur pour que vous puissiez cliquer dessus sans trop chercher (frontend), quand vous cliquerez sur "Commander", votre commande sera enregistrée et votre paiement validé (backend).
+
+### Pourquoi une application ?
+
+Une application est créée pour résoudre un problème ou simplifier une tâche, c'est une solution qui répond à un besoin, par exemple :
+
+-   Commander un repas sans avoir à se déplacer.
+
+-   Gérer des rendez-vous professionnels.
+
+-   Analyser des données dans une entreprise.
+
+### Penser design et interface
+
+Une application bien conçue doit :
+
+-   Être **simple à utiliser** : l'utilisateur ne doit pas se perdre ou être frustré.
+
+-   Être **agréable visuellement** : des couleurs, polices et boutons clairs.
+
+-   **S'adapter à tous les appareils** : ordinateurs, smartphones, tablettes (design "responsive").
+
+La culture applicative, c'est comprendre qu'une application est une combinaison entre ce que l'utilisateur voit (frontend) et la technologie qui fonctionne en arrière-plan (backend), avec comme objectif de rendre la vie plus simple et agréable grâce à un bon design et une utilité claire.
+
+## Rigueur est mère de réussite : le génie logiciel
+
+Pour atteindre ses objectifs de façon rigoureuse, il est possible d'appliquer plusieurs concepts :
+
+-   Le **software engineering** (ou génie logiciel) est la discipline qui consiste à concevoir, développer, tester, et maintenir des logiciels de manière organisée et efficace.
+
+### Conception structurée
+
+Avant de coder, on planifie comment le logiciel va fonctionner (quelles sont ses fonctionnalités, sa structure). Cela inclut des étapes comme la création de diagrammes ou l'écriture d'un cahier des charges.
+
+### Bonnes pratiques de code
+
+Écrire du code de qualité est crucial pour garantir que le logiciel soit lisible, réutilisable, et facile à maintenir. Voici quelques bonnes pratiques :
+
+-   **DRY (Don't Repeat Yourself)** : Éviter de dupliquer le code ; si une fonctionnalité doit être réutilisée, elle doit être écrite une seule fois et utilisée partout.
+
+-   **KISS (Keep It Simple, Stupid)** : Rendre le code aussi simple que possible pour éviter des solutions inutiles ou complexes.
+
+-   **SOLID** : Ensemble de principes qui facilitent la conception orientée objet :
+
+    -   **S** : Single Responsibility Principle (chaque classe doit avoir une seule responsabilité).
+
+    -   **O** : Open/Closed Principle (le code doit être ouvert à l'extension mais fermé à la modification).
+
+    -   **L** : Liskov Substitution Principle (les sous-classes doivent pouvoir remplacer leurs classes parentes).
+
+    -   **I** : Interface Segregation Principle (les interfaces doivent être spécifiques à un usage).
+
+    -   **D** : Dependency Inversion Principle (les modules de haut niveau ne doivent pas dépendre de modules de bas niveau, mais des abstractions).
+
+-   [**PEP8**](https://peps.python.org/pep-0008/) **(Python Enhancement Proposal)** : Un guide de style pour écrire du code Python clair et lisible, couvrant des aspects comme les indentations, les noms de variables, et les espaces.
+
+### Structurer un projet
+
+Un projet bien structuré est essentiel pour être déployable en production et maintenable dans le temps. Cela inclut :
+
+-   Une organisation claire des fichiers et des dossiers.
+
+-   Une séparation entre le code source, les tests, et la configuration.
+
+-   Une documentation complète expliquant le fonctionnement du logiciel et les étapes pour contribuer au projet.
+
+### Tests et qualité
+
+Tester un logiciel garantit qu'il fonctionne correctement et répond aux besoins.
+
+-   **Tests unitaires :** Vérifient des petites parties du code (ex. une seule fonction).
+-   **Tests d'intégration :** Vérifient que différentes parties du code fonctionnent ensemble.
+-   **Automatisation des tests :** Les outils comme pytest (en Python) permettent d'automatiser les tests pour gagner du temps.
+
+Pour renforcer la qualité, on utilise des linters (ex. *pylint, flake8*) qui analysent le code pour repérer les erreurs de style ou de logique avant qu'elles ne causent des problèmes.
+
+### Collaboration et gestion des versions
+
+Le développement logiciel est souvent un travail d'équipe. Des outils comme Git permettent de :
+
+-   Gérer différentes versions du code.
+-   Suivre l'historique des modifications.
+-   Collaborer efficacement en évitant les conflits entre les contributions des développeurs.
+
+### Adopter des patterns de design
+
+Les design patterns sont des solutions éprouvées pour résoudre des problèmes fréquents de conception logicielle. Par exemple :
+
+-   **Singleton :** Garantir qu'une classe n'ait qu'une seule instance.
+-   **Factory :** Centraliser la création d'objets complexes.
+-   **Observer :** Réagir aux changements d'état dans un système.
+
+### Le Zen of Python
+
+Une philosophie de développement Python, illustrée par des principes comme :
+
+-   "Beautiful is better than ugly" (un code lisible est préférable).
+-   "Simple is better than complex" (la simplicité est essentielle).
+-   "Errors should never pass silently" (les erreurs doivent être explicites).
+
+::: custom-box
+Ces pratiques sont essentielles pour concevoir des logiciels efficaces, maintenables et collaboratifs.\
+Pour conclure, le génie logiciel, c'est comme construire une maison : il faut des plans solides, des matériaux adaptés (le code), un contrôle qualité (tests), et un design qui facilite les rénovations futures (maintenance).
+:::
+
+## Commencer sur de bonnes bases : Python
+
+### Les fonctions
+
+Une fonction est un bloc de code qui effectue une tâche spécifique. Vous pouvez la réutiliser plusieurs fois.\
+Exemple :
+
+``` py
+def dire_bonjour(nom):
+    return f"Bonjour, {nom} !"
+
+print(dire_bonjour("Alice"))
+```
+
+Ici, la fonction *dire_bonjour* prend un nom et retourne un message personnalisé.
+
+### Tests unitaires
+
+Les tests unitaires permettent de vérifier qu'une partie précise de votre code (comme une fonction) fonctionne correctement.\
+Exemple avec la bibliothèque unittest :
+
+``` py
+import unittest
+
+def addition(a, b):
+    return a + b
+
+class TestAddition(unittest.TestCase):
+    def test_positif(self):
+        self.assertEqual(addition(2, 3), 5)
+
+if __name__ == "__main__":
+    unittest.main()
+```
+
+Cela permet de détecter les erreurs dès que le code change.
+
+### Objets et classes (Programmation orientée objet)
+
+Python permet de créer des classes, des "modèles" pour structurer vos données et comportements.
+
+::: custom-box
+Exemple :
+
+``` py
+class Animal:
+    def __init__(self, nom):
+        self.nom = nom
+
+    def parler(self):
+        return f"{self.nom} fait un bruit."
+
+chien = Animal("Rex")
+print(chien.parler())  # Rex fait un bruit.
+```
+:::
+
+Une classe regroupe des données (*nom*) et des comportements (*parler*).
+
+### Environnements virtuels (avec Docker)
+
+Un **environnement virtuel** permet d'isoler les dépendances (bibliothèques, versions de Python) d'un projet pour éviter les conflits avec d'autres projets.
+
+-   Avec Python :
+
+``` bash
+python -m venv mon_env
+source mon_env/bin/activate  # Active l'environnement
+pip install numpy            # Installe une bibliothèque uniquement pour cet environnement
+```
+
+-   Avec Docker (outil pour des environnements plus complexes) :\
+    Docker crée des conteneurs, qui isolent tout un système (pas seulement Python).\
+    Exemple d'un fichier Dockerfile :
+
+``` dockerfile
+FROM python:3.9
+WORKDIR /app
+COPY . .
+RUN pip install -r requirements.txt
+CMD ["python", "main.py"]
+```
+
+Cela garantit que votre application fonctionnera partout de la même manière.
+
+En résumé, maîtriser ces bases vous aide à écrire un code réutilisable, fiable, et bien organisé, tout en travaillant dans des environnements adaptés.
+
+## Plus on est de pro, plus on rit
+
+De votre rôle de professionnel de la donnée, dans les projets, vous serez amenez à travailler avec divers métiers, il est important de comprendre les fonctionnements et les missions de vos futurs collaborateurs.\
+Parmi ces individus avec lesquels vous allez collaborer fréquemment :
+
+**Le Product Manager (PM)**
+
+-   **Rôle :** Définit la stratégie et les objectifs d'un produit ou d'un projet en s'appuyant sur des analyses de données.
+-   **Collaboration :** Il travaille avec des data scientists et data analysts pour comprendre les tendances utilisateurs et prendre des décisions stratégiques basées sur les données.
+
+**Le Développeur Backend**
+
+-   **Rôle :** Construit les systèmes qui collectent et rendent accessibles les données (APIs, bases de données).
+-   **Collaboration :** Il travaille avec les data engineers pour intégrer les pipelines de données et avec les data scientists pour fournir les données nécessaires à leurs analyses.
+
+**Le Développeur Frontend**
+
+-   **Rôle :** Développe des interfaces utilisateur (sites web, tableaux de bord, applications) pour visualiser ou interagir avec les données.
+-   **Collaboration :** Il travaille avec des data analysts et des business intelligence analysts pour présenter les données de manière compréhensible et esthétique.
+
+**Le Spécialiste en Cybersécurité**
+
+-   **Rôle :** Protège les systèmes et les données contre les attaques et les intrusions.
+-   **Collaboration :** Il s'associe à des data governance specialists et des data engineers pour sécuriser les pipelines de données et garantir la conformité aux régulations.
+
+**Le Cloud Architect**
+
+-   **Rôle :** Conçoit les infrastructures cloud pour héberger et traiter les données à grande échelle.
+-   **Collaboration :** Il travaille avec des data engineers et des big data engineers pour s'assurer que les systèmes cloud répondent aux besoins de stockage et de calcul.
+
+**Le Consultant en Transformation Digitale**
+
+-   **Rôle :** Aide les entreprises à intégrer les données dans leurs processus décisionnels et leurs outils numériques.
+-   **Collaboration :** Il collabore avec des chief data officers, data scientists et business intelligence analysts pour orienter les projets.
+
+**L'UX Designer (Designer d'expérience utilisateur)**
+
+-   **Rôle :** Conçoit des interfaces utilisateur et des parcours fluides en se basant sur les données utilisateurs.
+-   **Collaboration :** Il utilise les insights des data analysts et des product managers pour optimiser l'expérience utilisateur.
+
+**L'Ingénieur DevOps**
+
+-   **Rôle :** Automatise et optimise le déploiement des applications, y compris les modèles d'apprentissage automatique ou les systèmes de traitement de données.
+-   **Collaboration :** Il travaille avec les machine learning engineers et data engineers pour déployer les solutions en production.
+
+**L'Analyste Marketing**
+
+-   **Rôle :** Utilise les données pour mesurer l'efficacité des campagnes publicitaires et comprendre le comportement des clients.
+-   **Collaboration :** Il collabore avec les data analysts et les business intelligence analysts pour extraire et interpréter les métriques marketing.
+
+**Le Responsable de la Conformité (Compliance Officer)**
+
+-   **Rôle :** S'assure que l'entreprise respecte les lois et régulations liées aux données (comme le RGPD).
+-   **Collaboration :** Il travaille avec les data governance specialists pour encadrer l'usage des données de manière légale et éthique.
+
+Ces métiers feront certainement parti de l'écosystème auquel vous appartiendrez et contribuerons à vos projets de près ou de loin.

@@ -3,15 +3,17 @@ title: "DATA Camp M1"
 editor: visual
 ---
 
-Ici, sera listé les pré-requis nécessaires pour le master SEP.
+Ici, seront listés les pré-requis nécessaires pour le master SEP.
 
-Nous allons commencer par les bases des probabilités, de l'algèbre linéaire et des statisitques.
+# Mathématique
 
-# Algèbre Linéaire
+Nous allons commencer par les bases des probabilités, de l'algèbre linéaire et des statistiques.
 
-Nous allons vous rappeler les notions essentielles à connaître sur les matrices.
+## Algèbre Linéaire
 
-## Trace d'une matrice
+Rappelons les notions essentielles à connaître sur les matrices.
+
+### Trace d'une matrice
 
 ::: custom-box
 La **trace** d'une matrice carrée $A$ est la somme de ses éléments diagonaux : $$\text{Tr}(A) = \sum_{i=1}^{n} a_{ii}$$
@@ -23,7 +25,7 @@ Propriétés : - La trace est linéaire : $$\text{Tr}(A + B) = \text{Tr}(A) + \t
 La trace d'une matrice ne change pas lorsqu'on change de base.
 :::
 
-## Déterminant d'une matrice
+### Déterminant d'une matrice
 
 ::: custom-box
 Le déterminant d'une matrice $A \in \mathcal{M}_{n\times n}$ peut être calculé en utilisant le développement par rapport à une ligne ou une colonne : $$\text{det}(A) = \sum_{j=1}^{n} (-1)^{i+j} a_{ij} \text{det}(A_{ij})$$ où ($A_{ij}$) est la matrice obtenue en supprimant la ($i$)-ème ligne et la ($j$)-ème colonne de ($A$).
@@ -33,11 +35,11 @@ Le déterminant d'une matrice $A \in \mathcal{M}_{n\times n}$ peut être calcul�
 Dans certains cas, il peut être long de calculer le déterminant d'une matrice. Pour remédier à cela, il est utile de connaître par coeur le calcul d'un déterminant d'une matrice de taille $2 \times 2$ et d'une matrice diagonale.
 :::
 
-## Déterminant d'une matrice $(2 \times 2)$
+### Déterminant d'une matrice $(2 \times 2)$
 
 Pour une matrice $A \in \mathcal{M}_{2 \times 2}$ de la forme : $$A = \left(\begin{array}{cc} a & b \\ c & d \end{array} \right)$$ le déterminant se calcule en utilisant la formule suivante : $$\text{det}(A) = ad - bc $$
 
-## Déterminant d'une matrice diagonale
+### Déterminant d'une matrice diagonale
 
 Pour une matrice diagonale de la forme : $$D = 
 \left(\begin{array}{cccc}
@@ -50,7 +52,7 @@ $$ le déterminant est le produit des éléments diagonaux : $$\text{det}(D) = d
 
 Les déterminants sont particulièrement utiles en algèbre linéaire pour déterminer si une matrice est inversible (une matrice est inversible si et seulement si son déterminant est non nul) et pour résoudre des systèmes d'équations linéaires.
 
-## Espace Euclidien
+### Espace Euclidien
 
 ::: custom-box
 Un **espace euclidien** est un espace vectoriel réel de dimension finie muni d'une forme bilinéaire symétrique définie positive, appelée **produit scalaire** : $$\langle x, y \rangle = x_1 y_1 + x_2 y_2 + \cdots + x_n y_n$$
@@ -63,11 +65,11 @@ Quelques inégalités à connaître :
 -   Inégalité de Cauchy-Schwarz : $$|\langle x, y \rangle| \leq \|x\| \|y\|$$
 -   Inégalité triangulaire : $$\|x + y\| \leq \|x\| + \|y\|$$
 
-## Orthogonalité
+### Orthogonalité
 
 Soient $v$ et $w$, deux vecteurs appartenant à un espace vectoriel $E$ de dimension $n$, muni du produit scalaire $\langle \cdot, \cdot \rangle$ associé à la norme euclidienne $\|\cdot\|_2$.On note $v = (v_1, \ldots, v_n)^t$ et $w = (w_1, \ldots, w_n)^t$ où \$ v_i\$ et $w_j$ sont des scalaires (i.e. des réels).
 
-### Normalisation d'un vecteur
+#### Normalisation d'un vecteur
 
 La normalisation d'un vecteur $v$ est donnée par : $$
 x = \frac{v}{\|v\|_2}
@@ -75,13 +77,13 @@ $$ Ainsi, $\|x\|_2 = 1$. Un espace vectoriel engendré par $v_1, \ldots, v_p$ es
 
 Deux vecteurs $x$ et $y$ sont **orthogonaux** si leur produit scalaire est nul : $$\langle x, y \rangle = 0$$ Une **base orthonormale** est une base où tous les vecteurs sont orthogonaux et de norme 1.
 
-### Matrice de Projection Orthogonale
+#### Matrice de Projection Orthogonale
 
 ::: custom-box
 Soit $E$ un espace vectoriel muni d'un produit scalaire $\langle \cdot, \cdot \rangle$ et $W$ un sous-espace vectoriel de $E$. La projection orthogonale d'un élément $B$ de $E$ sur $W$ est définie par : $$\Pi_W B = \underset{a \in W}{argmin} \|B - a\|_2$$ La matrice de projection orthogonale de $E$ sur $W$ est notée $\Pi_W$.
 :::
 
-#### Propriétés
+##### Propriétés
 
 -   $\Pi_W^t = \Pi_W$
 -   $\Pi_W^2 = \Pi_W$
@@ -92,7 +94,7 @@ Pour tout $B$, élément de $E$ : $$
 \Pi_{W^\perp} B = B - \Pi_{W} B
 $$
 
-### Construction de matrice de projection Orthogonale
+#### Construction de matrice de projection Orthogonale
 
 ::: custom-box
 Soient $v_1, \ldots, v_p$, $p$ vecteurs de $\mathbb{R}^n$ avec $p \leq n$. Si $(v_1, \ldots, v_p)$ est une base orthogonale de $\mathbb{R}^p$ et $W = \text{vect}(v_1, \ldots, v_p)$, alors la matrice de projection $W$ de $\mathbb{R}^n$ sur $W$ est : $$
@@ -104,7 +106,7 @@ Si $(v_1, \ldots, v_p)$ est une base orthonormale de $W$, alors : $$
 W = V V^t
 $$
 
-### Procédé d'orthogonalisation de Gram-Schmidt
+#### Procédé d'orthogonalisation de Gram-Schmidt
 
 Le but du procédé de Gram-Schmidt est de prendre un ensemble de vecteurs linéairement indépendants $( {v_1, v_2, \ldots, v_n})$ et de produire un ensemble de vecteurs orthogonaux $( {u_1, u_2, \ldots, u_n} )$ qui engendrent le même sous-espace.
 
@@ -120,7 +122,7 @@ Pour chaque vecteur $( v_k )$ (où $( k \geq 2 )$), on soustrait les projections
 
 Si l'on souhaite obtenir une base orthonormale, chaque vecteur $( u_k )$ est normalisé pour obtenir $( e_k )$ : $$ e_k = \frac{u_k}{||u_k||} $$
 
-## Base duale
+### Base duale
 
 ::: custom-box
 Pour une base $\{e_1, e_2, \ldots, e_n\}$ d'un espace vectoriel $E$, la **base duale** $(e^1, e^2, \ldots, e^n)$ est définie par : $$e^i(e_j) = \delta_{ij}$$ où $\delta_{ij}$ est le symbole de Kronecker.
@@ -128,7 +130,7 @@ Pour une base $\{e_1, e_2, \ldots, e_n\}$ d'un espace vectoriel $E$, la **base d
 
 La base duale permet de définir des formes linéaires et de travailler avec des espaces vectoriels de manière plus abstraite.
 
-## Diagonalisation d'une matrice
+### Diagonalisation d'une matrice
 
 ::: custom-box
 Une matrice carrée $A$ est dite **diagonalisable** s'il existe une matrice diagonale $D$ et une matrice inversible $P$ telles que : $$A = PDP^{-1}$$
@@ -136,7 +138,7 @@ Une matrice carrée $A$ est dite **diagonalisable** s'il existe une matrice diag
 $D$ est une matrice diagonale contenant les valeurs propres de $A$
 :::
 
-### Diagonalisation d'une matrice symétrique réelle
+#### Diagonalisation d'une matrice symétrique réelle
 
 Pour les matrices symétriques réelles, on peut toujours trouver une base orthonormale de vecteurs propres, ce qui permet de les diagonaliser par une matrice orthogonale $Q$ : $$A = QDQ^T$$ où $Q$ est une matrice orthogonale.
 
@@ -144,7 +146,7 @@ Pour les matrices symétriques réelles, on peut toujours trouver une base ortho
 Pour que la propriété soit vérifiée, il est essentiel que la matrice soit réelle, c'est-à-dire sans composantes complexes. En effet, la symétrie d'une matrice complexe n'implique pas nécessairement la propriété en question
 :::
 
-# Statistiques Descriptives Univariées
+## Statistiques Descriptives Univariées
 
 -   **Moyenne** : La moyenne arithmétique d'une série de valeurs $x_1, x_2, \ldots, x_n$ est donnée par : $$
     \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
@@ -166,9 +168,9 @@ Plus l'écart-type est grand, plus les données sont dispersées autour de la mo
 
 Les statistiques descriptives univariées sont essentielles pour résumer et comprendre les caractéristiques principales d'une seule variable. Elles sont largement utilisées en analyse de données pour obtenir une vue d'ensemble rapide et efficace. Elles permettent aussi d'identifier rapidement des valeurs extrêmes.
 
-# Statistiques Descriptives Bivariées
+## Statistiques Descriptives Bivariées
 
-## Définitions
+### Définitions
 
 -   **Covariance** : La covariance entre deux variables $X$ et $Y$ mesure la manière dont deux variables varient ensemble. Elle est donnée par deux formules :
 
@@ -186,11 +188,11 @@ La régression linéaire est une méthode statistique qui permet de modéliser l
 y = a + bx
 $$ où $y$ est la variable dépendante, $x$ est la variable indépendante, $a$ est l'ordonnée à l'origine (l'interception de la ligne avec l'axe des ordonnées), et $b$ est la pente de la ligne (le taux de changement de $y$ par rapport à $x$).
 
-## Probabilités
+### Probabilités
 
 Soit $E$ un ensemble muni d'une tribu $T$. On appelle probabilité toute application $P : T \rightarrow \mathbb{R}^+$ telle que : - $P(\emptyset) = 0$ - Si $(A_n)$ est une suite d'éléments de $T$ deux à deux disjoints alors : $$P\left(\bigcup_n A_n\right) = \sum_n P(A_n).$$
 
-### Probabilités conditionnelles
+#### Probabilités conditionnelles
 
 En théorie des probabilités, nous nous intéressons souvent au comportement d'un aléa, sachant qu'un autre événement est déjà passé. C'est ce que nous appelons Les Probabilités Conditionnelles.
 
@@ -208,7 +210,7 @@ $$
 
 C'est ce que nous appelons \textcolor{red}{LA FORMULE DE BAYES}.
 
-### Indépendance
+#### Indépendance
 
 Deux événements $A$ et $B$ sont dits indépendants si et seulement si : $$P(A \cap B) = P(A) \cdot P(B)$$ En termes courants, deux événements sont indépendants si le résultat de l'un n'influence aucunement l'aboutissement de l'autre. Sous condition d'indépendance de $A$ et $B$, la notion de la probabilité conditionnelle tombe à l'eau, car les événements évoluent l'un sans se soucier de l'autre. Ceci se traduit par : $$P(A|B) = P(A)$$ $$P(B|A) = P(B)$$
 
@@ -216,7 +218,7 @@ Notons que si $A$ est indépendant de $B$, il le sera par rapport à son complé
 
 \textcolor{red}{NE PAS CONFONDRE INDÉPENDANCE ET INCOMPATIBILITÉ DES ÉVÉNEMENTS}
 
-### Variable aléatoire
+#### Variable aléatoire
 
 Une variable aléatoire est un nombre qui dépend du résultat d'une expérience aléatoire. Chaque exécution de l'expérience génère une réalisation de la variable aléatoire.
 
@@ -226,7 +228,7 @@ Par exemple, dans une queue pour la caisse d'un magasin, le nombre de clients es
 
 \textcolor{green!70!black}{Qu’est- ce qui caractérise une variable aléatoire ?}
 
-### Fonction de répartition
+#### Fonction de répartition
 
 Une variable aléatoire traduit le résultat d'une expérience aléatoire en nombre réel. La fonction de répartition transporte le calcul des probabilités concernant les réalisations de la variable aléatoire. C'est la fonction définie par : $$F_X(x) = P(X \leq x)$$ \textcolor{green!70!black}{Propriétés :}
 
@@ -234,7 +236,7 @@ Pour tout $x$, $0 \leq F_X(x) \leq 1$ $F_X$ est une fonction croissante. $\lim_{
 
 ![](images/fonction_repartition.png){width="50%" fig-align="center"}
 
-### Probabilité ponctuelle / Densité
+#### Probabilité ponctuelle / Densité
 
 \textcolor{green!70!black}{CAS DISCRET : Probabilité ponctuelle}
 
@@ -246,9 +248,9 @@ La densité est la fonction qui décrit les variations de la fonction de répart
 
 \newpage
 
-## Fondements de probabilités : niveau basique
+### Fondements de probabilités : niveau basique
 
-### Moments
+#### Moments
 
 \textcolor{green!70!black}{ESPÉRANCE}
 
@@ -272,7 +274,7 @@ Le centrage consiste à localiser la distribution autour de l'origine et la réd
 
 Le moment d'ordre r est défini par : $$\mu_r = E(X^r)$$ Le moment centré d'ordre r est défini ainsi : $$\mũ_r = E((X - E(X))^r)$$
 
-### Couples aléatoires
+#### Couples aléatoires
 
 La fonction conjointe $$F_{X, Y}(x, y) = P(X \leq x \cap Y \leq y)$$ est appelée la distribution conjointe de X et Y.
 
@@ -296,7 +298,7 @@ Si X et Y sont indépendants, alors : $$Cov(X, Y) = 0$$
 
 \newpage
 
-## Propriétés
+### Propriétés
 
 \textcolor{green!70!black}{ESPÉRANCE} $$
 \mathbb{E}(aX + bY) = a\mathbb{E}(X) + b\mathbb{E}(Y)
@@ -328,7 +330,7 @@ $$
 
 \newpage
 
-## Vecteurs aléatoires
+### Vecteurs aléatoires
 
 Pour un vecteur aléatoire $$(X_1, X_2, \ldots, X_n)$$, l'espérance est toujours linéaire. Pour une suite $$(a_i)_{i \in \{1, \ldots, n\}}$$ de réels, on a : $$
 \mathbb{E}(a_1X_1 + a_2X_2 + \ldots + a_nX_n) = a_1\mathbb{E}(X_1) + a_2\mathbb{E}(X_2) + \ldots + a_n\mathbb{E}(X_n)
@@ -338,7 +340,7 @@ Si les variables aléatoires $$X_1, X_2, \ldots, X_n$$ sont indépendantes, alor
 \text{Var}(X_1 + X_2 + \ldots + X_n) = \text{Var}(X_1) + \ldots + \text{Var}(X_n)
 $$
 
-## Lois usuelles
+### Lois usuelles
 
 Ces tableaux récapitulent les lois usuelles que vous pourrez rencontrer dans différents cours du master.
 
@@ -412,9 +414,9 @@ Nous allons souvent rencontrer les lois grisées dans les Tests statistiques. L�
 
 \newpage
 
-# Fondements de probabilités
+## Fondements de probabilités
 
-## Vecteurs aléatoires
+### Vecteurs aléatoires
 
 \textcolor{green!70!black}{INDEPENDANCE DEUX À DEUX}
 
@@ -438,7 +440,7 @@ V(X_1) & \ldots & \text{Cov}(X_1, X_n) \\
 \text{Cov}(X_n, X_1) & \ldots & V(X_n)
 \end{bmatrix}$$
 
-## Notions de convergence
+### Notions de convergence
 
 Si l'on pense à des données, vues comme réalisation de variables aléatoires $X_1, \ldots, X_n$, il serait intéressant de se poser la question de savoir comment évolue cette suite lorsque $n$ tend vers l'infini.
 
@@ -460,29 +462,29 @@ On dit que $(X_n)$ converge en moyenne quadratique vers $X$ et on note $X_n \xri
 
 ![](images/convergence.png){width="30%" fig-align="center"}
 
-## Loi faible des grands nombres
+### Loi faible des grands nombres
 
 Soit $X_1, \ldots, X_n$ une suite de variables aléatoires indépendantes et de même loi telles que : $\mathbb{E}(X_i) = \mu$ et $\text{Var}(X_i) = \sigma^2$ alors :\
 $$\frac{1}{n} \sum_{i=1}^{n} X_i \xrightarrow{p} \mu $$
 
-## Loi forte des grands nombres
+### Loi forte des grands nombres
 
 Soit $X_1, \ldots, X_n$ une suite de variables aléatoires indépendantes et de même loi telles que : $\mathbb{E}(X_i) = \mu$ et $\text{Var}(X_i) = \sigma^2$, alors :\
 $$\frac{1}{n} \sum_{i=1}^{n} X_i \xrightarrow{p.s.} \mu$$
 
-## Théorème Central Limite
+### Théorème Central Limite
 
 Soit $X_1, \ldots, X_n$ une suite de variables aléatoires indépendantes et de même loi telles que : $\mathbb{E}(X_i) = \mu$ et $\text{Var}(X_i) = \sigma^2$, alors : $$\sqrt{n}\frac{\overline{X}_n - \mu}{\sigma} \xrightarrow{\mathcal{Loi}} \mathcal{N}(0, 1)$$
 
 \newpage
 
-# Statistique inférentielle : niveau basique
+## Statistique inférentielle : niveau basique
 
-## Echantillon / Estimateur
+### Echantillon / Estimateur
 
 Le point de départ est un vecteur (ou un tableau dans le cas multidimensionnel) de données. Ces données peuvent être vues comme les réalisations $(x_1, x_2, \ldots, x_n)$ d'une variable aléatoire $X$ qui dépend d'un certain paramètre $\theta$ que nous allons chercher à estimer. Pour ce faire, nous allons construire un échantillon de cette variable. Un échantillon $(X_1, X_2, \ldots, X_n)$ est un n-uplet de variables aléatoires indépendantes qui suivent toutes la même loi (celle de $X$). Un estimateur de $\theta$ est une fonction $\hat{\theta} = f(X_1, X_2, \ldots, X_n)$ de notre échantillon, qui possède une loi de probabilité. Lorsque l'aléa est réalisé, $\hat{\theta}(\omega) = f(x_1, x_2, \ldots, x_n)$ est une estimation de $\theta$. Le but de ce cours est de construire le meilleur estimateur possible de $\theta$.
 
-## Estimateur sans biais
+### Estimateur sans biais
 
 Pour que l'estimation soit bonne, il faut que $\hat{\theta}$ soit proche de $\theta$. Comme $\hat{\theta} = f(X_1, X_2, \ldots, X_n)$ est une variable aléatoire, on ne peut imposer de condition qu'à sa valeur moyenne.
 
@@ -490,13 +492,13 @@ On définit ainsi le biais : $$b_n(\hat{\theta}, \theta) = \mathbb{E}(\hat{\thet
 
 Un estimateur est dit sans biais si $b_n(\hat{\theta}, \theta) = 0$, c'est-à-dire : $$\mathbb{E}(\hat{\theta}_n) = \theta$$
 
-## Estimateur convergent
+### Estimateur convergent
 
 Un estimateur est dit convergent s'il converge en probabilité vers le paramètre à estimer : $$\hat{\theta}_n \xrightarrow{P} \theta$$
 
 En pratique, tout estimateur sans biais et dont la variance tend vers 0 est convergent.
 
-## Estimateur optimal
+### Estimateur optimal
 
 \textcolor{green!70!black}{Qualité d’un estimateur}
 
@@ -514,7 +516,7 @@ L'inégalité de Rao-Cramer postule que la variance d'un estimateur ne peut pas 
 
 \newpage
 
-## Construction d'un estimateur
+### Construction d'un estimateur
 
 \textcolor{green!70!black}{Méthode du maximum de vraisemblance}
 
@@ -549,13 +551,13 @@ En pratique, il faut résoudre l'(les) équation(s) : $$\mathbb{E}(X) = \overlin
 
 Lorsqu'il s'agit de prendre une mesure 𝜃 avec un appareil doté d'une imprécision $𝜀$, alors le problème d'estimation peut s'écrire : $𝑋 = 𝜃 + 𝜀$. La méthode des moindres-carrés ordinaires consiste à trouver le paramètre $𝜃$ qui minimise la somme des carrées des erreurs : $$𝜃_{𝑀𝐶𝑂} = \arg\min \left( \sum_{i=0}^n \varepsilon_i^2 \right) = \arg\min \left( \sum_{i=0}^n (X_i - \theta)^2 \right)$$
 
-## Intervalles de confiance
+### Intervalles de confiance
 
 Un intervalle de confiance \[$A$, $B$\] de niveau $1 - \alpha$ est un intervalle aléatoire qui a la probabilité $1 - \alpha$ de contenir le paramètre à estimer $\theta$. Formellement, on écrit : $P (t_1 (\theta) \leq f(X_1, \ldots, X_n) \leq t_2 (\theta)) = P(A \leq \theta \leq B) = 1 - \alpha$
 
 \newpage
 
-## Test d'hypothèses
+### Test d'hypothèses
 
 Dans le cadre d'un test d'hypothèse, nous cherchons à faire valoir une hypothèse en dépit d'une autre, qui lui est contradictoire.
 
@@ -572,7 +574,7 @@ Les calculs qui se cachent derrière le choix de l'hypothèse à garder sont com
 
 \newpage
 
-## Construction d'intervalles de confiance
+### Construction d'intervalles de confiance
 
 Les intervalles de confiance sont des outils essentiels en statistique pour estimer des paramètres inconnus tout en mesurant l'incertitude associée à cette estimation. Ci-dessous, vous trouverez un tableau présentant la construction des intervalles de confiance pour différents paramètres.
 
@@ -584,7 +586,7 @@ Les intervalles de confiance sont des outils essentiels en statistique pour esti
 ```
 # Economie
 
-## Définitions
+## Concepts de base
 
 ### Macroéconomie
 
@@ -615,6 +617,10 @@ Un bien non économique est un bien qui s'obtient gratuitement, comme l'oxygène
 ### Asymétrie d'information
 
 "L'asymétrie d'information concerne les situations où les agents d'un marché ne possèdent pas de la même information sur un produit que ce soit au sujet de ses qualités ou de ses défauts"
+
+### Externalité
+
+L'externalité désigne la conséquence (positive ou négative) d'une activité d'un agent économique sur un autre, sans qu'aucun des deux ne reçoive ou ne paye une compensation pour cet effet.
 
 ### Concurrence Pure et Parfaite
 
@@ -718,7 +724,7 @@ Si on ne s'intéresse pas à la réponse donnée. C'est tout simplement, parce q
 
 ![](images/question-02.png){fig-align="center" width="174"}
 
-### **Analyse du sujet**
+### Analyse du sujet
 
 L'analyse du sujet est la première étape de la dissertation et l'une des plus importantes. Une dissertation se présente sous la forme d'un sujet. Il faut isoler la ou les deux notions principales du sujet.
 
@@ -728,19 +734,19 @@ Dans tous les cas, l'objectif est d'arriver à une question (donc les sujets les
 
 Il faut éviter à tout prix de faire un exposé quand on attend de vous une dissertation. Un hors-sujet, c'est de ne pas traiter le bon sujet. Si vous répondez de manière factuelle à un sujet de dissertation, vous faites pire : vous faites un hors-exercice.
 
-### **Recherche des idées**
+### Recherche des idées
 
 Une fois qu'on a identifié un couple de notions, il faut (au brouillon) essayer de faire la liste des éléments du cours qui relient les deux notions. Il est important de ne noter que les éléments qui relient les deux notions (pour ne pas risquer de se perdre dans des éléments qui concernent seulement une seule des deux notions). Sur chacune des notions que vous aurez à traiter en dissertation, on a écrit des livres entiers. Il est impossible de tout dire dessus dans une dissertation. On se limite donc à ce qui relie les deux notions de notre sujet. Évidemment, si un élément pertinent vous vient en tête et qu'il ne se trouve pas dans votre cours, n'hésitez pas à le noter. Si cet élément peut être utilisé dans votre raisonnement, même comme exemple, ce sera un plus indiscutable.
 
 Dans un premier temps, on note tout ce qui se présente à l'esprit. Ce n'est que dans un deuxième temps, quand on a un certain nombre d'éléments que l'on se pose la question : « Est-ce qu'il y a une manière qui saute aux yeux de relier tous ces éléments en répondant à la question (si elle a été posée de manière directe) ou pour répondre à une question comprenant le couple de notions (si la question n'a pas été formulée dans le sujet) ? ». Si la réponse est positive, on a trouvé la question qui structurera notre devoir. Si ce n'est pas le cas, il faut essayer de trouver une question qui relie le plus grand nombre des éléments que l'on a noté sur son brouillon -- et donc laisser de côté les éléments qui ne servent pas. Il arrive souvent qu'une partie des éléments que l'on note sur son brouillon ne soit pas utilisée dans le devoir. Bref, si notre sujet est un couple de notions ou une citation, il faut que l'on arrive à une question. Évidemment, quand notre sujet est déjà une question, on n'a pas autant de marge de manœuvre, mais en vérité, si on vous pose une question précise, c'est que vous avez les éléments pour y répondre dans le cours (donc la différence n'est pas très importante).
 
-### **Mise en évidence d'un problème**
+### Mise en évidence d'un problème
 
 Puisqu'elle ne doit pas être une question de fait, la question qui relie le plus d'éléments possibles parmi ceux qui associent les deux notions dans votre cours doit être une question conceptuelle. Pour le dire autrement, cette question doit être un problème (on parle souvent de « problématique » pour désigner ce problème dans le cadre d'une dissertation). Qu'est-ce qu'un problème ? C'est une question qui met en tension deux concepts et qui analyse les différents aspects de leur relation (conceptuelle).
 
 Souvent les étudiants ont peur de ne pas trouver le « bon » problème. Pourtant, si on suit la méthode de dissertation, il n'y a pas de risque de se tromper. En effet, on ne doit pas choisir un problème d'abord (sans savoir si on a de quoi le traiter) et le traiter ensuite. Vous aurez noté qu'on procède exactement dans le sens inverse : on voit à quelle question on peut répondre avec les éléments qu'on a sur son brouillon et on pose précisément la question à laquelle on sait qu'on peut répondre.
 
-### **Construction du plan**
+### Construction du plan
 
 Pour la même raison qu'au-dessus, la construction du plan ne doit pas être très difficile : il s'agit de rassembler les différents éléments qui permettent de répondre à la question (au problème que l'on va poser) de façon à y apporter une réponse.
 
@@ -764,7 +770,7 @@ Vu que l'objectif du plan, c'est de répondre à une question qui met les deux n
 
 **Jusqu'à présent, nous n'avons encore rien écrit sur la copie elle-même.** Nous n'avons travaillé que sur le brouillon. Nous avons deux notions clés, un problème et un plan. Ce sont les éléments fondamentaux du devoir. Il faut à présent passer à la rédaction. Nous allons nous intéresser d'abord à l'introduction.
 
-### **La rédaction**
+### La rédaction
 
 [**(Introduction, Conclusion, Développement)**]{.underline}
 
