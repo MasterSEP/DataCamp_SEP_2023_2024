@@ -1,0 +1,7 @@
+.custom-box {
+    background-color: #fdefe3; /* Couleur de fond bleu clair */
+    border: 2px solid rgb(247, 211, 179); /* Bordure bleue */
+    border-radius: 5px;       /* Coins arrondis */
+    padding: 10px;            /* Marges intérieures */
+    margin: 10px 0;           /* Marges extérieures */
+  }

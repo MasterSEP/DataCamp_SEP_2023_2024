@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.6.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Datacamp pour le master SEP - Prérequis des mathématiques</title>
+<title>Prérequis des mathématiques – SEP Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,17 +35,23 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-29dedaace5d8918e049944c60b75f171.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -54,69 +60,191 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Datacamp pour le master SEP</span>
+    <span class="navbar-title">SEP Guide</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Accueil</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./M1SEP.html" rel="" target="">
- <span class="menu-text">M1 SEP</span></a>
+    <a class="nav-link" href="./M1SEP.html"> 
+<span class="menu-text">M1 SEP</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./M2SEP.html" rel="" target="">
- <span class="menu-text">M2 SEP</span></a>
+    <a class="nav-link" href="./M2SEP.html"> 
+<span class="menu-text">M2 SEP</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./LOGICIELS.html" rel="" target="">
- <span class="menu-text">Logiciels</span></a>
+    <a class="nav-link" href="./Exercices.html"> 
+<span class="menu-text">Exercices</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Quizz.html"> 
+<span class="menu-text">Quizz</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./LOGICIELS.html"> 
+<span class="menu-text">Logiciels</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#probabilités" id="toc-probabilités" class="nav-link active" data-scroll-target="#probabilités">Probabilités</a>
+  <ul class="collapse">
+  <li><a href="#définition" id="toc-définition" class="nav-link" data-scroll-target="#définition">Définition</a></li>
+  <li><a href="#types-de-variables-aléatoires" id="toc-types-de-variables-aléatoires" class="nav-link" data-scroll-target="#types-de-variables-aléatoires">Types de Variables Aléatoires</a></li>
+  <li><a href="#loi-de-probabilité" id="toc-loi-de-probabilité" class="nav-link" data-scroll-target="#loi-de-probabilité">Loi de Probabilité</a></li>
+  <li><a href="#exemples" id="toc-exemples" class="nav-link" data-scroll-target="#exemples">Exemples</a></li>
+  <li><a href="#fonction-de-densité" id="toc-fonction-de-densité" class="nav-link" data-scroll-target="#fonction-de-densité">Fonction de Densité</a></li>
+  <li><a href="#fonction-de-répartition" id="toc-fonction-de-répartition" class="nav-link" data-scroll-target="#fonction-de-répartition">Fonction de Répartition</a></li>
+  <li><a href="#formules-importantes" id="toc-formules-importantes" class="nav-link" data-scroll-target="#formules-importantes">Formules Importantes</a></li>
+  </ul></li>
+  <li><a href="#algèbre-linéaire" id="toc-algèbre-linéaire" class="nav-link" data-scroll-target="#algèbre-linéaire">Algèbre Linéaire</a></li>
+  <li><a href="#trace-dune-matrice" id="toc-trace-dune-matrice" class="nav-link" data-scroll-target="#trace-dune-matrice">Trace d’une matrice</a>
+  <ul class="collapse">
+  <li><a href="#déterminant-dune-matrice" id="toc-déterminant-dune-matrice" class="nav-link" data-scroll-target="#déterminant-dune-matrice">Déterminant d’une matrice</a></li>
+  <li><a href="#déterminant-dune-matrice-2-times-2" id="toc-déterminant-dune-matrice-2-times-2" class="nav-link" data-scroll-target="#déterminant-dune-matrice-2-times-2">Déterminant d’une matrice <span class="math inline">\((2 \times 2)\)</span></a></li>
+  <li><a href="#déterminant-dune-matrice-diagonale" id="toc-déterminant-dune-matrice-diagonale" class="nav-link" data-scroll-target="#déterminant-dune-matrice-diagonale">Déterminant d’une matrice diagonale</a></li>
+  </ul></li>
+  <li><a href="#espace-euclidien" id="toc-espace-euclidien" class="nav-link" data-scroll-target="#espace-euclidien">Espace Euclidien</a></li>
+  <li><a href="#orthogonalité" id="toc-orthogonalité" class="nav-link" data-scroll-target="#orthogonalité">Orthogonalité</a>
+  <ul class="collapse">
+  <li><a href="#normalisation-dun-vecteur" id="toc-normalisation-dun-vecteur" class="nav-link" data-scroll-target="#normalisation-dun-vecteur">Normalisation d’un vecteur</a></li>
+  <li><a href="#matrice-de-projection-orthogonale" id="toc-matrice-de-projection-orthogonale" class="nav-link" data-scroll-target="#matrice-de-projection-orthogonale">Matrice de Projection Orthogonale</a></li>
+  <li><a href="#construction-de-matrice-de-projection-orthogonale" id="toc-construction-de-matrice-de-projection-orthogonale" class="nav-link" data-scroll-target="#construction-de-matrice-de-projection-orthogonale">Construction de matrice de projection Orthogonale</a></li>
+  </ul></li>
+  <li><a href="#procédé-dorthogonalisation-de-gram-schmidt" id="toc-procédé-dorthogonalisation-de-gram-schmidt" class="nav-link" data-scroll-target="#procédé-dorthogonalisation-de-gram-schmidt">Procédé d’orthogonalisation de Gram-Schmidt</a></li>
+  <li><a href="#base-duale" id="toc-base-duale" class="nav-link" data-scroll-target="#base-duale">Base duale</a></li>
+  <li><a href="#diagonalisation-dune-matrice" id="toc-diagonalisation-dune-matrice" class="nav-link" data-scroll-target="#diagonalisation-dune-matrice">Diagonalisation d’une matrice</a>
+  <ul class="collapse">
+  <li><a href="#diagonalisation-dune-matrice-symétrique-réelle" id="toc-diagonalisation-dune-matrice-symétrique-réelle" class="nav-link" data-scroll-target="#diagonalisation-dune-matrice-symétrique-réelle">Diagonalisation d’une matrice symétrique réelle</a></li>
+  </ul></li>
+  <li><a href="#statistiques-descriptives-univariées" id="toc-statistiques-descriptives-univariées" class="nav-link" data-scroll-target="#statistiques-descriptives-univariées">Statistiques Descriptives Univariées</a></li>
+  <li><a href="#statistiques-descriptives-bivariées" id="toc-statistiques-descriptives-bivariées" class="nav-link" data-scroll-target="#statistiques-descriptives-bivariées">Statistiques Descriptives Bivariées</a>
+  <ul class="collapse">
+  <li><a href="#définitions" id="toc-définitions" class="nav-link" data-scroll-target="#définitions">Définitions</a></li>
+  <li><a href="#fondements-de-probabilité" id="toc-fondements-de-probabilité" class="nav-link" data-scroll-target="#fondements-de-probabilité">Fondements de Probabilité <img src="images/dé.png" class="img-fluid" width="42"></a>
+  <ul class="collapse">
+  <li><a href="#quelques-définitions" id="toc-quelques-définitions" class="nav-link" data-scroll-target="#quelques-définitions">Quelques définitions</a></li>
+  <li><a href="#evénements" id="toc-evénements" class="nav-link" data-scroll-target="#evénements">Evénements</a></li>
+  <li><a href="#partitions" id="toc-partitions" class="nav-link" data-scroll-target="#partitions">Partitions</a></li>
+  <li><a href="#tribus-et-boréliens" id="toc-tribus-et-boréliens" class="nav-link" data-scroll-target="#tribus-et-boréliens">Tribus et boréliens</a></li>
+  <li><a href="#mesure" id="toc-mesure" class="nav-link" data-scroll-target="#mesure">Mesure</a></li>
+  <li><a href="#probabilité" id="toc-probabilité" class="nav-link" data-scroll-target="#probabilité">Probabilité</a></li>
+  <li><a href="#probabilités-conditionnelles" id="toc-probabilités-conditionnelles" class="nav-link" data-scroll-target="#probabilités-conditionnelles">Probabilités conditionnelles</a></li>
+  <li><a href="#indépendance" id="toc-indépendance" class="nav-link" data-scroll-target="#indépendance">Indépendance</a></li>
+  <li><a href="#variable-aléatoire" id="toc-variable-aléatoire" class="nav-link" data-scroll-target="#variable-aléatoire">Variable aléatoire</a></li>
+  <li><a href="#quest-ce-qui-caractérise-une-variable-aléatoire" id="toc-quest-ce-qui-caractérise-une-variable-aléatoire" class="nav-link" data-scroll-target="#quest-ce-qui-caractérise-une-variable-aléatoire">Qu’est ce qui caractérise une variable aléatoire ?</a></li>
+  <li><a href="#moments" id="toc-moments" class="nav-link" data-scroll-target="#moments">Moments</a></li>
+  <li><a href="#couples-aléatoires" id="toc-couples-aléatoires" class="nav-link" data-scroll-target="#couples-aléatoires">Couples aléatoires</a></li>
+  <li><a href="#à-mémoriser" id="toc-à-mémoriser" class="nav-link" data-scroll-target="#à-mémoriser">À mémoriser</a></li>
+  <li><a href="#vecteurs-aléatoires" id="toc-vecteurs-aléatoires" class="nav-link" data-scroll-target="#vecteurs-aléatoires">Vecteurs aléatoires</a></li>
+  <li><a href="#lois-usuelles" id="toc-lois-usuelles" class="nav-link" data-scroll-target="#lois-usuelles">Lois usuelles</a></li>
+  </ul></li>
+  <li><a href="#statistique-inférentielle" id="toc-statistique-inférentielle" class="nav-link" data-scroll-target="#statistique-inférentielle">Statistique inférentielle</a>
+  <ul class="collapse">
+  <li><a href="#léchantillonnage" id="toc-léchantillonnage" class="nav-link" data-scroll-target="#léchantillonnage">L’échantillonnage</a></li>
+  <li><a href="#estimateur" id="toc-estimateur" class="nav-link" data-scroll-target="#estimateur">Estimateur</a></li>
+  <li><a href="#risque-quadratique" id="toc-risque-quadratique" class="nav-link" data-scroll-target="#risque-quadratique">Risque quadratique</a></li>
+  <li><a href="#biais" id="toc-biais" class="nav-link" data-scroll-target="#biais">Biais</a></li>
+  <li><a href="#statistique" id="toc-statistique" class="nav-link" data-scroll-target="#statistique">Statistique</a></li>
+  <li><a href="#consistance" id="toc-consistance" class="nav-link" data-scroll-target="#consistance">Consistance</a></li>
+  <li><a href="#moyenne-empirique" id="toc-moyenne-empirique" class="nav-link" data-scroll-target="#moyenne-empirique">Moyenne empirique</a></li>
+  <li><a href="#variance-empirique" id="toc-variance-empirique" class="nav-link" data-scroll-target="#variance-empirique">Variance empirique</a></li>
+  <li><a href="#estimation-par-la-méthode-du-maximum-de-vraisemblance" id="toc-estimation-par-la-méthode-du-maximum-de-vraisemblance" class="nav-link" data-scroll-target="#estimation-par-la-méthode-du-maximum-de-vraisemblance">Estimation par la méthode du maximum de vraisemblance</a></li>
+  <li><a href="#intervalle-de-confiance" id="toc-intervalle-de-confiance" class="nav-link" data-scroll-target="#intervalle-de-confiance">Intervalle de confiance</a></li>
+  <li><a href="#test-dhypothèses" id="toc-test-dhypothèses" class="nav-link" data-scroll-target="#test-dhypothèses">Test d’hypothèses</a></li>
+  <li><a href="#hypothèse" id="toc-hypothèse" class="nav-link" data-scroll-target="#hypothèse">Hypothèse</a></li>
+  <li><a href="#test-et-test-paramétrique" id="toc-test-et-test-paramétrique" class="nav-link" data-scroll-target="#test-et-test-paramétrique">Test et test paramétrique</a></li>
+  <li><a href="#erreurs-et-risques" id="toc-erreurs-et-risques" class="nav-link" data-scroll-target="#erreurs-et-risques">Erreurs et risques</a></li>
+  </ul></li>
+  <li><a href="#econométrie" id="toc-econométrie" class="nav-link" data-scroll-target="#econométrie">Econométrie</a>
+  <ul class="collapse">
+  <li><a href="#modèle-linéaire" id="toc-modèle-linéaire" class="nav-link" data-scroll-target="#modèle-linéaire">Modèle linéaire</a></li>
+  <li><a href="#hypothèses-sur-les-erreurs" id="toc-hypothèses-sur-les-erreurs" class="nav-link" data-scroll-target="#hypothèses-sur-les-erreurs">Hypothèses sur les erreurs</a></li>
+  <li><a href="#hypothèses-structurelle" id="toc-hypothèses-structurelle" class="nav-link" data-scroll-target="#hypothèses-structurelle">Hypothèses structurelle</a></li>
+  <li><a href="#décomposition-de-la-variance" id="toc-décomposition-de-la-variance" class="nav-link" data-scroll-target="#décomposition-de-la-variance">Décomposition de la variance</a></li>
+  <li><a href="#coefficient-de-détérmination" id="toc-coefficient-de-détérmination" class="nav-link" data-scroll-target="#coefficient-de-détérmination">Coefficient de détérmination</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Mathématiques.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -125,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -133,8 +261,303 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
 
+
+<p>Ici, sera listé les pré-requis nécessaires pour le master SEP.</p>
+<p>Nous allons commencer par les bases des probabilités, de l’algèbre linéaire et des statisitques.</p>
+<section id="probabilités" class="level2">
+<h2 class="anchored" data-anchor-id="probabilités">Probabilités</h2>
+<section id="définition" class="level3">
+<h3 class="anchored" data-anchor-id="définition">Définition</h3>
+<p>Une <strong>variable aléatoire</strong> est une fonction mesurable définie sur un espace probabilisé <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> vers un espace mesurable <span class="math inline">\((E, \mathcal{E})\)</span>. Autrement dit, c’est une fonction <span class="math inline">\(X : \Omega \to E\)</span> telle que pour tout ensemble mesurable <span class="math inline">\(B \in \mathcal{E}\)</span>, l’ensemble des issues <span class="math inline">\(\{\omega \in \Omega : X(\omega) \in B\}\)</span> appartient à <span class="math inline">\(\mathcal{F}\)</span>.</p>
+</section>
+<section id="types-de-variables-aléatoires" class="level3">
+<h3 class="anchored" data-anchor-id="types-de-variables-aléatoires">Types de Variables Aléatoires</h3>
+<ul>
+<li><strong>Variable aléatoire discrète</strong> : Peut prendre un nombre fini ou dénombrable de valeurs. Par exemple, le résultat d’un lancer de dé.</li>
+<li><strong>Variable aléatoire continue</strong> : Peut prendre une infinité de valeurs dans un intervalle. Par exemple, la température mesurée à un moment donné.</li>
+</ul>
+</section>
+<section id="loi-de-probabilité" class="level3">
+<h3 class="anchored" data-anchor-id="loi-de-probabilité">Loi de Probabilité</h3>
+<p>La loi de probabilité d’une variable aléatoire <span class="math inline">\(X\)</span> décrit la distribution des probabilités associées aux différentes valeurs que <span class="math inline">\(X\)</span> peut prendre.</p>
+</section>
+<section id="exemples" class="level3">
+<h3 class="anchored" data-anchor-id="exemples">Exemples</h3>
+<ul>
+<li><strong>Lancer de dé</strong> : Si <span class="math inline">\(X\)</span> représente le résultat d’un lancer de dé, alors <span class="math inline">\(X\)</span> peut prendre les valeurs <span class="math inline">\(\{1, 2, 3, 4, 5, 6\}\)</span>.</li>
+<li><strong>Temps d’attente</strong> : Si <span class="math inline">\(Y\)</span> représente le temps d’attente à un arrêt de bus, alors <span class="math inline">\(Y\)</span> peut prendre n’importe quelle valeur positive.</li>
+</ul>
+<p>La loi de probabilité d’une variable aléatoire peut être décrite via une fonction de densité.</p>
+</section>
+<section id="fonction-de-densité" class="level3">
+<h3 class="anchored" data-anchor-id="fonction-de-densité">Fonction de Densité</h3>
+<p>Une <strong>fonction de densité</strong> <span class="math inline">\(f_X\)</span> d’une variable aléatoire continue <span class="math inline">\(X\)</span> est une fonction telle que pour tout intervalle <span class="math inline">\([a, b]\)</span> : <span class="math display">\[
+\mathbb{P}(a \leq X \leq b) = \int_{a}^{b} f_X(x) \, dx
+\]</span> La fonction de densité <span class="math inline">\(f_X\)</span> est utilisée pour décrire la distribution des probabilités d’une variable aléatoire continue.</p>
+<section id="propriétés" class="level4">
+<h4 class="anchored" data-anchor-id="propriétés">Propriétés</h4>
+<ol type="1">
+<li><strong>Positivité</strong> : <span class="math inline">\(f_X(x) \geq 0\)</span> pour tout <span class="math inline">\(x\)</span>.</li>
+<li><strong>Intégrale égale à 1</strong> : <span class="math display">\[
+\int_{-\infty}^{\infty} f_X(x) \, dx = 1
+\]</span></li>
+</ol>
+<p>On calcule aussi la fonction de répartition lorsqu’on cherche la probabilité que la variable aléatoire (X) prenne une valeur inférieure ou égale à (x).</p>
+</section>
+</section>
+<section id="fonction-de-répartition" class="level3">
+<h3 class="anchored" data-anchor-id="fonction-de-répartition">Fonction de Répartition</h3>
+<p>La <strong>fonction de répartition</strong> d’une variable aléatoire <span class="math inline">\(X\)</span> est la fonction <span class="math inline">\(F_X\)</span> définie pour tout réel <span class="math inline">\(x\)</span> par : <span class="math display">\[
+F_X(x) = \mathbb{P}(X \leq x)
+\]</span> Cette fonction donne la probabilité que la variable aléatoire <span class="math inline">\(X\)</span> prenne une valeur inférieure ou égale à <span class="math inline">\(x\)</span>.</p>
+<section id="propriétés-1" class="level4">
+<h4 class="anchored" data-anchor-id="propriétés-1">Propriétés</h4>
+<ol type="1">
+<li><strong>Croissance</strong> : <span class="math inline">\(F_X\)</span> est une fonction croissante.</li>
+<li><strong>Limites</strong> :
+<ul>
+<li><span class="math inline">\(\lim_{x \to -\infty} F_X(x) = 0\)</span></li>
+<li><span class="math inline">\(\lim_{x \to \infty} F_X(x) = 1\)</span></li>
+</ul></li>
+<li><strong>Continuité à droite</strong> : <span class="math inline">\(F_X\)</span> est continue à droite, c’est-à-dire que pour tout <span class="math inline">\(x\)</span>, <span class="math inline">\(\lim_{h \to 0^+} F_X(x + h) = F_X(x)\)</span>.</li>
+<li><strong>Relation avec la fonction de densité</strong> : <span class="math display">\[
+F_X(x) = \int_{-\infty}^{x} f_X(t) \, dt
+\]</span></li>
+</ol>
+</section>
+</section>
+<section id="formules-importantes" class="level3">
+<h3 class="anchored" data-anchor-id="formules-importantes">Formules Importantes</h3>
+<ul>
+<li><strong>Espérance (ou moyenne)</strong> : <span class="math display">\[
+\mathbb{E}[X] = \sum_{i} x_i \mathbb{P}(X = x_i) \quad \text{(discrète)}
+\]</span> <span class="math display">\[
+\mathbb{E}[X] = \int_{-\infty}^{\infty} x f_X(x) \, dx \quad \text{(continue)}
+\]</span></li>
+<li><strong>Variance</strong> : <span class="math display">\[
+\text{Var}(X) = \mathbb{E}[(X - \mathbb{E}[X])^2]
+\]</span></li>
+</ul>
+<p>Ces concepts sont fondamentaux en probabilités et en statistiques pour modéliser et analyser des phénomènes aléatoires.</p>
+</section>
+</section>
+<section id="algèbre-linéaire" class="level2">
+<h2 class="anchored" data-anchor-id="algèbre-linéaire">Algèbre Linéaire</h2>
+<p>Nous allons vous rappeler les notions essentielles à connaître sur les matrices.</p>
+</section>
+<section id="trace-dune-matrice" class="level2">
+<h2 class="anchored" data-anchor-id="trace-dune-matrice">Trace d’une matrice</h2>
+<div class="custom-box">
+<p>La <strong>trace</strong> d’une matrice carrée <span class="math inline">\(A\)</span> est la somme de ses éléments diagonaux : <span class="math display">\[\text{Tr}(A) = \sum_{i=1}^{n} a_{ii}\]</span></p>
+</div>
+<p>Propriétés : - La trace est linéaire : <span class="math display">\[\text{Tr}(A + B) = \text{Tr}(A) + \text{Tr}(B)\]</span> - Invariance par similitude : <span class="math display">\[\text{Tr}(AB) = \text{Tr}(BA)\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La trace d’une matrice ne change pas lorsqu’on change de base.</p>
+</div>
+</div>
+<section id="déterminant-dune-matrice" class="level3">
+<h3 class="anchored" data-anchor-id="déterminant-dune-matrice">Déterminant d’une matrice</h3>
+<div class="custom-box">
+<p>Le déterminant d’une matrice <span class="math inline">\(A \in \mathcal{M}_{n\times n}\)</span> peut être calculé en utilisant le développement par rapport à une ligne ou une colonne : <span class="math display">\[\text{det}(A) = \sum_{j=1}^{n} (-1)^{i+j} a_{ij} \text{det}(A_{ij})\]</span> où (<span class="math inline">\(A_{ij}\)</span>) est la matrice obtenue en supprimant la (<span class="math inline">\(i\)</span>)-ème ligne et la (<span class="math inline">\(j\)</span>)-ème colonne de (<span class="math inline">\(A\)</span>).</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dans certains cas, il peut être long de calculer le déterminant d’une matrice. Pour remédier à cela, il est utile de connaître par coeur le calcul d’un déterminant d’une matrice de taille <span class="math inline">\(2 \times 2\)</span> et d’une matrice diagonale.</p>
+</div>
+</div>
+</section>
+<section id="déterminant-dune-matrice-2-times-2" class="level3">
+<h3 class="anchored" data-anchor-id="déterminant-dune-matrice-2-times-2">Déterminant d’une matrice <span class="math inline">\((2 \times 2)\)</span></h3>
+<p>Pour une matrice <span class="math inline">\(A \in \mathcal{M}_{2 \times 2}\)</span> de la forme : <span class="math display">\[A = \left(\begin{array}{cc} a &amp; b \\ c &amp; d \end{array} \right)\]</span> le déterminant se calcule en utilisant la formule suivante : <span class="math display">\[\text{det}(A) = ad - bc \]</span></p>
+</section>
+<section id="déterminant-dune-matrice-diagonale" class="level3">
+<h3 class="anchored" data-anchor-id="déterminant-dune-matrice-diagonale">Déterminant d’une matrice diagonale</h3>
+<p>Pour une matrice diagonale de la forme : <span class="math display">\[D =
+\left(\begin{array}{cccc}
+d_1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; d_2 &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; d_n
+\end{array}  \right)
+\]</span> le déterminant est le produit des éléments diagonaux : <span class="math display">\[\text{det}(D) = d_1 \times d_2 \times \cdots \times d_n\]</span></p>
+<p>Les déterminants sont particulièrement utiles en algèbre linéaire pour déterminer si une matrice est inversible (une matrice est inversible si et seulement si son déterminant est non nul) et pour résoudre des systèmes d’équations linéaires.</p>
+</section>
+</section>
+<section id="espace-euclidien" class="level2">
+<h2 class="anchored" data-anchor-id="espace-euclidien">Espace Euclidien</h2>
+<div class="custom-box">
+<p>Un <strong>espace euclidien</strong> est un espace vectoriel réel de dimension finie muni d’une forme bilinéaire symétrique définie positive, appelée <strong>produit scalaire</strong> : <span class="math display">\[\langle x, y \rangle = x_1 y_1 + x_2 y_2 + \cdots + x_n y_n\]</span></p>
+</div>
+<p>Quelques propriétés importantes du produit scalaire : - <span class="math inline">\(\langle v, v \rangle = \|v\|_2^2 = \sum_{i=1}^{n} v_i^2\)</span> - <span class="math inline">\(\langle v, w \rangle = v^t w = \text{trace}(vw^t)\)</span> - <span class="math inline">\(\langle v, w \rangle = \langle w, v \rangle\)</span> - <span class="math inline">\(\langle v, w \rangle = 0 \iff v \perp w\)</span></p>
+<p>Quelques inégalités à connaître :</p>
+<ul>
+<li>Inégalité de Cauchy-Schwarz : <span class="math display">\[|\langle x, y \rangle| \leq \|x\| \|y\|\]</span></li>
+<li>Inégalité triangulaire : <span class="math display">\[\|x + y\| \leq \|x\| + \|y\|\]</span></li>
+</ul>
+</section>
+<section id="orthogonalité" class="level2">
+<h2 class="anchored" data-anchor-id="orthogonalité">Orthogonalité</h2>
+<p>Soient <span class="math inline">\(v\)</span> et <span class="math inline">\(w\)</span>, deux vecteurs appartenant à un espace vectoriel <span class="math inline">\(E\)</span> de dimension <span class="math inline">\(n\)</span>, muni du produit scalaire <span class="math inline">\(\langle \cdot, \cdot \rangle\)</span> associé à la norme euclidienne <span class="math inline">\(\|\cdot\|_2\)</span>.On note <span class="math inline">\(v = (v_1, \ldots, v_n)^t\)</span> et <span class="math inline">\(w = (w_1, \ldots, w_n)^t\)</span> où $ v_i$ et <span class="math inline">\(w_j\)</span> sont des scalaires (i.e.&nbsp;des réels).</p>
+<section id="normalisation-dun-vecteur" class="level3">
+<h3 class="anchored" data-anchor-id="normalisation-dun-vecteur">Normalisation d’un vecteur</h3>
+<p>La normalisation d’un vecteur <span class="math inline">\(v\)</span> est donnée par : <span class="math display">\[
+x = \frac{v}{\|v\|_2}
+\]</span> Ainsi, <span class="math inline">\(\|x\|_2 = 1\)</span>. Un espace vectoriel engendré par <span class="math inline">\(v_1, \ldots, v_p\)</span> est identique à celui engendré par leurs versions normalisées.</p>
+<p>Deux vecteurs <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> sont <strong>orthogonaux</strong> si leur produit scalaire est nul : <span class="math display">\[\langle x, y \rangle = 0\]</span> Une <strong>base orthonormale</strong> est une base où tous les vecteurs sont orthogonaux et de norme 1.</p>
+</section>
+<section id="matrice-de-projection-orthogonale" class="level3">
+<h3 class="anchored" data-anchor-id="matrice-de-projection-orthogonale">Matrice de Projection Orthogonale</h3>
+<div class="custom-box">
+<p>Soit <span class="math inline">\(E\)</span> un espace vectoriel muni d’un produit scalaire <span class="math inline">\(\langle \cdot, \cdot \rangle\)</span> et <span class="math inline">\(W\)</span> un sous-espace vectoriel de <span class="math inline">\(E\)</span>. La projection orthogonale d’un élément <span class="math inline">\(B\)</span> de <span class="math inline">\(E\)</span> sur <span class="math inline">\(W\)</span> est définie par : <span class="math display">\[\Pi_W B = \underset{a \in W}{argmin} \|B - a\|_2\]</span> La matrice de projection orthogonale de <span class="math inline">\(E\)</span> sur <span class="math inline">\(W\)</span> est notée <span class="math inline">\(\Pi_W\)</span>.</p>
+</div>
+<section id="propriétés-2" class="level4">
+<h4 class="anchored" data-anchor-id="propriétés-2">Propriétés</h4>
+<ul>
+<li><span class="math inline">\(\Pi_W^t = \Pi_W\)</span></li>
+<li><span class="math inline">\(\Pi_W^2 = \Pi_W\)</span></li>
+<li><span class="math inline">\(\text{trace}(\Pi_W) = \dim(\Pi_W)\)</span></li>
+<li><span class="math inline">\(\Pi_W^\perp = I_E - \Pi_W\)</span></li>
+</ul>
+<p>Pour tout <span class="math inline">\(B\)</span>, élément de <span class="math inline">\(E\)</span> : <span class="math display">\[
+\Pi_{W^\perp} B = B - \Pi_{W} B
+\]</span></p>
+</section>
+</section>
+<section id="construction-de-matrice-de-projection-orthogonale" class="level3">
+<h3 class="anchored" data-anchor-id="construction-de-matrice-de-projection-orthogonale">Construction de matrice de projection Orthogonale</h3>
+<div class="custom-box">
+<p>Soient <span class="math inline">\(v_1, \ldots, v_p\)</span>, <span class="math inline">\(p\)</span> vecteurs de <span class="math inline">\(\mathbb{R}^n\)</span> avec <span class="math inline">\(p \leq n\)</span>. Si <span class="math inline">\((v_1, \ldots, v_p)\)</span> est une base orthogonale de <span class="math inline">\(\mathbb{R}^p\)</span> et <span class="math inline">\(W = \text{vect}(v_1, \ldots, v_p)\)</span>, alors la matrice de projection <span class="math inline">\(W\)</span> de <span class="math inline">\(\mathbb{R}^n\)</span> sur <span class="math inline">\(W\)</span> est : <span class="math display">\[
+W = V (V^t V)^{-1} V^t
+\]</span> où <span class="math inline">\(V\)</span> est la matrice dont les colonnes sont les vecteurs <span class="math inline">\(v_1, \ldots, v_p\)</span>.</p>
+</div>
+<p>Si <span class="math inline">\((v_1, \ldots, v_p)\)</span> est une base orthonormale de <span class="math inline">\(W\)</span>, alors : <span class="math display">\[
+W = V V^t
+\]</span></p>
+</section>
+</section>
+<section id="procédé-dorthogonalisation-de-gram-schmidt" class="level2">
+<h2 class="anchored" data-anchor-id="procédé-dorthogonalisation-de-gram-schmidt">Procédé d’orthogonalisation de Gram-Schmidt</h2>
+<p>Le but du procédé de Gram-Schmidt est de prendre un ensemble de vecteurs linéairement indépendants <span class="math inline">\(( {v_1, v_2, \ldots, v_n})\)</span> et de produire un ensemble de vecteurs orthogonaux <span class="math inline">\(( {u_1, u_2, \ldots, u_n} )\)</span> qui engendrent le même sous-espace.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Avant de recourir au procédé de Gram-Schmidt, il faut s’assurer que les vecteurs ne soient pas déjà orthogonaux, cela serait une perte de temps de les recalculer. Ce calcul est long, il faut bien prendre son temps pour le faire et ne pas se précipiter.</p>
+</div>
+</div>
+<p><strong>Étapes du Procédé</strong></p>
+<p>Le premier vecteur orthogonal ( u_1 ) est le premier vecteur de l’ensemble original : <span class="math display">\[u_1 = v_1\]</span></p>
+<p>Pour chaque vecteur <span class="math inline">\(( v_k )\)</span> (où <span class="math inline">\(( k \geq 2 )\)</span>), on soustrait les projections orthogonales de <span class="math inline">\(( v_k )\)</span> sur les vecteurs orthogonaux précédemment calculés <span class="math inline">\(( u_1, u_2, \ldots, u_{k-1})\)</span> : <span class="math display">\[ u_k = v_k - \sum_{j=1}^{k-1} \frac{\langle v_k, u_j \rangle}{\langle u_j, u_j \rangle} u_j \]</span></p>
+<p>Si l’on souhaite obtenir une base orthonormale, chaque vecteur <span class="math inline">\(( u_k )\)</span> est normalisé pour obtenir <span class="math inline">\(( e_k )\)</span> : <span class="math display">\[ e_k = \frac{u_k}{||u_k||} \]</span></p>
+</section>
+<section id="base-duale" class="level2">
+<h2 class="anchored" data-anchor-id="base-duale">Base duale</h2>
+<div class="custom-box">
+<p>Pour une base <span class="math inline">\(\{e_1, e_2, \ldots, e_n\}\)</span> d’un espace vectoriel <span class="math inline">\(E\)</span>, la <strong>base duale</strong> <span class="math inline">\((e^1, e^2, \ldots, e^n)\)</span> est définie par : <span class="math display">\[e^i(e_j) = \delta_{ij}\]</span> où <span class="math inline">\(\delta_{ij}\)</span> est le symbole de Kronecker.</p>
+</div>
+<p>La base duale permet de définir des formes linéaires et de travailler avec des espaces vectoriels de manière plus abstraite.</p>
+</section>
+<section id="diagonalisation-dune-matrice" class="level2">
+<h2 class="anchored" data-anchor-id="diagonalisation-dune-matrice">Diagonalisation d’une matrice</h2>
+<div class="custom-box">
+<p>Une matrice carrée <span class="math inline">\(A\)</span> est dite <strong>diagonalisable</strong> s’il existe une matrice diagonale <span class="math inline">\(D\)</span> et une matrice inversible <span class="math inline">\(P\)</span> telles que : <span class="math display">\[A = PDP^{-1}\]</span></p>
+<p><span class="math inline">\(D\)</span> est une matrice diagonale contenant les valeurs propres de <span class="math inline">\(A\)</span></p>
+</div>
+<section id="diagonalisation-dune-matrice-symétrique-réelle" class="level3">
+<h3 class="anchored" data-anchor-id="diagonalisation-dune-matrice-symétrique-réelle">Diagonalisation d’une matrice symétrique réelle</h3>
+<p>Pour les matrices symétriques réelles, on peut toujours trouver une base orthonormale de vecteurs propres, ce qui permet de les diagonaliser par une matrice orthogonale <span class="math inline">\(Q\)</span> : <span class="math display">\[A = QDQ^T\]</span> où <span class="math inline">\(Q\)</span> est une matrice orthogonale.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour que la propriété soit vérifiée, il est essentiel que la matrice soit réelle, c’est-à-dire sans composantes complexes. En effet, la symétrie d’une matrice complexe n’implique pas nécessairement la propriété en question</p>
+</div>
+</div>
+</section>
+</section>
+<section id="statistiques-descriptives-univariées" class="level1">
+<h1>Statistiques Descriptives Univariées</h1>
+<ul>
+<li><p><strong>Moyenne</strong> : La moyenne arithmétique d’une série de valeurs <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span> est donnée par : <span class="math display">\[
+\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+\]</span></p></li>
+<li><p><strong>Médiane</strong> : La médiane est la valeur qui sépare la série en deux parties égales. Pour une série ordonnée, si <span class="math inline">\(n\)</span> est impair, la médiane est la valeur centrale. Si <span class="math inline">\(n\)</span> est pair, c’est la moyenne des deux valeurs centrales.</p></li>
+<li><p><strong>Variance</strong> : La variance mesure la dispersion des valeurs autour de la moyenne : <span class="math display">\[
+\text{Var}(X) = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2
+\]</span></p></li>
+<li><p><strong>Écart-type</strong> : L’écart-type est la racine carrée de la variance : <span class="math display">\[
+\sigma = \sqrt{\text{Var}(X)}
+\]</span></p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Plus l’écart-type est grand, plus les données sont dispersées autour de la moyenne.</p>
+</div>
+</div>
+<p>Les statistiques descriptives univariées sont essentielles pour résumer et comprendre les caractéristiques principales d’une seule variable. Elles sont largement utilisées en analyse de données pour obtenir une vue d’ensemble rapide et efficace. Elles permettent aussi d’identifier rapidement des valeurs extrêmes.</p>
+</section>
+<section id="statistiques-descriptives-bivariées" class="level1">
+<h1>Statistiques Descriptives Bivariées</h1>
+<section id="définitions" class="level2">
+<h2 class="anchored" data-anchor-id="définitions">Définitions</h2>
+<ul>
+<li><strong>Covariance</strong> : La covariance entre deux variables <span class="math inline">\(X\)</span> et <span class="math inline">\(Y\)</span> mesure la manière dont deux variables varient ensemble. Elle est donnée par deux formules :</li>
+</ul>
+<ol type="1">
+<li><p>Pour un échantillon de données : <span class="math display">\[
+\text{Cov}(X, Y) = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})
+\]</span> où <span class="math inline">\(x_i\)</span> et <span class="math inline">\(y_i\)</span> sont les valeurs des échantillons, et <span class="math inline">\(\bar{x}\)</span> et <span class="math inline">\(\bar{y}\)</span> sont les moyennes des échantillons.</p></li>
+<li><p>Pour des variables aléatoires : <span class="math display">\[
+\text{Cov}(X, Y) = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y]
+\]</span> où <span class="math inline">\(\mathbb{E}[X]\)</span> et <span class="math inline">\(\mathbb{E}[Y]\)</span> sont les espérances (moyennes théoriques) des variables aléatoires <span class="math inline">\(X\)</span> et <span class="math inline">\(Y\)</span>.</p></li>
+</ol>
+<ul>
+<li><strong>Régression linéaire</strong>:</li>
+</ul>
+<p>La régression linéaire est une méthode statistique qui permet de modéliser la relation entre deux variables en ajustant une ligne droite à un ensemble de données. L’équation de la régression linéaire est : <span class="math display">\[
+y = a + bx
+\]</span> où <span class="math inline">\(y\)</span> est la variable dépendante, <span class="math inline">\(x\)</span> est la variable indépendante, <span class="math inline">\(a\)</span> est l’ordonnée à l’origine (l’interception de la ligne avec l’axe des ordonnées), et <span class="math inline">\(b\)</span> est la pente de la ligne (le taux de changement de <span class="math inline">\(y\)</span> par rapport à <span class="math inline">\(x\)</span>).</p>
+</section>
 <section id="fondements-de-probabilité" class="level2">
 <h2 class="anchored" data-anchor-id="fondements-de-probabilité">Fondements de Probabilité <img src="images/dé.png" class="img-fluid" width="42"></h2>
 <section id="quelques-définitions" class="level3">
@@ -203,7 +626,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Soient A et B deux événements. Les propriétés suivantes sont toujours vraies:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/math.png" class="img-fluid figure-img"></p>
+<p><img src="images/math.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <ol type="1">
@@ -215,7 +638,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/math3.png" class="img-fluid figure-img"></p>
+<p><img src="images/math3.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p>De plus, Considérant une suite <span class="math inline">\((A_n)_n\)</span> d’événements. On a alors :</p>
@@ -233,7 +656,7 @@ P \Bigl( \bigcup\limits_{k=1}^{+\infty} A_{k}
 <p><em>Et si :</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/math2.png" class="img-fluid figure-img" width="240"></p>
+<p><img src="images/math2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="240"></p>
 </figure>
 </div>
 <p><span class="math display">\[
@@ -317,8 +740,8 @@ P(\bigcap_{i=1}^{n}A_i)\ =\ \prod_{i=1}^{n} P(A_i)\ =\ P(A_1)\ ...\ P(A_n)
 </section>
 <section id="quest-ce-qui-caractérise-une-variable-aléatoire" class="level3">
 <h3 class="anchored" data-anchor-id="quest-ce-qui-caractérise-une-variable-aléatoire">Qu’est ce qui caractérise une variable aléatoire ?</h3>
-<section id="fonction-de-répartition" class="level4">
-<h4 class="anchored" data-anchor-id="fonction-de-répartition">Fonction de répartition</h4>
+<section id="fonction-de-répartition-1" class="level4">
+<h4 class="anchored" data-anchor-id="fonction-de-répartition-1">Fonction de répartition</h4>
 <p>Une VA traduit le résultat d’une expérience aléatoire en nombre réel. La fontion de répartition transporte le calcul des probabilités concernant les réalisations de la VA.</p>
 <p>C’est la fonction définie par :</p>
 <p><span class="math display">\[
@@ -334,7 +757,7 @@ F_x(x)\ =\ P(X\ \leq\ x)
 \]</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/math6.png" class="img-fluid figure-img" width="347"></p>
+<p><img src="images/math6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="347"></p>
 </figure>
 </div>
 <p><strong>Cas discret</strong> <strong>Cas continu</strong></p>
@@ -348,7 +771,7 @@ P(X=K)\ =\ P(X\leq K)\ -\ P(X\leq K-1)\ =\ P_K
 \]</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/math5.png" class="img-fluid figure-img"></p>
+<p><img src="images/math5.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p><strong>Cas continu : densité de probabilité</strong></p>
@@ -495,13 +918,13 @@ Cov(aX+bY,cU+dV)=ac.Cov(X,U)+adCov(X,U)+bcCov(Y,U)+bdCov(Y,V)
 <p><strong><em>Lois discètes</em></strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/Lois_discrètes-01.png" class="img-fluid figure-img"></p>
+<p><img src="images/Lois_discrètes-01.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p><strong><em>Lois absolument continues</em></strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/Lois_continues.png" class="img-fluid figure-img"></p>
+<p><img src="images/Lois_continues.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p><strong><em>Théorème de Fisher :</em></strong></p>
@@ -601,7 +1024,7 @@ f_{x_1,\theta}(x_i) = \left\{
 <p>Un intervalle de confiance permet d’avoir une idée de la marge d’erreur de l’échantillon représentatif sélectionné. En estimant cette marge d’erreur, on est donc en mesure de faire une estimation assez précise de ce qu’aurait été le résultat réel.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/confiance.png" width="675" height="394" class="figure-img"></p>
+<p><img src="images/confiance.png" class="quarto-figure quarto-figure-center figure-img" width="675" height="394"></p>
 </figure>
 </div>
 </section>
@@ -650,7 +1073,7 @@ H_1 : \theta\ \notin\ \theta_0
 <p>Le tableau suivant résume l’ensemble des couples (décisions/réalités) possibles :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/tableau.png" class="img-fluid figure-img"></p>
+<p><img src="images/tableau.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p>La quantité <span class="math inline">\(\beta\)</span> est une probabilité de bonne décision appelée puissance du test.</p>
@@ -698,7 +1121,7 @@ Y = X\beta\ +\ \epsilon
 <h3 class="anchored" data-anchor-id="décomposition-de-la-variance">Décomposition de la variance</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/Capture d’écran 2023-01-21 124938.png" class="img-fluid figure-img" width="439"></p>
+<p><img src="images/Capture d’écran 2023-01-21 124938.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="439"></p>
 </figure>
 </div>
 <p>L’équation d’analyse de la variance est : SCT = SCE + SCR, cela veut dire que la somme des carrées totale = somme des carrées expliquée + la somme des carrées résiduelle.</p>
@@ -711,6 +1134,7 @@ R^2 = \frac{SCE}{SCR}.
 \]</span></p>
 
 
+</section>
 </section>
 </section>
 
@@ -750,18 +1174,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -793,11 +1206,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -807,8 +1259,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -820,7 +1281,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -864,6 +1448,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -889,6 +1474,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -949,6 +1560,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

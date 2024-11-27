@@ -3,436 +3,194 @@ title: "DATA Camp M1"
 editor: visual
 ---
 
-# Algèbre Linéaire : niveau élémentaire
+Ici, sera listé les pré-requis nécessaires pour le master SEP.
 
-## Matrices
+Nous allons commencer par les bases des probabilités, de l'algèbre linéaire et des statisitques.
 
-Une matrice est un tableau de nombres disposés en $m$ lignes et $n$ colonnes. Soit $A$ de taille $(m, n)$ : $$
-A = (a_{ij})_{i=1,\ldots,m \atop j=1,\ldots,n} =
-\begin{bmatrix}
-a_{11} & \cdots & a_{1n} \\
-\vdots & \ddots & \vdots \\
-a_{m1} & \cdots & a_{mn}
-\end{bmatrix}
-$$
+# Algèbre Linéaire
 
-Le terme $a_{ij}$ est situé à la $i$-ème ligne de la $j$-ème colonne de la matrice $A$.
+Nous allons vous rappeler les notions essentielles à connaître sur les matrices.
 
-\textcolor{green!70!black!70!black}{Exemples :}
+## Trace d'une matrice
 
-$$
-A =
-\begin{bmatrix}
--2 & 1 \\
-8 & -3 \\
-1 & 3
-\end{bmatrix}
-;\quad
-B =
-\begin{bmatrix}
--2 \\
--3 \\
-5
-\end{bmatrix}
-;\quad
-C =
-\begin{bmatrix}
-3 & -1 & 6
-\end{bmatrix}
-;\quad
-D =
-\begin{bmatrix}
-3 & -1 \\
-4 & -3
-\end{bmatrix}
-$$
+::: custom-box
+La **trace** d'une matrice carrée $A$ est la somme de ses éléments diagonaux : $$\text{Tr}(A) = \sum_{i=1}^{n} a_{ii}$$
+:::
 
-$A$ est une matrice de taille $(3, 2)$, $B$ est une matrice de taille $(3, 1)$, $C$ est une matrice de taille $(1, 3)$, $D$ est une matrice de taille $(2, 2)$.
+Propriétés : - La trace est linéaire : $$\text{Tr}(A + B) = \text{Tr}(A) + \text{Tr}(B)$$ - Invariance par similitude : $$\text{Tr}(AB) = \text{Tr}(BA)$$
 
-Une matrice $(m, 1)$ est dite matrice colonne. Une matrice $(1, n)$ est dite une matrice ligne. Une matrice $(n, n)$ est dite une matrice carrée d'ordre $n$.
+::: callout-note
+La trace d'une matrice ne change pas lorsqu'on change de base.
+:::
 
-On appelle transposée de $A$ (et on note $A^t$ ou $A'$), la matrice dont les lignes sont les colonnes de $A$, et dont les colonnes sont les lignes de $A$.
+## Déterminant d'une matrice
 
-\textcolor{green!70!black}{Exemple :} $$
-A =
-\begin{bmatrix}
--2 & 1 \\
-8 & -3 \\
-1 & 3
-\end{bmatrix}
-\Rightarrow
-A^t =
-\begin{bmatrix}
--2 & 8 & 1 \\
-1 & -3 & 3
-\end{bmatrix}
-$$
+::: custom-box
+Le déterminant d'une matrice $A \in \mathcal{M}_{n\times n}$ peut être calculé en utilisant le développement par rapport à une ligne ou une colonne : $$\text{det}(A) = \sum_{j=1}^{n} (-1)^{i+j} a_{ij} \text{det}(A_{ij})$$ où ($A_{ij}$) est la matrice obtenue en supprimant la ($i$)-ème ligne et la ($j$)-ème colonne de ($A$).
+:::
 
-\textcolor{green!70!black}{Propriétés :} $$
-(A + B)^t = A^t + B^t
-$$ $$
-(AB)^t = B^t A
-$$
+::: callout-tip
+Dans certains cas, il peut être long de calculer le déterminant d'une matrice. Pour remédier à cela, il est utile de connaître par coeur le calcul d'un déterminant d'une matrice de taille $2 \times 2$ et d'une matrice diagonale.
+:::
 
-## Matrices usuelles
+## Déterminant d'une matrice $(2 \times 2)$
 
-Une matrice carrée d'ordre $n$ est dite diagonale lorsque, pour tout $i \neq j$, on a $a_{ij} = 0$ : $$
-A =
-\begin{bmatrix}
--2 & 0 & 0 \\
-0 & -3 & 0 \\
-0 & 0 & 5
-\end{bmatrix}
-$$
+Pour une matrice $A \in \mathcal{M}_{2 \times 2}$ de la forme : $$A = \left(\begin{array}{cc} a & b \\ c & d \end{array} \right)$$ le déterminant se calcule en utilisant la formule suivante : $$\text{det}(A) = ad - bc $$
 
-La matrice unité $I_n$ est la matrice diagonale telle que $\forall i = 1, \ldots, n$, $a_{ii} = 1$ : $$
-I_3 =
-\begin{bmatrix}
-1 & 0 & 0 \\
-0 & 1 & 0 \\
-0 & 0 & 1
-\end{bmatrix}
-$$
+## Déterminant d'une matrice diagonale
 
-## Opérations de base
+Pour une matrice diagonale de la forme : $$D = 
+\left(\begin{array}{cccc}
+d_1 & 0 & \cdots & 0 \\
+0 & d_2 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & d_n
+\end{array}  \right)
+$$ le déterminant est le produit des éléments diagonaux : $$\text{det}(D) = d_1 \times d_2 \times \cdots \times d_n$$
 
-Soient $A$ et $B$ deux matrices de même taille $(m, n)$ de termes généraux respectifs $a_{ij}$ et $b_{ij}$, et $\lambda$ un nombre réel.
+Les déterminants sont particulièrement utiles en algèbre linéaire pour déterminer si une matrice est inversible (une matrice est inversible si et seulement si son déterminant est non nul) et pour résoudre des systèmes d'équations linéaires.
 
-$A = B$ si et seulement si $a_{ij} = b_{ij}$ pour tous $i,j$.
+## Espace Euclidien
 
-La somme de $A$ et $B$ est la matrice de terme général $a_{ij} + b_{ij}$
+::: custom-box
+Un **espace euclidien** est un espace vectoriel réel de dimension finie muni d'une forme bilinéaire symétrique définie positive, appelée **produit scalaire** : $$\langle x, y \rangle = x_1 y_1 + x_2 y_2 + \cdots + x_n y_n$$
+:::
 
-:   $$
-    A + B =
-    \begin{bmatrix}
-    5 + (-4) & 2 + 1 \\
-    6 + 1 & 1 + (-3)
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-    1 & 3 \\
-    7 & -2
-    \end{bmatrix}
-    $$
+Quelques propriétés importantes du produit scalaire : - $\langle v, v \rangle = \|v\|_2^2 = \sum_{i=1}^{n} v_i^2$ - $\langle v, w \rangle = v^t w = \text{trace}(vw^t)$ - $\langle v, w \rangle = \langle w, v \rangle$ - $\langle v, w \rangle = 0 \iff v \perp w$
 
-Le produit de $A$ par $\lambda$ est la matrice de terme général $\lambda a_{ij}$ : $$
-\lambda A =
-3 \times
-\begin{bmatrix}
-5 & 2 \\
-6 & 1
-\end{bmatrix}
-=
-\begin{bmatrix}
-15 & 6 \\
-18 & 3
-\end{bmatrix}
-$$
+Quelques inégalités à connaître :
 
-\textcolor{green!70!black}{Exemples :} $$
-A =
-\begin{bmatrix}
-5 & 2 \\
-6 & 1
-\end{bmatrix}
-;\quad
-B =
-\begin{bmatrix}
--4 & 1 \\
-1 & -3
-\end{bmatrix}
-;\quad
-\lambda = 3
-$$ $$
-A + B =
-\begin{bmatrix}
-1 & 3 \\
-7 & -2 \\
-\end{bmatrix}
-\hspace{2cm}
-\lambda A =
-\begin{bmatrix}
-15 & 6 \\
-18 & -2 \\
-\end{bmatrix}
-$$
-
-## Multiplication matricielle
-
-Le produit de matrices A et B (noté $AB$) n'est défini que si le nombre de colonnes de $A$ est égal au nombre de lignes de $B$. C'est-à-dire $A$ doit être de taille $(m, p)$ et $B$ de taille $(p, n)$. Alors $AB$ est de taille $(m, n)$. De plus, soient $a_{ij}$ et $b_{ij}$ les termes généraux respectifs de $A$ et $B$, alors le terme général de $C$ = $AB$ est $c_{ij}$ défini par : $$
-c_{ij} = \sum_{k=1}^{p} a_{ik} b_{kj}
-$$ \textcolor{green!70!black}{Exemple : } $$A =
-\begin{bmatrix}
-2 & -2 & 1 \\
--3 & 6 & 8 \\
-5 & 2 & 1
-\end{bmatrix}
-\hspace{2cm}
-B = \begin{bmatrix}
--1 & 5 \\
-1 & 2 \\
-3 & 4
-\end{bmatrix}$$ Alors, la matrice $C = AB$ est donnée par : $$C = \begin{bmatrix}
--1 & 10 \\
-33 & 29 \\
-0 & 33
-\end{bmatrix}$$
-
-En effet, l'élément qui se trouve au croisement de la i-ème ligne et la j-ème colonne est : $$c_{ij} = \sum_{k=1}^{p} a_{ik} b_{kj}$$
-
-Par exemple, $$c_{2,1} = (-3) \times (-1) + 6 \times 1 + 8 \times 3 = 33$$
-
-\textbf{\textcolor{red}{Le produit matriciel n’est pas commutatif.}}
-
-\newpage
-
-## Propriétés
-
-Le produit est distributif par rapport à l'addition. C'est-à-dire : $$
-A (B + C) = AB + AC \quad \text{et} \quad (B + C)A = BA + CA
-$$
-
-Le produit est associatif, c'est-à-dire : $$
-ABC = A(BC) = (AB)C
-$$
-
-Si A est une matrice carrée d'ordre n, alors $$A I_n = I_n A = A$$
-
-Le produit de deux matrices peut être nul sans que l'une des deux matrices ne soit la matrice nulle, par exemple : $$
-\begin{bmatrix}
-1 & 2 \\
-2 & 4
-\end{bmatrix} \times
-\begin{bmatrix}
--2 & 10 \\
-1 & -5
-\end{bmatrix}
-$$
-
-## Inverse
-
-Une matrice carrée $A$ d'ordre $n$ est dite inversible lorsqu'il existe une matrice $B$ telle que : $$ A B = B A = I_n $$ $B$ est alors notée $A^{-1}$, l'inverse de $A$.
-
-\newpage
-
-## Systèmes linéaires
-
-Grâce au produit matriciel, on peut représenter un système linéaire par une équation matricielle. Soit le système linéaire de $n$ équations et $p$ inconnues :
-
-$$
-\begin{cases}
-a_{11} x_1 + a_{12} x_2 + \ldots + a_{1p} x_p = b_1 \\
-a_{21} x_1 + a_{22} x_2 + \ldots + a_{2p} x_p = b_2 \\
-a_{n1} x_1 + a_{n2} x_2 + \ldots + a_{np} x_p = b_n
-\end{cases}
-$$
-
-On peut le représenter par $AX = B$ où :
-
-$$A = \begin{bmatrix}
-a_{11} & \ldots & a_{1p} \\
-\vdots & \ddots & \vdots \\
-a_{n1} & \ldots & a_{np}
-\end{bmatrix} ; 
-\hspace{2cm}
-X = \begin{bmatrix}
-x_1 \\
-\vdots \\
-x_p
-\end{bmatrix} ; 
-\hspace{2cm}
-B = \begin{bmatrix}
-b_1 \\
-\vdots \\
-b_n
-\end{bmatrix}$$
-
-\newpage
-
-# Algèbre linéaire : niveau basique
-
-## Déterminant
-
-Soit $A = (a_{ij})$ une matrice carrée d'ordre 2. Le déterminant de $A$ est le réel noté $\text{det}(A)$ tel que : $$
-\text{det}(A) = \begin{vmatrix}
-a_{11} & a_{12} \\
-a_{21} & a_{22}
-\end{vmatrix} = a_{11}a_{22} - a_{12}a_{21}
-$$
-
-Soient $A = (a_{ij})$ et $B = (b_{ij})$ deux matrices carrées d'ordre $n$ et $\lambda \in \mathbb{R}$. On a les propriétés suivantes :
-
--   $\text{det}(AB) = \text{det}(A) \cdot \text{det}(B) = \text{det}(BA)$
--   $\text{det}(A^T) = \text{det}(A)$
--   $\text{det}(\lambda A) = \lambda^n \cdot \text{det}(A)$
--   Si $A$ est diagonale, alors $\text{det}(A) = a_{11}a_{22}\ldots a_{nn}$
--   $\text{det}(I_n) = 1$
--   $A$ est inversible si et seulement si $\text{det}(A) \neq 0$
--   Si $\text{det}(A) \neq 0$, alors $\text{det}(A^{-1}) = \frac{1}{\text{det}(A)}$
-
-## Diagonalisation
-
-\textcolor{green!70!black}{Valeur propre / Vecteur propre}
-
-Une valeur propre de $A$ est un scalaire $\lambda$ tel qu'il existe un vecteur colonne non nul $V$ vérifiant : $AV = \lambda V$. $V$ est alors appelé vecteur propre de $A$ associé à $\lambda$.
-
-\textcolor{green!70!black}{Diagonalisation}
-
-Une matrice carrée $A$ d'ordre $n$ est diagonalisable lorsqu'il existe une matrice diagonale $D$ et une matrice inversible $P$ telles que : $A = PDP^{-1}$. $D$ est constituée des valeurs propres de $A$. $P$ est obtenue par la concaténation des vecteurs propres de $A$. Si les valeurs propres de $A$ sont distinctes, alors $A$ est diagonalisable (réciproque fausse).
-
-## Matrice symétrique
-
-Une matrice carrée $A$ d'ordre $n$ est symétrique lorsque $A^T = A$. Si $A$ est symétrique, alors :
-
--   $A$ a des valeurs propres réelles.
--   $A$ est diagonalisable.
--   Il existe une matrice $P$ telle que $P^{-1} = P^T$ et $A = PDP^{-1}$.
-
-## Produit scalaire
-
-Soit $x$, $y$, $z$ trois vecteurs de $\mathbb{R}^n$ et $\lambda$ un scalaire. On définit par produit scalaire (qu'on note $\langle \cdot, \cdot \rangle$) toute application qui vérifie les propriétés suivantes :
-
--   $\langle x + \lambda y, z \rangle = \langle x, z \rangle + \lambda \langle y, z \rangle$
--   $\langle x, y + \lambda z \rangle = \langle x, z \rangle + \lambda \langle x, z \rangle$
--   $\langle x, y \rangle = \langle y, x \rangle$
--   $\langle x, x \rangle \geq 0$
--   $\langle x, x \rangle = 0 \Rightarrow x = 0$
-
-Le produit scalaire canonique et usuel est défini comme : $$
-\langle x, y \rangle = \sum_{i=1}^{n} x_i \cdot y_i
-$$
-
-## Norme
-
-On appelle norme associée à un produit scalaire le réel $\|x\| = \sqrt{\langle x, x \rangle}$. Elle vérifie les propriétés suivantes :
-
--   $|\langle x, y \rangle| \leq \|x\| \cdot \|y\|$ (Inégalité de Cauchy-Schwartz)
--   $\|x + y\| \leq \|x\| + \|y\|$ (Inégalité triangulaire)
--   $\|x\| \geq 0$ avec égalité si $x = 0$
--   $\|\lambda x\| = |\lambda| \cdot \|x\|$
--   $\|x + y\|^2 = \|x\|^2 + \|y\|^2 + 2\langle x, y \rangle$
-
-Un vecteur est dit unitaire ou normé si $\|x\| = 1$
+-   Inégalité de Cauchy-Schwarz : $$|\langle x, y \rangle| \leq \|x\| \|y\|$$
+-   Inégalité triangulaire : $$\|x + y\| \leq \|x\| + \|y\|$$
 
 ## Orthogonalité
 
-Deux vecteurs $x$ et $y$ sont dits orthogonaux si $\langle x, y \rangle = 0$. On note $x \perp y$.
+Soient $v$ et $w$, deux vecteurs appartenant à un espace vectoriel $E$ de dimension $n$, muni du produit scalaire $\langle \cdot, \cdot \rangle$ associé à la norme euclidienne $\|\cdot\|_2$.On note $v = (v_1, \ldots, v_n)^t$ et $w = (w_1, \ldots, w_n)^t$ où \$ v_i\$ et $w_j$ sont des scalaires (i.e. des réels).
 
-Une famille de vecteurs $\{x_i\}$ est dite orthogonale si tous ses vecteurs sont deux à deux orthogonaux. Toute famille orthogonale $\{x_i\}_{i=1}^p$ vérifie le théorème de Pythagore : $$
-\left\|\sum_{i=1}^n x_i\right\|^2 = \sum_{i=1}^n \|x_i\|^2
+### Normalisation d'un vecteur
+
+La normalisation d'un vecteur $v$ est donnée par : $$
+x = \frac{v}{\|v\|_2}
+$$ Ainsi, $\|x\|_2 = 1$. Un espace vectoriel engendré par $v_1, \ldots, v_p$ est identique à celui engendré par leurs versions normalisées.
+
+Deux vecteurs $x$ et $y$ sont **orthogonaux** si leur produit scalaire est nul : $$\langle x, y \rangle = 0$$ Une **base orthonormale** est une base où tous les vecteurs sont orthogonaux et de norme 1.
+
+### Matrice de Projection Orthogonale
+
+::: custom-box
+Soit $E$ un espace vectoriel muni d'un produit scalaire $\langle \cdot, \cdot \rangle$ et $W$ un sous-espace vectoriel de $E$. La projection orthogonale d'un élément $B$ de $E$ sur $W$ est définie par : $$\Pi_W B = \underset{a \in W}{argmin} \|B - a\|_2$$ La matrice de projection orthogonale de $E$ sur $W$ est notée $\Pi_W$.
+:::
+
+#### Propriétés
+
+-   $\Pi_W^t = \Pi_W$
+-   $\Pi_W^2 = \Pi_W$
+-   $\text{trace}(\Pi_W) = \dim(\Pi_W)$
+-   $\Pi_W^\perp = I_E - \Pi_W$
+
+Pour tout $B$, élément de $E$ : $$
+\Pi_{W^\perp} B = B - \Pi_{W} B
 $$
 
-Soit $E$ un espace muni d'un produit scalaire et $X$ une partie de $E$. On appelle orthogonal de $X$ et on note $X^\perp$ l'ensemble : $X^\perp = \{y \in E \,|\, \forall x \in X, \langle x, y \rangle = 0\}$.
+### Construction de matrice de projection Orthogonale
 
-On dit que $\{e_i\}_{i=1}^p$ est une base orthonormée de $E$ si et seulement si : - Si $a_1e_1 + a_2e_2 + \ldots + a_ne_n = 0$, alors $a_i = 0$ pour tout $i \in \{1, \ldots, n\}$.\
-- Pour tout $x \in E$, il existe $a_1, a_2, \ldots, a_n \in \mathbb{R}$ tels que $x = a_1e_1 + a_2e_2 + \ldots + a_ne_n$.\
-- $e_i$ est orthogonal à $e_j$ pour tout $i \neq j$.\
-- Pour tout $i \in \{1, \ldots, n\}$, $\|e_i\| = 1$.
+::: custom-box
+Soient $v_1, \ldots, v_p$, $p$ vecteurs de $\mathbb{R}^n$ avec $p \leq n$. Si $(v_1, \ldots, v_p)$ est une base orthogonale de $\mathbb{R}^p$ et $W = \text{vect}(v_1, \ldots, v_p)$, alors la matrice de projection $W$ de $\mathbb{R}^n$ sur $W$ est : $$
+W = V (V^t V)^{-1} V^t
+$$ où $V$ est la matrice dont les colonnes sont les vecteurs $v_1, \ldots, v_p$.
+:::
 
-## Projection orthogonale
-
-Soit $x$ un vecteur d'un espace muni d'un produit scalaire $E$. Soit $F$ un sous-espace vectoriel de $E$, $x$ s'écrit de façon unique sous la forme : $x = f + f^\perp$ où $f \in F$ et $f^\perp \in F^\perp$. On dit que $f$ est le projeté orthogonal de $x$ sur $F$ et on note $f = P_F(x)$.
-
-Pour $x$ et $y$ de $E$, on a $\langle P_F(x),y\rangle = \langle x, P_F(y)\>$.
-
-Si $(e_1, e_2, \ldots, e_n)$ est une base orthonormée, alors : $P_F(x) = \sum_{i=1}^n \langle x, e_i \rangle e_i$
-
-Notons que : $\|x - P_F(x)\| = \inf_{f \in F} \|x - f\|$
-
-## Matrice orthogonale
-
-Soit $M$ une matrice carrée d'ordre $n$. On dit que $M$ est une matrice orthogonale si elle vérifie : $$M \cdot M^T = M^T \cdot M = I_n$$
-
-Le déterminant d'une matrice orthogonale est égal à $\pm 1$. L'ensemble des valeurs propres de $M$ est inclus dans l'ensemble $\{0, 1\}$.
-
-\newpage
-
-# Fondements de probabilité : niveau élémentaire
-
-## Quelques définitions
-
--   On appelle épreuve $E$ toute expérience probabiliste.
--   On appelle univers de $E$ l'ensemble, généralement noté $\Omega$, de tous les résultats possibles de l'épreuve $E$ (appelés "événements élémentaires").
-
-Lancer une paire de dés équilibrés et en retenir la somme est une épreuve. $\Omega = \{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}$ \hspace{1cm} ![](images/deux_des.png){width="5%" fig-align="center"}
-
-## Evénements
-
-Un événement est un sous-ensemble de $\Omega$.
-
--   L'intersection de $A$ et $B$, notée $A \cap B$, est un événement. Il est réalisé uniquement si $A$ et $B$ se produisent.
--   La réunion de $A$ et $B$, notée $A \cup B$, est un événement. Il est réalisé si $A$ ou $B$ se produit. Deux événements remarquables sont à retenir :
-    -   L'événement certain $\Omega$ ;
-    -   L'événement impossible $\emptyset$ ;
--   Tous les éléments qui n'appartiennent pas à $A$ appartiennent à un événement que l'on appelle le complémentaire de $A$. On le note $\overline{A}$ ou $A^C$.
--   On dit que deux événements $A$ et $B$ sont incompatibles s'ils ne peuvent pas être réalisés en même temps.
-
-Si $A$, $B$ et $C$ sont des événements de $\Omega$, les propriétés suivantes sont toujours vérifiées :
-
--   $A \cup \overline{A} = \Omega$ et $A \cap \overline{A} = \emptyset$
--   $\overline{\overline{A} \cap \overline{B}} = \overline{A} \cup \overline{B}$ et $\overline{\overline{A} \cup \overline{B}} = \overline{A} \cap \overline{B}$ (lois de De Morgan)
--   $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
--   $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
-
-## Partitions
-
-La famille d'événements forme une partition de $\Omega$ si : $$
-\bigcup_{i \in I} A_i = \Omega \quad \text{et} \quad A_i \cap A_j = \emptyset \text{ pour tout } i \neq j.
-$$ Une partition remarquable est la famille qui contient l'événement $A$ et son complémentaire.
-
-## Tribus et boréliens
-
-![](images/venn_diagrams.jpg){width="50%" fig-align="center"} ![](images/AnBnC.png){width="50%" fig-align="center"}
-
-\textcolor{green!70!black}{Comment pouvons-nous qualifier l'ensemble des événements ?}
-
-Une tribu est une famille $T$ de parties de l'ensemble $\Omega$ qui vérifie les propriétés suivantes : - $\Omega \in T$\
-- Si $(A_n)$ est une suite dénombrable d'éléments de $T$, alors $\bigcup A_n \in T$\
---- Si $A$ est un élément de $T$, alors son complémentaire l'est aussi.
-
-De plus, si $T$ est une tribu, alors : - $\emptyset \in T$\
-- Si $(A_n)$ est une suite d'éléments de $T$, alors $\bigcap A_n \in T$.
-
-\textcolor{green!70!black}{Exemples de tribus :}
-
-Pour le cas discret, on considère l'expérience "Lancer une pièce de monnaie équilibrée".\
-On notera : $P$ pour "PILE apparaît" et $F$ pour "FACE apparaît".\
-Dans ce cas, l'univers est l'ensemble $\{P, F\}$ et $T = \{\Omega, \emptyset, P, F\}$ est une tribu.\
-En général, l'ensemble des parties est une tribu classique.
-
-Pour le cas continu, les intervalles du type $[a, +\infty[$, $]a, +\infty[$, $]-\infty, a[$, $]-\infty, a]$ sont des tribus. Nous les appelons DES BORÉLIENS.
-
-\textcolor{green!70!black}{Propriétés :}
-
-Soient $A$ et $B$ deux événements. Les propriétés suivantes sont toujours vraies :
-
-1.  $P(A^C) = 1 - P(A)$\
-2.  $P(B) = P(A \cap B) + P(A^C \cap B)$\
-3.  Si $A \subset B$, alors $P(A) \leq P(B)$\
-4.  $0 \leq P(A) \leq 1$\
-5.  $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
-
-De plus, en considérant une suite $(A_k)$ d'événements, on a les relations suivantes : $$
-\begin{aligned}
-P\left(\bigcup A_k\right) & = \lim_{n \to +\infty} P\left(\bigcup_{k=1}^n A_k\right) \\
-P\left(\bigcap A_k\right) & = \lim_{n \to +\infty} P\left(\bigcap_{k=1}^n A_k\right) \\
-P\left(\bigcup A_k\right) & \leq \sum_{k=1}^{+\infty} P(A_k)
-\end{aligned}
+Si $(v_1, \ldots, v_p)$ est une base orthonormale de $W$, alors : $$
+W = V V^t
 $$
 
-Et si $\bigcup A_k = \Omega$, alors : $$
-P(B) = \sum_{k=1}^{+\infty} P(B \cap A_k)
-$$
+### Procédé d'orthogonalisation de Gram-Schmidt
 
-## Mesure
+Le but du procédé de Gram-Schmidt est de prendre un ensemble de vecteurs linéairement indépendants $( {v_1, v_2, \ldots, v_n})$ et de produire un ensemble de vecteurs orthogonaux $( {u_1, u_2, \ldots, u_n} )$ qui engendrent le même sous-espace.
 
-Soit $E$ un ensemble muni d'une tribu $T$. On appelle mesure toute application $m : T \rightarrow \mathbb{R}^+$ telle que : - $m(\emptyset) = 0$ - Si $(A_n)$ est une suite d'éléments de $T$ deux à deux disjoints alors : $$m\left(\bigcup_n A_n\right) = \sum_n m(A_n).$$
+::: callout-tip
+Avant de recourir au procédé de Gram-Schmidt, il faut s'assurer que les vecteurs ne soient pas déjà orthogonaux, cela serait une perte de temps de les recalculer. Ce calcul est long, il faut bien prendre son temps pour le faire et ne pas se précipiter.
+:::
+
+**Étapes du Procédé**
+
+Le premier vecteur orthogonal ( u_1 ) est le premier vecteur de l'ensemble original : $$u_1 = v_1$$
+
+Pour chaque vecteur $( v_k )$ (où $( k \geq 2 )$), on soustrait les projections orthogonales de $( v_k )$ sur les vecteurs orthogonaux précédemment calculés $( u_1, u_2, \ldots, u_{k-1})$ : $$ u_k = v_k - \sum_{j=1}^{k-1} \frac{\langle v_k, u_j \rangle}{\langle u_j, u_j \rangle} u_j $$
+
+Si l'on souhaite obtenir une base orthonormale, chaque vecteur $( u_k )$ est normalisé pour obtenir $( e_k )$ : $$ e_k = \frac{u_k}{||u_k||} $$
+
+## Base duale
+
+::: custom-box
+Pour une base $\{e_1, e_2, \ldots, e_n\}$ d'un espace vectoriel $E$, la **base duale** $(e^1, e^2, \ldots, e^n)$ est définie par : $$e^i(e_j) = \delta_{ij}$$ où $\delta_{ij}$ est le symbole de Kronecker.
+:::
+
+La base duale permet de définir des formes linéaires et de travailler avec des espaces vectoriels de manière plus abstraite.
+
+## Diagonalisation d'une matrice
+
+::: custom-box
+Une matrice carrée $A$ est dite **diagonalisable** s'il existe une matrice diagonale $D$ et une matrice inversible $P$ telles que : $$A = PDP^{-1}$$
+
+$D$ est une matrice diagonale contenant les valeurs propres de $A$
+:::
+
+### Diagonalisation d'une matrice symétrique réelle
+
+Pour les matrices symétriques réelles, on peut toujours trouver une base orthonormale de vecteurs propres, ce qui permet de les diagonaliser par une matrice orthogonale $Q$ : $$A = QDQ^T$$ où $Q$ est une matrice orthogonale.
+
+::: callout-warning
+Pour que la propriété soit vérifiée, il est essentiel que la matrice soit réelle, c'est-à-dire sans composantes complexes. En effet, la symétrie d'une matrice complexe n'implique pas nécessairement la propriété en question
+:::
+
+# Statistiques Descriptives Univariées
+
+-   **Moyenne** : La moyenne arithmétique d'une série de valeurs $x_1, x_2, \ldots, x_n$ est donnée par : $$
+    \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+    $$
+
+-   **Médiane** : La médiane est la valeur qui sépare la série en deux parties égales. Pour une série ordonnée, si $n$ est impair, la médiane est la valeur centrale. Si $n$ est pair, c'est la moyenne des deux valeurs centrales.
+
+-   **Variance** : La variance mesure la dispersion des valeurs autour de la moyenne : $$
+    \text{Var}(X) = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2
+    $$
+
+-   **Écart-type** : L'écart-type est la racine carrée de la variance : $$
+    \sigma = \sqrt{\text{Var}(X)}
+    $$
+
+::: callout-note
+Plus l'écart-type est grand, plus les données sont dispersées autour de la moyenne.
+:::
+
+Les statistiques descriptives univariées sont essentielles pour résumer et comprendre les caractéristiques principales d'une seule variable. Elles sont largement utilisées en analyse de données pour obtenir une vue d'ensemble rapide et efficace. Elles permettent aussi d'identifier rapidement des valeurs extrêmes.
+
+# Statistiques Descriptives Bivariées
+
+## Définitions
+
+-   **Covariance** : La covariance entre deux variables $X$ et $Y$ mesure la manière dont deux variables varient ensemble. Elle est donnée par deux formules :
+
+1.  Pour un échantillon de données : $$
+    \text{Cov}(X, Y) = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})
+    $$ où $x_i$ et $y_i$ sont les valeurs des échantillons, et $\bar{x}$ et $\bar{y}$ sont les moyennes des échantillons.
+
+2.  Pour des variables aléatoires : $$
+    \text{Cov}(X, Y) = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y]
+    $$ où $\mathbb{E}[X]$ et $\mathbb{E}[Y]$ sont les espérances (moyennes théoriques) des variables aléatoires $X$ et $Y$.
+
+-   **Régression linéaire**:
+
+La régression linéaire est une méthode statistique qui permet de modéliser la relation entre deux variables en ajustant une ligne droite à un ensemble de données. L'équation de la régression linéaire est : $$
+y = a + bx
+$$ où $y$ est la variable dépendante, $x$ est la variable indépendante, $a$ est l'ordonnée à l'origine (l'interception de la ligne avec l'axe des ordonnées), et $b$ est la pente de la ligne (le taux de changement de $y$ par rapport à $x$).
 
 ## Probabilités
 
 Soit $E$ un ensemble muni d'une tribu $T$. On appelle probabilité toute application $P : T \rightarrow \mathbb{R}^+$ telle que : - $P(\emptyset) = 0$ - Si $(A_n)$ est une suite d'éléments de $T$ deux à deux disjoints alors : $$P\left(\bigcup_n A_n\right) = \sum_n P(A_n).$$
 
-## Probabilités conditionnelles
+### Probabilités conditionnelles
 
 En théorie des probabilités, nous nous intéressons souvent au comportement d'un aléa, sachant qu'un autre événement est déjà passé. C'est ce que nous appelons Les Probabilités Conditionnelles.
 
@@ -450,7 +208,7 @@ $$
 
 C'est ce que nous appelons \textcolor{red}{LA FORMULE DE BAYES}.
 
-## Indépendance
+### Indépendance
 
 Deux événements $A$ et $B$ sont dits indépendants si et seulement si : $$P(A \cap B) = P(A) \cdot P(B)$$ En termes courants, deux événements sont indépendants si le résultat de l'un n'influence aucunement l'aboutissement de l'autre. Sous condition d'indépendance de $A$ et $B$, la notion de la probabilité conditionnelle tombe à l'eau, car les événements évoluent l'un sans se soucier de l'autre. Ceci se traduit par : $$P(A|B) = P(A)$$ $$P(B|A) = P(B)$$
 
@@ -458,7 +216,7 @@ Notons que si $A$ est indépendant de $B$, il le sera par rapport à son complé
 
 \textcolor{red}{NE PAS CONFONDRE INDÉPENDANCE ET INCOMPATIBILITÉ DES ÉVÉNEMENTS}
 
-## Variable aléatoire
+### Variable aléatoire
 
 Une variable aléatoire est un nombre qui dépend du résultat d'une expérience aléatoire. Chaque exécution de l'expérience génère une réalisation de la variable aléatoire.
 
@@ -468,7 +226,7 @@ Par exemple, dans une queue pour la caisse d'un magasin, le nombre de clients es
 
 \textcolor{green!70!black}{Qu’est- ce qui caractérise une variable aléatoire ?}
 
-## Fonction de répartition
+### Fonction de répartition
 
 Une variable aléatoire traduit le résultat d'une expérience aléatoire en nombre réel. La fonction de répartition transporte le calcul des probabilités concernant les réalisations de la variable aléatoire. C'est la fonction définie par : $$F_X(x) = P(X \leq x)$$ \textcolor{green!70!black}{Propriétés :}
 
@@ -476,7 +234,7 @@ Pour tout $x$, $0 \leq F_X(x) \leq 1$ $F_X$ est une fonction croissante. $\lim_{
 
 ![](images/fonction_repartition.png){width="50%" fig-align="center"}
 
-## Probabilité ponctuelle / Densité
+### Probabilité ponctuelle / Densité
 
 \textcolor{green!70!black}{CAS DISCRET : Probabilité ponctuelle}
 
@@ -488,9 +246,9 @@ La densité est la fonction qui décrit les variations de la fonction de répart
 
 \newpage
 
-# Fondements de probabilités : niveau basique
+## Fondements de probabilités : niveau basique
 
-## Moments
+### Moments
 
 \textcolor{green!70!black}{ESPÉRANCE}
 
@@ -514,7 +272,7 @@ Le centrage consiste à localiser la distribution autour de l'origine et la réd
 
 Le moment d'ordre r est défini par : $$\mu_r = E(X^r)$$ Le moment centré d'ordre r est défini ainsi : $$\mũ_r = E((X - E(X))^r)$$
 
-## Couples aléatoires
+### Couples aléatoires
 
 La fonction conjointe $$F_{X, Y}(x, y) = P(X \leq x \cap Y \leq y)$$ est appelée la distribution conjointe de X et Y.
 
@@ -1022,7 +780,7 @@ Une introduction de dissertation comprend obligatoirement (au minimum) cinq él�
 
 *Une « accroche », c'est une phrase ou deux qui vont contenir la ou les deux notion(s) du sujet*. Son rôle est d'amener par étapes le lecteur vers la question que vous allez poser. Elle sert donc d'introduction à l'introduction. Une accroche peut être une citation (il y en a toujours dans un cours) ou un fait récent (le chômage a-t-il baissé récemment ? Un candidat à l'élection présidentielle a-t-il dit qu'il fallait juger sa politique en fonction de son impact sur le niveau de chômage ?). Si on n'a pas de citation ou de fait relevant de l'actualité, on peut amener le sujet de façon plus habituelle.
 
-Il est important d'éviter un certain nombre de formules toutes faites et souvent utilisées comme « De tous temps\... », « De tous temps, les hommes\... » ou encore les affirmations très générales (et que vous ne justifierez pas) comme : « Le chômage est un phénomène économique important, c'est pourquoi il faut l'étudier ». Le défaut de tous ces débuts d'accroche, c'est qu'ils peuvent servir pour n'importe quel sujet et que cela se voit.
+Il est important d'éviter un certain nombre de formules toutes faites et souvent utilisées comme « De tous temps... », « De tous temps, les hommes... » ou encore les affirmations très générales (et que vous ne justifierez pas) comme : « Le chômage est un phénomène économique important, c'est pourquoi il faut l'étudier ». Le défaut de tous ces débuts d'accroche, c'est qu'ils peuvent servir pour n'importe quel sujet et que cela se voit.
 
 On met une accroche parce que cela permet de mentionner les termes du sujet sans commencer directement par une définition -- ce qui constitue l'étape suivante.
 
@@ -1052,7 +810,7 @@ Si vous faites correctement votre travail de définition des termes et de constr
 
 Une introduction doit toujours se terminer par une annonce du plan (ce n'est pas une option, c'est une obligation). L'annonce de plan dit à votre lecteur comment vous allez répondre au problème que vous venez de poser. Dans une dissertation, on ne joue pas sur le suspens. On ne cherche pas à surprendre son correcteur. Il faut donc annoncer le plan de manière à ce qu'il comprenne que vous allez répondre au problème posé par un raisonnement et qu'il comprenne aussi quels vont être les principales étapes de votre raisonnement (c'est-à-dire de votre devoir).
 
-Vous allez donc annoncer vos (deux ou trois) grandes parties. Il est conseillé fortement d'utiliser les formules (un peu lourdes en termes de style, mais très claires) « dans une première partie, nous montrerons que\... », puis « dans une deuxième partie, nous verrons que \... ». Quand vous ne le faites pas, il arrive trop souvent que votre lecteur ne sache pas si vous allez faire formellement deux ou trois parties -- pour peu que vous utilisiez des mots comme « et », « puis » ou « ensuite », qui peuvent aussi bien marquer des étapes à l'intérieur d'une grande partie que le passage d'une partie à une autre.
+Vous allez donc annoncer vos (deux ou trois) grandes parties. Il est conseillé fortement d'utiliser les formules (un peu lourdes en termes de style, mais très claires) « dans une première partie, nous montrerons que... », puis « dans une deuxième partie, nous verrons que ... ». Quand vous ne le faites pas, il arrive trop souvent que votre lecteur ne sache pas si vous allez faire formellement deux ou trois parties -- pour peu que vous utilisiez des mots comme « et », « puis » ou « ensuite », qui peuvent aussi bien marquer des étapes à l'intérieur d'une grande partie que le passage d'une partie à une autre.
 
 **La conclusion**
 

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.6.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SEP Guide - DATA Camp M1</title>
+<title>DATA Camp M1 – SEP Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,17 +35,23 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-29dedaace5d8918e049944c60b75f171.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -54,67 +60,96 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">SEP Guide</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Accueil</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./M1SEP.html" rel="" target="" aria-current="page">
- <span class="menu-text">M1 SEP</span></a>
+    <a class="nav-link active" href="./M1SEP.html" aria-current="page"> 
+<span class="menu-text">M1 SEP</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./M2SEP.html" rel="" target="">
- <span class="menu-text">M2 SEP</span></a>
+    <a class="nav-link" href="./M2SEP.html"> 
+<span class="menu-text">M2 SEP</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Exercices.html" rel="" target="">
- <span class="menu-text">Exercices</span></a>
+    <a class="nav-link" href="./Exercices.html"> 
+<span class="menu-text">Exercices</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Quizz.html" rel="" target="">
- <span class="menu-text">Quizz</span></a>
+    <a class="nav-link" href="./Quizz.html"> 
+<span class="menu-text">Quizz</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./LOGICIELS.html" rel="" target="">
- <span class="menu-text">Logiciels</span></a>
+    <a class="nav-link" href="./LOGICIELS.html"> 
+<span class="menu-text">Logiciels</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -127,35 +162,32 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#algèbre-linéaire-niveau-élémentaire" id="toc-algèbre-linéaire-niveau-élémentaire" class="nav-link active" data-scroll-target="#algèbre-linéaire-niveau-élémentaire">Algèbre Linéaire : niveau élémentaire</a>
+  <li><a href="#algèbre-linéaire" id="toc-algèbre-linéaire" class="nav-link active" data-scroll-target="#algèbre-linéaire">Algèbre Linéaire</a>
   <ul class="collapse">
-  <li><a href="#matrices" id="toc-matrices" class="nav-link" data-scroll-target="#matrices">Matrices</a></li>
-  <li><a href="#matrices-usuelles" id="toc-matrices-usuelles" class="nav-link" data-scroll-target="#matrices-usuelles">Matrices usuelles</a></li>
-  <li><a href="#opérations-de-base" id="toc-opérations-de-base" class="nav-link" data-scroll-target="#opérations-de-base">Opérations de base</a></li>
-  <li><a href="#multiplication-matricielle" id="toc-multiplication-matricielle" class="nav-link" data-scroll-target="#multiplication-matricielle">Multiplication matricielle</a></li>
-  <li><a href="#propriétés" id="toc-propriétés" class="nav-link" data-scroll-target="#propriétés">Propriétés</a></li>
-  <li><a href="#inverse" id="toc-inverse" class="nav-link" data-scroll-target="#inverse">Inverse</a></li>
-  <li><a href="#systèmes-linéaires" id="toc-systèmes-linéaires" class="nav-link" data-scroll-target="#systèmes-linéaires">Systèmes linéaires</a></li>
+  <li><a href="#trace-dune-matrice" id="toc-trace-dune-matrice" class="nav-link" data-scroll-target="#trace-dune-matrice">Trace d’une matrice</a></li>
+  <li><a href="#déterminant-dune-matrice" id="toc-déterminant-dune-matrice" class="nav-link" data-scroll-target="#déterminant-dune-matrice">Déterminant d’une matrice</a></li>
+  <li><a href="#déterminant-dune-matrice-2-times-2" id="toc-déterminant-dune-matrice-2-times-2" class="nav-link" data-scroll-target="#déterminant-dune-matrice-2-times-2">Déterminant d’une matrice <span class="math inline">\((2 \times 2)\)</span></a></li>
+  <li><a href="#déterminant-dune-matrice-diagonale" id="toc-déterminant-dune-matrice-diagonale" class="nav-link" data-scroll-target="#déterminant-dune-matrice-diagonale">Déterminant d’une matrice diagonale</a></li>
+  <li><a href="#espace-euclidien" id="toc-espace-euclidien" class="nav-link" data-scroll-target="#espace-euclidien">Espace Euclidien</a></li>
+  <li><a href="#orthogonalité" id="toc-orthogonalité" class="nav-link" data-scroll-target="#orthogonalité">Orthogonalité</a>
+  <ul class="collapse">
+  <li><a href="#normalisation-dun-vecteur" id="toc-normalisation-dun-vecteur" class="nav-link" data-scroll-target="#normalisation-dun-vecteur">Normalisation d’un vecteur</a></li>
+  <li><a href="#matrice-de-projection-orthogonale" id="toc-matrice-de-projection-orthogonale" class="nav-link" data-scroll-target="#matrice-de-projection-orthogonale">Matrice de Projection Orthogonale</a></li>
+  <li><a href="#construction-de-matrice-de-projection-orthogonale" id="toc-construction-de-matrice-de-projection-orthogonale" class="nav-link" data-scroll-target="#construction-de-matrice-de-projection-orthogonale">Construction de matrice de projection Orthogonale</a></li>
+  <li><a href="#procédé-dorthogonalisation-de-gram-schmidt" id="toc-procédé-dorthogonalisation-de-gram-schmidt" class="nav-link" data-scroll-target="#procédé-dorthogonalisation-de-gram-schmidt">Procédé d’orthogonalisation de Gram-Schmidt</a></li>
   </ul></li>
-  <li><a href="#algèbre-linéaire-niveau-basique" id="toc-algèbre-linéaire-niveau-basique" class="nav-link" data-scroll-target="#algèbre-linéaire-niveau-basique">Algèbre linéaire : niveau basique</a>
+  <li><a href="#base-duale" id="toc-base-duale" class="nav-link" data-scroll-target="#base-duale">Base duale</a></li>
+  <li><a href="#diagonalisation-dune-matrice" id="toc-diagonalisation-dune-matrice" class="nav-link" data-scroll-target="#diagonalisation-dune-matrice">Diagonalisation d’une matrice</a>
   <ul class="collapse">
-  <li><a href="#déterminant" id="toc-déterminant" class="nav-link" data-scroll-target="#déterminant">Déterminant</a></li>
-  <li><a href="#diagonalisation" id="toc-diagonalisation" class="nav-link" data-scroll-target="#diagonalisation">Diagonalisation</a></li>
-  <li><a href="#matrice-symétrique" id="toc-matrice-symétrique" class="nav-link" data-scroll-target="#matrice-symétrique">Matrice symétrique</a></li>
-  <li><a href="#produit-scalaire" id="toc-produit-scalaire" class="nav-link" data-scroll-target="#produit-scalaire">Produit scalaire</a></li>
-  <li><a href="#norme" id="toc-norme" class="nav-link" data-scroll-target="#norme">Norme</a></li>
-  <li><a href="#orthogonalité" id="toc-orthogonalité" class="nav-link" data-scroll-target="#orthogonalité">Orthogonalité</a></li>
-  <li><a href="#projection-orthogonale" id="toc-projection-orthogonale" class="nav-link" data-scroll-target="#projection-orthogonale">Projection orthogonale</a></li>
-  <li><a href="#matrice-orthogonale" id="toc-matrice-orthogonale" class="nav-link" data-scroll-target="#matrice-orthogonale">Matrice orthogonale</a></li>
+  <li><a href="#diagonalisation-dune-matrice-symétrique-réelle" id="toc-diagonalisation-dune-matrice-symétrique-réelle" class="nav-link" data-scroll-target="#diagonalisation-dune-matrice-symétrique-réelle">Diagonalisation d’une matrice symétrique réelle</a></li>
   </ul></li>
-  <li><a href="#fondements-de-probabilité-niveau-élémentaire" id="toc-fondements-de-probabilité-niveau-élémentaire" class="nav-link" data-scroll-target="#fondements-de-probabilité-niveau-élémentaire">Fondements de probabilité : niveau élémentaire</a>
+  </ul></li>
+  <li><a href="#statistiques-descriptives-univariées" id="toc-statistiques-descriptives-univariées" class="nav-link" data-scroll-target="#statistiques-descriptives-univariées">Statistiques Descriptives Univariées</a></li>
+  <li><a href="#statistiques-descriptives-bivariées" id="toc-statistiques-descriptives-bivariées" class="nav-link" data-scroll-target="#statistiques-descriptives-bivariées">Statistiques Descriptives Bivariées</a>
   <ul class="collapse">
-  <li><a href="#quelques-définitions" id="toc-quelques-définitions" class="nav-link" data-scroll-target="#quelques-définitions">Quelques définitions</a></li>
-  <li><a href="#evénements" id="toc-evénements" class="nav-link" data-scroll-target="#evénements">Evénements</a></li>
-  <li><a href="#partitions" id="toc-partitions" class="nav-link" data-scroll-target="#partitions">Partitions</a></li>
-  <li><a href="#tribus-et-boréliens" id="toc-tribus-et-boréliens" class="nav-link" data-scroll-target="#tribus-et-boréliens">Tribus et boréliens</a></li>
-  <li><a href="#mesure" id="toc-mesure" class="nav-link" data-scroll-target="#mesure">Mesure</a></li>
-  <li><a href="#probabilités" id="toc-probabilités" class="nav-link" data-scroll-target="#probabilités">Probabilités</a></li>
+  <li><a href="#définitions" id="toc-définitions" class="nav-link" data-scroll-target="#définitions">Définitions</a></li>
+  <li><a href="#probabilités" id="toc-probabilités" class="nav-link" data-scroll-target="#probabilités">Probabilités</a>
+  <ul class="collapse">
   <li><a href="#probabilités-conditionnelles" id="toc-probabilités-conditionnelles" class="nav-link" data-scroll-target="#probabilités-conditionnelles">Probabilités conditionnelles</a></li>
   <li><a href="#indépendance" id="toc-indépendance" class="nav-link" data-scroll-target="#indépendance">Indépendance</a></li>
   <li><a href="#variable-aléatoire" id="toc-variable-aléatoire" class="nav-link" data-scroll-target="#variable-aléatoire">Variable aléatoire</a></li>
@@ -166,6 +198,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#moments" id="toc-moments" class="nav-link" data-scroll-target="#moments">Moments</a></li>
   <li><a href="#couples-aléatoires" id="toc-couples-aléatoires" class="nav-link" data-scroll-target="#couples-aléatoires">Couples aléatoires</a></li>
+  </ul></li>
   <li><a href="#propriétés-1" id="toc-propriétés-1" class="nav-link" data-scroll-target="#propriétés-1">Propriétés</a></li>
   <li><a href="#vecteurs-aléatoires" id="toc-vecteurs-aléatoires" class="nav-link" data-scroll-target="#vecteurs-aléatoires">Vecteurs aléatoires</a></li>
   <li><a href="#lois-usuelles" id="toc-lois-usuelles" class="nav-link" data-scroll-target="#lois-usuelles">Lois usuelles</a></li>
@@ -191,7 +224,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#economie" id="toc-economie" class="nav-link" data-scroll-target="#economie">Economie</a>
   <ul class="collapse">
-  <li><a href="#définitions" id="toc-définitions" class="nav-link" data-scroll-target="#définitions">Définitions</a>
+  <li><a href="#définitions-1" id="toc-définitions-1" class="nav-link" data-scroll-target="#définitions-1">Définitions</a>
   <ul class="collapse">
   <li><a href="#macroéconomie" id="toc-macroéconomie" class="nav-link" data-scroll-target="#macroéconomie">Macroéconomie</a></li>
   <li><a href="#microéconomie" id="toc-microéconomie" class="nav-link" data-scroll-target="#microéconomie">Microéconomie</a></li>
@@ -217,7 +250,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   </ul></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="M1SEP.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
@@ -229,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -237,404 +270,231 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
 
-<section id="algèbre-linéaire-niveau-élémentaire" class="level1">
-<h1>Algèbre Linéaire : niveau élémentaire</h1>
-<section id="matrices" class="level2">
-<h2 class="anchored" data-anchor-id="matrices">Matrices</h2>
-<p>Une matrice est un tableau de nombres disposés en <span class="math inline">\(m\)</span> lignes et <span class="math inline">\(n\)</span> colonnes. Soit <span class="math inline">\(A\)</span> de taille <span class="math inline">\((m, n)\)</span> : <span class="math display">\[
-A = (a_{ij})_{i=1,\ldots,m \atop j=1,\ldots,n} =
-\begin{bmatrix}
-a_{11} &amp; \cdots &amp; a_{1n} \\
-\vdots &amp; \ddots &amp; \vdots \\
-a_{m1} &amp; \cdots &amp; a_{mn}
-\end{bmatrix}
-\]</span></p>
-<p>Le terme <span class="math inline">\(a_{ij}\)</span> est situé à la <span class="math inline">\(i\)</span>-ème ligne de la <span class="math inline">\(j\)</span>-ème colonne de la matrice <span class="math inline">\(A\)</span>.</p>
-<p></p>
-<p><span class="math display">\[
-A =
-\begin{bmatrix}
--2 &amp; 1 \\
-8 &amp; -3 \\
-1 &amp; 3
-\end{bmatrix}
-;\quad
-B =
-\begin{bmatrix}
--2 \\
--3 \\
-5
-\end{bmatrix}
-;\quad
-C =
-\begin{bmatrix}
-3 &amp; -1 &amp; 6
-\end{bmatrix}
-;\quad
-D =
-\begin{bmatrix}
-3 &amp; -1 \\
-4 &amp; -3
-\end{bmatrix}
-\]</span></p>
-<p><span class="math inline">\(A\)</span> est une matrice de taille <span class="math inline">\((3, 2)\)</span>, <span class="math inline">\(B\)</span> est une matrice de taille <span class="math inline">\((3, 1)\)</span>, <span class="math inline">\(C\)</span> est une matrice de taille <span class="math inline">\((1, 3)\)</span>, <span class="math inline">\(D\)</span> est une matrice de taille <span class="math inline">\((2, 2)\)</span>.</p>
-<p>Une matrice <span class="math inline">\((m, 1)\)</span> est dite matrice colonne. Une matrice <span class="math inline">\((1, n)\)</span> est dite une matrice ligne. Une matrice <span class="math inline">\((n, n)\)</span> est dite une matrice carrée d’ordre <span class="math inline">\(n\)</span>.</p>
-<p>On appelle transposée de <span class="math inline">\(A\)</span> (et on note <span class="math inline">\(A^t\)</span> ou <span class="math inline">\(A'\)</span>), la matrice dont les lignes sont les colonnes de <span class="math inline">\(A\)</span>, et dont les colonnes sont les lignes de <span class="math inline">\(A\)</span>.</p>
-<p> <span class="math display">\[
-A =
-\begin{bmatrix}
--2 &amp; 1 \\
-8 &amp; -3 \\
-1 &amp; 3
-\end{bmatrix}
-\Rightarrow
-A^t =
-\begin{bmatrix}
--2 &amp; 8 &amp; 1 \\
-1 &amp; -3 &amp; 3
-\end{bmatrix}
-\]</span></p>
-<p> <span class="math display">\[
-(A + B)^t = A^t + B^t
-\]</span> <span class="math display">\[
-(AB)^t = B^t A
-\]</span></p>
+
+<p>Ici, sera listé les pré-requis nécessaires pour le master SEP.</p>
+<p>Nous allons commencer par les bases des probabilités, de l’algèbre linéaire et des statisitques.</p>
+<section id="algèbre-linéaire" class="level1">
+<h1>Algèbre Linéaire</h1>
+<p>Nous allons vous rappeler les notions essentielles à connaître sur les matrices.</p>
+<section id="trace-dune-matrice" class="level2">
+<h2 class="anchored" data-anchor-id="trace-dune-matrice">Trace d’une matrice</h2>
+<div class="custom-box">
+<p>La <strong>trace</strong> d’une matrice carrée <span class="math inline">\(A\)</span> est la somme de ses éléments diagonaux : <span class="math display">\[\text{Tr}(A) = \sum_{i=1}^{n} a_{ii}\]</span></p>
+</div>
+<p>Propriétés : - La trace est linéaire : <span class="math display">\[\text{Tr}(A + B) = \text{Tr}(A) + \text{Tr}(B)\]</span> - Invariance par similitude : <span class="math display">\[\text{Tr}(AB) = \text{Tr}(BA)\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La trace d’une matrice ne change pas lorsqu’on change de base.</p>
+</div>
+</div>
 </section>
-<section id="matrices-usuelles" class="level2">
-<h2 class="anchored" data-anchor-id="matrices-usuelles">Matrices usuelles</h2>
-<p>Une matrice carrée d’ordre <span class="math inline">\(n\)</span> est dite diagonale lorsque, pour tout <span class="math inline">\(i \neq j\)</span>, on a <span class="math inline">\(a_{ij} = 0\)</span> : <span class="math display">\[
-A =
-\begin{bmatrix}
--2 &amp; 0 &amp; 0 \\
-0 &amp; -3 &amp; 0 \\
-0 &amp; 0 &amp; 5
-\end{bmatrix}
-\]</span></p>
-<p>La matrice unité <span class="math inline">\(I_n\)</span> est la matrice diagonale telle que <span class="math inline">\(\forall i = 1, \ldots, n\)</span>, <span class="math inline">\(a_{ii} = 1\)</span> : <span class="math display">\[
-I_3 =
-\begin{bmatrix}
-1 &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; 0 \\
-0 &amp; 0 &amp; 1
-\end{bmatrix}
-\]</span></p>
+<section id="déterminant-dune-matrice" class="level2">
+<h2 class="anchored" data-anchor-id="déterminant-dune-matrice">Déterminant d’une matrice</h2>
+<div class="custom-box">
+<p>Le déterminant d’une matrice <span class="math inline">\(A \in \mathcal{M}_{n\times n}\)</span> peut être calculé en utilisant le développement par rapport à une ligne ou une colonne : <span class="math display">\[\text{det}(A) = \sum_{j=1}^{n} (-1)^{i+j} a_{ij} \text{det}(A_{ij})\]</span> où (<span class="math inline">\(A_{ij}\)</span>) est la matrice obtenue en supprimant la (<span class="math inline">\(i\)</span>)-ème ligne et la (<span class="math inline">\(j\)</span>)-ème colonne de (<span class="math inline">\(A\)</span>).</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dans certains cas, il peut être long de calculer le déterminant d’une matrice. Pour remédier à cela, il est utile de connaître par coeur le calcul d’un déterminant d’une matrice de taille <span class="math inline">\(2 \times 2\)</span> et d’une matrice diagonale.</p>
+</div>
+</div>
 </section>
-<section id="opérations-de-base" class="level2">
-<h2 class="anchored" data-anchor-id="opérations-de-base">Opérations de base</h2>
-<p>Soient <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux matrices de même taille <span class="math inline">\((m, n)\)</span> de termes généraux respectifs <span class="math inline">\(a_{ij}\)</span> et <span class="math inline">\(b_{ij}\)</span>, et <span class="math inline">\(\lambda\)</span> un nombre réel.</p>
-<p><span class="math inline">\(A = B\)</span> si et seulement si <span class="math inline">\(a_{ij} = b_{ij}\)</span> pour tous <span class="math inline">\(i,j\)</span>.</p>
-<dl>
-<dt>La somme de <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> est la matrice de terme général <span class="math inline">\(a_{ij} + b_{ij}\)</span></dt>
-<dd>
-<p><span class="math display">\[
-A + B =
-\begin{bmatrix}
-5 + (-4) &amp; 2 + 1 \\
-6 + 1 &amp; 1 + (-3)
-\end{bmatrix}
-=
-\begin{bmatrix}
-1 &amp; 3 \\
-7 &amp; -2
-\end{bmatrix}
-\]</span></p>
-</dd>
-</dl>
-<p>Le produit de <span class="math inline">\(A\)</span> par <span class="math inline">\(\lambda\)</span> est la matrice de terme général <span class="math inline">\(\lambda a_{ij}\)</span> : <span class="math display">\[
-\lambda A =
-3 \times
-\begin{bmatrix}
-5 &amp; 2 \\
-6 &amp; 1
-\end{bmatrix}
-=
-\begin{bmatrix}
-15 &amp; 6 \\
-18 &amp; 3
-\end{bmatrix}
-\]</span></p>
-<p> <span class="math display">\[
-A =
-\begin{bmatrix}
-5 &amp; 2 \\
-6 &amp; 1
-\end{bmatrix}
-;\quad
-B =
-\begin{bmatrix}
--4 &amp; 1 \\
-1 &amp; -3
-\end{bmatrix}
-;\quad
-\lambda = 3
-\]</span> <span class="math display">\[
-A + B =
-\begin{bmatrix}
-1 &amp; 3 \\
-7 &amp; -2 \\
-\end{bmatrix}
-\hspace{2cm}
-\lambda A =
-\begin{bmatrix}
-15 &amp; 6 \\
-18 &amp; -2 \\
-\end{bmatrix}
-\]</span></p>
+<section id="déterminant-dune-matrice-2-times-2" class="level2">
+<h2 class="anchored" data-anchor-id="déterminant-dune-matrice-2-times-2">Déterminant d’une matrice <span class="math inline">\((2 \times 2)\)</span></h2>
+<p>Pour une matrice <span class="math inline">\(A \in \mathcal{M}_{2 \times 2}\)</span> de la forme : <span class="math display">\[A = \left(\begin{array}{cc} a &amp; b \\ c &amp; d \end{array} \right)\]</span> le déterminant se calcule en utilisant la formule suivante : <span class="math display">\[\text{det}(A) = ad - bc \]</span></p>
 </section>
-<section id="multiplication-matricielle" class="level2">
-<h2 class="anchored" data-anchor-id="multiplication-matricielle">Multiplication matricielle</h2>
-<p>Le produit de matrices A et B (noté <span class="math inline">\(AB\)</span>) n’est défini que si le nombre de colonnes de <span class="math inline">\(A\)</span> est égal au nombre de lignes de <span class="math inline">\(B\)</span>. C’est-à-dire <span class="math inline">\(A\)</span> doit être de taille <span class="math inline">\((m, p)\)</span> et <span class="math inline">\(B\)</span> de taille <span class="math inline">\((p, n)\)</span>. Alors <span class="math inline">\(AB\)</span> est de taille <span class="math inline">\((m, n)\)</span>. De plus, soient <span class="math inline">\(a_{ij}\)</span> et <span class="math inline">\(b_{ij}\)</span> les termes généraux respectifs de <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span>, alors le terme général de <span class="math inline">\(C\)</span> = <span class="math inline">\(AB\)</span> est <span class="math inline">\(c_{ij}\)</span> défini par : <span class="math display">\[
-c_{ij} = \sum_{k=1}^{p} a_{ik} b_{kj}
-\]</span> <span class="math display">\[A =
-\begin{bmatrix}
-2 &amp; -2 &amp; 1 \\
--3 &amp; 6 &amp; 8 \\
-5 &amp; 2 &amp; 1
-\end{bmatrix}
-\hspace{2cm}
-B = \begin{bmatrix}
--1 &amp; 5 \\
-1 &amp; 2 \\
-3 &amp; 4
-\end{bmatrix}\]</span> Alors, la matrice <span class="math inline">\(C = AB\)</span> est donnée par : <span class="math display">\[C = \begin{bmatrix}
--1 &amp; 10 \\
-33 &amp; 29 \\
-0 &amp; 33
-\end{bmatrix}\]</span></p>
-<p>En effet, l’élément qui se trouve au croisement de la i-ème ligne et la j-ème colonne est : <span class="math display">\[c_{ij} = \sum_{k=1}^{p} a_{ik} b_{kj}\]</span></p>
-<p>Par exemple, <span class="math display">\[c_{2,1} = (-3) \times (-1) + 6 \times 1 + 8 \times 3 = 33\]</span></p>
-<p></p>
+<section id="déterminant-dune-matrice-diagonale" class="level2">
+<h2 class="anchored" data-anchor-id="déterminant-dune-matrice-diagonale">Déterminant d’une matrice diagonale</h2>
+<p>Pour une matrice diagonale de la forme : <span class="math display">\[D =
+\left(\begin{array}{cccc}
+d_1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; d_2 &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; d_n
+\end{array}  \right)
+\]</span> le déterminant est le produit des éléments diagonaux : <span class="math display">\[\text{det}(D) = d_1 \times d_2 \times \cdots \times d_n\]</span></p>
+<p>Les déterminants sont particulièrement utiles en algèbre linéaire pour déterminer si une matrice est inversible (une matrice est inversible si et seulement si son déterminant est non nul) et pour résoudre des systèmes d’équations linéaires.</p>
 </section>
-<section id="propriétés" class="level2">
-<h2 class="anchored" data-anchor-id="propriétés">Propriétés</h2>
-<p>Le produit est distributif par rapport à l’addition. C’est-à-dire : <span class="math display">\[
-A (B + C) = AB + AC \quad \text{et} \quad (B + C)A = BA + CA
-\]</span></p>
-<p>Le produit est associatif, c’est-à-dire : <span class="math display">\[
-ABC = A(BC) = (AB)C
-\]</span></p>
-<p>Si A est une matrice carrée d’ordre n, alors <span class="math display">\[A I_n = I_n A = A\]</span></p>
-<p>Le produit de deux matrices peut être nul sans que l’une des deux matrices ne soit la matrice nulle, par exemple : <span class="math display">\[
-\begin{bmatrix}
-1 &amp; 2 \\
-2 &amp; 4
-\end{bmatrix} \times
-\begin{bmatrix}
--2 &amp; 10 \\
-1 &amp; -5
-\end{bmatrix}
-\]</span></p>
-</section>
-<section id="inverse" class="level2">
-<h2 class="anchored" data-anchor-id="inverse">Inverse</h2>
-<p>Une matrice carrée <span class="math inline">\(A\)</span> d’ordre <span class="math inline">\(n\)</span> est dite inversible lorsqu’il existe une matrice <span class="math inline">\(B\)</span> telle que : <span class="math display">\[ A B = B A = I_n \]</span> <span class="math inline">\(B\)</span> est alors notée <span class="math inline">\(A^{-1}\)</span>, l’inverse de <span class="math inline">\(A\)</span>.</p>
-</section>
-<section id="systèmes-linéaires" class="level2">
-<h2 class="anchored" data-anchor-id="systèmes-linéaires">Systèmes linéaires</h2>
-<p>Grâce au produit matriciel, on peut représenter un système linéaire par une équation matricielle. Soit le système linéaire de <span class="math inline">\(n\)</span> équations et <span class="math inline">\(p\)</span> inconnues :</p>
-<p><span class="math display">\[
-\begin{cases}
-a_{11} x_1 + a_{12} x_2 + \ldots + a_{1p} x_p = b_1 \\
-a_{21} x_1 + a_{22} x_2 + \ldots + a_{2p} x_p = b_2 \\
-a_{n1} x_1 + a_{n2} x_2 + \ldots + a_{np} x_p = b_n
-\end{cases}
-\]</span></p>
-<p>On peut le représenter par <span class="math inline">\(AX = B\)</span> où :</p>
-<p><span class="math display">\[A = \begin{bmatrix}
-a_{11} &amp; \ldots &amp; a_{1p} \\
-\vdots &amp; \ddots &amp; \vdots \\
-a_{n1} &amp; \ldots &amp; a_{np}
-\end{bmatrix} ;
-\hspace{2cm}
-X = \begin{bmatrix}
-x_1 \\
-\vdots \\
-x_p
-\end{bmatrix} ;
-\hspace{2cm}
-B = \begin{bmatrix}
-b_1 \\
-\vdots \\
-b_n
-\end{bmatrix}\]</span></p>
-</section>
-</section>
-<section id="algèbre-linéaire-niveau-basique" class="level1">
-<h1>Algèbre linéaire : niveau basique</h1>
-<section id="déterminant" class="level2">
-<h2 class="anchored" data-anchor-id="déterminant">Déterminant</h2>
-<p>Soit <span class="math inline">\(A = (a_{ij})\)</span> une matrice carrée d’ordre 2. Le déterminant de <span class="math inline">\(A\)</span> est le réel noté <span class="math inline">\(\text{det}(A)\)</span> tel que : <span class="math display">\[
-\text{det}(A) = \begin{vmatrix}
-a_{11} &amp; a_{12} \\
-a_{21} &amp; a_{22}
-\end{vmatrix} = a_{11}a_{22} - a_{12}a_{21}
-\]</span></p>
-<p>Soient <span class="math inline">\(A = (a_{ij})\)</span> et <span class="math inline">\(B = (b_{ij})\)</span> deux matrices carrées d’ordre <span class="math inline">\(n\)</span> et <span class="math inline">\(\lambda \in \mathbb{R}\)</span>. On a les propriétés suivantes :</p>
+<section id="espace-euclidien" class="level2">
+<h2 class="anchored" data-anchor-id="espace-euclidien">Espace Euclidien</h2>
+<div class="custom-box">
+<p>Un <strong>espace euclidien</strong> est un espace vectoriel réel de dimension finie muni d’une forme bilinéaire symétrique définie positive, appelée <strong>produit scalaire</strong> : <span class="math display">\[\langle x, y \rangle = x_1 y_1 + x_2 y_2 + \cdots + x_n y_n\]</span></p>
+</div>
+<p>Quelques propriétés importantes du produit scalaire : - <span class="math inline">\(\langle v, v \rangle = \|v\|_2^2 = \sum_{i=1}^{n} v_i^2\)</span> - <span class="math inline">\(\langle v, w \rangle = v^t w = \text{trace}(vw^t)\)</span> - <span class="math inline">\(\langle v, w \rangle = \langle w, v \rangle\)</span> - <span class="math inline">\(\langle v, w \rangle = 0 \iff v \perp w\)</span></p>
+<p>Quelques inégalités à connaître :</p>
 <ul>
-<li><span class="math inline">\(\text{det}(AB) = \text{det}(A) \cdot \text{det}(B) = \text{det}(BA)\)</span></li>
-<li><span class="math inline">\(\text{det}(A^T) = \text{det}(A)\)</span></li>
-<li><span class="math inline">\(\text{det}(\lambda A) = \lambda^n \cdot \text{det}(A)\)</span></li>
-<li>Si <span class="math inline">\(A\)</span> est diagonale, alors <span class="math inline">\(\text{det}(A) = a_{11}a_{22}\ldots a_{nn}\)</span></li>
-<li><span class="math inline">\(\text{det}(I_n) = 1\)</span></li>
-<li><span class="math inline">\(A\)</span> est inversible si et seulement si <span class="math inline">\(\text{det}(A) \neq 0\)</span></li>
-<li>Si <span class="math inline">\(\text{det}(A) \neq 0\)</span>, alors <span class="math inline">\(\text{det}(A^{-1}) = \frac{1}{\text{det}(A)}\)</span></li>
+<li>Inégalité de Cauchy-Schwarz : <span class="math display">\[|\langle x, y \rangle| \leq \|x\| \|y\|\]</span></li>
+<li>Inégalité triangulaire : <span class="math display">\[\|x + y\| \leq \|x\| + \|y\|\]</span></li>
 </ul>
-</section>
-<section id="diagonalisation" class="level2">
-<h2 class="anchored" data-anchor-id="diagonalisation">Diagonalisation</h2>
-<p></p>
-<p>Une valeur propre de <span class="math inline">\(A\)</span> est un scalaire <span class="math inline">\(\lambda\)</span> tel qu’il existe un vecteur colonne non nul <span class="math inline">\(V\)</span> vérifiant : <span class="math inline">\(AV = \lambda V\)</span>. <span class="math inline">\(V\)</span> est alors appelé vecteur propre de <span class="math inline">\(A\)</span> associé à <span class="math inline">\(\lambda\)</span>.</p>
-<p></p>
-<p>Une matrice carrée <span class="math inline">\(A\)</span> d’ordre <span class="math inline">\(n\)</span> est diagonalisable lorsqu’il existe une matrice diagonale <span class="math inline">\(D\)</span> et une matrice inversible <span class="math inline">\(P\)</span> telles que : <span class="math inline">\(A = PDP^{-1}\)</span>. <span class="math inline">\(D\)</span> est constituée des valeurs propres de <span class="math inline">\(A\)</span>. <span class="math inline">\(P\)</span> est obtenue par la concaténation des vecteurs propres de <span class="math inline">\(A\)</span>. Si les valeurs propres de <span class="math inline">\(A\)</span> sont distinctes, alors <span class="math inline">\(A\)</span> est diagonalisable (réciproque fausse).</p>
-</section>
-<section id="matrice-symétrique" class="level2">
-<h2 class="anchored" data-anchor-id="matrice-symétrique">Matrice symétrique</h2>
-<p>Une matrice carrée <span class="math inline">\(A\)</span> d’ordre <span class="math inline">\(n\)</span> est symétrique lorsque <span class="math inline">\(A^T = A\)</span>. Si <span class="math inline">\(A\)</span> est symétrique, alors :</p>
-<ul>
-<li><span class="math inline">\(A\)</span> a des valeurs propres réelles.</li>
-<li><span class="math inline">\(A\)</span> est diagonalisable.</li>
-<li>Il existe une matrice <span class="math inline">\(P\)</span> telle que <span class="math inline">\(P^{-1} = P^T\)</span> et <span class="math inline">\(A = PDP^{-1}\)</span>.</li>
-</ul>
-</section>
-<section id="produit-scalaire" class="level2">
-<h2 class="anchored" data-anchor-id="produit-scalaire">Produit scalaire</h2>
-<p>Soit <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, <span class="math inline">\(z\)</span> trois vecteurs de <span class="math inline">\(\mathbb{R}^n\)</span> et <span class="math inline">\(\lambda\)</span> un scalaire. On définit par produit scalaire (qu’on note <span class="math inline">\(\langle \cdot, \cdot \rangle\)</span>) toute application qui vérifie les propriétés suivantes :</p>
-<ul>
-<li><span class="math inline">\(\langle x + \lambda y, z \rangle = \langle x, z \rangle + \lambda \langle y, z \rangle\)</span></li>
-<li><span class="math inline">\(\langle x, y + \lambda z \rangle = \langle x, z \rangle + \lambda \langle x, z \rangle\)</span></li>
-<li><span class="math inline">\(\langle x, y \rangle = \langle y, x \rangle\)</span></li>
-<li><span class="math inline">\(\langle x, x \rangle \geq 0\)</span></li>
-<li><span class="math inline">\(\langle x, x \rangle = 0 \Rightarrow x = 0\)</span></li>
-</ul>
-<p>Le produit scalaire canonique et usuel est défini comme : <span class="math display">\[
-\langle x, y \rangle = \sum_{i=1}^{n} x_i \cdot y_i
-\]</span></p>
-</section>
-<section id="norme" class="level2">
-<h2 class="anchored" data-anchor-id="norme">Norme</h2>
-<p>On appelle norme associée à un produit scalaire le réel <span class="math inline">\(\|x\| = \sqrt{\langle x, x \rangle}\)</span>. Elle vérifie les propriétés suivantes :</p>
-<ul>
-<li><span class="math inline">\(|\langle x, y \rangle| \leq \|x\| \cdot \|y\|\)</span> (Inégalité de Cauchy-Schwartz)</li>
-<li><span class="math inline">\(\|x + y\| \leq \|x\| + \|y\|\)</span> (Inégalité triangulaire)</li>
-<li><span class="math inline">\(\|x\| \geq 0\)</span> avec égalité si <span class="math inline">\(x = 0\)</span></li>
-<li><span class="math inline">\(\|\lambda x\| = |\lambda| \cdot \|x\|\)</span></li>
-<li><span class="math inline">\(\|x + y\|^2 = \|x\|^2 + \|y\|^2 + 2\langle x, y \rangle\)</span></li>
-</ul>
-<p>Un vecteur est dit unitaire ou normé si <span class="math inline">\(\|x\| = 1\)</span></p>
 </section>
 <section id="orthogonalité" class="level2">
 <h2 class="anchored" data-anchor-id="orthogonalité">Orthogonalité</h2>
-<p>Deux vecteurs <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> sont dits orthogonaux si <span class="math inline">\(\langle x, y \rangle = 0\)</span>. On note <span class="math inline">\(x \perp y\)</span>.</p>
-<p>Une famille de vecteurs <span class="math inline">\(\{x_i\}\)</span> est dite orthogonale si tous ses vecteurs sont deux à deux orthogonaux. Toute famille orthogonale <span class="math inline">\(\{x_i\}_{i=1}^p\)</span> vérifie le théorème de Pythagore : <span class="math display">\[
-\left\|\sum_{i=1}^n x_i\right\|^2 = \sum_{i=1}^n \|x_i\|^2
+<p>Soient <span class="math inline">\(v\)</span> et <span class="math inline">\(w\)</span>, deux vecteurs appartenant à un espace vectoriel <span class="math inline">\(E\)</span> de dimension <span class="math inline">\(n\)</span>, muni du produit scalaire <span class="math inline">\(\langle \cdot, \cdot \rangle\)</span> associé à la norme euclidienne <span class="math inline">\(\|\cdot\|_2\)</span>.On note <span class="math inline">\(v = (v_1, \ldots, v_n)^t\)</span> et <span class="math inline">\(w = (w_1, \ldots, w_n)^t\)</span> où $ v_i$ et <span class="math inline">\(w_j\)</span> sont des scalaires (i.e.&nbsp;des réels).</p>
+<section id="normalisation-dun-vecteur" class="level3">
+<h3 class="anchored" data-anchor-id="normalisation-dun-vecteur">Normalisation d’un vecteur</h3>
+<p>La normalisation d’un vecteur <span class="math inline">\(v\)</span> est donnée par : <span class="math display">\[
+x = \frac{v}{\|v\|_2}
+\]</span> Ainsi, <span class="math inline">\(\|x\|_2 = 1\)</span>. Un espace vectoriel engendré par <span class="math inline">\(v_1, \ldots, v_p\)</span> est identique à celui engendré par leurs versions normalisées.</p>
+<p>Deux vecteurs <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> sont <strong>orthogonaux</strong> si leur produit scalaire est nul : <span class="math display">\[\langle x, y \rangle = 0\]</span> Une <strong>base orthonormale</strong> est une base où tous les vecteurs sont orthogonaux et de norme 1.</p>
+</section>
+<section id="matrice-de-projection-orthogonale" class="level3">
+<h3 class="anchored" data-anchor-id="matrice-de-projection-orthogonale">Matrice de Projection Orthogonale</h3>
+<div class="custom-box">
+<p>Soit <span class="math inline">\(E\)</span> un espace vectoriel muni d’un produit scalaire <span class="math inline">\(\langle \cdot, \cdot \rangle\)</span> et <span class="math inline">\(W\)</span> un sous-espace vectoriel de <span class="math inline">\(E\)</span>. La projection orthogonale d’un élément <span class="math inline">\(B\)</span> de <span class="math inline">\(E\)</span> sur <span class="math inline">\(W\)</span> est définie par : <span class="math display">\[\Pi_W B = \underset{a \in W}{argmin} \|B - a\|_2\]</span> La matrice de projection orthogonale de <span class="math inline">\(E\)</span> sur <span class="math inline">\(W\)</span> est notée <span class="math inline">\(\Pi_W\)</span>.</p>
+</div>
+<section id="propriétés" class="level4">
+<h4 class="anchored" data-anchor-id="propriétés">Propriétés</h4>
+<ul>
+<li><span class="math inline">\(\Pi_W^t = \Pi_W\)</span></li>
+<li><span class="math inline">\(\Pi_W^2 = \Pi_W\)</span></li>
+<li><span class="math inline">\(\text{trace}(\Pi_W) = \dim(\Pi_W)\)</span></li>
+<li><span class="math inline">\(\Pi_W^\perp = I_E - \Pi_W\)</span></li>
+</ul>
+<p>Pour tout <span class="math inline">\(B\)</span>, élément de <span class="math inline">\(E\)</span> : <span class="math display">\[
+\Pi_{W^\perp} B = B - \Pi_{W} B
 \]</span></p>
-<p>Soit <span class="math inline">\(E\)</span> un espace muni d’un produit scalaire et <span class="math inline">\(X\)</span> une partie de <span class="math inline">\(E\)</span>. On appelle orthogonal de <span class="math inline">\(X\)</span> et on note <span class="math inline">\(X^\perp\)</span> l’ensemble : <span class="math inline">\(X^\perp = \{y \in E \,|\, \forall x \in X, \langle x, y \rangle = 0\}\)</span>.</p>
-<p>On dit que <span class="math inline">\(\{e_i\}_{i=1}^p\)</span> est une base orthonormée de <span class="math inline">\(E\)</span> si et seulement si : - Si <span class="math inline">\(a_1e_1 + a_2e_2 + \ldots + a_ne_n = 0\)</span>, alors <span class="math inline">\(a_i = 0\)</span> pour tout <span class="math inline">\(i \in \{1, \ldots, n\}\)</span>.<br>
-- Pour tout <span class="math inline">\(x \in E\)</span>, il existe <span class="math inline">\(a_1, a_2, \ldots, a_n \in \mathbb{R}\)</span> tels que <span class="math inline">\(x = a_1e_1 + a_2e_2 + \ldots + a_ne_n\)</span>.<br>
-- <span class="math inline">\(e_i\)</span> est orthogonal à <span class="math inline">\(e_j\)</span> pour tout <span class="math inline">\(i \neq j\)</span>.<br>
-- Pour tout <span class="math inline">\(i \in \{1, \ldots, n\}\)</span>, <span class="math inline">\(\|e_i\| = 1\)</span>.</p>
-</section>
-<section id="projection-orthogonale" class="level2">
-<h2 class="anchored" data-anchor-id="projection-orthogonale">Projection orthogonale</h2>
-<p>Soit <span class="math inline">\(x\)</span> un vecteur d’un espace muni d’un produit scalaire <span class="math inline">\(E\)</span>. Soit <span class="math inline">\(F\)</span> un sous-espace vectoriel de <span class="math inline">\(E\)</span>, <span class="math inline">\(x\)</span> s’écrit de façon unique sous la forme : <span class="math inline">\(x = f + f^\perp\)</span> où <span class="math inline">\(f \in F\)</span> et <span class="math inline">\(f^\perp \in F^\perp\)</span>. On dit que <span class="math inline">\(f\)</span> est le projeté orthogonal de <span class="math inline">\(x\)</span> sur <span class="math inline">\(F\)</span> et on note <span class="math inline">\(f = P_F(x)\)</span>.</p>
-<p>Pour <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> de <span class="math inline">\(E\)</span>, on a <span class="math inline">\(\langle P_F(x),y\rangle = \langle x, P_F(y)\&gt;\)</span>.</p>
-<p>Si <span class="math inline">\((e_1, e_2, \ldots, e_n)\)</span> est une base orthonormée, alors : <span class="math inline">\(P_F(x) = \sum_{i=1}^n \langle x, e_i \rangle e_i\)</span></p>
-<p>Notons que : <span class="math inline">\(\|x - P_F(x)\| = \inf_{f \in F} \|x - f\|\)</span></p>
-</section>
-<section id="matrice-orthogonale" class="level2">
-<h2 class="anchored" data-anchor-id="matrice-orthogonale">Matrice orthogonale</h2>
-<p>Soit <span class="math inline">\(M\)</span> une matrice carrée d’ordre <span class="math inline">\(n\)</span>. On dit que <span class="math inline">\(M\)</span> est une matrice orthogonale si elle vérifie : <span class="math display">\[M \cdot M^T = M^T \cdot M = I_n\]</span></p>
-<p>Le déterminant d’une matrice orthogonale est égal à <span class="math inline">\(\pm 1\)</span>. L’ensemble des valeurs propres de <span class="math inline">\(M\)</span> est inclus dans l’ensemble <span class="math inline">\(\{0, 1\}\)</span>.</p>
 </section>
 </section>
-<section id="fondements-de-probabilité-niveau-élémentaire" class="level1">
-<h1>Fondements de probabilité : niveau élémentaire</h1>
-<section id="quelques-définitions" class="level2">
-<h2 class="anchored" data-anchor-id="quelques-définitions">Quelques définitions</h2>
+<section id="construction-de-matrice-de-projection-orthogonale" class="level3">
+<h3 class="anchored" data-anchor-id="construction-de-matrice-de-projection-orthogonale">Construction de matrice de projection Orthogonale</h3>
+<div class="custom-box">
+<p>Soient <span class="math inline">\(v_1, \ldots, v_p\)</span>, <span class="math inline">\(p\)</span> vecteurs de <span class="math inline">\(\mathbb{R}^n\)</span> avec <span class="math inline">\(p \leq n\)</span>. Si <span class="math inline">\((v_1, \ldots, v_p)\)</span> est une base orthogonale de <span class="math inline">\(\mathbb{R}^p\)</span> et <span class="math inline">\(W = \text{vect}(v_1, \ldots, v_p)\)</span>, alors la matrice de projection <span class="math inline">\(W\)</span> de <span class="math inline">\(\mathbb{R}^n\)</span> sur <span class="math inline">\(W\)</span> est : <span class="math display">\[
+W = V (V^t V)^{-1} V^t
+\]</span> où <span class="math inline">\(V\)</span> est la matrice dont les colonnes sont les vecteurs <span class="math inline">\(v_1, \ldots, v_p\)</span>.</p>
+</div>
+<p>Si <span class="math inline">\((v_1, \ldots, v_p)\)</span> est une base orthonormale de <span class="math inline">\(W\)</span>, alors : <span class="math display">\[
+W = V V^t
+\]</span></p>
+</section>
+<section id="procédé-dorthogonalisation-de-gram-schmidt" class="level3">
+<h3 class="anchored" data-anchor-id="procédé-dorthogonalisation-de-gram-schmidt">Procédé d’orthogonalisation de Gram-Schmidt</h3>
+<p>Le but du procédé de Gram-Schmidt est de prendre un ensemble de vecteurs linéairement indépendants <span class="math inline">\(( {v_1, v_2, \ldots, v_n})\)</span> et de produire un ensemble de vecteurs orthogonaux <span class="math inline">\(( {u_1, u_2, \ldots, u_n} )\)</span> qui engendrent le même sous-espace.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Avant de recourir au procédé de Gram-Schmidt, il faut s’assurer que les vecteurs ne soient pas déjà orthogonaux, cela serait une perte de temps de les recalculer. Ce calcul est long, il faut bien prendre son temps pour le faire et ne pas se précipiter.</p>
+</div>
+</div>
+<p><strong>Étapes du Procédé</strong></p>
+<p>Le premier vecteur orthogonal ( u_1 ) est le premier vecteur de l’ensemble original : <span class="math display">\[u_1 = v_1\]</span></p>
+<p>Pour chaque vecteur <span class="math inline">\(( v_k )\)</span> (où <span class="math inline">\(( k \geq 2 )\)</span>), on soustrait les projections orthogonales de <span class="math inline">\(( v_k )\)</span> sur les vecteurs orthogonaux précédemment calculés <span class="math inline">\(( u_1, u_2, \ldots, u_{k-1})\)</span> : <span class="math display">\[ u_k = v_k - \sum_{j=1}^{k-1} \frac{\langle v_k, u_j \rangle}{\langle u_j, u_j \rangle} u_j \]</span></p>
+<p>Si l’on souhaite obtenir une base orthonormale, chaque vecteur <span class="math inline">\(( u_k )\)</span> est normalisé pour obtenir <span class="math inline">\(( e_k )\)</span> : <span class="math display">\[ e_k = \frac{u_k}{||u_k||} \]</span></p>
+</section>
+</section>
+<section id="base-duale" class="level2">
+<h2 class="anchored" data-anchor-id="base-duale">Base duale</h2>
+<div class="custom-box">
+<p>Pour une base <span class="math inline">\(\{e_1, e_2, \ldots, e_n\}\)</span> d’un espace vectoriel <span class="math inline">\(E\)</span>, la <strong>base duale</strong> <span class="math inline">\((e^1, e^2, \ldots, e^n)\)</span> est définie par : <span class="math display">\[e^i(e_j) = \delta_{ij}\]</span> où <span class="math inline">\(\delta_{ij}\)</span> est le symbole de Kronecker.</p>
+</div>
+<p>La base duale permet de définir des formes linéaires et de travailler avec des espaces vectoriels de manière plus abstraite.</p>
+</section>
+<section id="diagonalisation-dune-matrice" class="level2">
+<h2 class="anchored" data-anchor-id="diagonalisation-dune-matrice">Diagonalisation d’une matrice</h2>
+<div class="custom-box">
+<p>Une matrice carrée <span class="math inline">\(A\)</span> est dite <strong>diagonalisable</strong> s’il existe une matrice diagonale <span class="math inline">\(D\)</span> et une matrice inversible <span class="math inline">\(P\)</span> telles que : <span class="math display">\[A = PDP^{-1}\]</span></p>
+<p><span class="math inline">\(D\)</span> est une matrice diagonale contenant les valeurs propres de <span class="math inline">\(A\)</span></p>
+</div>
+<section id="diagonalisation-dune-matrice-symétrique-réelle" class="level3">
+<h3 class="anchored" data-anchor-id="diagonalisation-dune-matrice-symétrique-réelle">Diagonalisation d’une matrice symétrique réelle</h3>
+<p>Pour les matrices symétriques réelles, on peut toujours trouver une base orthonormale de vecteurs propres, ce qui permet de les diagonaliser par une matrice orthogonale <span class="math inline">\(Q\)</span> : <span class="math display">\[A = QDQ^T\]</span> où <span class="math inline">\(Q\)</span> est une matrice orthogonale.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour que la propriété soit vérifiée, il est essentiel que la matrice soit réelle, c’est-à-dire sans composantes complexes. En effet, la symétrie d’une matrice complexe n’implique pas nécessairement la propriété en question</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="statistiques-descriptives-univariées" class="level1">
+<h1>Statistiques Descriptives Univariées</h1>
 <ul>
-<li>On appelle épreuve <span class="math inline">\(E\)</span> toute expérience probabiliste.</li>
-<li>On appelle univers de <span class="math inline">\(E\)</span> l’ensemble, généralement noté <span class="math inline">\(\Omega\)</span>, de tous les résultats possibles de l’épreuve <span class="math inline">\(E\)</span> (appelés “événements élémentaires”).</li>
+<li><p><strong>Moyenne</strong> : La moyenne arithmétique d’une série de valeurs <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span> est donnée par : <span class="math display">\[
+\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+\]</span></p></li>
+<li><p><strong>Médiane</strong> : La médiane est la valeur qui sépare la série en deux parties égales. Pour une série ordonnée, si <span class="math inline">\(n\)</span> est impair, la médiane est la valeur centrale. Si <span class="math inline">\(n\)</span> est pair, c’est la moyenne des deux valeurs centrales.</p></li>
+<li><p><strong>Variance</strong> : La variance mesure la dispersion des valeurs autour de la moyenne : <span class="math display">\[
+\text{Var}(X) = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2
+\]</span></p></li>
+<li><p><strong>Écart-type</strong> : L’écart-type est la racine carrée de la variance : <span class="math display">\[
+\sigma = \sqrt{\text{Var}(X)}
+\]</span></p></li>
 </ul>
-<p>Lancer une paire de dés équilibrés et en retenir la somme est une épreuve. <span class="math inline">\(\Omega = \{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}\)</span> <img src="images/deux_des.png" class="img-fluid" style="width:5.0%" data-fig-align="center"></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Plus l’écart-type est grand, plus les données sont dispersées autour de la moyenne.</p>
+</div>
+</div>
+<p>Les statistiques descriptives univariées sont essentielles pour résumer et comprendre les caractéristiques principales d’une seule variable. Elles sont largement utilisées en analyse de données pour obtenir une vue d’ensemble rapide et efficace. Elles permettent aussi d’identifier rapidement des valeurs extrêmes.</p>
 </section>
-<section id="evénements" class="level2">
-<h2 class="anchored" data-anchor-id="evénements">Evénements</h2>
-<p>Un événement est un sous-ensemble de <span class="math inline">\(\Omega\)</span>.</p>
+<section id="statistiques-descriptives-bivariées" class="level1">
+<h1>Statistiques Descriptives Bivariées</h1>
+<section id="définitions" class="level2">
+<h2 class="anchored" data-anchor-id="définitions">Définitions</h2>
 <ul>
-<li>L’intersection de <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span>, notée <span class="math inline">\(A \cap B\)</span>, est un événement. Il est réalisé uniquement si <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> se produisent.</li>
-<li>La réunion de <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span>, notée <span class="math inline">\(A \cup B\)</span>, est un événement. Il est réalisé si <span class="math inline">\(A\)</span> ou <span class="math inline">\(B\)</span> se produit. Deux événements remarquables sont à retenir :
-<ul>
-<li>L’événement certain <span class="math inline">\(\Omega\)</span> ;</li>
-<li>L’événement impossible <span class="math inline">\(\emptyset\)</span> ;</li>
-</ul></li>
-<li>Tous les éléments qui n’appartiennent pas à <span class="math inline">\(A\)</span> appartiennent à un événement que l’on appelle le complémentaire de <span class="math inline">\(A\)</span>. On le note <span class="math inline">\(\overline{A}\)</span> ou <span class="math inline">\(A^C\)</span>.</li>
-<li>On dit que deux événements <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont incompatibles s’ils ne peuvent pas être réalisés en même temps.</li>
+<li><strong>Covariance</strong> : La covariance entre deux variables <span class="math inline">\(X\)</span> et <span class="math inline">\(Y\)</span> mesure la manière dont deux variables varient ensemble. Elle est donnée par deux formules :</li>
 </ul>
-<p>Si <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> et <span class="math inline">\(C\)</span> sont des événements de <span class="math inline">\(\Omega\)</span>, les propriétés suivantes sont toujours vérifiées :</p>
-<ul>
-<li><span class="math inline">\(A \cup \overline{A} = \Omega\)</span> et <span class="math inline">\(A \cap \overline{A} = \emptyset\)</span></li>
-<li><span class="math inline">\(\overline{\overline{A} \cap \overline{B}} = \overline{A} \cup \overline{B}\)</span> et <span class="math inline">\(\overline{\overline{A} \cup \overline{B}} = \overline{A} \cap \overline{B}\)</span> (lois de De Morgan)</li>
-<li><span class="math inline">\(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\)</span></li>
-<li><span class="math inline">\(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\)</span></li>
-</ul>
-</section>
-<section id="partitions" class="level2">
-<h2 class="anchored" data-anchor-id="partitions">Partitions</h2>
-<p>La famille d’événements forme une partition de <span class="math inline">\(\Omega\)</span> si : <span class="math display">\[
-\bigcup_{i \in I} A_i = \Omega \quad \text{et} \quad A_i \cap A_j = \emptyset \text{ pour tout } i \neq j.
-\]</span> Une partition remarquable est la famille qui contient l’événement <span class="math inline">\(A\)</span> et son complémentaire.</p>
-</section>
-<section id="tribus-et-boréliens" class="level2">
-<h2 class="anchored" data-anchor-id="tribus-et-boréliens">Tribus et boréliens</h2>
-<p><img src="images/venn_diagrams.jpg" class="img-fluid" style="width:50.0%" data-fig-align="center"> <img src="images/AnBnC.png" class="img-fluid" style="width:50.0%" data-fig-align="center"></p>
-<p></p>
-<p>Une tribu est une famille <span class="math inline">\(T\)</span> de parties de l’ensemble <span class="math inline">\(\Omega\)</span> qui vérifie les propriétés suivantes : - <span class="math inline">\(\Omega \in T\)</span><br>
-- Si <span class="math inline">\((A_n)\)</span> est une suite dénombrable d’éléments de <span class="math inline">\(T\)</span>, alors <span class="math inline">\(\bigcup A_n \in T\)</span><br>
-— Si <span class="math inline">\(A\)</span> est un élément de <span class="math inline">\(T\)</span>, alors son complémentaire l’est aussi.</p>
-<p>De plus, si <span class="math inline">\(T\)</span> est une tribu, alors : - <span class="math inline">\(\emptyset \in T\)</span><br>
-- Si <span class="math inline">\((A_n)\)</span> est une suite d’éléments de <span class="math inline">\(T\)</span>, alors <span class="math inline">\(\bigcap A_n \in T\)</span>.</p>
-<p></p>
-<p>Pour le cas discret, on considère l’expérience “Lancer une pièce de monnaie équilibrée”.<br>
-On notera : <span class="math inline">\(P\)</span> pour “PILE apparaît” et <span class="math inline">\(F\)</span> pour “FACE apparaît”.<br>
-Dans ce cas, l’univers est l’ensemble <span class="math inline">\(\{P, F\}\)</span> et <span class="math inline">\(T = \{\Omega, \emptyset, P, F\}\)</span> est une tribu.<br>
-En général, l’ensemble des parties est une tribu classique.</p>
-<p>Pour le cas continu, les intervalles du type <span class="math inline">\([a, +\infty[\)</span>, <span class="math inline">\(]a, +\infty[\)</span>, <span class="math inline">\(]-\infty, a[\)</span>, <span class="math inline">\(]-\infty, a]\)</span> sont des tribus. Nous les appelons DES BORÉLIENS.</p>
-<p></p>
-<p>Soient <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> deux événements. Les propriétés suivantes sont toujours vraies :</p>
 <ol type="1">
-<li><span class="math inline">\(P(A^C) = 1 - P(A)\)</span><br>
-</li>
-<li><span class="math inline">\(P(B) = P(A \cap B) + P(A^C \cap B)\)</span><br>
-</li>
-<li>Si <span class="math inline">\(A \subset B\)</span>, alors <span class="math inline">\(P(A) \leq P(B)\)</span><br>
-</li>
-<li><span class="math inline">\(0 \leq P(A) \leq 1\)</span><br>
-</li>
-<li><span class="math inline">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</span></li>
+<li><p>Pour un échantillon de données : <span class="math display">\[
+\text{Cov}(X, Y) = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})
+\]</span> où <span class="math inline">\(x_i\)</span> et <span class="math inline">\(y_i\)</span> sont les valeurs des échantillons, et <span class="math inline">\(\bar{x}\)</span> et <span class="math inline">\(\bar{y}\)</span> sont les moyennes des échantillons.</p></li>
+<li><p>Pour des variables aléatoires : <span class="math display">\[
+\text{Cov}(X, Y) = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y]
+\]</span> où <span class="math inline">\(\mathbb{E}[X]\)</span> et <span class="math inline">\(\mathbb{E}[Y]\)</span> sont les espérances (moyennes théoriques) des variables aléatoires <span class="math inline">\(X\)</span> et <span class="math inline">\(Y\)</span>.</p></li>
 </ol>
-<p>De plus, en considérant une suite <span class="math inline">\((A_k)\)</span> d’événements, on a les relations suivantes : <span class="math display">\[
-\begin{aligned}
-P\left(\bigcup A_k\right) &amp; = \lim_{n \to +\infty} P\left(\bigcup_{k=1}^n A_k\right) \\
-P\left(\bigcap A_k\right) &amp; = \lim_{n \to +\infty} P\left(\bigcap_{k=1}^n A_k\right) \\
-P\left(\bigcup A_k\right) &amp; \leq \sum_{k=1}^{+\infty} P(A_k)
-\end{aligned}
-\]</span></p>
-<p>Et si <span class="math inline">\(\bigcup A_k = \Omega\)</span>, alors : <span class="math display">\[
-P(B) = \sum_{k=1}^{+\infty} P(B \cap A_k)
-\]</span></p>
-</section>
-<section id="mesure" class="level2">
-<h2 class="anchored" data-anchor-id="mesure">Mesure</h2>
-<p>Soit <span class="math inline">\(E\)</span> un ensemble muni d’une tribu <span class="math inline">\(T\)</span>. On appelle mesure toute application <span class="math inline">\(m : T \rightarrow \mathbb{R}^+\)</span> telle que : - <span class="math inline">\(m(\emptyset) = 0\)</span> - Si <span class="math inline">\((A_n)\)</span> est une suite d’éléments de <span class="math inline">\(T\)</span> deux à deux disjoints alors : <span class="math display">\[m\left(\bigcup_n A_n\right) = \sum_n m(A_n).\]</span></p>
+<ul>
+<li><strong>Régression linéaire</strong>:</li>
+</ul>
+<p>La régression linéaire est une méthode statistique qui permet de modéliser la relation entre deux variables en ajustant une ligne droite à un ensemble de données. L’équation de la régression linéaire est : <span class="math display">\[
+y = a + bx
+\]</span> où <span class="math inline">\(y\)</span> est la variable dépendante, <span class="math inline">\(x\)</span> est la variable indépendante, <span class="math inline">\(a\)</span> est l’ordonnée à l’origine (l’interception de la ligne avec l’axe des ordonnées), et <span class="math inline">\(b\)</span> est la pente de la ligne (le taux de changement de <span class="math inline">\(y\)</span> par rapport à <span class="math inline">\(x\)</span>).</p>
 </section>
 <section id="probabilités" class="level2">
 <h2 class="anchored" data-anchor-id="probabilités">Probabilités</h2>
 <p>Soit <span class="math inline">\(E\)</span> un ensemble muni d’une tribu <span class="math inline">\(T\)</span>. On appelle probabilité toute application <span class="math inline">\(P : T \rightarrow \mathbb{R}^+\)</span> telle que : - <span class="math inline">\(P(\emptyset) = 0\)</span> - Si <span class="math inline">\((A_n)\)</span> est une suite d’éléments de <span class="math inline">\(T\)</span> deux à deux disjoints alors : <span class="math display">\[P\left(\bigcup_n A_n\right) = \sum_n P(A_n).\]</span></p>
-</section>
-<section id="probabilités-conditionnelles" class="level2">
-<h2 class="anchored" data-anchor-id="probabilités-conditionnelles">Probabilités conditionnelles</h2>
+<section id="probabilités-conditionnelles" class="level3">
+<h3 class="anchored" data-anchor-id="probabilités-conditionnelles">Probabilités conditionnelles</h3>
 <p>En théorie des probabilités, nous nous intéressons souvent au comportement d’un aléa, sachant qu’un autre événement est déjà passé. C’est ce que nous appelons Les Probabilités Conditionnelles.</p>
 <p>Considérant deux événements de probabilité non nulle, <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span>, la probabilité conditionnelle de <span class="math inline">\(A\)</span> sachant que <span class="math inline">\(B\)</span> est réalisé (couramment dit <span class="math inline">\(A\)</span> sachant <span class="math inline">\(B\)</span>) est donnée par : <span class="math display">\[
 P(A|B) = \frac{P(A \cap B)}{P(B)}
@@ -647,41 +507,41 @@ P(B|A) = \frac{P(A|B) \cdot P(B)}{P(A)}
 \]</span></p>
 <p>C’est ce que nous appelons .</p>
 </section>
-<section id="indépendance" class="level2">
-<h2 class="anchored" data-anchor-id="indépendance">Indépendance</h2>
+<section id="indépendance" class="level3">
+<h3 class="anchored" data-anchor-id="indépendance">Indépendance</h3>
 <p>Deux événements <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont dits indépendants si et seulement si : <span class="math display">\[P(A \cap B) = P(A) \cdot P(B)\]</span> En termes courants, deux événements sont indépendants si le résultat de l’un n’influence aucunement l’aboutissement de l’autre. Sous condition d’indépendance de <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span>, la notion de la probabilité conditionnelle tombe à l’eau, car les événements évoluent l’un sans se soucier de l’autre. Ceci se traduit par : <span class="math display">\[P(A|B) = P(A)\]</span> <span class="math display">\[P(B|A) = P(B)\]</span></p>
 <p>Notons que si <span class="math inline">\(A\)</span> est indépendant de <span class="math inline">\(B\)</span>, il le sera par rapport à son complémentaire également, et vice versa. En général, pour une suite <span class="math inline">\((A_n)\)</span> d’événements indépendants, on a : <span class="math display">\[P\left(\bigcap A_i\right) = \prod P(A_i) = P(A_1) \cdot \ldots \cdot P(A_n)\]</span> Cette formule est largement utilisée en statistique.</p>
 <p></p>
 </section>
-<section id="variable-aléatoire" class="level2">
-<h2 class="anchored" data-anchor-id="variable-aléatoire">Variable aléatoire</h2>
+<section id="variable-aléatoire" class="level3">
+<h3 class="anchored" data-anchor-id="variable-aléatoire">Variable aléatoire</h3>
 <p>Une variable aléatoire est un nombre qui dépend du résultat d’une expérience aléatoire. Chaque exécution de l’expérience génère une réalisation de la variable aléatoire.</p>
 <p>Mathématiquement, on définit une variable aléatoire X comme une fonction <span class="math inline">\(X : T \rightarrow \mathbb{R}\)</span> qui associe à chaque événement s, un réel <span class="math inline">\(X(s)\)</span>.</p>
 <p>Par exemple, dans une queue pour la caisse d’un magasin, le nombre de clients est une variable aléatoire. La durée de traitement de chaque requête aussi. Remarquons que la première est un nombre entier. On dit qu’elle est à support discret. Alors que la deuxième est une durée (un nombre réel). On dit qu’elle est à support continu.</p>
 <p></p>
 </section>
-<section id="fonction-de-répartition" class="level2">
-<h2 class="anchored" data-anchor-id="fonction-de-répartition">Fonction de répartition</h2>
+<section id="fonction-de-répartition" class="level3">
+<h3 class="anchored" data-anchor-id="fonction-de-répartition">Fonction de répartition</h3>
 <p>Une variable aléatoire traduit le résultat d’une expérience aléatoire en nombre réel. La fonction de répartition transporte le calcul des probabilités concernant les réalisations de la variable aléatoire. C’est la fonction définie par : <span class="math display">\[F_X(x) = P(X \leq x)\]</span> </p>
 <p>Pour tout <span class="math inline">\(x\)</span>, <span class="math inline">\(0 \leq F_X(x) \leq 1\)</span> <span class="math inline">\(F_X\)</span> est une fonction croissante. <span class="math inline">\(\lim_{x \to -\infty} F_X(x) = 0\)</span> et <span class="math inline">\(\lim_{x \to \infty} F_X(x) = 1\)</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/fonction_repartition.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="images/fonction_repartition.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 </section>
-<section id="probabilité-ponctuelle-densité" class="level2">
-<h2 class="anchored" data-anchor-id="probabilité-ponctuelle-densité">Probabilité ponctuelle / Densité</h2>
+<section id="probabilité-ponctuelle-densité" class="level3">
+<h3 class="anchored" data-anchor-id="probabilité-ponctuelle-densité">Probabilité ponctuelle / Densité</h3>
 <p></p>
 <p>La probabilité ponctuelle est la fonction qui décrit les sauts de la fonction de répartition : <span class="math display">\[P(X = k) = P(X \leq k) - P(X \leq k - 1) = p_k\]</span> <span class="math display">\[\sum p_i = 1\]</span></p>
 <p></p>
 <p>La densité est la fonction qui décrit les variations de la fonction de répartition : <span class="math display">\[f(x) = \frac{dF_X}{dx}(x)\]</span> <span class="math display">\[\int f(x) dx = 1\]</span></p>
 </section>
 </section>
-<section id="fondements-de-probabilités-niveau-basique" class="level1">
-<h1>Fondements de probabilités : niveau basique</h1>
-<section id="moments" class="level2">
-<h2 class="anchored" data-anchor-id="moments">Moments</h2>
+<section id="fondements-de-probabilités-niveau-basique" class="level2">
+<h2 class="anchored" data-anchor-id="fondements-de-probabilités-niveau-basique">Fondements de probabilités : niveau basique</h2>
+<section id="moments" class="level3">
+<h3 class="anchored" data-anchor-id="moments">Moments</h3>
 <p></p>
 <p>L’espérance d’une variable aléatoire est sa valeur attendue. C’est une mesure de localisation de la distribution.</p>
 <p>Dans le cas discret : <span class="math display">\[E(X) = \sum k \cdot P(X = k)\]</span> <span class="math display">\[k \in X(\Omega)\]</span> Alors que dans le cas continu : <span class="math display">\[E(X) = \int x \cdot f_X(x) \, dx\]</span> <span class="math display">\[x \in X(\Omega)\]</span></p>
@@ -693,8 +553,8 @@ P(B|A) = \frac{P(A|B) \cdot P(B)}{P(A)}
 <p></p>
 <p>Le moment d’ordre r est défini par : <span class="math display">\[\mu_r = E(X^r)\]</span> Le moment centré d’ordre r est défini ainsi : <span class="math display">\[\mũ_r = E((X - E(X))^r)\]</span></p>
 </section>
-<section id="couples-aléatoires" class="level2">
-<h2 class="anchored" data-anchor-id="couples-aléatoires">Couples aléatoires</h2>
+<section id="couples-aléatoires" class="level3">
+<h3 class="anchored" data-anchor-id="couples-aléatoires">Couples aléatoires</h3>
 <p>La fonction conjointe <span class="math display">\[F_{X, Y}(x, y) = P(X \leq x \cap Y \leq y)\]</span> est appelée la distribution conjointe de X et Y.</p>
 <p>Dans le cas continu, la fonction définie par : <span class="math display">\[f_{X, Y}(x, y) = \frac{\partial^2 F_{X, Y}(x, y)}{\partial x \partial y}\]</span> est la densité conjointe du couple (X, Y). On a donc : <span class="math display">\[F_{X, Y}(x, y) = \int \int f_{X, Y}(t, u) \, dt \, du, \text{ où } -\infty &lt; x, y &lt; +\infty,\]</span></p>
 <p>Dans le cas discret, on définit la fonction de probabilité conjointe : <span class="math display">\[P(X = x_i, Y = y_j) = p_{ij}\]</span> On a donc : <span class="math display">\[F_{X, Y}(x, y) = \sum \sum p_{ij}, \text{ où } x_i \leq x \text{ et } y_j \leq y\]</span></p>
@@ -705,6 +565,7 @@ P(B|A) = \frac{P(A|B) \cdot P(B)}{P(A)}
 <p>La covariance mesure l’intensité de la relation linéaire entre deux variables aléatoires X et Y. Elle est définie comme suit : <span class="math display">\[Cov(X, Y) = E(XY) - E(X) \cdot E(Y)\]</span></p>
 <p>Si X et Y sont indépendants, alors : <span class="math display">\[Cov(X, Y) = 0\]</span></p>
 <p></p>
+</section>
 </section>
 <section id="propriétés-1" class="level2">
 <h2 class="anchored" data-anchor-id="propriétés-1">Propriétés</h2>
@@ -782,7 +643,7 @@ V(X_1) &amp; \ldots &amp; \text{Cov}(X_1, X_n) \\
 <p>On dit que <span class="math inline">\((X_n)\)</span> converge en moyenne quadratique vers <span class="math inline">\(X\)</span> et on note <span class="math inline">\(X_n \xrightarrow{m.q.} X\)</span> si et seulement si : <span class="math inline">\(\mathbb{E}((X_n - X)^2) \rightarrow 0\)</span> Cette définition peut se généraliser jusqu’à l’ordre <span class="math inline">\(n\)</span>, mais nous n’en aurons pas besoin.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/convergence.png" class="img-fluid figure-img" style="width:30.0%"></p>
+<p><img src="images/convergence.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
 </figure>
 </div>
 </section>
@@ -858,7 +719,7 @@ S_n^2 = \frac{1}{n} \sum_{i=1}^{n} (X_i - \overline{X})^2\]</span></p>
 <p>On appellera la première (celle dont le rejet à tort sera le plus préjudiciable) « Hypothèse nulle » et la deuxième « Hypothèse alternative ».</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/test_hypo.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="images/test_hypo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 <p>Les calculs qui se cachent derrière le choix de l’hypothèse à garder sont compliqués. Mais BONNE NOUVELLE, la machine fera tour à notre place. Il suffit juste de suivre correctement la méthode :</p>
@@ -874,13 +735,13 @@ S_n^2 = \frac{1}{n} \sum_{i=1}^{n} (X_i - \overline{X})^2\]</span></p>
 </section>
 <section id="economie" class="level1">
 <h1>Economie</h1>
-<section id="définitions" class="level2">
-<h2 class="anchored" data-anchor-id="définitions">Définitions</h2>
+<section id="définitions-1" class="level2">
+<h2 class="anchored" data-anchor-id="définitions-1">Définitions</h2>
 <section id="macroéconomie" class="level3">
 <h3 class="anchored" data-anchor-id="macroéconomie">Macroéconomie</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/macroeconomics.png" class="img-fluid figure-img" width="73"></p>
+<p><img src="images/macroeconomics.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="73"></p>
 </figure>
 </div>
 <p>La macroéconomie est l’étude économique d’un système ou de phénomènes à un niveau global de l’économie.</p>
@@ -902,7 +763,7 @@ S_n^2 = \frac{1}{n} \sum_{i=1}^{n} (X_i - \overline{X})^2\]</span></p>
 <h3 class="anchored" data-anchor-id="marché">Marché</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/economie-circulaire.png" class="img-fluid figure-img" width="73"></p>
+<p><img src="images/economie-circulaire.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="73"></p>
 </figure>
 </div>
 <p>“Le marché c’est une institution sociale qui permet l’échange entre l’offre et la demande.”</p>
@@ -986,7 +847,7 @@ t : Temps
 <p><em>“On tient tout d’abord à remercier l’enseignant chercheur (en Philosophie économique, Théories économiques de la justice, Redistribution des revenus, Economie sociale, Economie publique), monsieur <strong>Jean-Sébastien Gharbi</strong> pour cette rubrique d’aide à la dissertation.”</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/dissertation.png" class="img-fluid figure-img" width="320"></p>
+<p><img src="images/dissertation.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="320"></p>
 </figure>
 </div>
 <p>On pense souvent que la dissertation en économie est un exercice difficile et qui récompense mal le travail. C’est totalement faux. La dissertation est un exercice dans lequel il est facile d’obtenir la moyenne, et même (avec un peu d’entraînement) d’obtenir systématiquement de très bonnes notes. C’est un exercice relativement facile parce que c’est un exercice en très grande partie formel&nbsp;: tout est une question de méthode.</p>
@@ -1006,7 +867,7 @@ t : Temps
 <p><u><strong>Comment on fait une dissertation ?</strong></u></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/question-02.png" class="img-fluid figure-img" width="174"></p>
+<p><img src="images/question-02.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="174"></p>
 </figure>
 </div>
 <section id="analyse-du-sujet" class="level3">
@@ -1051,7 +912,7 @@ t : Temps
 </ul>
 <p><strong><em>Une introduction de dissertation suit des règles assez rigides. Elle commence toujours par une accroche</em></strong>.</p>
 <p><em>Une «&nbsp;accroche&nbsp;», c’est une phrase ou deux qui vont contenir la ou les deux notion(s) du sujet</em>. Son rôle est d’amener par étapes le lecteur vers la question que vous allez poser. Elle sert donc d’introduction à l’introduction. Une accroche peut être une citation (il y en a toujours dans un cours) ou un fait récent (le chômage a-t-il baissé récemment&nbsp;? Un candidat à l’élection présidentielle a-t-il dit qu’il fallait juger sa politique en fonction de son impact sur le niveau de chômage&nbsp;?). Si on n’a pas de citation ou de fait relevant de l’actualité, on peut amener le sujet de façon plus habituelle.</p>
-<p>Il est important d’éviter un certain nombre de formules toutes faites et souvent utilisées comme «&nbsp;De tous temps...&nbsp;», «&nbsp;De tous temps, les hommes...&nbsp;» ou encore les affirmations très générales (et que vous ne justifierez pas) comme&nbsp;: «&nbsp;Le chômage est un phénomène économique important, c’est pourquoi il faut l’étudier&nbsp;». Le défaut de tous ces débuts d’accroche, c’est qu’ils peuvent servir pour n’importe quel sujet et que cela se voit.</p>
+<p>Il est important d’éviter un certain nombre de formules toutes faites et souvent utilisées comme «&nbsp;De tous temps…&nbsp;», «&nbsp;De tous temps, les hommes…&nbsp;» ou encore les affirmations très générales (et que vous ne justifierez pas) comme&nbsp;: «&nbsp;Le chômage est un phénomène économique important, c’est pourquoi il faut l’étudier&nbsp;». Le défaut de tous ces débuts d’accroche, c’est qu’ils peuvent servir pour n’importe quel sujet et que cela se voit.</p>
 <p>On met une accroche parce que cela permet de mentionner les termes du sujet sans commencer directement par une définition – ce qui constitue l’étape suivante.</p>
 <ul>
 <li><strong>Définition des termes du sujet</strong></li>
@@ -1074,7 +935,7 @@ t : Temps
 <li><strong>Annonce du plan</strong></li>
 </ul>
 <p>Une introduction doit toujours se terminer par une annonce du plan (ce n’est pas une option, c’est une obligation). L’annonce de plan dit à votre lecteur comment vous allez répondre au problème que vous venez de poser. Dans une dissertation, on ne joue pas sur le suspens. On ne cherche pas à surprendre son correcteur. Il faut donc annoncer le plan de manière à ce qu’il comprenne que vous allez répondre au problème posé par un raisonnement et qu’il comprenne aussi quels vont être les principales étapes de votre raisonnement (c’est-à-dire de votre devoir).</p>
-<p>Vous allez donc annoncer vos (deux ou trois) grandes parties. Il est conseillé fortement d’utiliser les formules (un peu lourdes en termes de style, mais très claires) «&nbsp;dans une première partie, nous montrerons que...&nbsp;», puis «&nbsp;dans une deuxième partie, nous verrons que ...&nbsp;». Quand vous ne le faites pas, il arrive trop souvent que votre lecteur ne sache pas si vous allez faire formellement deux ou trois parties – pour peu que vous utilisiez des mots comme «&nbsp;et&nbsp;», «&nbsp;puis&nbsp;» ou «&nbsp;ensuite&nbsp;», qui peuvent aussi bien marquer des étapes à l’intérieur d’une grande partie que le passage d’une partie à une autre.</p>
+<p>Vous allez donc annoncer vos (deux ou trois) grandes parties. Il est conseillé fortement d’utiliser les formules (un peu lourdes en termes de style, mais très claires) «&nbsp;dans une première partie, nous montrerons que…&nbsp;», puis «&nbsp;dans une deuxième partie, nous verrons que …&nbsp;». Quand vous ne le faites pas, il arrive trop souvent que votre lecteur ne sache pas si vous allez faire formellement deux ou trois parties – pour peu que vous utilisiez des mots comme «&nbsp;et&nbsp;», «&nbsp;puis&nbsp;» ou «&nbsp;ensuite&nbsp;», qui peuvent aussi bien marquer des étapes à l’intérieur d’une grande partie que le passage d’une partie à une autre.</p>
 <p><strong>La conclusion</strong></p>
 <p><strong>Vous pourriez être surpris de voir la conclusion arriver aussi tôt dans le devoir.</strong> La raison, c’est qu’il est inconcevable de ne pas répondre à la question posée en introduction – si vous ne répondez pas le devoir n’aura, littéralement, servi à rien. Or, il est évident qu’en partiel, on est souvent pris par le temps. On rédige donc la conclusion juste après avoir rédigé l’introduction au brouillon (on la rédige aussi au brouillon, d’ailleurs). Comme ça si on est pris par le temps, on pourra recopier la conclusion déjà prête avant de rendre le devoir. S’il faut couper quelque chose en raison du temps limité de l’épreuve, il vaut mieux couper un bout du développement que rendre une dissertation sans conclusion.</p>
 <p>La première phrase de votre conclusion doit apporter la réponse à la question que vous avez posée en introduction. Elle doit le faire de façon absolument claire et donc il est conseillé de reprendre exactement la question en la tournant en une phrase affirmative ou en une phrase négative selon votre réponse. <em>Le rôle de la conclusion, c’est de répondre à la question</em>. Il ne faut pas qu’on relise la conclusion en se demandant quelle était la réponse – et même en se demandant si une réponse a été donnée. Cela ne vous empêche pas de donner une réponse nuancée, mais il faut une réponse claire.</p>
@@ -1125,18 +986,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1168,11 +1018,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1182,8 +1071,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1195,7 +1093,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1239,6 +1260,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1264,6 +1286,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1324,6 +1372,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
