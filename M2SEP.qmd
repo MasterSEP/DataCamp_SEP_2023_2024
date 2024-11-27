@@ -733,7 +733,8 @@ Cet art est basé sur des concepts majeurs :
 -   Les barres horizontales représentent les activités, permettant de suivre l'avancement.\
     Exemple :
 
-![](images/GANTT.png){fig-align="center"}\
+![](images/GANTT.png){fig-align="center"}
+
 [*Source*](https://lequartier.animafac.net/fiches-pratiques/outils-numeriques-structurer-projet-associatif/)
 
 ### Roue de Deming (PCDA)
@@ -747,7 +748,8 @@ Cet art est basé sur des concepts majeurs :
 
 -   Utilisé pour garantir que chaque étape est maîtrisée et optimisée.
 
-![](images/PCDA.png){fig-align="center" width="500"}\
+![](images/PCDA.png){fig-align="center" width="500"}
+
 [*Source*](https://web.archive.org/web/20210624065640/https://learn.saylor.org/mod/page/view.php?id=21134)
 
 ### Les 0 Olympiques (Objectif "Zéro")
@@ -760,7 +762,8 @@ Cet art est basé sur des concepts majeurs :
     -   Zéro délais : Minimiser les retards.
     -   Zéro stocks : Éviter les surplus inutiles.
 
-![](images/5-zeros.png){fig-align="center"}\
+![](images/5-zeros.png){fig-align="center"}
+
 [*Source*](https://stmg.education/les-dicos/dico-management/zero.html)
 
 ### Méthode des 5S (complément toyotiste)
