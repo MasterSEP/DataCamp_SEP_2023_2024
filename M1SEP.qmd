@@ -2,7 +2,7 @@
 title: "DATA Camp M1"
 editor: visual
 ---
-# Mathématique
+# Mathématiques
 
 ## Algèbre Linéaire
 
