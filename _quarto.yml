@@ -27,4 +27,7 @@ format:
     toc: true 
     page-layout: full 
     theme: cosmo
+    css: styles.css
+  pdf:
+    include-in-header: header.tex
 
