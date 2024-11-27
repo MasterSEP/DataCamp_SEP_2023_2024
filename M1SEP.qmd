@@ -14,7 +14,10 @@ Rappelons les notions essentielles à connaître sur les matrices.
 La **trace** d'une matrice carrée $A$ est la somme de ses éléments diagonaux : $$\text{Tr}(A) = \sum_{i=1}^{n} a_{ii}$$
 :::
 
-Propriétés : - La trace est linéaire : $$\text{Tr}(A + B) = \text{Tr}(A) + \text{Tr}(B)$$ - Invariance par similitude : $$\text{Tr}(AB) = \text{Tr}(BA)$$
+Propriétés : 
+
+- La trace est linéaire : $$\text{Tr}(A + B) = \text{Tr}(A) + \text{Tr}(B)$$ 
+- Invariance par similitude : $$\text{Tr}(AB) = \text{Tr}(BA)$$
 
 ::: callout-note
 La trace d'une matrice ne change pas lorsqu'on change de base.
