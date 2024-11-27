@@ -611,11 +611,6 @@ print(spearman_test)
 # Conclure qu'il y a une corrélation significative entre les deux variables
 ```
 
----
-title: "Economie"
-editor: visual
----
-
 # Excel/VBA
 
 ::: callout-note
