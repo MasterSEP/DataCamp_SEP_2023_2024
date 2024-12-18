@@ -969,7 +969,7 @@ if __name__ == "__main__":
 
 Cela permet de détecter les erreurs dès que le code change.
 
-### Objets et classes (Programmation orientée objet)
+### Objets et classes (programmation orientée objet)
 
 Python permet de créer des classes, des "modèles" pour structurer vos données et comportements.
 

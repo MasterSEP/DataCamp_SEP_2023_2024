@@ -63,7 +63,7 @@ d_1 & 0 & \cdots & 0 \\
 
 ### Espace vectoriel
 
-Un espace vectoriel est un ensemble de vecteurs qui peuvent être combinés entre eux par des opérations comme l’addition et la multiplication par un nombre (appelé scalaire). Ces combinaisons permettent de construire de nouveaux vecteurs dans le même ensemble. Un vecteur $v = (v_1,...,v_d)$ n'a pas de dimension mais admet une longueur de taille $d$ ( = d coefficients).
+Un espace vectoriel est un ensemble de vecteurs qui peuvent être combinés entre eux par des opérations comme l’addition et la multiplication. Ces combinaisons permettent de construire de nouveaux vecteurs dans le même ensemble. Un vecteur $v = (v_1,...,v_d)$ n'a pas de dimension mais admet une longueur de taille $d$ ( = d coefficients).
 Mais, il est d'usage de représenter $v$ avec sa représentation matricielle notée $V = \left(\begin{array}{c} v_1 \\
 \cdots \\
 v_d  
@@ -79,7 +79,7 @@ Quelques propriétés importantes du produit scalaire :
 
 - $\langle v, u \rangle_2 = \langle u, v \rangle_2$ (symétrie)
 
-- $\langle v, u \rangle_2 > 0$ si $x$ différent du vecteur nul
+- $\langle v, u \rangle_2 > 0$ si $x$ \ne $0$
 
 - $\langle v, w \rangle_2 = v^t w = \text{trace}(vw^t)$ - $\langle v, w \rangle_2 = \langle w, v \rangle_2$ 
 
@@ -139,9 +139,9 @@ Le but du procédé de Gram-Schmidt est de prendre un ensemble de vecteurs liné
 
 **Étapes du Procédé**
 
-Le premier vecteur orthogonal ( u_1 ) est le premier vecteur de l'ensemble original : $$u_1 = v_1$$
+Le premier vecteur orthogonal ( $u_1$ ) est le premier vecteur de l'ensemble original : $$u_1 = v_1$$
 
-Pour chaque vecteur $( v_k )$ (où $( k \geq 2 )$), on soustrait les projections orthogonales de $( v_k )$ sur les vecteurs orthogonaux précédemment calculés $( u_1, u_2, \ldots, u_{k-1})$ : $$ u_k = v_k - \sum_{j=1}^{k-1} \frac{\langle v_k, u_j \rangle}{\langle u_j, u_j \rangle} u_j $$
+Pour chaque vecteur $( v_k )$ (où $ k \geq 2 $), on soustrait les projections orthogonales de $( v_k )$ sur les vecteurs orthogonaux précédemment calculés $( u_1, u_2, \ldots, u_{k-1})$ : $$ u_k = v_k - \sum_{j=1}^{k-1} \frac{\langle v_k, u_j \rangle}{\langle u_j, u_j \rangle} u_j $$
 
 Si l'on souhaite obtenir une base orthonormale, chaque vecteur $( u_k )$ est normalisé pour obtenir $( e_k )$ : $$ e_k = \frac{u_k}{||u_k||} $$
 
@@ -153,7 +153,7 @@ Pour une base $\{e_1, e_2, \ldots, e_n\}$ d'un espace vectoriel $E$, la **base d
 
 La base duale permet de définir des formes linéaires et de travailler avec des espaces vectoriels de manière plus abstraite.
 
-Pour plus d'informations sur la base duale cliquez[*ici*](https://www.math.univ-paris13.fr/~schwartz/L2/dual.pdf)
+Pour plus d'informations sur la base duale cliquez [**ici**](https://www.math.univ-paris13.fr/~schwartz/L2/dual.pdf)
 
 ### Diagonalisation d'une matrice
 
@@ -211,7 +211,9 @@ Le moment centré d'ordre r est défini par : $$\mũ_r = E((X - E(X))^r)$$
 #### Couples aléatoires
 
 ##### Fonction de répartition et densité
-La fonction conjointe $$F_{X, Y}(x, y) = P(X \leqslant x \cap Y \leqslant y)$$ est appelée la distribution conjointe de X et Y.
+
+La fonction conjointe est appelée la distribution conjointe de X et Y. 
+$$F_{X, Y}(x, y) = P(X \leqslant x \cap Y \leqslant y)$$ 
 
 Dans le cas continu, la fonction définie par : $$f_{X, Y}(x, y) = \frac{\partial^2 F_{X, Y}(x, y)}{\partial x \partial y}$$ est la densité conjointe du couple (X, Y). On a donc : $$F_{X, Y}(x, y) = \int \int f_{X, Y}(t, u) \, dt \, du, \text{ où } -\infty < x, y < +\infty,$$
 
@@ -272,8 +274,8 @@ L'espérance d'un vecteur aléatoire $X = (X_1, X_2, \vdots, X_n)^t$ de X est le
 
 L'espérance reste linéaire, en particulier pour $X$ et $Y$ appartenant à $R^n$ on a :  
 
-$$\mathbb{E}(aX + aY + bX_n) = a\mathbb{E}(X) + b\mathbb{E}(Y) \text{ où } a,b \in \mathbb{R}$$
-$$\mathbb{E}(AX) = A\mathbb{E}(X)$$
+$$\mathbb{E}(aX + bY) = a\mathbb{E}(X) + b\mathbb{E}(Y) \text{ où } a,b \in \mathbb{R}$$
+$$\mathbb{E}(AX + B) = A\mathbb{E}(X)+B$$
 
 La variance-covariance de X notée $\Sigma$ une matrice  $n \times n$ où chaque élément $\Sigma_{ij}$ représente la covariance entre les variables aléatoires $X_i$ et $X_j$. Les éléments diagonaux de $\Sigma$ correspondent aux variances des composantes $X_i$, tandis que les éléments hors-diagonaux représentent les covariances entre les différentes composantes de $X$. La matrice $\Sigma$ est donc définie comme suit :
 
@@ -288,66 +290,7 @@ $$
 $$ \Sigma_{AX + B} = A\Sigma_X(X)A^t$$
 où $\Sigma$ est la variance de X et A,B sont des matrices (deterministe)
 
-
-
-### Lois usuelles
-
-::: {.callout-tip}
-
-Les variables $X_1, \ldots, X_n$ sont indépendantes et identiquement distribuées (i.i.d.) si et seulement si : 
-
-Dans le cas discret : 
-$$P(X_1 = x_1, \ldots, X_n = x_n) = P(X_1 = x_1) \times \ldots \times P(X_n = x_n)$$
-
-Dans le cas continu :
-
-$$P(X_1 \leq x_1, X_2 \leq x_2, \ldots, X_n \leq x_n) = P(X_1 \leq x_1) \cdot P(X_2 \leq x_2) \cdots P(X_n \leq x_n)$$
-:::
-
-
-Ces tableaux récapitulent les lois usuelles que vous pourrez rencontrer dans différents cours du master.
-
-| Nom        | Notation                        | $X(\Omega)$         | $P(X = k)$                  | $E[X]$             | $Var(X)$           |
-|------------|---------------------------------|---------------------|-----------------------------|--------------------|--------------------|
-| Uniforme   | $X \sim U(\{1, 2, \ldots, n\})$ | $\{1, 2, \ldots, n\}$ | $\frac{1}{n}$              | $\frac{n+1}{2}$    | $\frac{n^2-1}{12}$ |
-| Bernouilli | $X \sim B(p), 0 < p < 1$        | $\{0, 1\}$           | $P(X = 1) = p$             | $p$                | $p(1-p)$           |
-|            |                                 |                     | $P(X = 0) = 1 - p$         |                    |                    |
-| Binomiale  | $X \sim B(n, p), 0 < p < 1$     | $\{1, 2, \ldots, n\}$ | $C_k^n p^k (1 - p)^{n-k}$ | $np$               | $np(1-p)$          |
-| Géométrique| $X \sim G(p), 0 < p < 1$        | $\mathbb{N}^{*}$         | $p(1-p)^{k}$               | $\frac{1-p}{p}$    | $\frac{1-p}{p^2}$  |
-| Poisson    | $X \sim P(\lambda), \lambda > 0$ | $\mathbb{N}$        | $\frac{\lambda^k}{k!}e^{-\lambda}$ | $\lambda$     | $\lambda$          |
-
-
-# Tableau des lois de probabilité
-
-| Nom                 | Notation                                  | $X(\Omega)$     | $f_X(x)$                                                                                  | $E[X]$                           | $V(X)$                                  |
-|---------------------|-------------------------------------------|-----------------|------------------------------------------------------------------------------------------|-----------------------------------|-----------------------------------------|
-| Uniforme            | $X \sim U([a, b]), a < b$                | $[a, b]$        | $\frac{1}{b - a}1_{[a, b]}(x)$                                                           | $\frac{a + b}{2}$                 | $\frac{(a - b)^2}{12}$                  |
-| Exponentielle       | $X \sim \mathcal{E}(\lambda), \lambda > 0$ | $\mathbb{R}^+$  | $\lambda e^{-\lambda x}1_{\mathbb{R}^+}(x)$                                              | $\frac{1}{\lambda}$               | $\frac{1}{\lambda^2}$                   |
-|                     | $\mathcal{E}(\lambda) = \gamma(1, \lambda)$ |                 |                                                                                          |                                   |                                         |
-| Normale ou Gaussienne | $X \sim N(m, \sigma^2), \sigma > 0$      | $\mathbb{R}$    | $\frac{1}{\sigma\sqrt{2\pi}} \exp\left(-\frac{(x - m)^2}{2\sigma^2}\right)$              | $m$                               | $\sigma^2$                              |
-| Gamma               | $X \sim \gamma(\alpha, \theta), \alpha > 0, \theta > 0$ | $\mathbb{R}^+$ | $\frac{\theta^\alpha}{\Gamma(\alpha)}x^{\alpha - 1}e^{-\theta x}1_{\mathbb{R}^+}(x)$     | $\frac{\alpha}{\theta}$           | $\frac{\alpha}{\theta^2}$               |
-|                     | $\Gamma(\alpha) = \int_0^\infty e^{-x}x^{\alpha-1} \, dx$ |                 |                                                                                          |                                   |                                         |
-| Khi-2               | $X \sim \chi^2(n), n \in \mathbb{N}^+$    | $\mathbb{R}^+$  | $\gamma\left(\frac{n}{2}, \frac{1}{2}\right)$                                            | $n$                               | $2n$                                    |
-|                     | $Y_1, Y_2, \ldots, Y_n \text{ i.i.d},$ |                 |                                                                                          |                                   |                                         |
-|                     | $Y_i \sim \mathcal{N}(0, 1), \quad X = \sum_{i=1}^{n} Y_i^2$ |                 |                                                                                          |                                   |                                         |
-| Bêta                | $X \sim B(\alpha, \theta), \alpha > 0, \theta > 0$ | $[0, 1]$       | $\frac{x^{\alpha-1}(1-x)^{\theta-1}}{B(\alpha, \theta)}1_{[0, 1]}(x)$                    | $\frac{\alpha}{\alpha+\theta}$    | $\frac{\alpha\theta}{(\alpha+\theta)^2(\alpha+\theta+1)}$ |
-|                     | $B(\alpha, \theta) = \int_0^1 x^{\alpha-1}(1-x)^{\theta-1} \, dx$ | |                                                                                          |                                   |                                         |
-|                     | $X = \frac{Z}{1 + Z}, \quad Z \sim B'(\alpha, \theta)$ | |                                                                                          |                                   |                                         |
-| Bêta (prime)        | $Z ∼ B'(\alpha, \theta), \alpha > 0, \theta > 0$ | $\mathbb{R}^+$ | $\frac{z^{\alpha-1}}{B(\alpha,\theta) \cdot (1+z)^{\alpha+\theta}} \cdot 1_{\mathbb{R}^+}(z)$ | $\frac{\alpha}{\theta - 1}$      | $\frac{\alpha(\alpha+\theta-1)}{(\theta-1)^2(\theta-2)}$ |
-|                     | $X \sim \gamma(\alpha, 1), Y \sim \gamma(\theta, 1), X \perp\!\!\!\perp Y$ | |                                                     | $\theta > 1$                      | $\theta > 2$                            |
-| Student T           | $T \sim T(n), n \in \mathbb{N}^*$         | $\mathbb{R}$    | $\frac{\left(1 + \frac{t^2}{n}\right)^{-(n+\frac{1}{2})}}{\sqrt{n}\cdot B(\frac{1}{2},\frac{n}{2})}$ | $0$               | $\frac{n}{n - 2}$                       |
-|                     | $T = \frac{X}{\sqrt{Y/n}}, \quad T^2/n \sim B'(1/2, n/2)$ | |                                                     |                                   | $n > 2$                                 |
-| Fisher              | $X \sim F(n, m)$                          | $\mathbb{R}^+$  | $\frac{Kx^{n/2-1}}{(m+nx)^{(n+m)/2}}1_{\mathbb{R}^+}(x)$                                | $\frac{m}{m-2}$                   | $\frac{2m^2(n+m-2)}{n(m-2)^2(m-4)}$     |
-|                     | $N \sim \chi^2(n), M \sim \chi^2(m), N \perp\!\!\!\perp M$ | |                                                     | $m > 2$                           | $m > 4$                                 |
-
-\newpage
-
-Connaître les densités ne servirait pas à grand chose, mais ceci nous évitera de parler de lois dont nous ne connaissons pas leur construction.
-
-\newpage
-
-
-### Notions de convergence
+## Notions de convergence
 
 Si l'on pense à des données, vues comme réalisation de variables aléatoires $X_1, \ldots, X_n$, il serait intéressant de se poser la question de savoir comment évolue cette suite lorsque $n$ tend vers l'infini.
 
@@ -379,7 +322,7 @@ Alors, la **moyenne empirique** $\bar{Z}_n$ converge en **probabilité** vers l'
 
 $$\bar{Z}_n  = \frac{1}{n} \sum_{i=1}^{n} Z_i = \begin{pmatrix} \frac{1}{n} \sum_{i=1}^{n} Z_{i1} \\ \frac{1}{n} \sum_{i=1}^{n} Z_{i2} \\ \vdots \\ \frac{1}{n} \sum_{i=1}^{n} Z_{ip} \end{pmatrix} \xrightarrow{P} \mu \quad \text{lorsque} \quad n \to \infty$$
 
-### Théorème Central Limite
+### Théorème central limite
 
 Soit $X_1, \ldots, X_n$ une suite de variables aléatoires indépendantes et de même loi telles que : $\mathbb{E}(X_i) = \mu$ et $\text{Var}(X_i) = \sigma^2$, alors : $$\sqrt{n}\frac{\overline{X}_n - \mu}{\sigma} \xrightarrow{\mathcal{Loi}} \mathcal{N}(0, 1)$$
 
@@ -387,6 +330,64 @@ Soit $Z_1,\ldots, Z_n$ une suite de vecteurs aléatoires où $Z_i$ est un vecteu
 $$\Sigma_X^{-\frac{1}{2}}(\bar{Z}_n-\mathbb{E}(Z) )\xrightarrow{\mathcal{Loi}} \mathcal{N}_d(0, 1)$$
 
 \newpage
+
+
+## Tableau des lois usuelles
+
+::: {.callout-tip}
+
+Les variables $X_1, \ldots, X_n$ sont indépendantes et identiquement distribuées (i.i.d.) si et seulement si : 
+
+Dans le cas discret : 
+$$P(X_1 = x_1, \ldots, X_n = x_n) = P(X_1 = x_1) \times \ldots \times P(X_n = x_n)$$
+
+Dans le cas continu :
+
+$$P(X_1 \leq x_1, X_2 \leq x_2, \ldots, X_n \leq x_n) = P(X_1 \leq x_1) \cdot P(X_2 \leq x_2) \cdots P(X_n \leq x_n)$$
+:::
+
+
+Ces tableaux récapitulent les lois usuelles que vous pourrez rencontrer dans différents cours du master.
+
+| Nom        | Notation                        | $X(\Omega)$         | $P(X = k)$                  | $E[X]$             | $Var(X)$           |
+|------------|---------------------------------|---------------------|-----------------------------|--------------------|--------------------|
+| Uniforme   | $X \sim U(\{1, 2, \ldots, n\})$ | $\{1, 2, \ldots, n\}$ | $\frac{1}{n}$              | $\frac{n+1}{2}$    | $\frac{n^2-1}{12}$ |
+| Bernouilli | $X \sim B(p), 0 < p < 1$        | $\{0, 1\}$           | $P(X = 1) = p$             | $p$                | $p(1-p)$           |
+|            |                                 |                     | $P(X = 0) = 1 - p$         |                    |                    |
+| Binomiale  | $X \sim B(n, p), 0 < p < 1$     | $\{1, 2, \ldots, n\}$ | $C_k^n p^k (1 - p)^{n-k}$ | $np$               | $np(1-p)$          |
+| Géométrique| $X \sim G(p), 0 < p < 1$        | $\mathbb{N}^{*}$         | $p(1-p)^{k}$               | $\frac{1-p}{p}$    | $\frac{1-p}{p^2}$  |
+| Poisson    | $X \sim P(\lambda), \lambda > 0$ | $\mathbb{N}$        | $\frac{\lambda^k}{k!}e^{-\lambda}$ | $\lambda$     | $\lambda$          |
+
+
+
+| Nom                 | Notation                                  | $X(\Omega)$     | $f_X(x)$                                                                                  | $E[X]$                           | $V(X)$                                  |
+|---------------------|-------------------------------------------|-----------------|------------------------------------------------------------------------------------------|-----------------------------------|-----------------------------------------|
+| Uniforme            | $X \sim U([a, b]), a < b$                | $[a, b]$        | $\frac{1}{b - a}1_{[a, b]}(x)$                                                           | $\frac{a + b}{2}$                 | $\frac{(a - b)^2}{12}$                  |
+| Exponentielle       | $X \sim \mathcal{E}(\lambda), \lambda > 0$ | $\mathbb{R}^+$  | $\lambda e^{-\lambda x}1_{\mathbb{R}^+}(x)$                                              | $\frac{1}{\lambda}$               | $\frac{1}{\lambda^2}$                   |
+|                     | $\mathcal{E}(\lambda) = \gamma(1, \lambda)$ |                 |                                                                                          |                                   |                                         |
+| Normale ou Gaussienne | $X \sim N(m, \sigma^2), \sigma > 0$      | $\mathbb{R}$    | $\frac{1}{\sigma\sqrt{2\pi}} \exp\left(-\frac{(x - m)^2}{2\sigma^2}\right)$              | $m$                               | $\sigma^2$                              |
+| Gamma               | $X \sim \gamma(\alpha, \theta), \alpha > 0, \theta > 0$ | $\mathbb{R}^+$ | $\frac{\theta^\alpha}{\Gamma(\alpha)}x^{\alpha - 1}e^{-\theta x}1_{\mathbb{R}^+}(x)$     | $\frac{\alpha}{\theta}$           | $\frac{\alpha}{\theta^2}$               |
+|                     | $\Gamma(\alpha) = \int_0^\infty e^{-x}x^{\alpha-1} \, dx$ |                 |                                                                                          |                                   |                                         |
+| Khi-2               | $X \sim \chi^2(n), n \in \mathbb{N}^+$    | $\mathbb{R}^+$  | $\gamma\left(\frac{n}{2}, \frac{1}{2}\right)$                                            | $n$                               | $2n$                                    |
+|                     | $Y_1, Y_2, \ldots, Y_n \text{ i.i.d},$ |                 |                                                                                          |                                   |                                         |
+|                     | $Y_i \sim \mathcal{N}(0, 1), \quad X = \sum_{i=1}^{n} Y_i^2$ |                 |                                                                                          |                                   |                                         |
+| Bêta                | $X \sim B(\alpha, \theta), \alpha > 0, \theta > 0$ | $[0, 1]$       | $\frac{x^{\alpha-1}(1-x)^{\theta-1}}{B(\alpha, \theta)}1_{[0, 1]}(x)$                    | $\frac{\alpha}{\alpha+\theta}$    | $\frac{\alpha\theta}{(\alpha+\theta)^2(\alpha+\theta+1)}$ |
+|                     | $B(\alpha, \theta) = \int_0^1 x^{\alpha-1}(1-x)^{\theta-1} \, dx$ | |                                                                                          |                                   |                                         |
+|                     | $X = \frac{Z}{1 + Z}, \quad Z \sim B'(\alpha, \theta)$ | |                                                                                          |                                   |                                         |
+| Bêta (prime)        | $Z ∼ B'(\alpha, \theta), \alpha > 0, \theta > 0$ | $\mathbb{R}^+$ | $\frac{z^{\alpha-1}}{B(\alpha,\theta) \cdot (1+z)^{\alpha+\theta}} \cdot 1_{\mathbb{R}^+}(z)$ | $\frac{\alpha}{\theta - 1}$      | $\frac{\alpha(\alpha+\theta-1)}{(\theta-1)^2(\theta-2)}$ |
+|                     | $X \sim \gamma(\alpha, 1), Y \sim \gamma(\theta, 1), X \perp\!\!\!\perp Y$ | |                                                     | $\theta > 1$                      | $\theta > 2$                            |
+| Student T           | $T \sim T(n), n \in \mathbb{N}^*$         | $\mathbb{R}$    | $\frac{\left(1 + \frac{t^2}{n}\right)^{-(n+\frac{1}{2})}}{\sqrt{n}\cdot B(\frac{1}{2},\frac{n}{2})}$ | $0$               | $\frac{n}{n - 2}$                       |
+|                     | $T = \frac{X}{\sqrt{Y/n}}, \quad T^2/n \sim B'(1/2, n/2)$ | |                                                     |                                   | $n > 2$                                 |
+| Fisher              | $X \sim F(n, m)$                          | $\mathbb{R}^+$  | $\frac{Kx^{n/2-1}}{(m+nx)^{(n+m)/2}}1_{\mathbb{R}^+}(x)$                                | $\frac{m}{m-2}$                   | $\frac{2m^2(n+m-2)}{n(m-2)^2(m-4)}$     |
+|                     | $N \sim \chi^2(n), M \sim \chi^2(m), N \perp\!\!\!\perp M$ | |                                                     | $m > 2$                           | $m > 4$                                 |
+
+\newpage
+
+Connaître les densités ne servirait pas à grand chose, mais ceci nous évitera de parler de lois dont nous ne connaissons pas leur construction.
+
+\newpage
+
+
 
 ## Statistique inférentielle 
 
@@ -401,6 +402,55 @@ Pour que l'estimation soit bonne, il faut que $\hat{\theta}$ soit proche de $\th
 On définit ainsi le biais : $$b_n(\hat{\theta}, \theta) = \mathbb{E}(\hat{\theta}_n) - \theta$$
 
 Un estimateur est dit sans biais si $b_n(\hat{\theta}, \theta) = 0$, c'est-à-dire : $$\mathbb{E}(\hat{\theta}_n) = \theta$$
+
+Le plus souvent, on veut estimer la moyenne et la variance. 
+
+#### Estimations de la moyenne
+
+Soit un échantillon de variables aléatoires $X_1, X_2, \dots, X_n$ tirées d'une population avec une moyenne $\mu = \mathbb{E}[X_i]$.
+
+La moyenne empirique (ou moyenne d'échantillon) est définie par :
+
+$$
+\hat{\mu} = \frac{1}{n} \sum_{i=1}^{n} X_i
+$$
+
+L'espérance de cet estimateur est :
+
+$$
+\mathbb{E}[\hat{\mu}] = \mathbb{E}\left[\frac{1}{n} \sum_{i=1}^{n} X_i\right] = \frac{1}{n} \sum_{i=1}^{n} \mathbb{E}[X_i] = \mu
+$$
+
+La moyenne empirique est donc **non biaisée**. Son espérance est égale à la vraie moyenne de la population.
+
+#### Estimation de la variance
+
+Soit $X_1, X_2, \dots, X_n$ un échantillon de variables aléatoires $X_i$ avec une variance $\sigma^2 = \mathbb{V}[X_i]$.
+
+
+L'estimateur classique de la variance basé sur l'échantillon est :
+
+$$
+\hat{\sigma}^2_{\text{biaisé}} = \frac{1}{n} \sum_{i=1}^{n} (X_i - \hat{\mu})^2
+$$
+
+Cependant, cet estimateur est **biaisé**. En effet, l'espérance de cet estimateur n'est pas égale à $\sigma^2$ :
+
+$$
+\mathbb{E}[\hat{\sigma}^2_{\text{biaisé}}] = \frac{n-1}{n} \sigma^2
+$$
+
+Pour corriger ce biais, on peut utiliser un estimateur non biaisé de la variance. Cela se fait en divisant la somme des carrés par $n - 1$ au lieu de $n$. Ainsi, l'estimateur non biaisé de la variance est :
+
+$$
+\hat{\sigma}^2_{\text{non biaisé}} = \frac{1}{n - 1} \sum_{i=1}^{n} (X_i - \hat{\mu})^2
+$$
+
+Cet estimateur est non biaisé, et l'espérance de $\hat{\sigma}^2_{\text{non biaisé}}$ est égale à la vraie variance de la population :
+
+$$
+\mathbb{E}[\hat{\sigma}^2_{\text{non biaisé}}] = \sigma^2
+$$
 
 ### Estimateur convergent
 
@@ -649,7 +699,7 @@ Il existe 4 grands problèmes macroéconomiques :
 
 -   Problème de l'équilibre extérieur Quand les importations sont plus importantes que les exportations, la balance commerciale est déséquilibrée.
 
-## La dissertation en économie
+# Rédaction d'une dissertation
 
 *"On tient tout d'abord à remercier l'enseignant chercheur (en Philosophie économique, Théories économiques de la justice, Redistribution des revenus, Economie sociale, Economie publique), monsieur **Jean-Sébastien Gharbi** pour cette rubrique d'aide à la dissertation."*
 
