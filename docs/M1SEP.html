@@ -181,14 +181,13 @@ window.Quarto = {
   <li><a href="#savoir-faire-de-probabilités" id="toc-savoir-faire-de-probabilités" class="nav-link" data-scroll-target="#savoir-faire-de-probabilités">Savoir-faire de probabilités</a></li>
   <li><a href="#propriétés-à-connaître-de-lespérance-variance-et-covariance" id="toc-propriétés-à-connaître-de-lespérance-variance-et-covariance" class="nav-link" data-scroll-target="#propriétés-à-connaître-de-lespérance-variance-et-covariance">Propriétés à connaître de l’espérance, variance et covariance</a></li>
   <li><a href="#vecteurs-aléatoires" id="toc-vecteurs-aléatoires" class="nav-link" data-scroll-target="#vecteurs-aléatoires">Vecteurs aléatoires</a></li>
-  <li><a href="#lois-usuelles" id="toc-lois-usuelles" class="nav-link" data-scroll-target="#lois-usuelles">Lois usuelles</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#tableau-des-lois-de-probabilité" id="toc-tableau-des-lois-de-probabilité" class="nav-link" data-scroll-target="#tableau-des-lois-de-probabilité">Tableau des lois de probabilité</a>
+  <li><a href="#notions-de-convergence" id="toc-notions-de-convergence" class="nav-link" data-scroll-target="#notions-de-convergence">Notions de convergence</a>
   <ul class="collapse">
-  <li><a href="#notions-de-convergence" id="toc-notions-de-convergence" class="nav-link" data-scroll-target="#notions-de-convergence">Notions de convergence</a></li>
   <li><a href="#loi-faible-des-grands-nombres" id="toc-loi-faible-des-grands-nombres" class="nav-link" data-scroll-target="#loi-faible-des-grands-nombres">Loi faible des grands nombres</a></li>
   <li><a href="#théorème-central-limite" id="toc-théorème-central-limite" class="nav-link" data-scroll-target="#théorème-central-limite">Théorème central limite</a></li>
+  </ul></li>
+  <li><a href="#tableau-des-lois-usuelles" id="toc-tableau-des-lois-usuelles" class="nav-link" data-scroll-target="#tableau-des-lois-usuelles">Tableau des lois usuelles</a></li>
   <li><a href="#statistique-inférentielle" id="toc-statistique-inférentielle" class="nav-link" data-scroll-target="#statistique-inférentielle">Statistique inférentielle</a>
   <ul class="collapse">
   <li><a href="#echantillon-estimateur" id="toc-echantillon-estimateur" class="nav-link" data-scroll-target="#echantillon-estimateur">Echantillon / Estimateur</a></li>
@@ -225,14 +224,14 @@ window.Quarto = {
   <li><a href="#actualisation" id="toc-actualisation" class="nav-link" data-scroll-target="#actualisation">Actualisation</a></li>
   <li><a href="#problèmes-macroéconomiques" id="toc-problèmes-macroéconomiques" class="nav-link" data-scroll-target="#problèmes-macroéconomiques">Problèmes macroéconomiques</a></li>
   </ul></li>
-  <li><a href="#la-dissertation-en-économie" id="toc-la-dissertation-en-économie" class="nav-link" data-scroll-target="#la-dissertation-en-économie">La dissertation en économie</a>
+  </ul></li>
+  <li><a href="#rédaction-dune-dissertation" id="toc-rédaction-dune-dissertation" class="nav-link" data-scroll-target="#rédaction-dune-dissertation">Rédaction d’une dissertation</a>
   <ul class="collapse">
   <li><a href="#analyse-du-sujet" id="toc-analyse-du-sujet" class="nav-link" data-scroll-target="#analyse-du-sujet">Analyse du sujet</a></li>
   <li><a href="#recherche-des-idées" id="toc-recherche-des-idées" class="nav-link" data-scroll-target="#recherche-des-idées">Recherche des idées</a></li>
   <li><a href="#mise-en-évidence-dun-problème" id="toc-mise-en-évidence-dun-problème" class="nav-link" data-scroll-target="#mise-en-évidence-dun-problème">Mise en évidence d’un problème</a></li>
   <li><a href="#construction-du-plan" id="toc-construction-du-plan" class="nav-link" data-scroll-target="#construction-du-plan">Construction du plan</a></li>
   <li><a href="#la-rédaction" id="toc-la-rédaction" class="nav-link" data-scroll-target="#la-rédaction">La rédaction</a></li>
-  </ul></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="M1SEP.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -513,8 +512,36 @@ Warning
 \end{pmatrix}
 \]</span> <span class="math display">\[ \Sigma_{AX + B} = A\Sigma_X(X)A^t\]</span> où <span class="math inline">\(\Sigma\)</span> est la variance de X et A,B sont des matrices (deterministe)</p>
 </section>
-<section id="lois-usuelles" class="level3">
-<h3 class="anchored" data-anchor-id="lois-usuelles">Lois usuelles</h3>
+</section>
+<section id="notions-de-convergence" class="level2">
+<h2 class="anchored" data-anchor-id="notions-de-convergence">Notions de convergence</h2>
+<p>Si l’on pense à des données, vues comme réalisation de variables aléatoires <span class="math inline">\(X_1, \ldots, X_n\)</span>, il serait intéressant de se poser la question de savoir comment évolue cette suite lorsque <span class="math inline">\(n\)</span> tend vers l’infini.</p>
+<p>On dit que <span class="math inline">\((X_n)\)</span> converge presque sûrement vers <span class="math inline">\(X\)</span> et on note <span class="math inline">\(X_n \underset{n \rightarrow \infty}{\xrightarrow{\text{p.s.}}}{} X\)</span> si et seulement si : <span class="math inline">\(P\left(\underset{n\to+\infty}{\lim} X_n = X\right) = 1\)</span></p>
+<p>On dit que <span class="math inline">\((X_n)\)</span> converge en probabilité vers <span class="math inline">\(X\)</span> et on note <span class="math inline">\(X_n \underset{n \rightarrow \infty}{\xrightarrow{\text{p}}} X\)</span> si et seulement si : <span class="math inline">\(\forall \varepsilon &gt; 0, \quad P(|X_n - X| &gt; \varepsilon) \rightarrow 0\)</span></p>
+<p>On dit que <span class="math inline">\((X_n)\)</span> converge en loi vers <span class="math inline">\(X\)</span> et on note <span class="math inline">\(X_n \xrightarrow{\mathcal{L}} X\)</span> si et seulement si : <span class="math inline">\(F_{X_n} \underset{n \to +\infty}{\rightarrow} F_X\)</span> Où <span class="math inline">\(F_X\)</span> dénote la fonction de répartition de <span class="math inline">\(X\)</span>.</p>
+<p>On dit que <span class="math inline">\((X_n)\)</span> converge en moyenne quadratique vers <span class="math inline">\(X\)</span> et on note <span class="math inline">\(X_n \underset{n \rightarrow \infty}{\xrightarrow{m.q.}}X\)</span> si et seulement si : <span class="math inline">\(\mathbb{E}((X_n - X)^2) \rightarrow 0\)</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/convergence.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<section id="loi-faible-des-grands-nombres" class="level3">
+<h3 class="anchored" data-anchor-id="loi-faible-des-grands-nombres">Loi faible des grands nombres</h3>
+<p>Soit <span class="math inline">\(X_1, \ldots, X_n\)</span> une suite de variables aléatoires indépendantes et de même loi telles que : <span class="math inline">\(\mathbb{E}(X_i) = \mu\)</span> et <span class="math inline">\(\text{Var}(X_i) = \sigma^2\)</span> alors :<br>
+<span class="math display">\[\frac{1}{n} \sum_{i=1}^{n} X_i \xrightarrow{P} \mu \]</span></p>
+<p>Soit <span class="math inline">\(Z_1,\ldots, Z_n\)</span> une suite de vecteurs aléatoires où <span class="math inline">\(Z_i\)</span> est un vecteur aléatoire à p dimensions : <span class="math display">\[Z_i = \begin{pmatrix} Z_{i1} \\ Z_{i2} \\ \vdots \\ Z_{ip} \end{pmatrix}\]</span></p>
+<p>On suppose que les vecteurs <span class="math inline">\(Z_1, Z_2, \dots, Z_n\)</span> sont i.i.d. , avec une espérance <span class="math inline">\(\mathbb{E}[Z_i] = \mu\)</span>, où <span class="math inline">\(\mu\)</span> est un vecteur constant de dimension <span class="math inline">\(p\)</span> et chaque composante <span class="math inline">\(Z_{ij}\)</span> a une variance finie. <span class="math display">\[\mu = \begin{pmatrix} \mu_1 \\ \mu_2 \\ \vdots \\ \mu_p \end{pmatrix}\]</span></p>
+<p>Alors, la <strong>moyenne empirique</strong> <span class="math inline">\(\bar{Z}_n\)</span> converge en <strong>probabilité</strong> vers l’espérance <span class="math inline">\(\mu\)</span> lorsque <span class="math inline">\(n \to \infty\)</span> :</p>
+<p><span class="math display">\[\bar{Z}_n  = \frac{1}{n} \sum_{i=1}^{n} Z_i = \begin{pmatrix} \frac{1}{n} \sum_{i=1}^{n} Z_{i1} \\ \frac{1}{n} \sum_{i=1}^{n} Z_{i2} \\ \vdots \\ \frac{1}{n} \sum_{i=1}^{n} Z_{ip} \end{pmatrix} \xrightarrow{P} \mu \quad \text{lorsque} \quad n \to \infty\]</span></p>
+</section>
+<section id="théorème-central-limite" class="level3">
+<h3 class="anchored" data-anchor-id="théorème-central-limite">Théorème central limite</h3>
+<p>Soit <span class="math inline">\(X_1, \ldots, X_n\)</span> une suite de variables aléatoires indépendantes et de même loi telles que : <span class="math inline">\(\mathbb{E}(X_i) = \mu\)</span> et <span class="math inline">\(\text{Var}(X_i) = \sigma^2\)</span>, alors : <span class="math display">\[\sqrt{n}\frac{\overline{X}_n - \mu}{\sigma} \xrightarrow{\mathcal{Loi}} \mathcal{N}(0, 1)\]</span></p>
+<p>Soit <span class="math inline">\(Z_1,\ldots, Z_n\)</span> une suite de vecteurs aléatoires où <span class="math inline">\(Z_i\)</span> est un vecteur aléatoire à p dimensions et si les vecteurs aléatoires suivent les mêmes hypothèses que précedement alors <span class="math display">\[\Sigma_X^{-\frac{1}{2}}(\bar{Z}_n-\mathbb{E}(Z) )\xrightarrow{\mathcal{Loi}} \mathcal{N}_d(0, 1)\]</span></p>
+</section>
+</section>
+<section id="tableau-des-lois-usuelles" class="level2">
+<h2 class="anchored" data-anchor-id="tableau-des-lois-usuelles">Tableau des lois usuelles</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -602,11 +629,6 @@ Tip
 </tr>
 </tbody>
 </table>
-</section>
-</section>
-</section>
-<section id="tableau-des-lois-de-probabilité" class="level1">
-<h1>Tableau des lois de probabilité</h1>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 8%">
@@ -774,32 +796,6 @@ Tip
 </tbody>
 </table>
 <p>Connaître les densités ne servirait pas à grand chose, mais ceci nous évitera de parler de lois dont nous ne connaissons pas leur construction.</p>
-<section id="notions-de-convergence" class="level3">
-<h3 class="anchored" data-anchor-id="notions-de-convergence">Notions de convergence</h3>
-<p>Si l’on pense à des données, vues comme réalisation de variables aléatoires <span class="math inline">\(X_1, \ldots, X_n\)</span>, il serait intéressant de se poser la question de savoir comment évolue cette suite lorsque <span class="math inline">\(n\)</span> tend vers l’infini.</p>
-<p>On dit que <span class="math inline">\((X_n)\)</span> converge presque sûrement vers <span class="math inline">\(X\)</span> et on note <span class="math inline">\(X_n \underset{n \rightarrow \infty}{\xrightarrow{\text{p.s.}}}{} X\)</span> si et seulement si : <span class="math inline">\(P\left(\underset{n\to+\infty}{\lim} X_n = X\right) = 1\)</span></p>
-<p>On dit que <span class="math inline">\((X_n)\)</span> converge en probabilité vers <span class="math inline">\(X\)</span> et on note <span class="math inline">\(X_n \underset{n \rightarrow \infty}{\xrightarrow{\text{p}}} X\)</span> si et seulement si : <span class="math inline">\(\forall \varepsilon &gt; 0, \quad P(|X_n - X| &gt; \varepsilon) \rightarrow 0\)</span></p>
-<p>On dit que <span class="math inline">\((X_n)\)</span> converge en loi vers <span class="math inline">\(X\)</span> et on note <span class="math inline">\(X_n \xrightarrow{\mathcal{L}} X\)</span> si et seulement si : <span class="math inline">\(F_{X_n} \underset{n \to +\infty}{\rightarrow} F_X\)</span> Où <span class="math inline">\(F_X\)</span> dénote la fonction de répartition de <span class="math inline">\(X\)</span>.</p>
-<p>On dit que <span class="math inline">\((X_n)\)</span> converge en moyenne quadratique vers <span class="math inline">\(X\)</span> et on note <span class="math inline">\(X_n \underset{n \rightarrow \infty}{\xrightarrow{m.q.}}X\)</span> si et seulement si : <span class="math inline">\(\mathbb{E}((X_n - X)^2) \rightarrow 0\)</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/convergence.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
-</figure>
-</div>
-</section>
-<section id="loi-faible-des-grands-nombres" class="level3">
-<h3 class="anchored" data-anchor-id="loi-faible-des-grands-nombres">Loi faible des grands nombres</h3>
-<p>Soit <span class="math inline">\(X_1, \ldots, X_n\)</span> une suite de variables aléatoires indépendantes et de même loi telles que : <span class="math inline">\(\mathbb{E}(X_i) = \mu\)</span> et <span class="math inline">\(\text{Var}(X_i) = \sigma^2\)</span> alors :<br>
-<span class="math display">\[\frac{1}{n} \sum_{i=1}^{n} X_i \xrightarrow{P} \mu \]</span></p>
-<p>Soit <span class="math inline">\(Z_1,\ldots, Z_n\)</span> une suite de vecteurs aléatoires où <span class="math inline">\(Z_i\)</span> est un vecteur aléatoire à p dimensions : <span class="math display">\[Z_i = \begin{pmatrix} Z_{i1} \\ Z_{i2} \\ \vdots \\ Z_{ip} \end{pmatrix}\]</span></p>
-<p>On suppose que les vecteurs <span class="math inline">\(Z_1, Z_2, \dots, Z_n\)</span> sont i.i.d. , avec une espérance <span class="math inline">\(\mathbb{E}[Z_i] = \mu\)</span>, où <span class="math inline">\(\mu\)</span> est un vecteur constant de dimension <span class="math inline">\(p\)</span> et chaque composante <span class="math inline">\(Z_{ij}\)</span> a une variance finie. <span class="math display">\[\mu = \begin{pmatrix} \mu_1 \\ \mu_2 \\ \vdots \\ \mu_p \end{pmatrix}\]</span></p>
-<p>Alors, la <strong>moyenne empirique</strong> <span class="math inline">\(\bar{Z}_n\)</span> converge en <strong>probabilité</strong> vers l’espérance <span class="math inline">\(\mu\)</span> lorsque <span class="math inline">\(n \to \infty\)</span> :</p>
-<p><span class="math display">\[\bar{Z}_n  = \frac{1}{n} \sum_{i=1}^{n} Z_i = \begin{pmatrix} \frac{1}{n} \sum_{i=1}^{n} Z_{i1} \\ \frac{1}{n} \sum_{i=1}^{n} Z_{i2} \\ \vdots \\ \frac{1}{n} \sum_{i=1}^{n} Z_{ip} \end{pmatrix} \xrightarrow{P} \mu \quad \text{lorsque} \quad n \to \infty\]</span></p>
-</section>
-<section id="théorème-central-limite" class="level3">
-<h3 class="anchored" data-anchor-id="théorème-central-limite">Théorème central limite</h3>
-<p>Soit <span class="math inline">\(X_1, \ldots, X_n\)</span> une suite de variables aléatoires indépendantes et de même loi telles que : <span class="math inline">\(\mathbb{E}(X_i) = \mu\)</span> et <span class="math inline">\(\text{Var}(X_i) = \sigma^2\)</span>, alors : <span class="math display">\[\sqrt{n}\frac{\overline{X}_n - \mu}{\sigma} \xrightarrow{\mathcal{Loi}} \mathcal{N}(0, 1)\]</span></p>
-<p>Soit <span class="math inline">\(Z_1,\ldots, Z_n\)</span> une suite de vecteurs aléatoires où <span class="math inline">\(Z_i\)</span> est un vecteur aléatoire à p dimensions et si les vecteurs aléatoires suivent les mêmes hypothèses que précedement alors <span class="math display">\[\Sigma_X^{-\frac{1}{2}}(\bar{Z}_n-\mathbb{E}(Z) )\xrightarrow{\mathcal{Loi}} \mathcal{N}_d(0, 1)\]</span></p>
 </section>
 <section id="statistique-inférentielle" class="level2">
 <h2 class="anchored" data-anchor-id="statistique-inférentielle">Statistique inférentielle</h2>
@@ -1070,8 +1066,9 @@ t : Temps
 </ul>
 </section>
 </section>
-<section id="la-dissertation-en-économie" class="level2">
-<h2 class="anchored" data-anchor-id="la-dissertation-en-économie">La dissertation en économie</h2>
+</section>
+<section id="rédaction-dune-dissertation" class="level1">
+<h1>Rédaction d’une dissertation</h1>
 <p><em>“On tient tout d’abord à remercier l’enseignant chercheur (en Philosophie économique, Théories économiques de la justice, Redistribution des revenus, Economie sociale, Economie publique), monsieur <strong>Jean-Sébastien Gharbi</strong> pour cette rubrique d’aide à la dissertation.”</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1174,7 +1171,6 @@ t : Temps
 <p>Comme dit juste au-dessus, si on manque de temps, on coupe une partie du développement et on recopie la conclusion qui se trouve sur le brouillon. Attention&nbsp;: si vous ne rédigez pas tout le développement, mettez tout de même le plan apparent pour les parties et sous-parties non développées. C’est précisément parce qu’on a une idée de ce que vous auriez écrit qu’il est possible (en cas de gros manque de temps) de ne pas rédiger tout le développement. Si vous ne détaillez pas votre plan, c’est la trame de votre raisonnement qui manque et c’est beaucoup plus ennuyeux. Si vous ne pouvez pas rédiger tout le développement, je vous conseille de mettre des éléments que vous auriez utilisé sous forme de liste de tirets (en plus des titres apparents qui sont obligatoires).</p>
 
 
-</section>
 </section>
 </section>
 
