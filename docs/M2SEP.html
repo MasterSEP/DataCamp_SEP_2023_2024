@@ -200,6 +200,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#rappels-fondamentaux" id="toc-rappels-fondamentaux" class="nav-link" data-scroll-target="#rappels-fondamentaux">Rappels Fondamentaux</a>
   <ul class="collapse">
+  <li><a href="#probabilités-conditionnelles" id="toc-probabilités-conditionnelles" class="nav-link" data-scroll-target="#probabilités-conditionnelles">Probabilités conditionnelles</a></li>
   <li><a href="#quest-ce-quune-variable" id="toc-quest-ce-quune-variable" class="nav-link" data-scroll-target="#quest-ce-quune-variable">Qu’est ce qu’une variable ?</a></li>
   <li><a href="#tableau-du-type-de-variable" id="toc-tableau-du-type-de-variable" class="nav-link" data-scroll-target="#tableau-du-type-de-variable">Tableau du type de variable :</a></li>
   <li><a href="#vocabulaire-autour-de-la-variable" id="toc-vocabulaire-autour-de-la-variable" class="nav-link" data-scroll-target="#vocabulaire-autour-de-la-variable">Vocabulaire autour de la variable :</a></li>
@@ -310,6 +311,20 @@ window.Quarto = {
 <h1>Analyse de données</h1>
 <section id="rappels-fondamentaux" class="level2">
 <h2 class="anchored" data-anchor-id="rappels-fondamentaux">Rappels Fondamentaux</h2>
+<section id="probabilités-conditionnelles" class="level3">
+<h3 class="anchored" data-anchor-id="probabilités-conditionnelles">Probabilités conditionnelles</h3>
+<p>En théorie des probabilités, nous nous intéressons souvent au comportement d’un aléa, sachant qu’un autre événement est déjà passé. C’est ce que nous appelons Les Probabilités Conditionnelles.</p>
+<p>Considérant deux événements de probabilité non nulle, <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span>, la probabilité conditionnelle de <span class="math inline">\(A\)</span> sachant que <span class="math inline">\(B\)</span> est réalisé (couramment dit <span class="math inline">\(A\)</span> sachant <span class="math inline">\(B\)</span>) est donnée par : <span class="math display">\[
+P(A|B) = \frac{P(A \cap B)}{P(B)}
+\]</span></p>
+<p>Par commutativité de l’intersection, nous avons : <span class="math display">\[
+P(A \cap B) = P(B \cap A)
+\]</span></p>
+<p>En utilisant la formule ci-dessus, nous pouvons également exprimer la probabilité conditionnelle de <span class="math inline">\(B\)</span> sachant <span class="math inline">\(A\)</span> : <span class="math display">\[
+P(B|A) = \frac{P(A|B) \cdot P(B)}{P(A)}
+\]</span></p>
+<p>C’est ce que nous appelons la formule de Bayes.</p>
+</section>
 <section id="quest-ce-quune-variable" class="level3">
 <h3 class="anchored" data-anchor-id="quest-ce-quune-variable">Qu’est ce qu’une variable ?</h3>
 <p>Une variable statistique est une caractéristique ou une mesure que l’on peut attribuer à chaque individu d’une population ou d’un échantillon.</p>
@@ -489,7 +504,14 @@ Boîtes à Moustaches (Boxplots) : Pour montrer la médiane, quartiles et valeur
 <h2 class="anchored" data-anchor-id="premiers-modèles">Premiers modèles</h2>
 <section id="modèles-linéaires" class="level3">
 <h3 class="anchored" data-anchor-id="modèles-linéaires">Modèles linéaires</h3>
-<p><strong><em>Def regression</em></strong> : Un ensemble de méthodes pour analyser la relation d’une variable à expliquer par une ou plusieurs autres variables explicatives.</p>
+<p><strong><em>Définition d’une régression linéaire</em></strong> :</p>
+<p>La régression linéaire <strong>simple</strong> est une méthode statistique qui permet de modéliser la relation entre deux variables en ajustant une ligne droite à un ensemble de données. L’équation de la régression linéaire est : <span class="math display">\[y = a + bx\]</span> où <span class="math inline">\(y\)</span> est la variable dépendante, <span class="math inline">\(x\)</span> est la variable indépendante, <span class="math inline">\(a\)</span> est l’ordonnée à l’origine (l’interception de la ligne avec l’axe des ordonnées), et <span class="math inline">\(b\)</span> est la pente de la ligne (le taux de changement de <span class="math inline">\(y\)</span> par rapport à <span class="math inline">\(x\)</span>).</p>
+<p>La régression linéaire <strong>multiple</strong> reprend les mêmes principes, mais elle s’étend à plusieurs variables indépendantes. Ainsi, au lieu d’ajuster une ligne droite, on ajuste un hyperplan dans un espace multidimensionnel. L’équation de la régression linéaire multiple est la suivante :</p>
+<p><span class="math display">\[
+y = a + b_1 x_1 + b_2 x_2 + \dots + b_p x_p
+\]</span></p>
+<p>où : - <span class="math inline">\(y\)</span> est la variable dépendante, - <span class="math inline">\(x_1, x_2, \dots, x_p\)</span> sont les variables indépendantes, - <span class="math inline">\(a\)</span> est l’ordonnée à l’origine (ou l’interception avec l’axe des ordonnées), - <span class="math inline">\(b_1, b_2, \dots, b_p\)</span> sont les coefficients de régression qui mesurent l’effet de chaque variable indépendante sur (y).</p>
+<p>Dans ce cas, <span class="math inline">\(b_1, b_2, \dots, b_p\)</span> indiquent l’effet individuel de chaque variable <span class="math inline">\(x_1, x_2, \dots, x_p\)</span> sur la variable <span class="math inline">\(y\)</span>, tout en prenant en compte les autres variables. L’objectif de la régression linéaire multiple est d’estimer ces coefficients afin de prédire <span class="math inline">\(y\)</span> à partir des valeurs des <span class="math inline">\(x_i\)</span>.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <p><img src="images/Reg1.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="467"></p>
@@ -551,7 +573,7 @@ Boîtes à Moustaches (Boxplots) : Pour montrer la médiane, quartiles et valeur
 </section>
 <section id="regression-logistique" class="level3">
 <h3 class="anchored" data-anchor-id="regression-logistique">Regression logistique</h3>
-<p><strong><em>Def regression logistique</em></strong> : Utilisée pour des problèmes de classification ( variable dependante bianire ).<br>
+<p><strong><em>Definition d’une régression logistique</em></strong> : Utilisée pour des problèmes de classification ( variable dependante bianire ).<br>
 </p>
 <p><strong><em>Principe:</em></strong> Modélise la probabilité que la variable dépendante appartienne à une catégorie particulière.<br>
 </p>
@@ -580,7 +602,8 @@ Boîtes à Moustaches (Boxplots) : Pour montrer la médiane, quartiles et valeur
 </section>
 <section id="lasso" class="level4">
 <h4 class="anchored" data-anchor-id="lasso">Lasso</h4>
-<p><strong><em>Usage:</em></strong> Usage: Permet de sélectionner des variables en réduisant les coefficients de certaines à zéro. <strong><em>Principe:</em></strong> Semblable à Ridge, mais ajoute une pénalité absolue aux coefficients.</p>
+<p><strong><em>Usage:</em></strong> Usage: Permet de sélectionner des variables en réduisant les coefficients de certaines à zéro.</p>
+<p><strong><em>Principe:</em></strong> Semblable à Ridge, mais ajoute une pénalité absolue aux coefficients.</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Régression Lasso en R</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glmnet)</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>lasso_model <span class="ot">&lt;-</span> <span class="fu">glmnet</span>(x, y, <span class="at">alpha =</span> <span class="dv">1</span>, <span class="at">lambda =</span> lambda_value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

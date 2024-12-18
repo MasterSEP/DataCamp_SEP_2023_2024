@@ -7,6 +7,25 @@ editor: visual
 
 ## Rappels Fondamentaux
 
+
+### Probabilités conditionnelles
+
+En théorie des probabilités, nous nous intéressons souvent au comportement d'un aléa, sachant qu'un autre événement est déjà passé. C'est ce que nous appelons Les Probabilités Conditionnelles.
+
+Considérant deux événements de probabilité non nulle, $A$ et $B$, la probabilité conditionnelle de $A$ sachant que $B$ est réalisé (couramment dit $A$ sachant $B$) est donnée par : $$
+P(A|B) = \frac{P(A \cap B)}{P(B)}
+$$
+
+Par commutativité de l'intersection, nous avons : $$
+P(A \cap B) = P(B \cap A)
+$$
+
+En utilisant la formule ci-dessus, nous pouvons également exprimer la probabilité conditionnelle de $B$ sachant $A$ : $$
+P(B|A) = \frac{P(A|B) \cdot P(B)}{P(A)}
+$$
+
+C'est ce que nous appelons la formule de Bayes.
+
 ### Qu'est ce qu'une variable ?
 
 Une variable statistique est une caractéristique ou une mesure que l'on peut attribuer à chaque individu d'une population ou d'un échantillon.
@@ -253,9 +272,27 @@ La statistique descriptive offre une première compréhension des données, indi
 
 ### Modèles linéaires
 
-***Def regression*** : Un ensemble de méthodes pour analyser la relation d'une variable à expliquer par une ou plusieurs autres variables explicatives.
+***Définition d'une régression linéaire*** :
+
+La régression linéaire **simple** est une méthode statistique qui permet de modéliser la relation entre deux variables en ajustant une ligne droite à un ensemble de données. L'équation de la régression linéaire est : $$y = a + bx$$ où $y$ est la variable dépendante, $x$ est la variable indépendante, $a$ est l'ordonnée à l'origine (l'interception de la ligne avec l'axe des ordonnées), et $b$ est la pente de la ligne (le taux de changement de $y$ par rapport à $x$).
+
+La régression linéaire **multiple** reprend les mêmes principes, mais elle s'étend à plusieurs variables indépendantes. Ainsi, au lieu d'ajuster une ligne droite, on ajuste un hyperplan dans un espace multidimensionnel. L'équation de la régression linéaire multiple est la suivante :
+
+$$
+y = a + b_1 x_1 + b_2 x_2 + \dots + b_p x_p
+$$
+
+où :
+- $y$ est la variable dépendante,
+- $x_1, x_2, \dots, x_p$ sont les variables indépendantes,
+- $a$ est l'ordonnée à l'origine (ou l'interception avec l'axe des ordonnées),
+- $b_1, b_2, \dots, b_p$ sont les coefficients de régression qui mesurent l'effet de chaque variable indépendante sur \(y\).
+
+Dans ce cas, $b_1, b_2, \dots, b_p$ indiquent l'effet individuel de chaque variable $x_1, x_2, \dots, x_p$ sur la variable $y$, tout en prenant en compte les autres variables. L'objectif de la régression linéaire multiple est d'estimer ces coefficients afin de prédire $y$ à partir des valeurs des $x_i$.
+
 
 ![](images/Reg1.png){fig-align="left" width="467"}
+
 
 **Méthode des moindres carrés ordinaires :**
 
@@ -340,7 +377,7 @@ abline(Reg1)  #Representation de la regression linéaire
 
 ### Regression logistique
 
-***Def regression logistique*** : Utilisée pour des problèmes de classification ( variable dependante bianire ).\
+***Definition d'une régression logistique*** : Utilisée pour des problèmes de classification ( variable dependante bianire ).\
 
 ***Principe:*** Modélise la probabilité que la variable dépendante appartienne à une catégorie particulière.\
 
@@ -380,7 +417,9 @@ model.fit(X, y)
 
 #### Lasso
 
-***Usage:*** Usage: Permet de sélectionner des variables en réduisant les coefficients de certaines à zéro. ***Principe:*** Semblable à Ridge, mais ajoute une pénalité absolue aux coefficients.
+***Usage:*** Usage: Permet de sélectionner des variables en réduisant les coefficients de certaines à zéro. 
+
+***Principe:*** Semblable à Ridge, mais ajoute une pénalité absolue aux coefficients.
 
 ``` r
 # Régression Lasso en R
