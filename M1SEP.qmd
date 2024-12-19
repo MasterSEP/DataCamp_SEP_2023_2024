@@ -290,7 +290,7 @@ $$
 $$ \Sigma_{AX + B} = A\Sigma_X(X)A^t$$
 où $\Sigma$ est la variance de X et A,B sont des matrices (deterministe)
 
-## Notions de convergence
+### Notions de convergence
 
 Si l'on pense à des données, vues comme réalisation de variables aléatoires $X_1, \ldots, X_n$, il serait intéressant de se poser la question de savoir comment évolue cette suite lorsque $n$ tend vers l'infini.
 
@@ -381,10 +381,12 @@ Ces tableaux récapitulent les lois usuelles que vous pourrez rencontrer dans di
 | Fisher              | $X \sim F(n, m)$                          | $\mathbb{R}^+$  | $\frac{Kx^{n/2-1}}{(m+nx)^{(n+m)/2}}1_{\mathbb{R}^+}(x)$                                | $\frac{m}{m-2}$                   | $\frac{2m^2(n+m-2)}{n(m-2)^2(m-4)}$     |
 |                     | $N \sim \chi^2(n), M \sim \chi^2(m), N \perp\!\!\!\perp M$ | |                                                     | $m > 2$                           | $m > 4$                                 |
 
-\newpage
+
+:::{.callout-warning}
 
 Connaître les densités ne servirait pas à grand chose, mais ceci nous évitera de parler de lois dont nous ne connaissons pas leur construction.
 
+:::
 \newpage
 
 
@@ -464,7 +466,7 @@ La qualité d'un estimateur est mesurée à travers son erreur quadratique moyen
 
 Un estimateur 𝜃̂1 est meilleur que 𝜃̂2 si : $$V(\hat{\theta}_1) < V(\hat{\theta}_2)$$
 
-\textcolor{green!70!black}{Inégalité de Rao-Cramer/ Efficacité}
+
 
 On définit la quantité d'information apportée par l'estimateur par : $$
 I(\hat{\theta}_n) = -\left( \mathbb{E} \left( \frac{\partial L}{\partial \theta} \right) \right)^2
